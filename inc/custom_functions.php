@@ -5,7 +5,7 @@ function theme_load_scripts(){
   wp_register_script( 'jquery', 'http://code.jquery.com/jquery-latest.min.js');
   wp_enqueue_script( 'jquery' );
 }
-\
+
 define( 'ACFGFS_API_KEY', 'AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U' );
 
 define('CLI_ROOT', get_template_directory_uri());
