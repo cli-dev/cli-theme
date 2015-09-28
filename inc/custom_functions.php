@@ -716,3 +716,24 @@ add_filter('acf/load_field/key=field_5602e24562fc3', 'my_acf_load_field');
 add_filter('acf/load_field/key=field_56043cbf10409', 'my_acf_load_field');
 add_filter('acf/load_field/key=field_56043d901040e', 'my_acf_load_field');
 
+function custom_navigation_menus() {
+
+$logo_position = get_field('logo_position', 'option');
+
+  $locations = '';
+
+  if($logo_position === 'left') {
+    $locations = array(
+      'right-menu' => __( 'Main Menu', 'text_domain' ),
+    );
+  } else if($logo_position === 'center'){
+    $locations = array(
+      'divided-right-menu' => __( 'Divided menu right side', 'text_domain' ),
+      'divided-left-menu' => __( 'Divided menu left side', 'text_domain' ),
+    );
+  }
+  register_nav_menus( $locations );
+
+}
+add_action( 'init', 'custom_navigation_menus' );
+
