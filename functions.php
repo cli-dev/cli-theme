@@ -65,6 +65,7 @@ return $count;
 }
 }
 require_once('inc/mobile_detect.php');
+require_once('inc/my-plugins.php');
 require_once('inc/theme-options.php');
 require_once('inc/custom_functions.php');
 require_once('inc/shortcodes.php');
