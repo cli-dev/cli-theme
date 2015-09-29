@@ -12,8 +12,6 @@ if ( file_exists( $root.'/wp-load.php' ) ) {
 //    require_once( $root.'/wp-config.php' );
 	}
 }
-
-$header_bottom_border_width = 1;
 header("Content-type: text/css; charset=utf-8");
 
 if( function_exists('get_field') ) :
@@ -36,7 +34,6 @@ $menu_font_family_label = $menu_font_family['choices'][ $menu_font_family_value 
 $menu_link_active_color = get_field('menu_link_active_color', 'option');
 $general_font_family = get_field('general_font_family', 'option'); 
 $general_font = $general_font_family["fonts"];
-$general_font_variants = implode(",", $general_font_family["variants"]);
 
 $headings_font_family = get_field_object('headings_font_family', 'option'); 
 $headings_font_family_value = get_field('headings_font_family', 'option');
@@ -62,6 +59,11 @@ $footer_bottom_background_color = get_field('footer_bottom_background_color', 'o
 $footer_bottom_text_color = get_field('footer_bottom_text_color', 'option');
 $footer_bottom_link_color = get_field('footer_bottom_link_color', 'option');
 $footer_bottom_link_hover_color = get_field('footer_bottom_link_hover_color', 'option');
+
+$global_css = get_field('global_css', 'option');
+$tablet_portrait_css = get_field('tablet_portrait_css', 'option');
+$tablet_landscape_css = get_field('tablet_landscape_css', 'option');
+$desktop_css = get_field('desktop_css', 'option');
 
 ?>
 
@@ -161,6 +163,14 @@ $footer_bottom_link_hover_color = get_field('footer_bottom_link_hover_color', 'o
 h1,h2,h3,h4,h5,h6{<?php if($headings_font_family_label) { echo 'font-family: "' . $headings_font_family_label . '";'; } if($headings_line_height) { echo 'line-height: ' . $headings_line_height . ';'; } if($headings_font_color) { echo 'color: ' . $headings_font_color . ';'; } if($headings_font_weight) { echo 'font-weight: ' . $headings_font_weight . ';'; } if($headings_text_transform) { echo 'text-transform: ' . $headings_text_transform . ';'; }?>}
 
 p, ul li, ol li{<?php if($paragraph_font_family_label) { echo 'font-family: "' . $paragraph_font_family_label . '";'; } if($paragraph_line_height) { echo 'line-height: ' . $paragraph_line_height . ';'; } if($paragraph_font_color) { echo 'color: ' . $paragraph_font_color . ';'; } if($paragraph_font_weight) { echo 'font-weight: ' . $paragraph_font_weight . ';'; } if($paragraph_text_transform) { echo 'text-transform: ' . $paragraph_text_transform . ';'; }?>}
+
+<?php if ($global_css) { echo $global_css; }?>
+
+<?php if ($tablet_portrait_css) { echo '@media screen and (min-width: 700px) and (orientation: portrait){' . $tablet_portrait_css . '}'; }?>
+
+<?php if ($tablet_landscape_css) { echo '@media screen and (min-width: 700px) and (orientation: landscape){' . $tablet_landscape_css . '}'; }?>
+
+<?php if ($desktop_css) { echo '@media screen and (min-width: 1100px){' . $desktop_css . '}'; }?>
 
 <?php endif; ?>
 
