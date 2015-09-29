@@ -3162,10 +3162,10 @@ body.admin-bar #header.sticky.headhesive.stuck {
   display: block;
   margin: 0 auto;
 }
-/* line 48, ../sass/layout/_header.scss */
-.site-logo img {
-  width: 100%;
-  height: auto;
+
+/* line 50, ../sass/layout/_header.scss */
+img.site-main-logo {
+  display: none;
 }
 
 /* line 54, ../sass/layout/_header.scss */
