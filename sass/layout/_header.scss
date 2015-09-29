@@ -31,19 +31,17 @@ body.admin-bar #header.sticky.headhesive.stuck{
 
 .site-logo{
   width: 100%;
-  max-width: 200px;
   @include display-flex;
   @include flex-direction(column);
   @include justify-content(center);
   @include breakpoint($mdl){
     @include flex(0,1,auto);
-    width: auto;  
-    max-width: 250px;
   }
   a{
     @include flex(1,1,auto);
     display: block; 
     margin: 0 auto;
+    width: 100%;
   }
 }
 
