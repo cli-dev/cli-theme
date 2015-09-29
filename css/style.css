@@ -3154,11 +3154,11 @@ body.admin-bar #header.sticky.headhesive.stuck {
 }
 /* line 43, ../sass/layout/_header.scss */
 .site-logo a {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: block;
   margin: 0 auto;
 }

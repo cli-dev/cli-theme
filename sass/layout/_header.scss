@@ -41,7 +41,7 @@ body.admin-bar #header.sticky.headhesive.stuck{
     max-width: 250px;
   }
   a{
-    @include flex(0,1,auto);
+    @include flex(1,1,auto);
     display: block; 
     margin: 0 auto;
   }
