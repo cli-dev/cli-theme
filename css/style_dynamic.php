@@ -76,18 +76,13 @@ $footer_bottom_link_hover_color = get_field('footer_bottom_link_hover_color', 'o
 
 <?php if($main_font_color) { echo 'body{color: ' . $main_font_color . ';} '; }?>
 
-#header, #header .menu-container { background-color: <?php echo $header_color; ?> }
+<?php if($header_color) { echo '#header, #header .menu-container{background-color: ' . $header_color . ';} '; }?>
 
-.header-inner{ height: <?php echo $mobile_header_height; ?>px;}
-
-.page-header, .post-image-window{ padding-top: <?php echo $mobile_header_height; ?>px;}
+<?php if($mobile_header_height) { echo '.header-inner{ height: ' . $mobile_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $mobile_header_height . 'px;} '; }?>
 
 @media screen and (min-width: 1000px){
-  #header .menu-container{ background-color: transparent; }
-  #header { background-color: rgba(<?php echo $header_bg_rgb; ?>, <?php echo $header_background_opacity; ?>);}
-  .header-inner{ height: <?php echo $desktop_header_height; ?>px; }
-  #header .menu a{ line-height: <?php echo $desktop_header_height; ?>px; }
-  .page-header, .post-image-window{ padding-top: <?php echo $desktop_header_height; ?>px;}
+  <?php if($header_color) { echo '#header .menu-container{ background-color: transparent; } #header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
+  <?php if($desktop_header_height) { echo '.header-inner{ height: ' . $desktop_header_height . 'px;} #header .menu a{ line-height: ' . $desktop_header_height . 'px; } .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
 }
 
 #header .menu a{
