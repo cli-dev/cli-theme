@@ -13,6 +13,6 @@
     </button>
     <span class="menu-button-txt">Menu</span>
   </div>
-  <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu') ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'container_class' => 'menu-mobile-container',) ); ?>
   </div>
 </nav>

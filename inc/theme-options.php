@@ -17,14 +17,6 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-  
-  acf_add_options_page(array(
-		'page_title' 	=> 'Custom CSS',
-		'menu_title'	=> 'Custom CSS',
-		'menu_slug' 	=> 'theme-custom-css',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
 	
 }
 

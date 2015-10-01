@@ -16,4 +16,4 @@
   
  
  ?>
-<a class="btn <?php echo $custom_class; ?>" href="<?php echo $link; ?>" <?php echo $styles; ?>><?php echo $text; ?></a>
+<a class="btn <?php echo $custom_class; ?>" href="<?php echo $link; ?>" <?php echo $styles; ?>><span><?php echo $text; ?></span></a>

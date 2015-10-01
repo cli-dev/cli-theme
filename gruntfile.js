@@ -67,7 +67,7 @@ module.exports = function(grunt) {
     sync: {
       main: {
         files: [
-          {expand: true, src: ['css/*.css'], dest: 'W:/emanationwp/wp-content/themes/jdandco/'},
+          {expand: true, src: ['css/*.css'], dest: 'W:/garnetwp/wp-content/themes/cli-theme/'},
         ],
       },
     },

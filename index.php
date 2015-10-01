@@ -14,6 +14,7 @@ $page_for_posts = get_option( 'page_for_posts' );
       <?php get_template_part( 'templates/post-block-small' ); ?>
       <?php endwhile; endif; ?>
     </div>
+    <?php get_template_part( 'nav', 'below' ); ?>
   </section>
 </section>
 <?php get_footer(); ?>

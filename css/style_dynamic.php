@@ -78,7 +78,7 @@ $desktop_css = get_field('desktop_css', 'option');
 
 <?php if($main_font_color) { echo 'body{color: ' . $main_font_color . ';} '; }?>
 
-<?php if($header_color) { echo '#header, #header .menu-container{background-color: ' . $header_color . ';} '; }?>
+<?php if($header_color) { echo '#header, #header .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
 
 <?php if($mobile_header_height) { echo '.header-inner{ height: ' . $mobile_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $mobile_header_height . 'px;} '; }?>
 

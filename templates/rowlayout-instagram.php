@@ -9,7 +9,7 @@
   $access_token = get_sub_field('access_token', $item_id);
 ?>
         
-<div class="instagram-wrapper"><div id="<?php echo $block_id; ?>" class="instagram-block <?php echo $custom_class; ?>"><i class="social-grid-icon cli-instagram-circle"></i></div></div> 
+<div class="instagram-wrapper"><div id="<?php echo $block_id; ?>" class="instagram-block <?php echo $custom_class; ?>"><i class="social-grid-icon fa fa-instagram"></i></div></div> 
         
 <script type="text/javascript">
   var userFeed = new Instafeed({
@@ -17,7 +17,7 @@
     get: 'user',
     userId: <?php echo $instagram_user_id; ?>,
     accessToken: '<?php echo $access_token; ?>',
-    template: '<a href="{{link}}" class="instagram-img" target="_blank" style="background-image: url({{image}});"></a>',
+    template: '<a href="{{link}}" class="instagram-img" target="_blank" ><img src="{{image}}" /></a>',
     resolution: 'standard_resolution',
     limit: 1,
   });

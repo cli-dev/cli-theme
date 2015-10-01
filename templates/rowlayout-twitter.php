@@ -18,5 +18,5 @@
   </div>
 <?php } ?>
 
-<i class="social-grid-icon cli-twitter-circle"></i>
+<i class="social-grid-icon fa fa-twitter"></i>
 </div>
