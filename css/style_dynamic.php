@@ -12,8 +12,7 @@ if ( file_exists( $root.'/wp-load.php' ) ) {
 //    require_once( $root.'/wp-config.php' );
 	}
 }
-header("Content-type: text/css; charset=utf-8");
-
+header("Content-type: text/css; charset=utf-8"); 
 if( function_exists('get_field') ) :
 
 $content_background_color = get_field('content_background_color', 'option');
@@ -177,6 +176,10 @@ p, ul li, ol li{<?php if($paragraph_font_family_label) { echo 'font-family: "' .
   echo '.'. $color_class_name .'-border{ border-color:' . $color . ';  }';
   echo '.'. $color_class_name .'-bg{ background-color:' . $color . ';  }';
   echo '.'. $color_class_name .'-txt{ color:' . $color . ';  }';
+  echo '.btn.'. $color_class_name .'.outline{ background: none; color:' . $color . ';  border: solid 2px ' . $color . ';}';
+  echo '.btn.'. $color_class_name .'.outline:hover{ color: #FFF; background: ' . $color . ';}';
+  echo '.btn.'. $color_class_name .'.solid{ color: #FFF; background: ' . $color . ';}';
+  echo '.btn.'. $color_class_name .'-hover:hover{ color: #FFF; background: ' . $color . ' !important;}';
   echo '*[class*="hvr"].'. $color_class_name .':before{ background-color:' . $color . '; border-color:' . $color . ';}';
   
 endwhile; endif; 

@@ -134,7 +134,7 @@ img.site-main-logo{
   @include display-flex;
   @include flex-direction(column);
   @include align-items(stretch);
-  @include justify-content(space-between);
+  @include justify-content(space-around);
   @include transition (all ease-in-out 0.3s);
   &.left-menu{
     left: 0;
