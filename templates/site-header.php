@@ -36,7 +36,7 @@
   <?php
     $desktop_logo_maximum_width = get_field('desktop_logo_maximum_width', 'option');
   ?>
-  <nav id="side-menu" class="<?php echo $hide_menu; if ($header_type === 'Right Menu') { echo ' right-menu';} else {echo ' left-menu';} ?>">
+  <nav id="side-menu" class="<?php echo $hide_menu; if ($header_type === 'Right Side Menu') { echo ' right-menu';} else {echo ' left-menu';} ?>">
     <div class="site-logo" itemtype="http://schema.org/LocalBusiness"> 
       <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?>" rel="home" <?php if ($logo) { echo 'style="background: url(' . $logo . ') center no-repeat; background-size: contain;'; if ($desktop_logo_maximum_width) { echo ' max-width: ' . $desktop_logo_maximum_width . 'px;"'; } else {echo '"';}}; ?>><img src="<?php if ($logo) { echo $logo; }; ?>" alt="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?> Logo" itemprop="logo" class="site-main-logo"/></a>
     </div>
