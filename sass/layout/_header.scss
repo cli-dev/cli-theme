@@ -176,3 +176,15 @@ img.site-main-logo{
     min-height:  100px;
   }
 }
+
+#header-widgets{
+  display: none;
+  @include breakpoint($md){
+    @include display-flex;
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    > div{
+      @include flex(0,1,auto);
+    }
+  }
+}
