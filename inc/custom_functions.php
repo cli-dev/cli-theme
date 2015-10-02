@@ -724,7 +724,7 @@ function my_acf_settings_path( $path ) {
  
 
 // 2. customize ACF dir
-//add_filter('acf/settings/dir', 'my_acf_settings_dir');
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
  
 function my_acf_settings_dir( $dir ) {
  
