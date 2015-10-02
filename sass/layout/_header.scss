@@ -130,6 +130,11 @@ img.site-main-logo{
   top: 0;
   width: 100%;
   height: 100%;
+  padding: 20px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(stretch);
+  @include justify-content(space-between);
   @include transition (all ease-in-out 0.3s);
   &.left-menu{
     left: 0;
@@ -158,5 +163,16 @@ img.site-main-logo{
     &.right-menu.hidden-menu{
       @include transform(translateX(100%));
     }
+  }
+  > div{
+    @include flex(0,1,auto);
+  }
+  .menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-logo a{
+    min-height:  100px;
   }
 }

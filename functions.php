@@ -66,6 +66,7 @@ function cli_theme_comments_number( $count ){
 }
 
 require_once('inc/mobile_detect.php');
+require_once('inc/custom_css.php');
 require_once('inc/my-plugins.php');
 require_once('inc/theme-options.php');
 require_once('inc/custom_functions.php');
