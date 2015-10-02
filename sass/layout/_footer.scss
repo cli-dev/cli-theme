@@ -2,7 +2,9 @@
 
 .footer-inner{
   width: 100%;
+  padding: 10px;
   @include breakpoint($md){
+    padding: 20px;
     @include display-flex;
     @include flex-wrap(nowrap);
     @include justify-content(center);
@@ -33,7 +35,9 @@
 }
 
 .footer-column{
+  padding: 10px;
   @include breakpoint($md){
+    padding: 20px;
     @include flex(0,1,auto);
     @include display-flex;
     @include flex-direction(column);
@@ -48,8 +52,6 @@
     max-width: 350px;
     margin: 0 auto;
     img{
-      width: 100%;
-      height: auto !important;
       display: block;
       margin: 0 auto;  
     }
