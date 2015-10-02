@@ -75,20 +75,6 @@
   }
 }
 
-.flex-order-2.battery-img{
-  @include order(1);
-  @include breakpoint($mdl){
-    @include order(2);
-  }
-}
-
-.flex-order-1.battery-img{
-  @include order(2);
-  @include breakpoint($mdl){
-    @include order(1);
-  }
-}
-
 
 .flex-col{
   @include flex(0, 1, auto); 

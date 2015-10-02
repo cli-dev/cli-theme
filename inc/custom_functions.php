@@ -601,25 +601,25 @@ add_image_size( 'sidebar-thumb', 50, 50, true );
 function position() {
 
 	$labels = array(
-		'name'                => _x( 'Positions', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Position', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Open Positions', 'text_domain' ),
-		'name_admin_bar'      => __( 'Open Positions', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Positions', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Position', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'new_item'            => __( 'New Position', 'text_domain' ),
-		'edit_item'           => __( 'Edit Position', 'text_domain' ),
-		'update_item'         => __( 'Update Position', 'text_domain' ),
-		'view_item'           => __( 'View Position', 'text_domain' ),
-		'search_items'        => __( 'Search Position', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+		'name'                => _x( 'Positions', 'Post Type General Name', 'cli_theme' ),
+		'singular_name'       => _x( 'Position', 'Post Type Singular Name', 'cli_theme' ),
+		'menu_name'           => __( 'Open Positions', 'cli_theme' ),
+		'name_admin_bar'      => __( 'Open Positions', 'cli_theme' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'cli_theme' ),
+		'all_items'           => __( 'All Positions', 'cli_theme' ),
+		'add_new_item'        => __( 'Add New Position', 'cli_theme' ),
+		'add_new'             => __( 'Add New', 'cli_theme' ),
+		'new_item'            => __( 'New Position', 'cli_theme' ),
+		'edit_item'           => __( 'Edit Position', 'cli_theme' ),
+		'update_item'         => __( 'Update Position', 'cli_theme' ),
+		'view_item'           => __( 'View Position', 'cli_theme' ),
+		'search_items'        => __( 'Search Position', 'cli_theme' ),
+		'not_found'           => __( 'Not found', 'cli_theme' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'cli_theme' ),
 	);
 	$args = array(
-		'label'               => __( 'Position', 'text_domain' ),
-		'description'         => __( 'Open job positions', 'text_domain' ),
+		'label'               => __( 'Position', 'cli_theme' ),
+		'description'         => __( 'Open job positions', 'cli_theme' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', ),
 		'hierarchical'        => false,
@@ -644,25 +644,25 @@ add_action( 'init', 'position', 0 );
 function team_member() {
 
 	$labels = array(
-		'name'                => _x( 'Team Members', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Team Member', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Team Members', 'text_domain' ),
-		'name_admin_bar'      => __( 'Team Members', 'text_domain' ),
-		'parent_item_colon'   => __( 'Team Member:', 'text_domain' ),
-		'all_items'           => __( 'All Team Members', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Team Member', 'text_domain' ),
-		'add_new'             => __( 'Add New Team Member', 'text_domain' ),
-		'new_item'            => __( 'New Team Member', 'text_domain' ),
-		'edit_item'           => __( 'Edit Team Member', 'text_domain' ),
-		'update_item'         => __( 'Update Team Member', 'text_domain' ),
-		'view_item'           => __( 'View Team Member', 'text_domain' ),
-		'search_items'        => __( 'Search Team Member', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+		'name'                => _x( 'Team Members', 'Post Type General Name', 'cli_theme' ),
+		'singular_name'       => _x( 'Team Member', 'Post Type Singular Name', 'cli_theme' ),
+		'menu_name'           => __( 'Team Members', 'cli_theme' ),
+		'name_admin_bar'      => __( 'Team Members', 'cli_theme' ),
+		'parent_item_colon'   => __( 'Team Member:', 'cli_theme' ),
+		'all_items'           => __( 'All Team Members', 'cli_theme' ),
+		'add_new_item'        => __( 'Add New Team Member', 'cli_theme' ),
+		'add_new'             => __( 'Add New Team Member', 'cli_theme' ),
+		'new_item'            => __( 'New Team Member', 'cli_theme' ),
+		'edit_item'           => __( 'Edit Team Member', 'cli_theme' ),
+		'update_item'         => __( 'Update Team Member', 'cli_theme' ),
+		'view_item'           => __( 'View Team Member', 'cli_theme' ),
+		'search_items'        => __( 'Search Team Member', 'cli_theme' ),
+		'not_found'           => __( 'Not found', 'cli_theme' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'cli_theme' ),
 	);
 	$args = array(
-		'label'               => __( 'Team Member', 'text_domain' ),
-		'description'         => __( 'Post Type Description', 'text_domain' ),
+		'label'               => __( 'Team Member', 'cli_theme' ),
+		'description'         => __( 'Post Type Description', 'cli_theme' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', ),
 		'hierarchical'        => false,
@@ -724,12 +724,12 @@ $logo_position = get_field('logo_position', 'option');
 
   if($logo_position === 'center'){
     $locations = array(
-      'divided-right-menu' => __( 'Divided menu right side', 'text_domain' ),
-      'divided-left-menu' => __( 'Divided menu left side', 'text_domain' ),
+      'divided-right-menu' => __( 'Divided menu right side', 'cli_theme' ),
+      'divided-left-menu' => __( 'Divided menu left side', 'cli_theme' ),
     );
   } else {
     $locations = array(
-      'right-menu' => __( 'Main Menu', 'text_domain' ),
+      'right-menu' => __( 'Main Menu', 'cli_theme' ),
     );
   }
   register_nav_menus( $locations );

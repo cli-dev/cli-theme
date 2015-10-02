@@ -47,11 +47,11 @@ module.exports = function(grunt) {
     ftp_push: {
       your_target: {
         options: {
-          host: "tidalconcepts.com",
-          dest: "/tidalwp/wp-content/themes/tidal",
+          host: "",
+          dest: "",
           port: 21,
-          username: "tidalftp@tidalconcepts.com",
-          password: "o+n+?STbM[Uq",
+          username: "",
+          password: "",
         },
         files: [
           {
