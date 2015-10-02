@@ -654,7 +654,7 @@ function my_acf_load_field( $field ) {
   return $field;
     
 }
-
+add_filter('acf/load_field/name=default_font_family', 'my_acf_load_field');
 add_filter('acf/load_field/name=menu_font_family', 'my_acf_load_field');
 add_filter('acf/load_field/name=headings_font_family', 'my_acf_load_field');
 add_filter('acf/load_field/name=paragraph_font_family', 'my_acf_load_field');

@@ -32,8 +32,10 @@ $menu_font_family_value = get_field('menu_font_family', 'option');
 $menu_font_family_label = $menu_font_family['choices'][ $menu_font_family_value ];
 
 $menu_link_active_color = get_field('menu_link_active_color', 'option');
-$general_font_family = get_field('general_font_family', 'option'); 
-$general_font = $general_font_family["fonts"];
+
+$default_font_family = get_field_object('default_font_family', 'option'); 
+$default_font_family_value = get_field('default_font_family', 'option');
+$default_font_family_label = $default_font_family['choices'][ $default_font_family_value ];
 
 $headings_font_family = get_field_object('headings_font_family', 'option'); 
 $headings_font_family_value = get_field('headings_font_family', 'option');
@@ -163,6 +165,8 @@ $desktop_css = get_field('desktop_css', 'option');
 }
 
 <?php endif; ?>
+
+<?php if($default_font_family_label) { echo 'body{ font-family: "' . $default_font_family_label . '"; }'; } ?>
 
 h1,h2,h3,h4,h5,h6{<?php if($headings_font_family_label) { echo 'font-family: "' . $headings_font_family_label . '";'; } if($headings_line_height) { echo 'line-height: ' . $headings_line_height . ';'; } if($headings_font_color) { echo 'color: ' . $headings_font_color . ';'; } if($headings_font_weight) { echo 'font-weight: ' . $headings_font_weight . ';'; } if($headings_text_transform) { echo 'text-transform: ' . $headings_text_transform . ';'; }?>}
 
