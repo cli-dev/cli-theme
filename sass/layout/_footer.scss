@@ -5,6 +5,8 @@
   padding: 10px;
   @include breakpoint($md){
     padding: 20px;
+    width: 80%;
+    max-width: $grid-width;
     @include display-flex;
     @include flex-wrap(nowrap);
     @include justify-content(center);
