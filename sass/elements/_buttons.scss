@@ -1,5 +1,4 @@
 .btn, .caldera-grid input[type="submit"].btn{
-  font-family: $primary-font;
   font-weight: 700;
   display: block;
   text-align: center;
@@ -15,31 +14,6 @@
   &.btn-full-width{
     display: block;
     width: 100%;
-  }
-  @each $maincolor, $color in $main-colors {
-    &.#{$maincolor}.outline{
-      color: $color;
-      background: none;  
-      border: solid 2px $color;
-      &:hover{
-        color: #FFF;
-        background: $color; 
-      }
-    }
-    &.#{$maincolor}.solid{
-      color: #FFF;  
-      background: $color;
-    }
-    &.#{$maincolor}-hover:hover{
-      color: #FFF;  
-      background: $color;
-    }
-    &.color1.solid{
-      color: $black; 
-    }
-    &.color5.solid{
-      color: $black;  
-    }
   }
 }
 

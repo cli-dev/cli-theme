@@ -1,15 +1,7 @@
 <?php get_header(); ?>
-<header class="page-header wow slideInDown" data-wow-duration="0.5s" data-wow-delay="1s" <?php 
-    $careers_page = get_id_by_slug( 'careers' );
-    
-    $background_image = get_field('background_image', $careers_page);
-    $background_color = get_field('background_color', $careers_page);
-    
-    if($background_image){echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
-    else{echo 'style="background: ' . $background_color. ';"';}
-  ?>>
-    <div class="page-header-inner"></div>
-  </header>
+<?php get_template_part('templates/page', 'header') ; 
+$careers_page = get_id_by_slug( 'careers' );
+?>
 <section id="content" role="main">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  

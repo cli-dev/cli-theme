@@ -10,10 +10,6 @@
   }
 }
 
-body.admin-bar #header.sticky.headhesive.stuck{
-  top: 32px;  
-}
-
 .header-inner{
   padding: 10px;
   margin: 0 auto;
@@ -121,33 +117,6 @@ img.site-main-logo{
   }
 }
 
-body.page-id-135{
-  .page-header-inner{
-    padding: 40px 20px 0 20px;
-    @include breakpoint($md){
-      padding: 60px 0 0;
-    }
-    .header-block .single-image{
-      margin-bottom: -8px;  
-    }
-  }
-}
-
 .header-block{
   @include flex(0,1,auto); 
-  h1{
-    color: $color1;
-    @include breakpoint($md){
-      font-size: 50px;
-    }
-  }
-  p{
-    color: #FFF;
-    font-family: 'Crimson Text';
-    font-style: italic;
-    font-size: 20px;  
-    @include breakpoint($md){
-      font-size: 30px;
-    }
-  }
 }

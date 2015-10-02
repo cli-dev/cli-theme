@@ -7,20 +7,32 @@ acf_add_local_field_group(array (
 	'title' => 'Page Header',
 	'fields' => array (
 		array (
-			'key' => 'field_55f6f86291389',
-			'label' => 'Add Background Video?',
-			'name' => 'add_background_video',
-			'type' => 'true_false',
+			'key' => 'field_560eb8b550a4b',
+			'label' => 'Header Type',
+			'name' => 'header_type',
+			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
-				'width' => 20,
+				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
-			'message' => '',
-			'default_value' => 0,
+			'choices' => array (
+				'Background Image' => 'Background Image',
+				'Background Video' => 'Background Video',
+				'Slider' => 'Slider',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
 		),
 		array (
 			'key' => 'field_55f6f9499138a',
@@ -32,14 +44,14 @@ acf_add_local_field_group(array (
 			'conditional_logic' => array (
 				array (
 					array (
-						'field' => 'field_55f6f86291389',
+						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => '1',
+						'value' => 'Background Video',
 					),
 				),
 			),
 			'wrapper' => array (
-				'width' => 20,
+				'width' => 25,
 				'class' => '',
 				'id' => '',
 			),
@@ -59,14 +71,14 @@ acf_add_local_field_group(array (
 			'conditional_logic' => array (
 				array (
 					array (
-						'field' => 'field_55f6f86291389',
+						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => '1',
+						'value' => 'Background Video',
 					),
 				),
 			),
 			'wrapper' => array (
-				'width' => 20,
+				'width' => 25,
 				'class' => '',
 				'id' => '',
 			),
@@ -86,14 +98,14 @@ acf_add_local_field_group(array (
 			'conditional_logic' => array (
 				array (
 					array (
-						'field' => 'field_55f6f86291389',
+						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => '1',
+						'value' => 'Background Video',
 					),
 				),
 			),
 			'wrapper' => array (
-				'width' => 20,
+				'width' => 25,
 				'class' => '',
 				'id' => '',
 			),
@@ -113,14 +125,14 @@ acf_add_local_field_group(array (
 			'conditional_logic' => array (
 				array (
 					array (
-						'field' => 'field_55f6f86291389',
+						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => '1',
+						'value' => 'Background Video',
 					),
 				),
 			),
 			'wrapper' => array (
-				'width' => 20,
+				'width' => 25,
 				'class' => '',
 				'id' => '',
 			),
@@ -136,6 +148,35 @@ acf_add_local_field_group(array (
 			'mime_types' => '',
 		),
 		array (
+			'key' => 'field_560eb88d9508e',
+			'label' => 'Slider Shortcode',
+			'name' => 'slider_shortcode',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '==',
+						'value' => 'Slider',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 50,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
 			'key' => 'field_55d4f30fa518e',
 			'label' => 'Background Image',
 			'name' => 'background_image',
@@ -145,9 +186,9 @@ acf_add_local_field_group(array (
 			'conditional_logic' => array (
 				array (
 					array (
-						'field' => 'field_55f6f86291389',
-						'operator' => '!=',
-						'value' => '1',
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '==',
+						'value' => 'Background Image',
 					),
 				),
 			),

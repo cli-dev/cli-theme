@@ -164,6 +164,19 @@ h1,h2,h3,h4,h5,h6{<?php if($headings_font_family_label) { echo 'font-family: "' 
 
 p, ul li, ol li{<?php if($paragraph_font_family_label) { echo 'font-family: "' . $paragraph_font_family_label . '";'; } if($paragraph_line_height) { echo 'line-height: ' . $paragraph_line_height . ';'; } if($paragraph_font_color) { echo 'color: ' . $paragraph_font_color . ';'; } if($paragraph_font_weight) { echo 'font-weight: ' . $paragraph_font_weight . ';'; } if($paragraph_text_transform) { echo 'text-transform: ' . $paragraph_text_transform . ';'; }?>}
 
+<?php if( have_rows('theme_colors') ): while( have_rows('theme_colors') ): the_row(); 
+
+  $color = get_sub_field('color');
+  $color_class_name = get_sub_field('color_class_name');
+
+  echo '.'. $color_class_name .'-border{ border-color:' . $color . ';  }';
+  echo '.'. $color_class_name .'-bg{ background-color:' . $color . ';  }';
+  echo '.'. $color_class_name .'-txt{ color:' . $color . ';  }';
+  echo '*[class*="hvr"].'. $color_class_name .':before{ background-color:' . $color . '; border-color:' . $color . ';}';
+  
+endwhile; endif; 
+?>
+
 <?php if ($global_css) { echo $global_css; }?>
 
 <?php if ($tablet_portrait_css) { echo '@media screen and (min-width: 700px) and (orientation: portrait){' . $tablet_portrait_css . '}'; }?>

@@ -1,10 +1,4 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'theme_load_scripts' );
-function theme_load_scripts(){
-  wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', 'http://code.jquery.com/jquery-latest.min.js');
-  wp_enqueue_script( 'jquery' );
-}
 
 define( 'ACFGFS_API_KEY', 'AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U' );
 
@@ -45,16 +39,19 @@ function cli_generate_dynamic_css_and_js() {
 		}
 	}
 
-if (file_exists(dirname(__FILE__) ."/css/style_dynamic.css") && cli_is_css_folder_writable() && !is_multisite() && !is_admin()) {
-  wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.css", array(), filemtime(dirname(__FILE__) ."/css/style_dynamic.css"));
-} 
-else if(!is_admin()) {
-  wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.php");
+function cli_add_dynamic_css(){
+  if (file_exists(dirname(__FILE__) ."/css/style_dynamic.css") && cli_is_css_folder_writable() && !is_multisite() && !is_admin()) {
+    wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.css", array(), filemtime(dirname(__FILE__) ."/css/style_dynamic.css"));
+  } 
+  else if(!is_admin()) {
+    wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.php");
+  }
 }
+add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css' );
 
 function bac_variable_length_excerpt($text, $length, $finish_sentence){
   //Word length of the excerpt. This is exact or NOT depending on your '$finish_sentence' variable.
-  $length = 10; /* Change the Length of the excerpt as you wish. The Length is in words. */
+  $length = 15; /* Change the Length of the excerpt as you wish. The Length is in words. */
   
   //1 if you want to finish the sentence of the excerpt (No weird cuts).
   $finish_sentence = 1; // Put 0 if you do NOT want to finish the sentence.
@@ -100,6 +97,10 @@ function bac_variable_length_excerpt($text, $length, $finish_sentence){
 
 function bac_excerpt_filter($text){
   //Get the full content and filter it.
+  $finish_sentence = 1;
+
+  $length = 15;
+
   $text = get_the_content('');
   $text = strip_shortcodes( $text );
   $text = apply_filters('the_content', $text);
@@ -113,8 +114,8 @@ function bac_excerpt_filter($text){
   //$allowed_tags = '<p>,<a>,<strong>'; /* Here I am allowing p, a, strong tags. Separate tags by comma. */
    
   //If you want to Disallow ALL HTML tags: THEN Uncomment the next line + Line 80, 
-  $allowed_tags = ''; /* To disallow all HTML tags, keep it empty. The Excerpt will be unformated but newlines are preserved. */
-  $text = strip_tags($text, $allowed_tags); /* Line 80 */
+  //$allowed_tags = ''; /* To disallow all HTML tags, keep it empty. The Excerpt will be unformated but newlines are preserved. */
+  //$text = strip_tags($text, $allowed_tags); /* Line 80 */
    
   //Create the excerpt.
   $text = bac_variable_length_excerpt($text, $length, $finish_sentence);  
@@ -122,40 +123,6 @@ function bac_excerpt_filter($text){
 }
 //Hooks the 'bac_excerpt_filter' function to a specific (get_the_excerpt) filter action.
 add_filter('get_the_excerpt','bac_excerpt_filter',5);
-
-
-function get_theme_logo($themelogo){
-  
-  $logocolor = get_field('logo_color', 'option');
-  $logowhite = get_field('logo_white', 'option');
-  $logoblack = get_field('logo_black', 'option');
-  
-  $headerlogo = get_field( 'logo_header_choice', 'option' );
-  
-  if( $headerlogo == 'black' ) {
-    
-    $themelogo = $logoblack;
-      
-    return $themelogo;
-  
-  } elseif( $headerlogo == 'white' ) {
-  
-     $themelogo = $logowhite;
-      
-    return $themelogo;  
-       
-  } elseif( $headerlogo == 'color' ){
-     
-     $themelogo = $logocolor;
-      
-    return $themelogo; 
-           
-  }
-  else{
-    return '';  
-  }
-
-}
 
 add_filter('widget_text', 'do_shortcode');
 
@@ -166,30 +133,6 @@ function get_id_by_slug($page_slug) {
 	} else {
 		return null;
 	}
-}
-
-function create_page_box($page_slug) {
-  
-  $page = get_page_by_path($page_slug);
-  if ($page) {
-    $pageboxid = $page->ID;
-  } else {
-    return null;
-  }
-  
-  if(function_exists('get_field')){
-    if(get_field('title', $pageboxid))
-    {
-      $pageboxtitle = '<h4>' . get_field('title', $pageboxid) . '</h4>';
-    }
-    if(get_field('subtitle', $pageboxid))
-    {
-      $pageboxsubtitle = '<p>' . get_field('subtitle', $pageboxid) . '</p>';
-    }
-  }
-  
-    return '<div class="page-box-content-wrap">' . $pageboxtitle . $pageboxsubtitle .'<a class="special-btn white-btn center-btn ' . $page_slug .'" href="' . get_permalink( $pageboxid ) . '" target="_self"><span class="first-panel">Learn More</span><span class="second-panel">' . get_the_title( $pageboxid ) . '</span></a></div>';
-  
 }
 
 function displayfullAddress() {
@@ -718,7 +661,7 @@ add_filter('acf/load_field/name=paragraph_font_family', 'my_acf_load_field');
 
 function custom_navigation_menus() {
 
-$logo_position = get_field('logo_position', 'option');
+  $logo_position = get_field('logo_position', 'option');
 
   $locations = '';
 
@@ -765,3 +708,38 @@ function pagination($pages = '', $range = 1){
     echo '</div>';
   }
 }
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+ 
+function my_acf_settings_path( $path ) {
+ 
+    // update path
+    $path = get_stylesheet_directory() . '/acf/';
+    
+    // return
+    return $path;
+    
+}
+ 
+
+// 2. customize ACF dir
+//add_filter('acf/settings/dir', 'my_acf_settings_dir');
+ 
+function my_acf_settings_dir( $dir ) {
+ 
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/plugins/acf/';
+    
+    // return
+    return $dir;
+    
+}
+ 
+
+// 3. Hide ACF field group menu item
+add_filter('acf/settings/show_admin', '__return_false');
+
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );

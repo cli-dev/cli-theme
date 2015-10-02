@@ -24,7 +24,6 @@
 
 .team-bio{
   padding: 20px;
-  background-color: #ece1cf;
   img{
     width: 100%;
     height: auto;
@@ -89,13 +88,10 @@
        
     }
     h3{
-      @include flex(0,1,auto);  
-      text-transform: uppercase;
-      font-weight: 600;
+      @include flex(0,1,auto);
     }
     div{
       @include flex(0,1,auto); 
-      border-top: solid 1px #FFF;
       max-width: 70%; 
     }
     p{
@@ -251,7 +247,6 @@
     min-width: 50px;
     height: 50px;
     border-radius: 50%;  
-    border: solid 1px $off-white;
   }
 }
 
@@ -298,20 +293,6 @@ h4.location-item-title{
   word-break: break-all;  
 }
 
-
-.values-box{
-  background: #FFF;
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  @include breakpoint($md){
-    text-align: left;
-    padding: 20px;
-    @include transform(translateX(-20px));  
-  }
-}
-
-
 #scrollTop{
   position: fixed;
   bottom: 10px;
@@ -344,27 +325,6 @@ h4.location-item-title{
   }
 }
 
-.triangle-cutout{
-  position: relative;
-  @include breakpoint($md){
-    &:before{
-      content: '\f502';
-      font-family: 'Genericons';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      font-size: 50px;
-      @include transform(translateX(-50%));
-      z-index: 20;
-    }
-  }
-  @include breakpoint($lrg){
-    &:before{
-      font-size: 70px;
-    }
-  }
-}
 
 .social-grid .position-block .position-block-inner{
   padding: 20px;  
@@ -373,32 +333,8 @@ h4.location-item-title{
 .social-grid-btn{
   width: 100%;
   line-height: 5;
-  &:hover{
-    color: $black;
-    background-color: $color1;  
-  }
   @include breakpoint($md){
     width: 50%;  
-  }
-}
-
-.quote{
-  background: $off-white;
-  padding: 20px;
-  width: 100%;
-  .quote-title{
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 300;
-  }
-  p{
-    font-size: 20px;
-    font-weight: 700;  
-  }
-  .quote-author{
-    font-style: italic;
-    font-size: 12px;
-    font-weight: 300;
   }
 }
 
