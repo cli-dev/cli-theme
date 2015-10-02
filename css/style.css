@@ -3022,6 +3022,7 @@ html {
   .footer-inner {
     padding: 20px;
     width: 80%;
+    margin: 0 auto;
     max-width: 1050px;
     display: -webkit-box;
     display: -moz-box;
@@ -3043,23 +3044,23 @@ html {
   }
 }
 
-/* line 17, ../sass/layout/_footer.scss */
+/* line 18, ../sass/layout/_footer.scss */
 #bottom-footer {
   padding: 0 20px;
 }
 @media (min-width: 900px) {
-  /* line 17, ../sass/layout/_footer.scss */
+  /* line 18, ../sass/layout/_footer.scss */
   #bottom-footer {
     padding: 0;
   }
 }
 
-/* line 24, ../sass/layout/_footer.scss */
+/* line 25, ../sass/layout/_footer.scss */
 #bottom-footer .footer-inner {
   padding: 20px;
 }
 @media (min-width: 900px) {
-  /* line 24, ../sass/layout/_footer.scss */
+  /* line 25, ../sass/layout/_footer.scss */
   #bottom-footer .footer-inner {
     -webkit-box-pack: flex-end;
     -moz-box-pack: flex-end;
@@ -3068,25 +3069,25 @@ html {
     justify-content: flex-end;
   }
 }
-/* line 29, ../sass/layout/_footer.scss */
+/* line 30, ../sass/layout/_footer.scss */
 #bottom-footer .footer-inner .textwidget {
   text-align: center;
   font-weight: 300;
   font-size: 12px;
 }
 @media (min-width: 900px) {
-  /* line 29, ../sass/layout/_footer.scss */
+  /* line 30, ../sass/layout/_footer.scss */
   #bottom-footer .footer-inner .textwidget {
     text-align: right;
   }
 }
 
-/* line 39, ../sass/layout/_footer.scss */
+/* line 40, ../sass/layout/_footer.scss */
 .footer-column {
   padding: 10px;
 }
 @media (min-width: 700px) {
-  /* line 39, ../sass/layout/_footer.scss */
+  /* line 40, ../sass/layout/_footer.scss */
   .footer-column {
     padding: 20px;
     -webkit-box-flex: 0;
@@ -3117,7 +3118,7 @@ html {
     -ms-flex-align: center;
     align-items: center;
   }
-  /* line 48, ../sass/layout/_footer.scss */
+  /* line 49, ../sass/layout/_footer.scss */
   .footer-column > * {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
@@ -3126,19 +3127,19 @@ html {
     flex: 0 1 auto;
   }
 }
-/* line 52, ../sass/layout/_footer.scss */
+/* line 53, ../sass/layout/_footer.scss */
 .footer-column .widget_sp_image a {
   display: block;
   max-width: 350px;
   margin: 0 auto;
 }
-/* line 56, ../sass/layout/_footer.scss */
+/* line 57, ../sass/layout/_footer.scss */
 .footer-column .widget_sp_image a img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 63, ../sass/layout/_footer.scss */
+/* line 64, ../sass/layout/_footer.scss */
 .footer-widget .menu {
   padding: 0;
   margin: 0;
@@ -3157,18 +3158,18 @@ html {
   justify-content: center;
   @inclue align-items(center);
 }
-/* line 71, ../sass/layout/_footer.scss */
+/* line 72, ../sass/layout/_footer.scss */
 .footer-widget .menu li {
   width: auto;
   padding: 0 10px;
 }
 @media (min-width: 1100px) {
-  /* line 71, ../sass/layout/_footer.scss */
+  /* line 72, ../sass/layout/_footer.scss */
   .footer-widget .menu li {
     padding: 0 5px;
   }
 }
-/* line 77, ../sass/layout/_footer.scss */
+/* line 78, ../sass/layout/_footer.scss */
 .footer-widget .menu li a {
   display: block;
   line-height: 30px;
