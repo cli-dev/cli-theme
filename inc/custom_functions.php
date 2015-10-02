@@ -722,14 +722,14 @@ $logo_position = get_field('logo_position', 'option');
 
   $locations = '';
 
-  if($logo_position === 'left') {
-    $locations = array(
-      'right-menu' => __( 'Main Menu', 'text_domain' ),
-    );
-  } else if($logo_position === 'center'){
+  if($logo_position === 'center'){
     $locations = array(
       'divided-right-menu' => __( 'Divided menu right side', 'text_domain' ),
       'divided-left-menu' => __( 'Divided menu left side', 'text_domain' ),
+    );
+  } else {
+    $locations = array(
+      'right-menu' => __( 'Main Menu', 'text_domain' ),
     );
   }
   register_nav_menus( $locations );

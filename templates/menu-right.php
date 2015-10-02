@@ -8,8 +8,6 @@
   $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
 ?>
 
-<header id="header" class="<?php echo $header_in_grid; ?>">
-  <div class="header-inner">
   <div class="site-logo" itemtype="http://schema.org/LocalBusiness"> 
     <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?>" rel="home" <?php if ($logo) { echo 'style="background: url(' . $logo . ') center no-repeat; background-size: contain;'; if ($desktop_logo_maximum_width) { echo ' max-width: ' . $desktop_logo_maximum_width . 'px;"'; } else {echo '"';}}; ?>><img src="<?php if ($logo) { echo $logo; }; ?>" alt="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?> Logo" itemprop="logo" class="site-main-logo"/></a>
   </div>
@@ -19,7 +17,4 @@
     </button>
     <span class="menu-button-txt">Menu</span>
   </div>
-  <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => $hide_menu,) ); ?>
-  </div>
-  
-</header>
+  <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container_class' => $hide_menu,) ); ?>

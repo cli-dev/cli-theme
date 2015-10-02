@@ -15,11 +15,14 @@
     <?php if ($detect->isMobile() ) { ?>
       <?php get_template_part('templates/menu' , 'mobile') ?>
     <?php } else { ?>
-      <?php if($logo_position === 'left') { ?>
-        <?php get_template_part('templates/menu' , 'right') ?>
-      <?php } else if($logo_position === 'center'){ ?>
-        <?php get_template_part('templates/menu' , 'divided') ?>
-      <?php } ?>
+      <?php 
+      if($logo_position === 'center'){ 
+        get_template_part('templates/menu' , 'divided'); 
+      } 
+      else { 
+        get_template_part('templates/menu' , 'right'); 
+      } 
+      ?>
     <?php } ?>
   </div>
 </header>
