@@ -70,6 +70,26 @@ if ( function_exists('register_sidebar') ) {
     'before_title' => '<h4 class="content-widget-title">',
     'after_title' => '</h4>',
   ));
+
+  register_sidebar(array(
+    'name' => 'Side Menu Bottom Widget Area',
+    'id' => 'side-menu-bottom-widget',
+    'description' => '',
+    'before_widget' => '<div id="%1$s" class="side-menu-widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="side-menu-widget-title">',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'name' => 'Header Widget Area',
+    'id' => 'header-widgets',
+    'description' => 'Used with side menu',
+    'before_widget' => '<div id="%1$s" class="header-widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="header-widget-title">',
+    'after_title' => '</h4>',
+  ));
 }
 
 ?>

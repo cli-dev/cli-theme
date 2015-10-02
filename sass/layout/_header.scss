@@ -1,10 +1,13 @@
 #header{
   width: 100%;
   position: absolute;
-  z-index: 20;
+  z-index: 1000;
   top: 0;
   left: 50%;
   @include transform(translateX(-50%));
+  &.has-side-menu{
+    position: fixed;
+  }
   &.header-in-grid{
     max-width: $grid-width;
   }
@@ -75,7 +78,7 @@ img.site-main-logo{
   position: absolute;
   right: 20px;
   top: 50%;
-  z-index: 20;
+  z-index: 1000;
   cursor: pointer;
   @include transform(translateY(-50%)); 
   @include breakpoint($mdl){
@@ -119,4 +122,41 @@ img.site-main-logo{
 
 .header-block{
   @include flex(0,1,auto); 
+}
+
+#side-menu{
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include transition (all ease-in-out 0.3s);
+  &.left-menu{
+    left: 0;
+    @include transform(translateX(-100%));
+    &.active{
+      @include transform(translateX(0));
+    }
+  }
+  &.right-menu{
+    right: 0;
+    @include transform(translateX(100%));
+    &.active{
+      @include transform(translateX(0));
+    }
+  }
+  @include breakpoint($md){
+    width: 300px;
+  }
+  @include breakpoint($mdl){
+    &.left-menu, &.left-menu.hidden-menu.active, &.right-menu, &.right-menu.hidden-menu.active{
+      @include transform(translateX(0));
+    }
+    &.left-menu.hidden-menu{
+      @include transform(translateX(-100%));
+    }
+    &.right-menu.hidden-menu{
+      @include transform(translateX(100%));
+    }
+  }
 }

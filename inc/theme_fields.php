@@ -293,6 +293,34 @@ acf_add_local_field_group(array (
 			'icon_class' => 'dashicons-arrow-right',
 		),
 		array (
+			'key' => 'field_560ec99f29270',
+			'label' => 'Header Type',
+			'name' => 'header_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'Top Menu' => 'Top Menu',
+				'Left Side Menu' => 'Left Side Menu',
+				'Right Side Menu' => 'Right Side Menu',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
+		),
+		array (
 			'key' => 'field_5605b94321d7d',
 			'label' => 'Logo Position',
 			'name' => 'logo_position',
@@ -326,7 +354,15 @@ acf_add_local_field_group(array (
 			'type' => 'true_false',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560ec99f29270',
+						'operator' => '==',
+						'value' => 'Top Menu',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => 20,
 				'class' => '',
@@ -372,6 +408,21 @@ acf_add_local_field_group(array (
 			'step' => '0.05',
 			'readonly' => 0,
 			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_560eca6029271',
+			'label' => 'Menu Background Color',
+			'name' => 'menu_background_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 		array (
 			'key' => 'field_55f30b4e7e257',
@@ -516,6 +567,21 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+		),
+		array (
+			'key' => 'field_560eca9229272',
+			'label' => 'Header Widget Font Color',
+			'name' => 'header_font_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 		array (
 			'key' => 'field_55d616e76456c',

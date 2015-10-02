@@ -6,6 +6,20 @@ html{
   position: relative;  
 }
 
+#content-wrapper{
+  position: relative; 
+  &.has-left-menu{
+    @include breakpoint($mdl){
+      margin-left: 300px;
+    }
+  }
+  &.has-right-menu{
+    @include breakpoint($mdl){
+      margin-right: 300px;
+    }
+  }
+}
+
 #content-bottom{
   background-color: $color2;
   width: 100%;
