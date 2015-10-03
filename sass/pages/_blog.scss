@@ -314,3 +314,27 @@ body.blog .entry-content.news-feed{
    @include flex(1,1,auto);  
  }
 }
+
+.pagination{
+  padding-top: 20px;
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+  > *{
+    @include flex(0,1,auto);
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0 5px;  
+  }
+  .current, .inactive:hover{
+    background-color: $black;
+    color: $off-white;  
+  }
+  .inactive{
+    background-color: $off-white;
+    color: $black;  
+  }
+  @include breakpoint($mdl){
+    padding-top: 40px;
+  }
+}

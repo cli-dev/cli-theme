@@ -1940,8 +1940,7 @@ h4.location-item-title {
   bottom: 10px;
   right: 10px;
   z-index: 9999;
-  border: solid 3px #363636;
-  background: #EBEBEB;
+  border: solid 3px #231F20;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1953,48 +1952,44 @@ h4.location-item-title {
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
-/* line 310, ../sass/elements/_other.scss */
+/* line 309, ../sass/elements/_other.scss */
 #scrollTop.show {
   opacity: 1;
 }
-/* line 313, ../sass/elements/_other.scss */
+/* line 312, ../sass/elements/_other.scss */
 #scrollTop i {
   font-size: 55px;
   line-height: 50px;
-  color: #363636;
+  color: #231F20;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 319, ../sass/elements/_other.scss */
+/* line 318, ../sass/elements/_other.scss */
 #scrollTop:hover {
-  border: solid 3px #FFF200;
-  background: #FFF200;
-}
-/* line 322, ../sass/elements/_other.scss */
-#scrollTop:hover i {
-  color: #363636;
+  border: solid 3px #E1E1E1;
+  background: #E1E1E1;
 }
 
-/* line 329, ../sass/elements/_other.scss */
+/* line 325, ../sass/elements/_other.scss */
 .social-grid .position-block .position-block-inner {
   padding: 20px;
 }
 
-/* line 333, ../sass/elements/_other.scss */
+/* line 329, ../sass/elements/_other.scss */
 .social-grid-btn {
   width: 100%;
   line-height: 5;
 }
 @media (min-width: 700px) {
-  /* line 333, ../sass/elements/_other.scss */
+  /* line 329, ../sass/elements/_other.scss */
   .social-grid-btn {
     width: 50%;
   }
 }
 
-/* line 341, ../sass/elements/_other.scss */
+/* line 337, ../sass/elements/_other.scss */
 .social-grid-mini {
   display: -webkit-box;
   display: -moz-box;
@@ -2009,7 +2004,7 @@ h4.location-item-title {
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 345, ../sass/elements/_other.scss */
+/* line 341, ../sass/elements/_other.scss */
 .social-grid-mini > * {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2019,7 +2014,7 @@ h4.location-item-title {
   border: solid 2px #FFF;
 }
 
-/* line 351, ../sass/elements/_other.scss */
+/* line 347, ../sass/elements/_other.scss */
 a.flex-col.social-grid {
   border: solid 2px #FFF;
   line-height: 5;
@@ -4143,4 +4138,51 @@ body.blog .entry-content.news-feed {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+/* line 318, ../sass/pages/_blog.scss */
+.pagination {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* line 323, ../sass/pages/_blog.scss */
+.pagination > * {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+/* line 329, ../sass/pages/_blog.scss */
+.pagination .current, .pagination .inactive:hover {
+  background-color: #231F20;
+  color: #E1E1E1;
+}
+/* line 333, ../sass/pages/_blog.scss */
+.pagination .inactive {
+  background-color: #E1E1E1;
+  color: #231F20;
+}
+@media (min-width: 900px) {
+  /* line 318, ../sass/pages/_blog.scss */
+  .pagination {
+    padding-top: 40px;
+  }
 }

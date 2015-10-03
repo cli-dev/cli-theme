@@ -298,8 +298,7 @@ h4.location-item-title{
   bottom: 10px;
   right: 10px;
   z-index: 9999;
-  border: solid 3px $color2;
-  background: $color5;
+  border: solid 3px $black;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -313,15 +312,12 @@ h4.location-item-title{
   i{
     font-size: 55px;
     line-height: 50px;
-    color: $color2; 
+    color: $black; 
     @include transition(all 0.3s ease-in-out);
   }
   &:hover{
-    border: solid 3px $color1;
-    background: $color1;
-    i{
-      color: $color2;
-    }
+    border: solid 3px $off-white;;
+    background: $off-white;;
   }
 }
 
