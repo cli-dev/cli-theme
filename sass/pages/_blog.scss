@@ -159,6 +159,9 @@ body.blog .entry-content.news-feed{
     @include flex-wrap(nowrap);
     @include justify-content(space-between);
     @include align-items(center);
+    h1{
+      padding-bottom: 0;  
+    }
   } 
 }
 
