@@ -108,6 +108,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'google_map' ) { 
           get_template_part('templates/rowlayout', 'map');
         } 
+        else if ( get_row_layout() == 'quote_block' ) { 
+          get_template_part('templates/rowlayout', 'quoteblock');
+        }
       ?>
    <?php endwhile; endif; ?>
   <?php echo $end_inner_column ; ?>
