@@ -246,11 +246,6 @@ $social-colors: (facebook, $facebook),
 .instagram-block{
   position: relative;
   overflow: hidden;
-  &:before{
-    content: '';
-    padding-bottom: 100%;
-    display: block;  
-  }
 }
 
 .ttf-tweet{

@@ -1421,12 +1421,6 @@ em {
   position: relative;
   overflow: hidden;
 }
-/* line 249, ../sass/elements/_social.scss */
-.instagram-block:before {
-  content: '';
-  padding-bottom: 100%;
-  display: block;
-}
 
 /* line 2, ../sass/elements/_other.scss */
 .company-address > div {
