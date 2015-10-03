@@ -1725,19 +1725,6 @@ em {
 }
 
 /* line 167, ../sass/elements/_other.scss */
-.instagram-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* line 179, ../sass/elements/_other.scss */
 .bg-video {
   position: absolute;
   width: 100%;
@@ -1747,7 +1734,7 @@ em {
   overflow: hidden;
 }
 
-/* line 188, ../sass/elements/_other.scss */
+/* line 176, ../sass/elements/_other.scss */
 .bgvid {
   position: absolute;
   top: 50%;
@@ -1762,7 +1749,7 @@ em {
   transform: translate(-50%, -50%);
 }
 
-/* line 199, ../sass/elements/_other.scss */
+/* line 187, ../sass/elements/_other.scss */
 .bg-video-overlay {
   position: absolute;
   width: 100%;
@@ -1771,26 +1758,26 @@ em {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* line 207, ../sass/elements/_other.scss */
+/* line 195, ../sass/elements/_other.scss */
 .bg-video + div {
   position: relative;
   z-index: 5;
 }
 
-/* line 212, ../sass/elements/_other.scss */
+/* line 200, ../sass/elements/_other.scss */
 .acf-map {
   width: 100%;
   height: 400px;
   border: #ccc solid 1px;
 }
 @media (min-width: 700px) {
-  /* line 212, ../sass/elements/_other.scss */
+  /* line 200, ../sass/elements/_other.scss */
   .acf-map {
     margin-top: -40px;
   }
 }
 
-/* line 221, ../sass/elements/_other.scss */
+/* line 209, ../sass/elements/_other.scss */
 .locations-list {
   display: -webkit-box;
   display: -moz-box;
@@ -1806,12 +1793,12 @@ em {
   align-items: stretch;
 }
 @media (min-width: 700px) {
-  /* line 221, ../sass/elements/_other.scss */
+  /* line 209, ../sass/elements/_other.scss */
   .locations-list {
     padding-top: 20px;
   }
 }
-/* line 228, ../sass/elements/_other.scss */
+/* line 216, ../sass/elements/_other.scss */
 .locations-list .location-item {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -1820,30 +1807,30 @@ em {
   flex: 0 1 auto;
 }
 @media (min-width: 700px) {
-  /* line 228, ../sass/elements/_other.scss */
+  /* line 216, ../sass/elements/_other.scss */
   .locations-list .location-item {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 228, ../sass/elements/_other.scss */
+  /* line 216, ../sass/elements/_other.scss */
   .locations-list .location-item {
     width: 33.33333%;
   }
 }
 
-/* line 239, ../sass/elements/_other.scss */
+/* line 227, ../sass/elements/_other.scss */
 .location-item {
   width: 100%;
   padding: 20px 0;
 }
 @media (min-width: 700px) {
-  /* line 239, ../sass/elements/_other.scss */
+  /* line 227, ../sass/elements/_other.scss */
   .location-item {
     padding: 20px;
   }
 }
-/* line 245, ../sass/elements/_other.scss */
+/* line 233, ../sass/elements/_other.scss */
 .location-item .company-logo {
   width: 50px;
   min-width: 50px;
@@ -1851,7 +1838,7 @@ em {
   border-radius: 50%;
 }
 
-/* line 253, ../sass/elements/_other.scss */
+/* line 241, ../sass/elements/_other.scss */
 .location-item-title-row {
   display: -webkit-box;
   display: -moz-box;
@@ -1867,7 +1854,7 @@ em {
   align-items: center;
   padding-bottom: 10px;
 }
-/* line 258, ../sass/elements/_other.scss */
+/* line 246, ../sass/elements/_other.scss */
 .location-item-title-row div {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -1876,13 +1863,13 @@ em {
   flex: 0 1 auto;
 }
 
-/* line 263, ../sass/elements/_other.scss */
+/* line 251, ../sass/elements/_other.scss */
 h4.location-item-title {
   font-size: 18px;
   padding: 0 0 0 20px;
 }
 
-/* line 268, ../sass/elements/_other.scss */
+/* line 256, ../sass/elements/_other.scss */
 .location-item-table-row {
   display: -webkit-box;
   display: -moz-box;
@@ -1897,18 +1884,18 @@ h4.location-item-title {
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 272, ../sass/elements/_other.scss */
+/* line 260, ../sass/elements/_other.scss */
 .location-item-table-row.phone {
   padding-bottom: 10px;
 }
 
-/* line 277, ../sass/elements/_other.scss */
+/* line 265, ../sass/elements/_other.scss */
 .location-item-table-cell {
   font-size: 13px;
   line-height: 1.4;
 }
 @media (min-width: 480px) {
-  /* line 277, ../sass/elements/_other.scss */
+  /* line 265, ../sass/elements/_other.scss */
   .location-item-table-cell {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
@@ -1917,22 +1904,22 @@ h4.location-item-title {
     flex: 0 1 auto;
   }
 }
-/* line 283, ../sass/elements/_other.scss */
+/* line 271, ../sass/elements/_other.scss */
 .location-item-table-cell.label {
   min-width: 70px;
   font-weight: bold;
 }
-/* line 287, ../sass/elements/_other.scss */
+/* line 275, ../sass/elements/_other.scss */
 .location-item-table-cell .address_line_2 {
   padding-bottom: 10px;
 }
 
-/* line 292, ../sass/elements/_other.scss */
+/* line 280, ../sass/elements/_other.scss */
 .location-website {
   word-break: break-all;
 }
 
-/* line 296, ../sass/elements/_other.scss */
+/* line 284, ../sass/elements/_other.scss */
 #scrollTop {
   position: fixed;
   bottom: 10px;
@@ -1950,11 +1937,11 @@ h4.location-item-title {
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
-/* line 309, ../sass/elements/_other.scss */
+/* line 297, ../sass/elements/_other.scss */
 #scrollTop.show {
   opacity: 1;
 }
-/* line 312, ../sass/elements/_other.scss */
+/* line 300, ../sass/elements/_other.scss */
 #scrollTop i {
   font-size: 55px;
   line-height: 50px;
@@ -1964,30 +1951,30 @@ h4.location-item-title {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 318, ../sass/elements/_other.scss */
+/* line 306, ../sass/elements/_other.scss */
 #scrollTop:hover {
   border: solid 3px #E1E1E1;
   background: #E1E1E1;
 }
 
-/* line 325, ../sass/elements/_other.scss */
+/* line 313, ../sass/elements/_other.scss */
 .instagram-img img {
   width: 100%;
   height: auto;
 }
 
-/* line 330, ../sass/elements/_other.scss */
+/* line 318, ../sass/elements/_other.scss */
 .social-grid .position-block .position-block-inner {
   padding: 20px;
 }
 
-/* line 334, ../sass/elements/_other.scss */
+/* line 322, ../sass/elements/_other.scss */
 .social-grid-btn {
   width: 100%;
   font-size: 30px;
 }
 @media (min-width: 700px) {
-  /* line 334, ../sass/elements/_other.scss */
+  /* line 322, ../sass/elements/_other.scss */
   .social-grid-btn {
     width: 50%;
     text-align: left;
@@ -2002,7 +1989,7 @@ h4.location-item-title {
     -ms-flex-align: flex-end;
     align-items: flex-end;
   }
-  /* line 342, ../sass/elements/_other.scss */
+  /* line 330, ../sass/elements/_other.scss */
   .social-grid-btn span {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
@@ -2012,7 +1999,7 @@ h4.location-item-title {
   }
 }
 
-/* line 348, ../sass/elements/_other.scss */
+/* line 336, ../sass/elements/_other.scss */
 .social-grid-mini {
   display: -webkit-box;
   display: -moz-box;
@@ -2027,7 +2014,7 @@ h4.location-item-title {
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 352, ../sass/elements/_other.scss */
+/* line 340, ../sass/elements/_other.scss */
 .social-grid-mini > * {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2037,22 +2024,22 @@ h4.location-item-title {
   border: solid 2px #FFF;
 }
 
-/* line 358, ../sass/elements/_other.scss */
+/* line 346, ../sass/elements/_other.scss */
 a.flex-col.social-grid {
   border: solid 2px #FFF;
   line-height: 5;
 }
 
-/* line 363, ../sass/elements/_other.scss */
+/* line 351, ../sass/elements/_other.scss */
 .instagram-block {
   position: relative;
 }
 
-/* line 368, ../sass/elements/_other.scss */
+/* line 356, ../sass/elements/_other.scss */
 .social-grid.col-inner {
   padding: 10px;
 }
-/* line 370, ../sass/elements/_other.scss */
+/* line 358, ../sass/elements/_other.scss */
 .social-grid.col-inner > * {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2061,11 +2048,11 @@ a.flex-col.social-grid {
   flex: 1 1 auto;
   position: relative;
 }
-/* line 375, ../sass/elements/_other.scss */
+/* line 363, ../sass/elements/_other.scss */
 .social-grid.col-inner.social-grid-mini {
   padding: 0;
 }
-/* line 377, ../sass/elements/_other.scss */
+/* line 365, ../sass/elements/_other.scss */
 .social-grid.col-inner.social-grid-mini > * {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2075,7 +2062,7 @@ a.flex-col.social-grid {
   border: solid 10px #FFF;
   max-height: 50%;
 }
-/* line 383, ../sass/elements/_other.scss */
+/* line 371, ../sass/elements/_other.scss */
 .social-grid .blog-feed-wrapper {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2093,7 +2080,7 @@ a.flex-col.social-grid {
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 387, ../sass/elements/_other.scss */
+/* line 375, ../sass/elements/_other.scss */
 .social-grid .blog-feed-wrapper article {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2101,7 +2088,7 @@ a.flex-col.social-grid {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-/* line 391, ../sass/elements/_other.scss */
+/* line 379, ../sass/elements/_other.scss */
 .social-grid .twitter-feed-wrapper {
   width: 100%;
   display: -webkit-box;
@@ -2111,11 +2098,11 @@ a.flex-col.social-grid {
   display: flex;
   background-color: #231F20;
 }
-/* line 395, ../sass/elements/_other.scss */
+/* line 383, ../sass/elements/_other.scss */
 .social-grid .twitter-feed-wrapper * {
   color: #FFF;
 }
-/* line 398, ../sass/elements/_other.scss */
+/* line 386, ../sass/elements/_other.scss */
 .social-grid .twitter-feed-wrapper .twitter-feed {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2124,7 +2111,7 @@ a.flex-col.social-grid {
   flex: 1 1 auto;
   position: relative;
 }
-/* line 403, ../sass/elements/_other.scss */
+/* line 391, ../sass/elements/_other.scss */
 .social-grid .social-grid-icon.fa {
   position: absolute;
   bottom: 10px;
@@ -2133,7 +2120,7 @@ a.flex-col.social-grid {
   font-size: 40px;
   display: block;
 }
-/* line 410, ../sass/elements/_other.scss */
+/* line 398, ../sass/elements/_other.scss */
 .social-grid .social-grid-icon.fa.fa-instagram {
   color: #FFF;
 }
