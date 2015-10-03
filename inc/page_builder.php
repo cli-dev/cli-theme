@@ -1522,7 +1522,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 70,
+												'width' => 80,
 												'class' => '',
 												'id' => '',
 											),
@@ -1543,7 +1543,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 30,
+												'width' => 20,
 												'class' => '',
 												'id' => '',
 											),
@@ -1558,7 +1558,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 70,
+												'width' => 80,
 												'class' => '',
 												'id' => '',
 											),
@@ -1579,7 +1579,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => '',
+												'width' => 20,
 												'class' => '',
 												'id' => '',
 											),
@@ -1594,7 +1594,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 30,
+												'width' => 80,
 												'class' => '',
 												'id' => '',
 											),
@@ -1615,7 +1615,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => '',
+												'width' => 20,
 												'class' => '',
 												'id' => '',
 											),
@@ -1630,7 +1630,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 70,
+												'width' => 80,
 												'class' => '',
 												'id' => '',
 											),
@@ -1651,7 +1651,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => 30,
+												'width' => 20,
 												'class' => '',
 												'id' => '',
 											),
