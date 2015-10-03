@@ -4,7 +4,6 @@ body.single-post{
     max-width: 900px;
     margin: 0 auto; 
     padding: 0px;
-    background-color: $color5;
     @include breakpoint($md){
       width: 80%;
       margin: 40px auto; 
@@ -101,13 +100,11 @@ body.blog .entry-content.news-feed{
 .post-block-title{
   @include flex(0,1,auto); 
   text-transform: none; 
-  color: $color1;
+  color: #FFF;
 }
 
 .post-block-date{
   @include flex(0,1,auto);  
-  font-family: 'Oswald';
-  font-weight: 700;
 }
 
 .post-block-excerpt{
@@ -156,14 +153,6 @@ body.blog .entry-content.news-feed{
 .post-header{
   padding: 20px;
   background-color: $off-white;
-  h1{
-    text-transform: none;
-    font-weight: 700;  
-  }
-  .entry-date{
-    font-family: 'Oswald';
-    font-weight: 700;
-  }
   @include breakpoint($md){
     padding: 40px;
     @include display-flex;
@@ -253,8 +242,6 @@ body.blog .entry-content.news-feed{
     min-height: 150px;  
   }
   .twitter-feed-wrapper{
-    background: url(../imgs/twitter-bg.jpg) center no-repeat;
-    background-size: cover; 
     padding: 10px; 
     @include breakpoint($xlrg){
       padding: 20px;
