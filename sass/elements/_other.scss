@@ -322,15 +322,26 @@ h4.location-item-title{
 }
 
 
+.instagram-img img{
+  width: 100%;
+  height: auto;
+}
+
 .social-grid .position-block .position-block-inner{
   padding: 20px;  
 }
 
 .social-grid-btn{
   width: 100%;
-  line-height: 5;
+  font-size: 30px;
   @include breakpoint($md){
-    width: 50%;  
+    width: 50%;
+    text-align: left;
+    @include display-flex;
+    @include align-items(flex-end); 
+    span{
+      @include flex(0,1,auto);
+    }
   }
 }
 
@@ -347,4 +358,57 @@ h4.location-item-title{
 a.flex-col.social-grid{
   border: solid 2px #FFF; 
   line-height: 5; 
+}
+
+.instagram-block{
+  position: relative;  
+}
+
+.social-grid{
+  &.col-inner{
+    padding: 10px;  
+    > *{
+      @include flex(1,1,auto); 
+      position: relative;
+    }
+  }
+  &.col-inner.social-grid-mini{
+    padding: 0;
+    > * {
+      @include flex(1,1,auto); 
+      border: solid 10px #FFF; 
+      max-height: 50%;
+    }
+  }
+ .blog-feed-wrapper{
+    @include flex(1,1,auto);  
+    @include display-flex;
+    @include align-items(stretch);
+    article{
+     @include flex(1,1,auto); 
+    }
+  }
+  .twitter-feed-wrapper{
+    width: 100%;  
+    @include display-flex;
+    background-color: $black;
+    *{
+      color: #FFF;  
+    }
+    .twitter-feed{
+      @include flex(1,1,auto); 
+      position: relative;
+    }
+  }
+  .social-grid-icon.fa{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;  
+    font-size: 40px;
+    display: block;
+    &.fa-instagram{
+      color: #FFF;  
+    }
+  }
 }

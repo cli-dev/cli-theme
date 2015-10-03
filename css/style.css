@@ -1971,23 +1971,48 @@ h4.location-item-title {
 }
 
 /* line 325, ../sass/elements/_other.scss */
+.instagram-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 330, ../sass/elements/_other.scss */
 .social-grid .position-block .position-block-inner {
   padding: 20px;
 }
 
-/* line 329, ../sass/elements/_other.scss */
+/* line 334, ../sass/elements/_other.scss */
 .social-grid-btn {
   width: 100%;
-  line-height: 5;
+  font-size: 30px;
 }
 @media (min-width: 700px) {
-  /* line 329, ../sass/elements/_other.scss */
+  /* line 334, ../sass/elements/_other.scss */
   .social-grid-btn {
     width: 50%;
+    text-align: left;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: flex-end;
+    -moz-box-align: flex-end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+  }
+  /* line 342, ../sass/elements/_other.scss */
+  .social-grid-btn span {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
   }
 }
 
-/* line 337, ../sass/elements/_other.scss */
+/* line 348, ../sass/elements/_other.scss */
 .social-grid-mini {
   display: -webkit-box;
   display: -moz-box;
@@ -2002,7 +2027,7 @@ h4.location-item-title {
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 341, ../sass/elements/_other.scss */
+/* line 352, ../sass/elements/_other.scss */
 .social-grid-mini > * {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -2012,10 +2037,105 @@ h4.location-item-title {
   border: solid 2px #FFF;
 }
 
-/* line 347, ../sass/elements/_other.scss */
+/* line 358, ../sass/elements/_other.scss */
 a.flex-col.social-grid {
   border: solid 2px #FFF;
   line-height: 5;
+}
+
+/* line 363, ../sass/elements/_other.scss */
+.instagram-block {
+  position: relative;
+}
+
+/* line 368, ../sass/elements/_other.scss */
+.social-grid.col-inner {
+  padding: 10px;
+}
+/* line 370, ../sass/elements/_other.scss */
+.social-grid.col-inner > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+/* line 375, ../sass/elements/_other.scss */
+.social-grid.col-inner.social-grid-mini {
+  padding: 0;
+}
+/* line 377, ../sass/elements/_other.scss */
+.social-grid.col-inner.social-grid-mini > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border: solid 10px #FFF;
+  max-height: 50%;
+}
+/* line 383, ../sass/elements/_other.scss */
+.social-grid .blog-feed-wrapper {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+/* line 387, ../sass/elements/_other.scss */
+.social-grid .blog-feed-wrapper article {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+/* line 391, ../sass/elements/_other.scss */
+.social-grid .twitter-feed-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #231F20;
+}
+/* line 395, ../sass/elements/_other.scss */
+.social-grid .twitter-feed-wrapper * {
+  color: #FFF;
+}
+/* line 398, ../sass/elements/_other.scss */
+.social-grid .twitter-feed-wrapper .twitter-feed {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+/* line 403, ../sass/elements/_other.scss */
+.social-grid .social-grid-icon.fa {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+  font-size: 40px;
+  display: block;
+}
+/* line 410, ../sass/elements/_other.scss */
+.social-grid .social-grid-icon.fa.fa-instagram {
+  color: #FFF;
 }
 
 /* line 1, ../sass/layout/_grid.scss */
