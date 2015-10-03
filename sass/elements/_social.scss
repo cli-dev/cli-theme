@@ -76,6 +76,7 @@ $social-colors: (facebook, $facebook),
 
 .twitter-feed{
   overflow: hidden;
+  position: relative;
   display: block;
   &:before{
     content: '\f099';
@@ -87,7 +88,7 @@ $social-colors: (facebook, $facebook),
     font-size: 50px;
     @include transform(translateX(-50%));
     z-index: 20;
-    color: $black;
+    color: $twitter;
   }
   .timeline-twitter-feed{
     &.owl-carousel.owl-loaded{
@@ -176,8 +177,7 @@ $social-colors: (facebook, $facebook),
       content: '\f1db';
       font-family: 'FontAwesome';
       display: block;
-      font-size: 15px;
-      color: $color1;    
+      font-size: 15px; 
     }
     &.active:before{
       content: '\f111';  
@@ -207,7 +207,6 @@ $social-colors: (facebook, $facebook),
   }
   .ttf-tweet-full-name{
     display: block;
-    font-family: $secondary-font;
     font-size: 12px;
     padding: 10px;
     @include breakpoint($md){
@@ -219,7 +218,6 @@ $social-colors: (facebook, $facebook),
   }
   .ttf-tweet-text{
     font-weight: 700; 
-    font-family: $secondary-font;
     font-size: 14px;
     @include breakpoint($md){
       font-size: 20px;
