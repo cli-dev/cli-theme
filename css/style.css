@@ -3283,17 +3283,14 @@ body.single-position .page-header-inner {
 /* line 49, ../sass/pages/_position.scss */
 .position-meta-box {
   padding: 20px;
-  background-color: #707070;
-  font-weight: 300;
-  color: #FFF;
 }
-/* line 54, ../sass/pages/_position.scss */
+/* line 51, ../sass/pages/_position.scss */
 .position-meta-box .benefit {
   display: block;
   padding-bottom: 10px;
 }
 
-/* line 60, ../sass/pages/_position.scss */
+/* line 57, ../sass/pages/_position.scss */
 .position-meta-box-inner {
   display: -webkit-box;
   display: -moz-box;
@@ -3303,7 +3300,7 @@ body.single-position .page-header-inner {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
-/* line 63, ../sass/pages/_position.scss */
+/* line 60, ../sass/pages/_position.scss */
 .position-meta-box-inner div {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -3311,29 +3308,26 @@ body.single-position .page-header-inner {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-/* line 65, ../sass/pages/_position.scss */
+/* line 62, ../sass/pages/_position.scss */
 .position-meta-box-inner div:first-child {
   max-width: 105px;
 }
 @media (min-width: 700px) {
-  /* line 65, ../sass/pages/_position.scss */
+  /* line 62, ../sass/pages/_position.scss */
   .position-meta-box-inner div:first-child {
     max-width: 130px;
   }
 }
-/* line 71, ../sass/pages/_position.scss */
+/* line 68, ../sass/pages/_position.scss */
 .position-meta-box-inner div h4 {
   padding-bottom: 0;
   line-height: 0.8;
 }
 
-/* line 78, ../sass/pages/_position.scss */
+/* line 75, ../sass/pages/_position.scss */
 .position-btn {
   line-height: 35px;
   text-align: center;
-  color: #FFF;
-  font-weight: 700;
-  text-transform: uppercase;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3357,7 +3351,7 @@ body.single-position .page-header-inner {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-/* line 88, ../sass/pages/_position.scss */
+/* line 82, ../sass/pages/_position.scss */
 .position-btn span {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -3366,33 +3360,23 @@ body.single-position .page-header-inner {
   flex: 0 1 auto;
 }
 
-/* line 93, ../sass/pages/_position.scss */
-.back-to-careers:hover {
-  background-color: #707070 !important;
-}
-
-/* line 97, ../sass/pages/_position.scss */
-.show-apply-form:hover {
-  background-color: #707070 !important;
-}
-
-/* line 101, ../sass/pages/_position.scss */
+/* line 87, ../sass/pages/_position.scss */
 .position-form {
   display: none;
   padding: 20px 0;
 }
-/* line 104, ../sass/pages/_position.scss */
+/* line 90, ../sass/pages/_position.scss */
 .position-form h3 {
   padding-bottom: 20px;
 }
 @media (min-width: 700px) {
-  /* line 101, ../sass/pages/_position.scss */
+  /* line 87, ../sass/pages/_position.scss */
   .position-form {
     padding: 40px;
   }
 }
 
-/* line 112, ../sass/pages/_position.scss */
+/* line 98, ../sass/pages/_position.scss */
 .position-block {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -3413,10 +3397,9 @@ body.single-position .page-header-inner {
   flex-wrap: wrap;
 }
 
-/* line 118, ../sass/pages/_position.scss */
+/* line 104, ../sass/pages/_position.scss */
 .position-block-inner {
   width: 100%;
-  border-left: solid 5px #FFF200;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -3443,11 +3426,11 @@ body.single-position .page-header-inner {
   flex-direction: column;
   padding: 20px;
 }
-/* line 127, ../sass/pages/_position.scss */
+/* line 112, ../sass/pages/_position.scss */
 .position-block-inner p, .position-block-inner ul li, ul .position-block-inner li, .position-block-inner ol li, ol .position-block-inner li, .position-block-inner .ttf-tweet {
   color: #FFF;
 }
-/* line 130, ../sass/pages/_position.scss */
+/* line 115, ../sass/pages/_position.scss */
 .position-block-inner a {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -3458,11 +3441,11 @@ body.single-position .page-header-inner {
   -ms-flex-item-align: center;
   align-self: center;
 }
-/* line 133, ../sass/pages/_position.scss */
+/* line 118, ../sass/pages/_position.scss */
 .position-block-inner a p, .position-block-inner a ul li, ul .position-block-inner a li, .position-block-inner a ol li, ol .position-block-inner a li, .position-block-inner a .ttf-tweet, .position-block-inner a h3 {
   color: #FFF;
 }
-/* line 137, ../sass/pages/_position.scss */
+/* line 122, ../sass/pages/_position.scss */
 .position-block-inner h3 {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -3474,12 +3457,12 @@ body.single-position .page-header-inner {
   font-weight: 700;
   color: #FFF;
 }
-/* line 144, ../sass/pages/_position.scss */
+/* line 129, ../sass/pages/_position.scss */
 .position-block-inner h2 {
   color: #FFF;
 }
 
-/* line 148, ../sass/pages/_position.scss */
+/* line 133, ../sass/pages/_position.scss */
 .job-description {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -3488,31 +3471,31 @@ body.single-position .page-header-inner {
   flex: 1 1 auto;
 }
 @media (min-width: 700px) {
-  /* line 151, ../sass/pages/_position.scss */
+  /* line 136, ../sass/pages/_position.scss */
   .job-description p, .job-description ul li, ul .job-description li, .job-description ol li, ol .job-description li, .job-description .ttf-tweet {
     font-size: 16px;
   }
 }
 
-/* line 157, ../sass/pages/_position.scss */
+/* line 142, ../sass/pages/_position.scss */
 .position-form {
   border-top: solid 1px #E1E1E1;
   max-width: 1050px;
   margin: 0 auto;
 }
 @media (min-width: 700px) {
-  /* line 157, ../sass/pages/_position.scss */
+  /* line 142, ../sass/pages/_position.scss */
   .position-form {
     width: 80%;
   }
 }
-/* line 164, ../sass/pages/_position.scss */
+/* line 149, ../sass/pages/_position.scss */
 .position-form h3 {
   text-align: center;
 }
 
 @media (min-width: 700px) {
-  /* line 169, ../sass/pages/_position.scss */
+  /* line 154, ../sass/pages/_position.scss */
   .positions {
     display: -webkit-box;
     display: -moz-box;
@@ -3529,7 +3512,7 @@ body.single-position .page-header-inner {
     margin: -5px;
   }
 }
-/* line 176, ../sass/pages/_position.scss */
+/* line 161, ../sass/pages/_position.scss */
 .positions .position-block {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -3538,7 +3521,7 @@ body.single-position .page-header-inner {
   flex: 0 1 auto;
   padding: 5px;
 }
-/* line 179, ../sass/pages/_position.scss */
+/* line 164, ../sass/pages/_position.scss */
 .positions .position-block:first-child .position-block-inner {
   -webkit-box-pack: center;
   -moz-box-pack: center;
@@ -3548,7 +3531,7 @@ body.single-position .page-header-inner {
   text-align: center;
 }
 @media (min-width: 700px) {
-  /* line 176, ../sass/pages/_position.scss */
+  /* line 161, ../sass/pages/_position.scss */
   .positions .position-block {
     width: 50%;
   }

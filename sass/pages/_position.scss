@@ -47,10 +47,7 @@ body.single-position{
 }
 
 .position-meta-box{
-  padding: 20px;  
-  background-color: $gray;
-  font-weight: 300;
-  color: #FFF;
+  padding: 20px;
   .benefit{
     display: block;  
     padding-bottom: 10px;
@@ -78,9 +75,6 @@ body.single-position{
 .position-btn{
   line-height: 35px;
   text-align: center;
-  color: #FFF;
-  font-weight: 700;
-  text-transform: uppercase;
   @include display-flex;
   @include align-items(center);
   @include justify-content(center);
@@ -88,14 +82,6 @@ body.single-position{
   span{
     @include flex(0,1,auto);
   }
-}
-
-.back-to-careers:hover{
-  background-color: $gray !important;  
-}
-
-.show-apply-form:hover{
-  background-color: $gray !important;  
 }
 
 .position-form{
@@ -117,7 +103,6 @@ body.single-position{
 }
 .position-block-inner{
   width: 100%;
-  border-left: solid 5px $color1;
   @include flex(1,1,auto);
   @include display-flex;
   @include align-items(stretch);
