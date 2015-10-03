@@ -256,7 +256,7 @@ $social-colors: (facebook, $facebook),
   padding: 20px;
   @include display-flex;
   @include flex-direction(column);
-  @include justify-content(space-around);
+  @include justify-content(center);
   @include align-items(stretch);
   div{
     @include flex(0,1,auto);
