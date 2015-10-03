@@ -7,6 +7,9 @@
   @include transform(translateX(-50%));
   &.header-in-grid{
     max-width: $grid-width;
+    @include breakpoint($md){
+      width: 80%;
+    }
   }
 }
 
@@ -17,7 +20,6 @@
   max-width: $grid-width;
   position: relative;  
   @include breakpoint($mdl){
-    width: 80%;
     padding: 0 40px;
     @include display-flex;
     @include align-items(stretch);
