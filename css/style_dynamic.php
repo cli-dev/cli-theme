@@ -21,7 +21,7 @@ $text_highlight_color = get_field('text_highlight_color', 'option');
 $header_color = get_field('header_color', 'option');
 $header_background_opacity = get_field('header_background_opacity', 'option');
 $desktop_header_height = get_field('desktop_header_height', 'option');
-$mobile_header_height = get_field('mobile_header_height', 'option');
+$mobile_header_height = get_field('mobile_header_height', 'options');
 $header_bg_rgb = hex2rgb($header_color);
 $menu_link_color = get_field('menu_link_color', 'option');
 $menu_font_size = get_field('menu_font_size', 'option');
@@ -82,11 +82,11 @@ $desktop_css = get_field('desktop_css', 'option');
 
 <?php if($header_color) { echo '#header, #header .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
 
-<?php if($mobile_header_height) { echo '.header-inner{ height: ' . $mobile_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $mobile_header_height . 'px;} '; }?>
+<?php if($mobile_header_height) { echo '.header-inner > nav{ height: ' . $mobile_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $mobile_header_height . 'px;} '; }?>
 
 @media screen and (min-width: 1000px){
   <?php if($header_color) { echo '#header .menu-container{ background-color: transparent; } #header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
-  <?php if($desktop_header_height) { echo '.header-inner{ height: ' . $desktop_header_height . 'px;} #header .menu-container a{ line-height: ' . $desktop_header_height . 'px; } .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
+  <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} #header .menu-container a{ line-height: ' . $desktop_header_height . 'px; } .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
 }
 
 .menu-container a{

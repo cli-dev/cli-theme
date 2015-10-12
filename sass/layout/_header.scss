@@ -13,7 +13,7 @@
   }
 }
 
-.header-inner{
+.header-inner > nav{
   padding: 10px;
   margin: 0 auto;
   width: 100%;
@@ -28,8 +28,26 @@
   }
 }
 
+#mobile-nav{
+  width: 100%;
+  @include display-flex;
+  @include flex-direction(column);
+  @include breakpoint($mdl){
+    display: none;
+  }
+}
+
+
+.desktop-menu{
+  display: none;
+  @include breakpoint($mdl){
+    @include display-flex;
+  }
+}
+
 .site-logo{
   width: 100%;
+  @include flex(1,1,auto);
   @include display-flex;
   @include flex-direction(column);
   @include justify-content(center);
@@ -66,9 +84,9 @@ img.site-main-logo{
       margin-right: 100px;
       ul.menu{
         @include transform(translateX(100%));
-        &.active{
-          @include transform(translateX(0));
-        }
+      }
+      &.active ul.menu{
+        @include transform(translateX(0));
       }
     }
   }
