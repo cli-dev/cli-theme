@@ -31,7 +31,7 @@
 #mobile-nav{
   width: 100%;
   @include display-flex;
-  @include flex-direction(column);
+  @include justify-content(center);
   position: relative; 
   @include breakpoint($mdl){
     display: none;
@@ -44,7 +44,12 @@
   top: 100%;
   width: 100%;
   z-index: 999;
-  left: 0;
+  left: 50%;
+  @include transform(translateX(-50%));
+  @include breakpoint($md){
+    width: 80%;
+    padding: 20px;
+  }
 }
 
 
