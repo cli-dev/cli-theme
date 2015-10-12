@@ -124,6 +124,7 @@ $button-color: #FFF;
   }
   li{
     padding: 0;
+    position: relative; 
     @include breakpoint($mdl){
       @include flex(0,1,auto); 
       padding: 0 15px;

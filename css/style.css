@@ -964,6 +964,7 @@ em {
 /* line 125, ../sass/elements/_nav.scss */
 .header-inner ul.menu li {
   padding: 0;
+  position: relative;
 }
 @media (min-width: 900px) {
   /* line 125, ../sass/elements/_nav.scss */
@@ -993,7 +994,7 @@ em {
     flex-direction: column;
   }
 }
-/* line 135, ../sass/elements/_nav.scss */
+/* line 136, ../sass/elements/_nav.scss */
 .header-inner ul.menu a {
   text-transform: uppercase;
   display: block;
@@ -1027,12 +1028,12 @@ em {
   flex-direction: column;
 }
 @media (min-width: 900px) {
-  /* line 135, ../sass/elements/_nav.scss */
+  /* line 136, ../sass/elements/_nav.scss */
   .header-inner ul.menu a {
     font-size: 16px;
   }
 }
-/* line 147, ../sass/elements/_nav.scss */
+/* line 148, ../sass/elements/_nav.scss */
 .header-inner ul.menu a .link-text {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -1040,7 +1041,7 @@ em {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-/* line 151, ../sass/elements/_nav.scss */
+/* line 152, ../sass/elements/_nav.scss */
 .header-inner ul.menu ul {
   margin: 0;
   list-style: none;
