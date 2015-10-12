@@ -89,16 +89,12 @@ $desktop_css = get_field('desktop_css', 'option');
   <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
 }
 
-.menu-container a{
+#header .menu a{
   <?php if ($menu_link_color) { echo 'color: ' . $menu_link_color . '; '; }?>
   <?php if ($menu_font_family) { echo 'font-family: "' . $menu_font_family_label  . '"; '; }?>
 }
 
-.menu-container .current-menu-item a, .menu-container a:hover{
-  <?php if ($menu_link_active_color) { echo 'color: ' . $menu_link_active_color . '; '; }?>
-}
-
-.menu-container .current-menu-item a, .menu-container a:hover{
+#header .menu .current-menu-item a, #header .menu a:hover{
   <?php if ($menu_link_active_color) { echo 'color: ' . $menu_link_active_color . '; '; }?>
 }
 
