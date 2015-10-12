@@ -9,9 +9,12 @@
     margin: 0 auto;
     max-width: $grid-width;
     @include display-flex;
-    @include flex-wrap(nowrap);
+    @include flex-wrap(wrap);
     @include justify-content(center);
     @include align-items(stretch);  
+  }
+  @include breakpoint($mdl){
+    @include flex-wrap(nowrap);
   }
 }
 
