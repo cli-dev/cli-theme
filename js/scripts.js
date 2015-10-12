@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   
 
-  $('#header .menu-mobile-container').hide();
+  $('.menu-mobile-container').hide();
  
   
   if($(window).width() >= 700){

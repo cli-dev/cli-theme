@@ -30,11 +30,9 @@
 
 #mobile-nav{
   width: 100%;
+  display: none;
   @include display-flex;
   @include flex-direction(column);
-  @include breakpoint($mdl){
-    display: none;
-  }
 }
 
 
