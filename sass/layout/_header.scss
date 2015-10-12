@@ -73,10 +73,12 @@ img.site-main-logo{
   top: 100%;
   left: 0;
   @include breakpoint($mdl){
-    @include flex(0,1,auto); 
+    @include flex(0,1,auto);
+    @include display-flex;
+    @include align-items(stretch);
+    @include flex-direction(column); 
     overflow: hidden;
-    width: auto;  
-    display: block;
+    width: auto; 
     position: relative;
     top: auto;
     left: auto;

@@ -19,5 +19,5 @@
 			</button>
 			<span class="menu-button-txt">Menu</span>
 	  </div>
-	  <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container_class' => $hide_menu,) ); ?>
+	  <?php wp_nav_menu( array( 'theme_location' => 'right-menu', 'container_class' => $hide_menu, 'link_before' => '<span class="link-text">', 'link_after' => '</span>') ); ?>
   </nav>

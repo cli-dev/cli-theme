@@ -86,7 +86,7 @@ $desktop_css = get_field('desktop_css', 'option');
 
 @media screen and (min-width: 1000px){
   <?php if($header_color) { echo '#header .menu-container{ background-color: transparent; } #header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
-  <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} #header .menu-container a{ line-height: ' . $desktop_header_height . 'px; } .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
+  <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
 }
 
 .menu-container a{
