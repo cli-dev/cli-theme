@@ -32,6 +32,7 @@
   width: 100%;
   @include display-flex;
   @include flex-direction(column);
+  position: relative; 
   @include breakpoint($mdl){
     display: none;
   }
@@ -39,6 +40,11 @@
 
 .menu-mobile-container{
   display: none;
+  position: absolute; 
+  top: 100%;
+  width: 100%;
+  z-index: 999;
+  left: 0;
 }
 
 
