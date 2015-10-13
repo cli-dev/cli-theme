@@ -133,7 +133,6 @@ $button-color: #FFF;
     }
   }
   a{
-    text-transform: uppercase;
     display: block;
     padding: 0 5px;
     @include flex(1,1,auto); 
@@ -141,9 +140,6 @@ $button-color: #FFF;
     @include justify-content(center);
     @include align-items(stretch);
     @include flex-direction(column);
-    @include breakpoint($mdl){
-      font-size: 16px;
-    }
     .link-text{
       @include flex(0,1,auto);
     }
