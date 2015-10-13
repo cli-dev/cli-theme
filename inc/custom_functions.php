@@ -4,12 +4,13 @@ define( 'ACFGFS_API_KEY', 'AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U' );
 
 define('CLI_ROOT', get_template_directory_uri());
 
-add_filter('stylesheet_uri','wpi_stylesheet_uri',10,2);
+function main_stylesheet() {
 
-function wpi_stylesheet_uri($stylesheet_uri, $stylesheet_dir_uri){
+  wp_register_style( 'main', CLI_ROOT . '/css/style.css', false, false, 'all' );
+  wp_enqueue_style( 'main' );
 
-    return $stylesheet_dir_uri.'/css/style.css';
 }
+add_action( 'wp_enqueue_scripts', 'main_stylesheet' );
 
 if(!function_exists('cli_is_css_folder_writable')) {
 	/**
