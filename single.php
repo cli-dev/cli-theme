@@ -1,9 +1,10 @@
 <?php get_header(); 
+$page_for_posts = get_option( 'page_for_posts' );
 
 $thumb_id = get_post_thumbnail_id();
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
 $thumb_url = $thumb_url_array[0];
-$placeholder_img = get_field('background_image', 10);
+$placeholder_img = get_field('background_image', $page_for_posts);
 ?>
 <section id="content" role="main">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
