@@ -1860,7 +1860,7 @@ acf_add_local_field_group(array (
 									array (
 										'field' => 'field_55d50f8dc94ca',
 										'operator' => '==',
-										'value' => 'row',
+										'value' => 'column',
 									),
 								),
 							),
@@ -1896,7 +1896,7 @@ acf_add_local_field_group(array (
 									array (
 										'field' => 'field_55d50f8dc94ca',
 										'operator' => '==',
-										'value' => 'column',
+										'value' => 'row',
 									),
 								),
 							),
