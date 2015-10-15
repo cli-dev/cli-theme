@@ -1,6 +1,4 @@
-<?php
-
-if( function_exists('acf_add_local_field_group') ):
+<?php if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_55d4b6edb7b18',
@@ -776,7 +774,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => '',
+												'width' => 20,
 												'class' => 'field_type-number field_key-field_55e5dcceb475d',
 												'id' => '',
 											),
@@ -799,7 +797,7 @@ acf_add_local_field_group(array (
 											'required' => 0,
 											'conditional_logic' => 0,
 											'wrapper' => array (
-												'width' => '',
+												'width' => 20,
 												'class' => '',
 												'id' => '',
 											),
@@ -812,6 +810,54 @@ acf_add_local_field_group(array (
 											'step' => '',
 											'readonly' => 0,
 											'disabled' => 0,
+										),
+										array (
+											'key' => 'field_561fe7208d243',
+											'label' => 'Post Layout',
+											'name' => 'post_layout',
+											'type' => 'select',
+											'instructions' => '',
+											'required' => 0,
+											'conditional_logic' => 0,
+											'wrapper' => array (
+												'width' => 20,
+												'class' => '',
+												'id' => '',
+											),
+											'choices' => array (
+												1 => 1,
+											),
+											'default_value' => array (
+											),
+											'allow_null' => 0,
+											'multiple' => 0,
+											'ui' => 0,
+											'ajax' => 0,
+											'placeholder' => '',
+											'disabled' => 0,
+											'readonly' => 0,
+										),
+										array (
+											'key' => 'field_561fe5418d242',
+											'label' => 'Blog Category',
+											'name' => 'blog_category',
+											'type' => 'taxonomy',
+											'instructions' => '',
+											'required' => 0,
+											'conditional_logic' => 0,
+											'wrapper' => array (
+												'width' => 40,
+												'class' => '',
+												'id' => '',
+											),
+											'taxonomy' => 'category',
+											'field_type' => 'select',
+											'allow_null' => 1,
+											'add_term' => 0,
+											'save_terms' => 0,
+											'load_terms' => 1,
+											'return_format' => 'id',
+											'multiple' => 0,
 										),
 										array (
 											'key' => 'field_55fc743e82576',
@@ -1656,6 +1702,34 @@ acf_add_local_field_group(array (
 												'id' => '',
 											),
 											'default_value' => '',
+										),
+									),
+									'min' => '',
+									'max' => '',
+								),
+								array (
+									'key' => '561fe89ca1e4b',
+									'name' => 'raw_html',
+									'label' => 'Raw HTML',
+									'display' => 'block',
+									'sub_fields' => array (
+										array (
+											'key' => 'field_561fe8aca1e4c',
+											'label' => 'Raw HTML',
+											'name' => 'raw_html',
+											'type' => 'wysiwyg',
+											'instructions' => '',
+											'required' => 0,
+											'conditional_logic' => 0,
+											'wrapper' => array (
+												'width' => '',
+												'class' => '',
+												'id' => '',
+											),
+											'default_value' => '',
+											'tabs' => 'text',
+											'toolbar' => 'basic',
+											'media_upload' => 0,
 										),
 									),
 									'min' => '',

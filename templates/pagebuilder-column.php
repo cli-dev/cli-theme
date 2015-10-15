@@ -111,6 +111,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'quote_block' ) { 
           get_template_part('templates/rowlayout', 'quoteblock');
         }
+        else if ( get_row_layout() == 'raw_html' ) { 
+          get_template_part('templates/rowlayout', 'html');
+        }
       ?>
    <?php endwhile; endif; ?>
   <?php echo $end_inner_column ; ?>

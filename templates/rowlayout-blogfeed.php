@@ -7,12 +7,14 @@ $item_id = (is_blog()) ? $page_for_posts : $postid;
 $blog_posts = get_sub_field('blog_posts', $item_id);
 $post_offset = get_sub_field('post_offset', $item_id);
 $custom_class = get_sub_field('custom_class', $item_id);
+$blog_category = get_sub_field('blog_category', $item_id);
+$post_layout = get_sub_field('post_layout', $item_id);
  ?>
         
-<?php $args = array ('posts_per_page' => $blog_posts, 'offset' => $post_offset,); $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
+<?php $args = array ('posts_per_page' => $blog_posts, 'offset' => $post_offset, 'cat' => $blog_category); $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
   <div class="blog-feed-wrapper <?php echo $custom_class; ?>">
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-    <?php get_template_part('templates/post-block-small'); ?>
+    <?php get_template_part('templates/post-layouts/post-layout-' . $post_layout); ?>
   <?php endwhile; ?>
   </div>
 <?php endif; ?>
