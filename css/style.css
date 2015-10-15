@@ -2600,8 +2600,6 @@ a.flex-col.social-grid {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 @media (min-width: 700px) {
   /* line 88, ../sass/layout/_grid.scss */
@@ -2615,7 +2613,7 @@ a.flex-col.social-grid {
     padding: 40px;
   }
 }
-/* line 102, ../sass/layout/_grid.scss */
+/* line 101, ../sass/layout/_grid.scss */
 .col-inner > * {
   /*min-height: 2px;*/
   -webkit-box-flex: 0;
@@ -2625,151 +2623,151 @@ a.flex-col.social-grid {
   flex: 0 1 auto;
 }
 
-/* line 108, ../sass/layout/_grid.scss */
+/* line 107, ../sass/layout/_grid.scss */
 .col-12 {
   width: 100%;
 }
 
-/* line 112, ../sass/layout/_grid.scss */
+/* line 111, ../sass/layout/_grid.scss */
 .col-11 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 112, ../sass/layout/_grid.scss */
+  /* line 111, ../sass/layout/_grid.scss */
   .col-11 {
     width: 91.66667%;
   }
 }
 
-/* line 119, ../sass/layout/_grid.scss */
+/* line 118, ../sass/layout/_grid.scss */
 .col-10 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 119, ../sass/layout/_grid.scss */
+  /* line 118, ../sass/layout/_grid.scss */
   .col-10 {
     width: 83.33333%;
   }
 }
 
-/* line 125, ../sass/layout/_grid.scss */
+/* line 124, ../sass/layout/_grid.scss */
 .col-9 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 125, ../sass/layout/_grid.scss */
+  /* line 124, ../sass/layout/_grid.scss */
   .col-9 {
     width: 75%;
   }
 }
 
-/* line 131, ../sass/layout/_grid.scss */
+/* line 130, ../sass/layout/_grid.scss */
 .col-8 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 131, ../sass/layout/_grid.scss */
+  /* line 130, ../sass/layout/_grid.scss */
   .col-8 {
     width: 66.66667%;
   }
 }
 
-/* line 137, ../sass/layout/_grid.scss */
+/* line 136, ../sass/layout/_grid.scss */
 .col-7 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 137, ../sass/layout/_grid.scss */
+  /* line 136, ../sass/layout/_grid.scss */
   .col-7 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 137, ../sass/layout/_grid.scss */
+  /* line 136, ../sass/layout/_grid.scss */
   .col-7 {
     width: 58.33333%;
   }
 }
 
-/* line 146, ../sass/layout/_grid.scss */
+/* line 145, ../sass/layout/_grid.scss */
 .col-6 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 146, ../sass/layout/_grid.scss */
+  /* line 145, ../sass/layout/_grid.scss */
   .col-6 {
     width: 50%;
   }
 }
 
-/* line 152, ../sass/layout/_grid.scss */
+/* line 151, ../sass/layout/_grid.scss */
 .col-5 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 152, ../sass/layout/_grid.scss */
+  /* line 151, ../sass/layout/_grid.scss */
   .col-5 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 152, ../sass/layout/_grid.scss */
+  /* line 151, ../sass/layout/_grid.scss */
   .col-5 {
     width: 41.66667%;
   }
 }
 
-/* line 161, ../sass/layout/_grid.scss */
+/* line 160, ../sass/layout/_grid.scss */
 .col-4 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 161, ../sass/layout/_grid.scss */
+  /* line 160, ../sass/layout/_grid.scss */
   .col-4 {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  /* line 161, ../sass/layout/_grid.scss */
+  /* line 160, ../sass/layout/_grid.scss */
   .col-4 {
     width: 33.33333%;
   }
 }
 
-/* line 170, ../sass/layout/_grid.scss */
+/* line 169, ../sass/layout/_grid.scss */
 .col-3 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 170, ../sass/layout/_grid.scss */
+  /* line 169, ../sass/layout/_grid.scss */
   .col-3 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 170, ../sass/layout/_grid.scss */
+  /* line 169, ../sass/layout/_grid.scss */
   .col-3 {
     width: 25%;
   }
 }
 
-/* line 179, ../sass/layout/_grid.scss */
+/* line 178, ../sass/layout/_grid.scss */
 .col-2 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 179, ../sass/layout/_grid.scss */
+  /* line 178, ../sass/layout/_grid.scss */
   .col-2 {
     width: 16.66667%;
   }
 }
 
-/* line 185, ../sass/layout/_grid.scss */
+/* line 184, ../sass/layout/_grid.scss */
 .col-1 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 185, ../sass/layout/_grid.scss */
+  /* line 184, ../sass/layout/_grid.scss */
   .col-1 {
     width: 8.33333%;
   }

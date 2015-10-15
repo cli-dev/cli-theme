@@ -92,7 +92,6 @@
   position: relative;
   -ms-flex-preferred-size: auto;
   @include display-flex;
-  @include flex-wrap(wrap);
   @include breakpoint($md){
     padding: 20px;
   }
