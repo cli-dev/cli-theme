@@ -1,4 +1,5 @@
-<?php if( function_exists('acf_add_local_field_group') ):
+<?php
+if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_55d4b6edb7b18',
@@ -851,7 +852,7 @@ acf_add_local_field_group(array (
 												'id' => '',
 											),
 											'taxonomy' => 'category',
-											'field_type' => 'select',
+											'field_type' => 'radio',
 											'allow_null' => 1,
 											'add_term' => 0,
 											'save_terms' => 0,
