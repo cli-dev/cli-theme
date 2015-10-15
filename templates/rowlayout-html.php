@@ -5,6 +5,6 @@ $postid = get_the_ID();
 
 $item_id = (is_blog()) ? $page_for_posts : $postid;
 
-the_sub_field('raw_htmlt', $item_id);
+the_sub_field('raw_html', $item_id);
 
 ?>
