@@ -230,6 +230,16 @@ function displaySocialProfiles($icon_type, $extra_class) {
   $flickr = get_field('flickr', 'options');
   $newswire = get_field('newswire', 'options');
   $instagram = get_field('instagram', 'options');
+
+  $facebookCode = '';
+  $twitterCode = '';
+  $googleCode = '';
+  $linkedinCode = '';
+  $tumblrCode = '';
+  $pinterestCode = '';
+  $flickrCode = '';
+  $newswireCode = '';
+  $instagramCode = '';
   
   if($facebook){
     if($type_of_icon === 'icon1'){
