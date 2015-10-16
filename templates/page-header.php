@@ -2,17 +2,12 @@
 
   $page_for_posts = get_option( 'page_for_posts' );  
   $postid = get_the_ID();
-  $careers_page = get_id_by_slug( 'careers' );
   
   if(is_blog()){
     
     $item_id = $page_for_posts;
   }
-  else if( is_singular( 'position' ) ){
-    
-    $item_id = $careers_page;
-
-  }else{
+  else{
     
     $item_id = $postid;
 

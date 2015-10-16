@@ -1,6 +1,4 @@
-<?php
-
-if( function_exists('acf_add_local_field_group') ):
+<?php if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_55d4f27d86090',
@@ -20,9 +18,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Background Image' => 'Background Image',
-				'Background Video' => 'Background Video',
-				'Slider' => 'Slider',
+				'bg-img' => 'Background Image',
+				'bg-vid' => 'Background Video',
+				'slider' => 'Slider',
 			),
 			'default_value' => array (
 			),
@@ -215,7 +213,15 @@ acf_add_local_field_group(array (
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '!=',
+						'value' => 'Slider',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => 33,
 				'class' => '',
@@ -243,7 +249,15 @@ acf_add_local_field_group(array (
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '!=',
+						'value' => 'Slider',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => 33,
 				'class' => '',
@@ -274,7 +288,15 @@ acf_add_local_field_group(array (
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '!=',
+						'value' => 'Slider',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => 33,
 				'class' => '',
@@ -307,7 +329,15 @@ acf_add_local_field_group(array (
 			'type' => 'flexible_content',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '!=',
+						'value' => 'Slider',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => '',
 				'class' => '',
@@ -403,6 +433,11 @@ acf_add_local_field_group(array (
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'page',
+			),
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'position',
 			),
 		),
 	),
