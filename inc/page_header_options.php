@@ -44,7 +44,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Background Video',
+						'value' => 'bg-vid',
 					),
 				),
 			),
@@ -71,7 +71,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Background Video',
+						'value' => 'bg-vid',
 					),
 				),
 			),
@@ -98,7 +98,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Background Video',
+						'value' => 'bg-vid',
 					),
 				),
 			),
@@ -125,7 +125,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Background Video',
+						'value' => 'bg-vid',
 					),
 				),
 			),
@@ -157,7 +157,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Slider',
+						'value' => 'slider',
 					),
 				),
 			),
@@ -186,7 +186,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '==',
-						'value' => 'Background Image',
+						'value' => 'bg-img',
 					),
 				),
 			),
@@ -218,7 +218,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'Slider',
+						'value' => 'slider',
 					),
 				),
 			),
@@ -254,7 +254,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'Slider',
+						'value' => 'slider',
 					),
 				),
 			),
@@ -293,7 +293,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'Slider',
+						'value' => 'slider',
 					),
 				),
 			),
@@ -334,7 +334,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'Slider',
+						'value' => 'slider',
 					),
 				),
 			),
