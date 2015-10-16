@@ -26,12 +26,12 @@
   $background_image = get_field('background_image', $item_id);
   $slider_shortcode = get_field('slider_shortcode', $item_id);
 
-  if($header_type === 'Background Image'){echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
+  if($header_type === 'bg-img'){echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
   
   $detect = new Mobile_Detect;
 ?>>
-  <?php if($header_type === 'Slider'){ echo do_shortcode($slider_shortcode); } else {
-    if(!$detect->isMobile() && $header_type === 'Background Video') { ?>
+  <?php if($header_type === 'slider'){ echo do_shortcode($slider_shortcode); } else {
+    if(!$detect->isMobile() && $header_type === 'bg-vid') { ?>
       <div class="header-bg-video bg-video">
         <video autoplay loop poster="<?php echo $video_placeholder_image; ?>" class="bgvid">
           <source src="<?php echo $video_webm; ?>" type="video/webm">
@@ -40,7 +40,7 @@
         </video>
         <div class="bg-video-overlay"></div>
       </div>
-    <?php } else if($detect->isMobile() && $header_type === 'Background Video'){?>
+    <?php } else if($detect->isMobile() && $header_type === 'bg-vid'){?>
       <div class="header-bg-video bg-video" style="background: url('<?php echo $video_placeholder_image; ?>') center no-repeat; background-size: cover;">
         <div class="bg-video-overlay"></div>
       </div>
