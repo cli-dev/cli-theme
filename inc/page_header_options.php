@@ -434,6 +434,8 @@ acf_add_local_field_group(array (
 				'operator' => '==',
 				'value' => 'page',
 			),
+		),
+		array (
 			array (
 				'param' => 'post_type',
 				'operator' => '==',
