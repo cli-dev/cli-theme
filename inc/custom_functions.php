@@ -720,37 +720,13 @@ function pagination($pages = '', $range = 1){
   }
 }
 
-// // 1. customize ACF path
-// add_filter('acf/settings/path', 'my_acf_settings_path');
- 
-// function my_acf_settings_path( $path ) {
- 
-//     // update path
-//     $path = get_stylesheet_directory() . '/acf/';
-    
-//     // return
-//     return $path;
-    
-// }
- 
+function my_search_form( $form ) {
+  $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+  <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+  <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn black outline" />
+  </form>';
 
-// // 2. customize ACF dir
-// add_filter('acf/settings/dir', 'my_acf_settings_dir');
- 
-// function my_acf_settings_dir( $dir ) {
- 
-//     // update path
-//     $dir = get_stylesheet_directory_uri() . '/plugins/acf/';
-    
-//     // return
-//     return $dir;
-    
-// }
- 
+  return $form;
+}
 
-// // 3. Hide ACF field group menu item
-// add_filter('acf/settings/show_admin', '__return_false');
-
-
-// // 4. Include ACF
-// include_once( get_stylesheet_directory() . '/plugins/acf/acf.php' );
+add_filter( 'get_search_form', 'my_search_form' );

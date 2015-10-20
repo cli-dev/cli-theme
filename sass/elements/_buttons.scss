@@ -17,6 +17,16 @@
   }
 }
 
+#searchsubmit{
+  background-color: transparent;
+  border: solid 2px $black;
+  color: $black;
+  &:hover{
+    color: #FFF;
+    background-color: $black;
+  } 
+}
+
 .special-btn{
   overflow: hidden;  
   display: block;

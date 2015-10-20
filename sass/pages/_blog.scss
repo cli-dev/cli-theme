@@ -11,7 +11,8 @@ body.single-post{
   }
 }
 
-body.blog .entry-content.news-feed{
+body.blog .entry-content.news-feed,
+body.archive .entry-content.news-feed{
   padding: 20px;
   @include breakpoint($md){
     padding:40px;
@@ -62,14 +63,6 @@ body.blog .entry-content.news-feed{
     @include align-items(stretch);
     position: relative;
     overflow: hidden;
-    &:hover{
-      *{
-        color: $color4;  
-      }
-      .post-block-inner{
-        @include bg-opacity($color1, 0.7);
-      }
-    }
   }
   *{
     @include transition(all ease-in-out 0.3s);  
@@ -83,7 +76,6 @@ body.blog .entry-content.news-feed{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    @include filter(grayscale(1));
   }
   .post-block-inner{
     @include flex(1,1,auto);
@@ -134,7 +126,6 @@ body.blog .entry-content.news-feed{
   min-height: 100px;
   font-size: 0;
   line-height: 0;
-  @include filter(grayscale(1));
   @include breakpoint($md){
     min-height: 200px;
   }
@@ -152,7 +143,6 @@ body.blog .entry-content.news-feed{
 
 .post-header{
   padding: 20px;
-  background-color: $off-white;
   @include breakpoint($md){
     padding: 40px;
     @include display-flex;
@@ -177,15 +167,17 @@ body.blog .entry-content.news-feed{
 }
 
 .entry-footer{
-  padding: 20px 0;
-  margin: 0 20px;
-  border-top: solid 1px $black;
-  @include display-flex;
-  @include flex-wrap(wrap);
-  @include justify-content(space-between); 
-  @include align-items(center);
+  padding: 0 20px;
   @include breakpoint($md){
-    margin: 0 40px;  
+    padding: 0 40px;  
+  }
+  .entry-footer-inner{
+    padding: 20px 0;
+    border-top: solid 1px $black;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between); 
+    @include align-items(center);
   }
 }
 
@@ -214,58 +206,6 @@ body.blog .entry-content.news-feed{
 }
 
 
-.news-block{
-  .half-block{
-    width: 100%;
-    @include breakpoint($mds){
-      width: 50%;  
-    }
-    h3{
-      @include breakpoint($mds){
-        font-size: 16px;
-      }
-      @include breakpoint($md){
-        font-size: 20px;  
-      }
-      @include breakpoint($xlrg){
-        font-size: 30px;
-      }
-    }
-    p{
-      @include breakpoint($mds){
-        font-size: 12px;
-      }
-      @include breakpoint($md){
-        font-size: 14px;  
-      }  
-    }
-  }
-  .news-inner-block{
-    border: #FFF solid 5px;
-    min-height: 150px;  
-  }
-  .twitter-feed-wrapper{
-    padding: 10px; 
-    @include breakpoint($xlrg){
-      padding: 20px;
-    }
-    .ttf-tweet{
-      display: none;
-      &:first-child{
-        display: block;  
-      }
-    }
-  }
-  .btn.news-inner-block{
-    padding: 10px;
-    text-align: left;
-    text-transform: none;  
-    @include breakpoint($xlrg){
-      padding: 20px;
-    }
-  }
-}
-
 .post-block-small .post-block-inner{
   padding: 10px;
   @include display-flex;
@@ -280,12 +220,6 @@ body.blog .entry-content.news-feed{
       margin-bottom: 20px;  
     }
   }
-  h3.post-block-title{
-    font-weight: 700;  
-  }
-  p{
-   font-weight: 300; 
-  }
   .entry-meta{
     @include display-flex;
     @include justify-content(space-between);
@@ -297,14 +231,8 @@ body.blog .entry-content.news-feed{
     }
     .post-block-date{
       @include flex(0,1,auto);
-      font-weight: 300;
     }
   }
-}
-
-.facebook-wrapper{
-  background: $off-white;
-  padding: 20px;
 }
 
 .blog-feed-wrapper.news-inner-block{

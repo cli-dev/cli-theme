@@ -1,13 +1,20 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$page_for_posts = get_option( 'page_for_posts' ); 
+?>
 <section id="content" role="main">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Category Archives: ', 'cli_theme' ); ?><?php single_cat_title(); ?></h1>
-<?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
-</header>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
+  <?php get_template_part('templates/page', 'header') ; ?>
+  <section class="entry-content">
+    <?php if( have_rows('row', $page_for_posts) ): while( have_rows('row', $page_for_posts) ): the_row(); ?>
+    <?php get_template_part('templates/pagebuilder', 'row') ; ?>
+    <?php endwhile; endif; ?>
+  </section>
+  <section class="entry-content news-feed">
+    <div class="news-feed-inner">
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php get_template_part( 'templates/post-block-small' ); ?>
+      <?php endwhile; endif; ?>
+    </div>
+    <?php get_template_part( 'nav', 'below' ); ?>
+  </section>
 </section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

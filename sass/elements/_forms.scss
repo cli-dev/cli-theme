@@ -35,6 +35,35 @@
   }
 }
 
+#searchform{
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px 0;
+  @include breakpoint($md){
+    @include display-flex;
+  }
+}
+
+#searchsubmit{
+  @include flex(0,1,auto);
+}
+
+#s{
+  @include flex(1,1,auto);
+  color: $black;  
+  padding: 10px;
+  line-height: 20px;
+  background-color: $off-white;
+  font-family: $primary-font;
+  border: none;
+  margin-bottom: 20px;
+  @include breakpoint($md){
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
+
 .content-bottom-widget .caldera-grid{
   max-width: $grid-width;
   margin: 0 auto;

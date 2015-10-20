@@ -1,6 +1,4 @@
-<?php
-
-if( function_exists('acf_add_local_field_group') ):
+<?php if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_55d4c883ee802',
@@ -278,6 +276,30 @@ acf_add_local_field_group(array (
 			),
 		),
 		array (
+			'key' => 'field_56265e29e9709',
+			'label' => '404 Header Image',
+			'name' => '404_header_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array (
 			'key' => 'field_55d4c8be4b506',
 			'label' => 'Header Options',
 			'name' => '',
@@ -553,10 +575,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				0 => 'Arial',
-				1 => 'Oswald',
-				2 => 'Lato',
-				3 => 'Crimson Text',
+				0 => 'Oswald',
+				1 => 'Lato',
+				2 => 'Crimson Text',
 			),
 			'default_value' => array (
 			),
@@ -747,10 +768,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				0 => 'Arial',
-				1 => 'Oswald',
-				2 => 'Lato',
-				3 => 'Crimson Text',
+				0 => 'Oswald',
+				1 => 'Lato',
+				2 => 'Crimson Text',
 			),
 			'default_value' => array (
 			),
@@ -776,10 +796,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				0 => 'Arial',
-				1 => 'Oswald',
-				2 => 'Lato',
-				3 => 'Crimson Text',
+				0 => 'Oswald',
+				1 => 'Lato',
+				2 => 'Crimson Text',
 			),
 			'default_value' => array (
 			),
@@ -905,10 +924,9 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				0 => 'Arial',
-				1 => 'Oswald',
-				2 => 'Lato',
-				3 => 'Crimson Text',
+				0 => 'Oswald',
+				1 => 'Lato',
+				2 => 'Crimson Text',
 			),
 			'default_value' => array (
 			),
@@ -1019,6 +1037,36 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+		),
+		array (
+			'key' => 'field_5626690ae235d',
+			'label' => 'Link Text Color',
+			'name' => 'link_text_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => 50,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+		),
+		array (
+			'key' => 'field_5626691de235e',
+			'label' => 'Link Text Hover Color',
+			'name' => 'link_text_hover_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => 50,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 	),
 	'location' => array (

@@ -53,6 +53,9 @@ $paragraph_text_transform = get_field('paragraph_text_transform', 'option');
 $paragraph_line_height = get_field('paragraph_line_height', 'option');
 $paragraph_font_weight = get_field('paragraph_font_weight', 'option');
 
+$link_text_color = get_field('link_text_color', 'option');
+$link_text_hover_color = get_field('link_text_hover_color', 'option');
+
 $footer_top_background_color = get_field('footer_top_background_color', 'option');
 $footer_top_text_color = get_field('footer_top_text_color', 'option');
 $footer_top_link_color = get_field('footer_top_link_color', 'option');
@@ -79,6 +82,10 @@ $desktop_css = get_field('desktop_css', 'option');
 <?php if($content_background_color) { echo '#wrapper{background-color: ' . $content_background_color . ';} '; }?>
 
 <?php if($main_font_color) { echo 'body{color: ' . $main_font_color . ';} '; }?>
+
+<?php if($link_text_color) { echo 'a{color: ' . $link_text_color . ';} '; }?>
+
+<?php if($link_text_hover_color) { echo 'a:hover{color: ' . $link_text_hover_color . ';} '; }?>
 
 <?php if($header_color) { echo '#header, #header .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
 

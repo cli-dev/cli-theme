@@ -1,0 +1,591 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"b",
+				"bg	background"
+			],
+			[
+				"paint",
+				"paintLine"
+			],
+			[
+				"forum",
+				"forumCafe"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"ve",
+				"veneto"
+			],
+			[
+				"ven",
+				"veneto-route"
+			],
+			[
+				"hou",
+				"houstons-route"
+			],
+			[
+				"sl",
+				"slanted-rice-route"
+			],
+			[
+				"pau",
+				"paulMartins"
+			],
+			[
+				"ra",
+				"ranchoPinot"
+			],
+			[
+				"mo",
+				"moodSwings"
+			],
+			[
+				"mood",
+				"mood-swings-route"
+			],
+			[
+				"op",
+				"opticalExpressions"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"p-l",
+				"padding-left"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"jc",
+				"jc-sa	justify-content: space-around;"
+			],
+			[
+				"ai",
+				"ai-fe	align-items: flex-end;"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"mx",
+				"max-width"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"m",
+				"m	margin"
+			],
+			[
+				"ls",
+				"list-style-type"
+			],
+			[
+				"hid",
+				"hide_menu"
+			],
+			[
+				"p-r",
+				"padding-right"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"map",
+				"mapHeight"
+			],
+			[
+				"col",
+				"color3"
+			],
+			[
+				"color",
+				"color2"
+			],
+			[
+				"fsi",
+				"font-size"
+			],
+			[
+				"list",
+				"list-n	list-style-type: none;"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "templates/post-layouts/post-layout-2.php",
+			"settings":
+			{
+				"buffer_size": 790,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/post-layouts",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme-child"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/clitheme.sublime-project",
+		"/C/wamp/www/alliancewp/wp-content/themes/morph-management.sublime-project",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/layout/_main.scss",
+		"/C/wamp/www/alliancewp/wp-content/themes/cli-theme-child/sass/layout/_nav.scss",
+		"/C/wamp/www/alliancewp/wp-content/themes/cli-theme-child/sass/layout/_footer.scss",
+		"/C/wamp/www/alliancewp/wp-content/themes/cli-theme-child/sass/helpers/_variables.scss",
+		"/C/wamp/www/alliancewp/wp-content/themes/cli-theme-child/gruntfile.js",
+		"/W/alliancewp/wp-content/themes/cli-theme-child/alliance-marketing-group.sublime-project",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/inc/theme_fields.php",
+		"/C/wamp/www/alliancewp/wp-content/themes/sftp-config.json",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar Folders.sublime-settings",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/User/SFTP.errors.log",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme-child/sass/layout/_footer.scss",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sftp-config.json",
+		"/W/alliancewp/wp-config.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme-child/functions.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/entry-content.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/single.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/entry-footer.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme-child/sass/style.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/templates/post-block-small.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/helpers/_variables.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/layout/_nav.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/layout/_footer.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/nav-below-single.php",
+		"/W/morphwp/wp-content/themes/cli-theme/sass/layout/_grid.scss",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/inc/page_builder.php",
+		"/W/morphwp/wp-content/themes/cli-theme/templates/pagebuilder-column.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/layout/_header.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/single-position.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/single.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/helpers/_mixins.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/sass/style.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/sass/helpers/_mixins.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/js/scripts.js",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/js/scripts.js",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/css/style.css",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/templates/page-header.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/sass/elements/_buttons.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme/templates/site-header.php",
+		"/C/wamp/www/alphawp/wp-content/themes/alpha/sass/elements/_blocks.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/templates/rowlayout-positionsgrid.php",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/functions.php",
+		"/W/morphwp/wp-content/themes/cli-theme/sass/elements/_buttons.scss",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/js/scripts",
+		"/C/wamp/www/aciwp/wp-content/themes/blankslate/scss/partials/_footer.scss",
+		"/C/Users/SAM/Qsync/Assets/ME Cosmetics/Employee Newsletter/newsletter/2015/10/12-16/sftp-config.json",
+		"/C/Users/SAM/Qsync/Assets/ME Cosmetics/Employee Newsletter/newsletter/2015/10/12-16/template.html",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/gruntfile.js",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/package.json",
+		"/C/wamp/www/morphwp/wp-content/themes/cli-theme-child/style.css",
+		"/W/morphwp/wp-content/themes/cli-theme-child/css/style.css",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/elements/_nav.scss",
+		"/C/Users/SAM/Qsync/Resources/Brand Enhanced Websites/BrandEnhancedSites/wordpress/wp-content/themes/bridge-child/style.css",
+		"/C/wamp/www/morphwp/wp-content/themes/sftp-config.json",
+		"/W/morphwp/wp-content/themes/cli-theme/style.css",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/style.scss",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/inc/custom_functions.php",
+		"/C/Users/SAM/Qsync/Resources/Brand Enhanced Websites/BrandEnhancedSites/wordpress/wp-content/themes/bridge/style.css",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/menu-mobile.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/css/style_dynamic.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/inc/shortcodes.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/menu-right.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/layout/_header.scss",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/layout/_footer.scss",
+		"/C/wamp/www/alliancewp/index.html",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/js/scripts.js",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/site-header.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/css/style.css",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/elements/_buttons.scss",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/User/FileSync.sublime-settings",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/menu-divided.php",
+		"/C/wamp/www/alliancewp/sftp-config.json",
+		"/C/wamp/www/enclave/app/index.html",
+		"/C/wamp/www/enclave/app/scripts/main.js",
+		"/C/wamp/www/enclave/app/scripts/maps.js",
+		"/C/wamp/www/enclave/app/scripts/templates/locations.js",
+		"/C/wamp/www/enclave/app/scripts/templates/shopping.category.js",
+		"/C/wamp/www/enclave/app/styles/partials/_logos.scss",
+		"/C/wamp/www/enclave/app/styles/partials/_nav.scss",
+		"/C/wamp/www/enclave/app/styles/partials/_map.scss",
+		"/C/wamp/www/enclave/app/images/icons/icon_shopping-white.svg",
+		"/C/wamp/www/enclave/app/scripts/templates/restaurants.category.js",
+		"/C/wamp/www/enclave/app/styles/partials/_info-panel.scss",
+		"/C/wamp/www/enclave/app/scripts/templates/services.categories.js",
+		"/C/wamp/www/alliancewp/splashpage/sass/elements/_fonts.scss",
+		"/C/wamp/www/alliancewp/splashpage/sass/layout/_main.scss",
+		"/C/wamp/www/alliancewp/splashpage/inc/mail.php",
+		"/C/wamp/www/alliancewp/splashpage/js/mail.js",
+		"/C/wamp/www/alliancewp/splashpage/sass/elements/_forms.scss",
+		"/C/wamp/www/alliancewp/splashpage/sass/helpers/_variables.scss",
+		"/C/wamp/www/alliancewp/splashpage/sass/style.scss",
+		"/C/wamp/www/alliancewp/splashpage/gruntfile.js",
+		"/C/wamp/www/alliancewp/splashpage/package.json",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/elements/_fonts.scss",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/FileSync/README.md",
+		"/W/clithemewp/wp-content/themes/cli-theme/sass/elements/_fonts.scss",
+		"/C/wamp/www/ascendantwp/wp-content/themes/blame_child/style.css",
+		"/C/wamp/www/ascendantwp/wp-content/themes/sftp-config.json",
+		"/C/Users/SAM/AppData/Roaming/Sublime Text 3/Packages/FileSync/FileSync.sublime-settings",
+		"/C/wamp/www/enclave/app/scripts/templates/nightonthetown.categories.js",
+		"/C/wamp/www/enclave/app/scripts/templates/socialafternoon.categories.js",
+		"/C/wamp/www/enclave/app/styles/main.scss",
+		"/C/wamp/www/enclave/app/scripts/templates/lookingyourbest.categories.js",
+		"/C/wamp/www/enclave/app/scripts/templates/categories.js",
+		"/C/wamp/www/enclave/app/styles/partials/_layout.scss",
+		"/C/wamp/www/enclave/app/scripts/templates/wakingup.categories.js",
+		"/C/wamp/www/enclave/app/templates/layouts/default.hbs",
+		"/W/enclave/styles/main.17e8d2a2.css",
+		"/C/wamp/www/enclave/Gruntfile.js",
+		"/C/wamp/www/enclave/app/templates/pages/index.hbs",
+		"/C/wamp/www/enclave/app/scripts/templates/categorylist.handlebars",
+		"/C/wamp/www/enclave/bower_components/lazy-line-painter/bower.json",
+		"/C/wamp/www/enclave/bower_components/lazy-line-painter/.bower.json",
+		"/C/wamp/www/enclave/bower.json",
+		"/C/wamp/www/enclave/bower_components/jquery.gifplayer/.bower.json",
+		"/C/wamp/www/enclave/bower_components/jquery.gifplayer/bower.json",
+		"/W/enclave/index.html",
+		"/C/Users/SAM/Qsync/Assets/Enclave/starbucks-map.svg",
+		"/C/wamp/www/enclave/bower_components/lazy-line-painter/jquery.lazylinepainter-1.7.0.min.js",
+		"/C/wamp/www/enclave/bower_components/gifplayer/.bower.json",
+		"/C/wamp/www/enclave/bower_components/gifplayer/bower.json",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/nav-below-single.php",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/sass/elements/_social.scss",
+		"/C/wamp/www/clithemewp/wp-content/themes/cli-theme/templates/pagebuilder-column.php"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"color5",
+			"color4",
+			"color3",
+			"color2",
+			"color1",
+			"color6",
+			"green",
+			"10/12-16/",
+			"09/14-18",
+			"ec008c",
+			"theme",
+			"blankslate",
+			"1000",
+			"spa",
+			"restaurant",
+			"Icons_Shopping.svg",
+			"Icons_Spas.svg",
+			"Icons_Services.svg",
+			"Icons_Restaurants.svg",
+			"service",
+			"uppercase",
+			"images",
+			"\"duration\": 600",
+			"routes_",
+			"\"0.2\" steps:",
+			"\"0.2\"}",
+			"shopping",
+			"restaurant",
+			"sa",
+			"wp",
+			"0.2",
+			"distance",
+			"time",
+			", distance: \"0.2\"",
+			"time",
+			"locationid",
+			"locations",
+			"build",
+			"concat",
+			">\n",
+			"items",
+			"\"",
+			"copy",
+			"dot",
+			"star",
+			"wiredep",
+			"boot",
+			"#header .menu ",
+			"\"Background Video\"",
+			"Background Video",
+			"Background Image",
+			"blankslate",
+			"text_domain",
+			"blankslate",
+			"<div class=\"item-info\">\n            <div class=\"walkability\">Walkability</div>",
+			"watch",
+			"sass: {",
+			"grunt.task.run(['clean:server'",
+			"grunt.task.run([\n    'clean:server'",
+			"clean:",
+			"sass:"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"orange",
+			"red",
+			"light-blue",
+			"dark-blue",
+			"pink",
+			"green",
+			"10/12-16/imgs/",
+			"10/12-16",
+			"51ad61",
+			"cli-theme",
+			"1200",
+			"shopping",
+			"spa",
+			"icon_shopping-circle-brown.svg",
+			"icon_spas-circle-brown.svg",
+			"icon_services-circle-brown.svg",
+			"icon_restaurants-circle-brown.svg",
+			"restaurant",
+			"lowercase",
+			"imgs",
+			"\"duration\": 1000",
+			"",
+			"\"0.2\", steps:",
+			"\"0.2\" steps: \"200\"}",
+			"service",
+			"spa",
+			"lyb",
+			"sa",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet efficitur bibendum.",
+			"content",
+			"title",
+			"",
+			"content",
+			"id",
+			"categories",
+			"locations",
+			"'",
+			".menu-container ",
+			".menu-container",
+			"'Background Video'",
+			"bg-vid",
+			"bg-img",
+			"cli_theme",
+			"<div class=\"walkability-wrapper\">\n            <div class=\"walkability\">Walkability</div>",
+			"<div class=\"item-info\">\n            <div class=\"walkability\">Walkability</div>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/post-layouts/post-layout-2.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								790
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"side_bar_folders_auto_load_folder": 1,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "clitheme.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"W:\\alliancewp\\wp-content\\themes\\cli-theme-child\\alliance-marketing-group.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
