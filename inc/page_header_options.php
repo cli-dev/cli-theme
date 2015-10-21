@@ -21,6 +21,7 @@ acf_add_local_field_group(array (
 				'bg-img' => 'Background Image',
 				'bg-vid' => 'Background Video',
 				'slider' => 'Slider',
+				'color' => 'Solid Color',
 			),
 			'default_value' => array (
 			),
@@ -191,7 +192,7 @@ acf_add_local_field_group(array (
 				),
 			),
 			'wrapper' => array (
-				'width' => '',
+				'width' => 33,
 				'class' => 'field_type-image field_key-field_55d4f30fa518e',
 				'id' => '',
 			),
@@ -207,6 +208,83 @@ acf_add_local_field_group(array (
 			'mime_types' => '',
 		),
 		array (
+			'key' => 'field_5627dce3b2838',
+			'label' => 'Background Image color overlay',
+			'name' => 'background_image_color_overlay',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '==',
+						'value' => 'bg-img',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 33,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+		),
+		array (
+			'key' => 'field_5627dcfcb2839',
+			'label' => 'Background Image color overlay opacity',
+			'name' => 'background_image_color_overlay_opacity',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '==',
+						'value' => 'bg-img',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 33,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 0,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 0,
+			'max' => 1,
+			'step' => '0.05',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_5627dc7e0759c',
+			'label' => 'Header Color',
+			'name' => 'header_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_560eb8b550a4b',
+						'operator' => '==',
+						'value' => 'color',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+		),
+		array (
 			'key' => 'field_55f7084decf3b',
 			'label' => 'Header Item Direction',
 			'name' => 'header_item_direction',
@@ -218,7 +296,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'slider',
+						'value' => 'Slider',
 					),
 				),
 			),
@@ -254,7 +332,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'slider',
+						'value' => 'Slider',
 					),
 				),
 			),
@@ -293,7 +371,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'slider',
+						'value' => 'Slider',
 					),
 				),
 			),
@@ -334,7 +412,7 @@ acf_add_local_field_group(array (
 					array (
 						'field' => 'field_560eb8b550a4b',
 						'operator' => '!=',
-						'value' => 'slider',
+						'value' => 'Slider',
 					),
 				),
 			),
