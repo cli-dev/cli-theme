@@ -519,7 +519,7 @@ function displaySocialShare() {
     }
 
 
-return '<div id="social-share" class="social">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
+return '<div id="social-share" class="social ' . $type_of_icon . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
   
 }
 
