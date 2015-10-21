@@ -25,8 +25,24 @@
   $video_placeholder_image = get_field('video_placeholder_image', $item_id);
   $background_image = get_field('background_image', $item_id);
   $slider_shortcode = get_field('slider_shortcode', $item_id);
+  $header_color = get_field('header_color', $item_id);
 
-  if($header_type === 'bg-img'){echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
+  $background_image_color_overlay = get_sub_field('background_image_color_overlay', $item_id);
+  $background_image_color_overlay_opacity = get_sub_field('background_image_color_overlay_opacity', $item_id);
+  $header_rgb = hex2rgb($background_image_color_overlay);
+
+
+
+  if($header_type === 'bg-img'){
+    echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;'; 
+    if($background_image_color_overlay){ 
+      echo ' box-shadow: inset 0 0 0 1000px rgba(' . $header_rgb . ', ' . $background_image_color_overlay_opacity . ');"';} 
+    else{
+      echo '"';
+    } 
+  }
+
+  if($header_type === 'color'){echo 'style="background-color: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
   
   $detect = new Mobile_Detect;
 ?>>
