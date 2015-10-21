@@ -312,7 +312,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
     }
     else{
-    $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve""><path id="linkedin fill="none" stroke="#0977B4" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5 13.5 0 24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM16.5 39.5h-7v-19h7V39.5zM13.6 17.5L13.6 17.5c-2.2 0-3.6-1.4-3.6-3.2 0-1.9 1.4-3.3 3.6-3.3 2.2 0 3.6 1.4 3.6 3.3C17.2 16.1 15.8 17.5 13.6 17.5zM39.5 39.5h-6V29.3c0-2.6-0.9-4.4-3.2-4.4 -1.8 0-3 1.2-3.4 2.3 -0.2 0.4-0.3 1-0.3 1.6v10.6h-6.1c0.1-17 0-19 0-19h6.1v2.6c1-1.3 2.3-3.2 5.7-3.2 4.2 0 7.3 2.8 7.3 8.7V39.5z"/></svg></a></div>';  
+    $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve""><path id="linkedin" fill="none" stroke="#0977B4" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5 13.5 0 24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM16.5 39.5h-7v-19h7V39.5zM13.6 17.5L13.6 17.5c-2.2 0-3.6-1.4-3.6-3.2 0-1.9 1.4-3.3 3.6-3.3 2.2 0 3.6 1.4 3.6 3.3C17.2 16.1 15.8 17.5 13.6 17.5zM39.5 39.5h-6V29.3c0-2.6-0.9-4.4-3.2-4.4 -1.8 0-3 1.2-3.4 2.3 -0.2 0.4-0.3 1-0.3 1.6v10.6h-6.1c0.1-17 0-19 0-19h6.1v2.6c1-1.3 2.3-3.2 5.7-3.2 4.2 0 7.3 2.8 7.3 8.7V39.5z"/></svg></a></div>';  
     }
 
   }
