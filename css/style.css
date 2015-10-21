@@ -1172,68 +1172,68 @@ em {
   transition: ease-in-out 0.2s all;
 }
 /* line 42, ../sass/elements/_social.scss */
-.social.icon4 a {
+.social.icon5 a {
   display: block;
   border-radius: 50%;
   width: 35px;
   height: 35px;
 }
 /* line 47, ../sass/elements/_social.scss */
-.social.icon4 a:hover {
+.social.icon5 a:hover {
   background-color: #FFF;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #facebook {
+.social.icon5 a:hover #facebook {
   fill: #3C599B;
   stroke: #3C599B;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #twitter {
+.social.icon5 a:hover #twitter {
   fill: #32CCFE;
   stroke: #32CCFE;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #google {
+.social.icon5 a:hover #google {
   fill: #DD4B39;
   stroke: #DD4B39;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #linkedin {
+.social.icon5 a:hover #linkedin {
   fill: #0977B4;
   stroke: #0977B4;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #tumblr {
+.social.icon5 a:hover #tumblr {
   fill: #2D4865;
   stroke: #2D4865;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #pinterest {
+.social.icon5 a:hover #pinterest {
   fill: #CB2027;
   stroke: #CB2027;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #flickr {
+.social.icon5 a:hover #flickr {
   fill: #E30663;
   stroke: #E30663;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #newswire {
+.social.icon5 a:hover #newswire {
   fill: #1357A8;
   stroke: #1357A8;
 }
 /* line 52, ../sass/elements/_social.scss */
-.social.icon4 a:hover #instagram {
+.social.icon5 a:hover #instagram {
   fill: #7C5641;
   stroke: #7C5641;
 }
 /* line 57, ../sass/elements/_social.scss */
-.social.icon4 svg {
+.social.icon5 svg {
   width: 35px;
   height: 35px;
 }
 /* line 60, ../sass/elements/_social.scss */
-.social.icon4 svg path {
+.social.icon5 svg path {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
