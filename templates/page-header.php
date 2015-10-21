@@ -42,7 +42,7 @@
     } 
   }
 
-  if($header_type === 'color'){echo 'style="background-color: url(' . $background_image . ') center no-repeat; background-size: cover;"';}
+  if($header_type === 'color'){echo 'style="background-color: ' . $header_color . ';"';}
   
   $detect = new Mobile_Detect;
 ?>>
