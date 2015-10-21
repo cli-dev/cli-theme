@@ -255,7 +255,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
     }
     else{
-      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve" id="facebook"><path fill="none" stroke="#3C599B" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM32.5 15.5h-2.8c-2.2 0-3.2 0.7-3.2 2.2v3.8h5.8l-0.7 5h-5.1v14h-5v-14h-5v-5h5v-4.3c0-4.5 2.9-6.9 6.9-6.9 1.9 0 3.1 0.1 4.1 0.2V15.5z"/></svg></a></div>';  
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="facebook" fill="none" stroke="#3C599B" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM32.5 15.5h-2.8c-2.2 0-3.2 0.7-3.2 2.2v3.8h5.8l-0.7 5h-5.1v14h-5v-14h-5v-5h5v-4.3c0-4.5 2.9-6.9 6.9-6.9 1.9 0 3.1 0.1 4.1 0.2V15.5z"/></svg></a></div>';  
     }
     
   }
