@@ -144,8 +144,8 @@ jQuery(document).ready(function($) {
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
     autoHeight:true,
     onInitialized: function(){
-      $('.owl-item').width(itemWidth);
-      $('.owl-stage-outer').width(itemWidth);
+      $('.owl-item').width(sliderWidth);
+      $('.owl-stage-outer').width(sliderWidth);
     }
   });
   
