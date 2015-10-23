@@ -92,8 +92,13 @@ $social-colors: (facebook, $facebook),
   }
   .timeline-twitter-feed{
     &.owl-carousel.owl-loaded{
-      max-width: 80vw;
+      max-width: 100vw;
       margin: 0 auto;
+    }
+    .owl-stage-outer{
+      margin: 0 30px;
+      position: relative;
+      z-index: 5;
     }
     .ttf-tweet{
       width: 100%; 
@@ -142,6 +147,14 @@ $social-colors: (facebook, $facebook),
       }
     }
   }
+  .owl-controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
   .owl-nav{
     position: absolute;
     left: 0;
@@ -154,18 +167,24 @@ $social-colors: (facebook, $facebook),
     @include align-content(center);
     >div{
       @include flex(0,1,auto);
-      padding: 0 10px;
-      font-size: 30px;  
+      text-align: center;
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+      i{
+        line-height: 30px;
+        display: block;
+        @include transform(translate(1px, -1px));
+      }
     }
   }
 }
 
 .owl-dots{
   position: absolute;
-  left: 50%;
+  left: 0;
   width: 100%;
-  bottom: 20px;
-  @include transform(translateX(-50%));
+  bottom: 10px;
   @include display-flex;
   @include justify-content(center);
   @include align-items(center);
@@ -209,6 +228,12 @@ $social-colors: (facebook, $facebook),
     display: block;
     font-size: 12px;
     padding: 10px;
+    &:before{
+      content: "\f007"; 
+      font-family: 'FontAwesome';
+      display: inline-block;
+      padding-right: 5px; 
+    } 
     @include breakpoint($md){
       font-size: 16px;
     }
@@ -217,14 +242,9 @@ $social-colors: (facebook, $facebook),
     display: none;  
   }
   .ttf-tweet-text{
-    font-weight: 700; 
-    font-size: 14px;
-    @include breakpoint($md){
-      font-size: 20px;
-    }
+    padding: 10px 0;
   }
   .ttf-timestamp{
-    font-family: $secondary-font;
     font-size: 12px;
     padding: 10px;
     @include breakpoint($md){
