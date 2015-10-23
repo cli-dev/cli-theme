@@ -27,8 +27,8 @@
   $slider_shortcode = get_field('slider_shortcode', $item_id);
   $header_color = get_field('header_color', $item_id);
 
-  $background_image_color_overlay = get_sub_field('background_image_color_overlay', $item_id);
-  $background_image_color_overlay_opacity = get_sub_field('background_image_color_overlay_opacity', $item_id);
+  $background_image_color_overlay = get_field('background_image_color_overlay', $item_id);
+  $background_image_color_overlay_opacity = get_field('background_image_color_overlay_opacity', $item_id);
   $header_rgb = hex2rgb($background_image_color_overlay);
 
 
