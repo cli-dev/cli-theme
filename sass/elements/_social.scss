@@ -106,13 +106,13 @@ $social-colors: (facebook, $facebook),
       padding: 0px;
       font-size: 16px;
       font-weight: 300;
-      padding: 50px 30px; 
+      padding: 50px 20px; 
       @include display-flex;
       @include flex-wrap(wrap);
       @include justify-content(center);
       @include align-items(center);
       @include breakpoint($md){
-        padding: 50px 40px 40px 40px; 
+        padding: 50px 20px 40px 20px; 
       }
       .ttf-tweet-row{  
         @include flex(0,1,auto);

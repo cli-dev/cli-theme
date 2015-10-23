@@ -1292,7 +1292,7 @@ em {
   padding: 0px;
   font-size: 16px;
   font-weight: 300;
-  padding: 50px 30px;
+  padding: 50px 20px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1314,7 +1314,7 @@ em {
 @media (min-width: 700px) {
   /* line 103, ../sass/elements/_social.scss */
   .twitter-feed .timeline-twitter-feed .ttf-tweet {
-    padding: 50px 40px 40px 40px;
+    padding: 50px 20px 40px 20px;
   }
 }
 /* line 117, ../sass/elements/_social.scss */
