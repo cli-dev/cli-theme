@@ -1569,6 +1569,21 @@ em {
   flex: 0 1 auto;
 }
 
+/* line 266, ../sass/elements/_social.scss */
+.flickr-img {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 271, ../sass/elements/_social.scss */
+.flickr-img:after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
 /* line 2, ../sass/elements/_other.scss */
 .company-address > div {
   text-align: center;

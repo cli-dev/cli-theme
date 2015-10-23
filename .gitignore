@@ -1,5 +1,5 @@
+/node_modules
 sftp-config.json
+/.sass-cache
 .DS_Store
 clitheme.sublime-project
-/.sass-cache
-/node_modules

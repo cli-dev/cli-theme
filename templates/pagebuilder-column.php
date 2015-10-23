@@ -114,6 +114,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'raw_html' ) { 
           get_template_part('templates/rowlayout', 'html');
         }
+        else if ( get_row_layout() == 'flickr_feed' ) { 
+          get_template_part('templates/rowlayout', 'flickr');
+        }
       ?>
    <?php endwhile; endif; ?>
   <?php echo $end_inner_column ; ?>

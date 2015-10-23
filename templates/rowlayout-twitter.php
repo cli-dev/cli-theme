@@ -11,12 +11,6 @@
 <div class="twitter-feed<?php if ($is_slider == 1) { echo ' twitter-slider'; }?>">
   <?php $twitter_posts = get_sub_field('twitter_posts', $item_id); echo do_shortcode('[timeline-twitter-feed]'); ?>
 </div>
-<?php if($is_slider == 1){ ?>
-  <div class="slider-nav">
-    <div class="slider-prev"></div> 
-    <div class="slider-next"></div>
-  </div>
-<?php } ?>
 
 <i class="social-grid-icon fa fa-twitter"></i>
 </div>

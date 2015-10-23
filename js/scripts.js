@@ -149,7 +149,6 @@ jQuery(document).ready(function($) {
    
   
   $(window).scroll(function() {
-    console.log('scrolling ', $(window).scrollTop(), $(document).height());
     if ($(window).scrollTop() >= 400) {
       $('#scrollTop').addClass('show');
     }
