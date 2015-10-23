@@ -3,3 +3,5 @@ sftp-config.json
 /.sass-cache
 .DS_Store
 clitheme.sublime-project
+*.sublime-workspace
+clitheme.sublime-workspace
