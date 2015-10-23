@@ -133,15 +133,19 @@ jQuery(document).ready(function($) {
   wow.init();
   
   var sliderWidth = $('.twitter-slider').width();
+
+  var itemWidth = sliderWidth - 60;
+
+  console.log(itemWidth);
   
   $('.twitter-slider .timeline-twitter-feed').owlCarousel({
     items: 1,
     nav: true,
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
     autoHeight:true,
-    onInitialize: function(){
-      $('.owl-item').width(sliderWidth);
-      $('.owl-stage-outer').width(sliderWidth);
+    onInitialized: function(){
+      $('.owl-item').width(itemWidth);
+      $('.owl-stage-outer').width(itemWidth);
     }
   });
   
