@@ -55,7 +55,7 @@ function bac_variable_length_excerpt($text, $length, $finish_sentence){
   $length = 15; /* Change the Length of the excerpt as you wish. The Length is in words. */
   
   //1 if you want to finish the sentence of the excerpt (No weird cuts).
-  $finish_sentence = 1; // Put 0 if you do NOT want to finish the sentence.
+  $finish_sentence = 0; // Put 0 if you do NOT want to finish the sentence.
    
   $tokens = array();
   $out = '';
@@ -112,11 +112,11 @@ function bac_excerpt_filter($text){
   //Control what HTML tags to allow: If you want to allow ALL HTML tags in the excerpt, then do NOT touch.
    
   //If you want to Allow SOME tags: THEN Uncomment the next line + Line 80.
-  //$allowed_tags = '<p>,<a>,<strong>'; /* Here I am allowing p, a, strong tags. Separate tags by comma. */
+  $allowed_tags = '<p>'; /* Here I am allowing p, a, strong tags. Separate tags by comma. */
    
   //If you want to Disallow ALL HTML tags: THEN Uncomment the next line + Line 80, 
   //$allowed_tags = ''; /* To disallow all HTML tags, keep it empty. The Excerpt will be unformated but newlines are preserved. */
-  //$text = strip_tags($text, $allowed_tags); /* Line 80 */
+  $text = strip_tags($text, $allowed_tags); /* Line 80 */
    
   //Create the excerpt.
   $text = bac_variable_length_excerpt($text, $length, $finish_sentence);  
