@@ -647,20 +647,35 @@ add_filter('the_content', 'filter_ptags_on_images');
 function my_acf_load_field( $field ) {
   
   $theme_fonts = get_field('theme_fonts', 'option');
-  
-  $font_choices = array();
+  $typekit_fonts = get_field('typekit_fonts', 'option');
+
+  $typekitFonts = array();
+  $googleFonts = array();
   
   if($theme_fonts)
   {  
     foreach($theme_fonts as $theme_font)
     {
       $font = $theme_font['theme_font'];
+      $fontName = $font['font'];
+      $cssName = $font['font'];
       
-      array_push($font_choices, $font["font"]);
+      $googleFonts[$cssName] = $fontName;
+    }
+  }
+
+  if($typekit_fonts)
+  {  
+    foreach($typekit_fonts as $typekit_font)
+    {
+      $fontName = $typekit_font['typekit_font'];
+      $cssName = $typekit_font['css_name'];
+
+      $typekitFonts[$cssName] = $fontName;
     }
   }
   
-  $field['choices'] = $font_choices;
+  $field['choices'] = array_merge($googleFonts, $typekitFonts);
   
   return $field;
     

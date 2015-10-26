@@ -38,6 +38,13 @@
     echo ']}});</script>';
   }
 
+  $typekit = get_field('typekit_id', 'option');
+
+  if($typekit)
+  {  
+    echo '<script src="https://use.typekit.net/' . $typekit . '.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>';
+  }
+
 ?>
 
 </head>

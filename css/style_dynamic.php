@@ -98,7 +98,7 @@ $desktop_css = get_field('desktop_css', 'option');
 
 #header .menu a{
   <?php if ($menu_link_color) { echo 'color: ' . $menu_link_color . '; '; }?>
-  <?php if ($menu_font_family) { echo 'font-family: "' . $menu_font_family_label  . '"; '; }?>
+  <?php if ($menu_font_family) { echo 'font-family: "' . $menu_font_family_value  . '"; '; }?>
 }
 
 #header .menu .current-menu-item a, #header .menu a:hover{
@@ -169,11 +169,11 @@ $desktop_css = get_field('desktop_css', 'option');
 
 <?php endif; ?>
 
-<?php if($default_font_family_label) { echo 'body{ font-family: "' . $default_font_family_label . '"; }'; } ?>
+<?php if($default_font_family) { echo 'body{ font-family: "' . $default_font_family_value . '"; }'; } ?>
 
-h1,h2,h3,h4,h5,h6{<?php if($headings_font_family_label) { echo 'font-family: "' . $headings_font_family_label . '";'; } if($headings_line_height) { echo 'line-height: ' . $headings_line_height . ';'; } if($headings_font_color) { echo 'color: ' . $headings_font_color . ';'; } if($headings_font_weight) { echo 'font-weight: ' . $headings_font_weight . ';'; } if($headings_text_transform) { echo 'text-transform: ' . $headings_text_transform . ';'; }?>}
+h1,h2,h3,h4,h5,h6{<?php if($headings_font_family) { echo 'font-family: "' . $headings_font_family_value . '";'; } if($headings_line_height) { echo 'line-height: ' . $headings_line_height . ';'; } if($headings_font_color) { echo 'color: ' . $headings_font_color . ';'; } if($headings_font_weight) { echo 'font-weight: ' . $headings_font_weight . ';'; } if($headings_text_transform) { echo 'text-transform: ' . $headings_text_transform . ';'; }?>}
 
-p, ul li, ol li{<?php if($paragraph_font_family_label) { echo 'font-family: "' . $paragraph_font_family_label . '";'; } if($paragraph_line_height) { echo 'line-height: ' . $paragraph_line_height . ';'; } if($paragraph_font_color) { echo 'color: ' . $paragraph_font_color . ';'; } if($paragraph_font_weight) { echo 'font-weight: ' . $paragraph_font_weight . ';'; } if($paragraph_text_transform) { echo 'text-transform: ' . $paragraph_text_transform . ';'; }?>}
+p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $paragraph_font_family_value . '";'; } if($paragraph_line_height) { echo 'line-height: ' . $paragraph_line_height . ';'; } if($paragraph_font_color) { echo 'color: ' . $paragraph_font_color . ';'; } if($paragraph_font_weight) { echo 'font-weight: ' . $paragraph_font_weight . ';'; } if($paragraph_text_transform) { echo 'text-transform: ' . $paragraph_text_transform . ';'; }?>}
 
 <?php if( have_rows('theme_colors') ): while( have_rows('theme_colors') ): the_row(); 
 
