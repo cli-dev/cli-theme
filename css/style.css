@@ -76,65 +76,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-bottom-style: solid;
 }
 
-@media (min-width: 700px) {
+/* line 20, ../sass/helpers/_classes.scss */
+.mobile-bottom-border {
+  border-bottom-style: solid;
+}
+@media (min-width: 900px) {
   /* line 20, ../sass/helpers/_classes.scss */
+  .mobile-bottom-border {
+    border-bottom-style: none;
+  }
+}
+
+@media (min-width: 700px) {
+  /* line 27, ../sass/helpers/_classes.scss */
   .left-border {
     border-left-style: solid;
   }
 }
 
 @media (min-width: 700px) {
-  /* line 26, ../sass/helpers/_classes.scss */
+  /* line 33, ../sass/helpers/_classes.scss */
   .right-border {
     border-right-style: solid;
   }
 }
 
-/* line 32, ../sass/helpers/_classes.scss */
+/* line 39, ../sass/helpers/_classes.scss */
 .thin-border {
   border-width: 1px;
 }
 
-/* line 36, ../sass/helpers/_classes.scss */
+/* line 43, ../sass/helpers/_classes.scss */
 .medium-border {
   border-width: 5px;
 }
 
-/* line 40, ../sass/helpers/_classes.scss */
+/* line 47, ../sass/helpers/_classes.scss */
 .thick-border {
   border-width: 10px;
 }
 
-/* line 44, ../sass/helpers/_classes.scss */
+/* line 51, ../sass/helpers/_classes.scss */
 .white-border {
   border-color: #FFF;
 }
 
-/* line 48, ../sass/helpers/_classes.scss */
+/* line 55, ../sass/helpers/_classes.scss */
 .no-padding {
   padding: 0;
 }
-/* line 50, ../sass/helpers/_classes.scss */
+/* line 57, ../sass/helpers/_classes.scss */
 .no-padding.row-wrapper .flex-row {
   padding: 0;
 }
-/* line 52, ../sass/helpers/_classes.scss */
+/* line 59, ../sass/helpers/_classes.scss */
 .no-padding.row-wrapper .flex-row .col-inner {
   padding: 20px;
 }
 @media (min-width: 700px) {
-  /* line 52, ../sass/helpers/_classes.scss */
+  /* line 59, ../sass/helpers/_classes.scss */
   .no-padding.row-wrapper .flex-row .col-inner {
     padding: 40px;
   }
 }
-/* line 59, ../sass/helpers/_classes.scss */
+/* line 66, ../sass/helpers/_classes.scss */
 .no-padding.col-inner {
   padding: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 64, ../sass/helpers/_classes.scss */
+  /* line 71, ../sass/helpers/_classes.scss */
   .in-grid {
     margin: 0 auto;
     max-width: 1050px;
@@ -142,28 +153,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 72, ../sass/helpers/_classes.scss */
+/* line 79, ../sass/helpers/_classes.scss */
 .img-col .col-inner {
   min-height: 150px;
 }
 @media (min-width: 700px) {
-  /* line 72, ../sass/helpers/_classes.scss */
+  /* line 79, ../sass/helpers/_classes.scss */
   .img-col .col-inner {
     min-height: 300px;
   }
 }
 @media (min-width: 1100px) {
-  /* line 72, ../sass/helpers/_classes.scss */
+  /* line 79, ../sass/helpers/_classes.scss */
   .img-col .col-inner {
     min-height: 500px;
   }
 }
 
-/* line 83, ../sass/helpers/_classes.scss */
+/* line 90, ../sass/helpers/_classes.scss */
 *[class*="hvr"]:hover * {
   color: #FFF;
 }
-/* line 86, ../sass/helpers/_classes.scss */
+/* line 93, ../sass/helpers/_classes.scss */
 *[class*="hvr"] * {
   -moz-transition: ease-in-out 0.3s all;
   -o-transition: ease-in-out 0.3s all;
@@ -171,25 +182,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition: ease-in-out 0.3s all;
 }
 
-/* line 91, ../sass/helpers/_classes.scss */
+/* line 98, ../sass/helpers/_classes.scss */
 .single-image {
   max-width: 100%;
   height: auto;
 }
 
-/* line 96, ../sass/helpers/_classes.scss */
+/* line 103, ../sass/helpers/_classes.scss */
 .aligncenter {
   margin: 10px auto;
   display: block;
 }
 
-/* line 101, ../sass/helpers/_classes.scss */
+/* line 108, ../sass/helpers/_classes.scss */
 .alignright {
   float: right;
   margin: 0 0 10px 10px;
 }
 
-/* line 106, ../sass/helpers/_classes.scss */
+/* line 113, ../sass/helpers/_classes.scss */
 .alignleft {
   float: left;
   margin: 0 10px 10px 0;

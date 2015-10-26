@@ -17,6 +17,13 @@
   border-bottom-style: solid;  
 }
 
+.mobile-bottom-border{
+  border-bottom-style: solid;  
+  @include breakpoint($mdl){
+    border-bottom-style: none;  
+  }
+}
+
 .left-border{
   @include breakpoint($md){
     border-left-style: solid; 
@@ -100,7 +107,7 @@
 
 .alignright{
   float: right;
-  margin: 0 0 10px 10px;  
+  margin: 0 0 10px 10px;; 
 }
 
 .alignleft{

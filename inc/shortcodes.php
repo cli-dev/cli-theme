@@ -75,6 +75,24 @@ function page_box_shortcode( $atts ) {
 }
 add_shortcode( 'page_box', 'page_box_shortcode' );
 
+function divider_shortcode( $atts ) {
+
+  $a = shortcode_atts( array(
+    'width' => '100%',
+    'height' => '1px',
+    'bg_color' => '#000',
+    'margin_top' => '0',
+    'margin_bottom' => '0',
+    'margin_left' => 'auto',
+    'margin_right' => 'auto',
+    'class' => '',
+  ), $atts );
+  
+  return '<div class="divider ' . esc_attr($a['class']) . '" style="width: ' . esc_attr($a['width']) . '; height: ' . esc_attr($a['height']) . '; margin-top: ' . esc_attr($a['margin_top']) . '; margin-bottom: ' . esc_attr($a['margin_bottom']) . '; margin-left: ' . esc_attr($a['margin_left']) . '; margin-right: ' . esc_attr($a['margin_right']) . '; background-color: ' . esc_attr($a['bg_color']) . ';"></div>';
+  
+}
+add_shortcode( 'divider', 'divider_shortcode' );
+
 function show_full_Address() {
   
   return displayfullAddress();
