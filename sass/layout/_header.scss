@@ -62,12 +62,14 @@
 
 .site-logo{
   width: 100%;
+  padding: 5px;
   @include flex(1,1,auto);
   @include display-flex;
   @include flex-direction(column);
   @include justify-content(center);
   @include breakpoint($mdl){
     @include flex(0,1,auto);
+    padding: 10px;
   }
   a{
     @include flex(1,1,auto);
@@ -138,20 +140,20 @@ img.site-main-logo{
 
 .page-header{
   position: relative;
-  @include breakpoint($lrg){
-   min-height: 400px;
-  }  
+  @include display-flex;
+  @include align-items(center);
+  @include flex-direction(column); 
 }
 
 .page-header-inner{
   width: 100%;
   max-width: $grid-width;
-  margin: 0 auto;
   padding: 40px 20px;
-  min-height: 50vh;
+  min-height: 100px;
+  @include flex(1, 1, auto);
   @include breakpoint($md){
    width: 80%;
-   padding: 60px 0px;
+   padding: 80px 0px;
   }
 }
 

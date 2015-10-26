@@ -1,4 +1,20 @@
 jQuery(document).ready(function($) {
+
+  var wH = $(window).height(); 
+  var fH = $('#footer').height();
+
+  var cH = wH - fH;
+
+  $('#container').css('min-height', cH);
+
+  $(window).resize(function(event) {
+    var wH2 = $(window).height(); 
+    var fH2 = $('#footer').height();
+
+    var cH2 = wH2 - fH2;
+
+    $('#container').css('min-height', cH2);
+  });
   
 
   $('.menu-mobile-container').hide();
