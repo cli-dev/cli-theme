@@ -3901,7 +3901,7 @@ body.single-position .page-header-inner {
     width: 100% !important;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
   /* line 152, ../sass/pages/_position.scss */
   .position-block {
     width: 50% !important;
