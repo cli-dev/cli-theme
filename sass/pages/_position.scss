@@ -109,45 +109,23 @@ body.single-position{
   @include flex-wrap(wrap);
   @include flex-direction(column);
   padding: 20px;
-  p{
-    color: #FFF;
-  }
   a{
     @include flex(0,1,auto);
     @include align-self(center);
-    p, h3{
-      color: #FFF;   
-    }
   }
   h3{
     @include flex(0,1,auto); 
-    font-size: 20px;
-    text-transform: none;
-    font-weight: 700;
-    color: #FFF;
-  }
-  h2{
-    color: #FFF;
   }
 }
 .job-description{
   @include flex(1,1,auto);
-  @include breakpoint($md){
-    p{
-      font-size: 16px;  
-    }
-  }
 }
 
 .position-form{
-  border-top: solid 1px $off-white;
   max-width: $grid-width;
   margin: 0 auto;
   @include breakpoint($md){
     width: 80%;  
-  }
-  h3{
-    text-align: center;  
   }
 }
 
@@ -161,12 +139,17 @@ body.single-position{
   .position-block{
     @include flex(0,1,auto);
     padding: 5px;
-    &:first-child .position-block-inner{
-      @include justify-content(center);
-      text-align: center;
-    }
-    @include breakpoint($md){
-      width: 50%;  
-    }
   }
+}
+
+@media screen and (max-width: $mds) {
+  .position-block{
+    width: 100% !important; 
+  }
+}
+
+@media screen and (max-width: $mdl) {
+  .position-block{
+    width: 50% !important; 
+  } 
 }
