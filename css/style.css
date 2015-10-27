@@ -4265,6 +4265,8 @@ body.archive .entry-content.news-feed {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   -webkit-justify-content: center;
@@ -4292,7 +4294,7 @@ body.archive .entry-content.news-feed {
     margin-top: 0;
   }
 }
-/* line 198, ../sass/pages/_blog.scss */
+/* line 199, ../sass/pages/_blog.scss */
 #nav-below a {
   margin-top: 10px;
   width: 100%;
@@ -4320,13 +4322,13 @@ body.archive .entry-content.news-feed {
   align-items: center;
 }
 @media (min-width: 480px) {
-  /* line 198, ../sass/pages/_blog.scss */
+  /* line 199, ../sass/pages/_blog.scss */
   #nav-below a {
     width: auto;
     margin: 0 5px;
   }
 }
-/* line 210, ../sass/pages/_blog.scss */
+/* line 211, ../sass/pages/_blog.scss */
 #nav-below a .nav-txt, #nav-below a .fa {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -4334,13 +4336,13 @@ body.archive .entry-content.news-feed {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-/* line 213, ../sass/pages/_blog.scss */
+/* line 214, ../sass/pages/_blog.scss */
 #nav-below a .fa {
   font-size: 25px;
   padding: 0 3px;
 }
 
-/* line 221, ../sass/pages/_blog.scss */
+/* line 222, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner {
   padding: 10px;
   display: -webkit-box;
@@ -4362,12 +4364,12 @@ body.archive .entry-content.news-feed {
   justify-content: space-between;
 }
 @media (min-width: 1300px) {
-  /* line 221, ../sass/pages/_blog.scss */
+  /* line 222, ../sass/pages/_blog.scss */
   .post-block-small .post-block-inner {
     padding: 20px;
   }
 }
-/* line 229, ../sass/pages/_blog.scss */
+/* line 230, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner div {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -4375,11 +4377,11 @@ body.archive .entry-content.news-feed {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-/* line 231, ../sass/pages/_blog.scss */
+/* line 232, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner div:first-child {
   margin-bottom: 20px;
 }
-/* line 235, ../sass/pages/_blog.scss */
+/* line 236, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner .entry-meta {
   display: -webkit-box;
   display: -moz-box;
@@ -4397,7 +4399,7 @@ body.archive .entry-content.news-feed {
   -ms-flex-align: center;
   align-items: center;
 }
-/* line 239, ../sass/pages/_blog.scss */
+/* line 240, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner .entry-meta .news-icon {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -4407,7 +4409,7 @@ body.archive .entry-content.news-feed {
   width: 50px;
   height: auto;
 }
-/* line 244, ../sass/pages/_blog.scss */
+/* line 245, ../sass/pages/_blog.scss */
 .post-block-small .post-block-inner .entry-meta .post-block-date {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -4416,7 +4418,7 @@ body.archive .entry-content.news-feed {
   flex: 0 1 auto;
 }
 
-/* line 250, ../sass/pages/_blog.scss */
+/* line 251, ../sass/pages/_blog.scss */
 .blog-feed-wrapper.news-inner-block {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -4429,7 +4431,7 @@ body.archive .entry-content.news-feed {
   display: -webkit-flex;
   display: flex;
 }
-/* line 253, ../sass/pages/_blog.scss */
+/* line 254, ../sass/pages/_blog.scss */
 .blog-feed-wrapper.news-inner-block .post-block:only-child {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -4438,7 +4440,7 @@ body.archive .entry-content.news-feed {
   flex: 1 1 auto;
 }
 
-/* line 258, ../sass/pages/_blog.scss */
+/* line 259, ../sass/pages/_blog.scss */
 .pagination {
   padding-top: 20px;
   display: -webkit-box;
@@ -4457,7 +4459,7 @@ body.archive .entry-content.news-feed {
   -ms-flex-align: center;
   align-items: center;
 }
-/* line 263, ../sass/pages/_blog.scss */
+/* line 264, ../sass/pages/_blog.scss */
 .pagination > * {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -4468,18 +4470,18 @@ body.archive .entry-content.news-feed {
   padding: 0 10px;
   margin: 0 5px;
 }
-/* line 269, ../sass/pages/_blog.scss */
+/* line 270, ../sass/pages/_blog.scss */
 .pagination .current, .pagination a:hover {
   background-color: #231F20;
   color: #E1E1E1;
 }
-/* line 273, ../sass/pages/_blog.scss */
+/* line 274, ../sass/pages/_blog.scss */
 .pagination a {
   background-color: #E1E1E1;
   color: #231F20;
 }
 @media (min-width: 900px) {
-  /* line 258, ../sass/pages/_blog.scss */
+  /* line 259, ../sass/pages/_blog.scss */
   .pagination {
     padding-top: 40px;
   }

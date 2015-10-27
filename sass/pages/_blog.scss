@@ -184,6 +184,7 @@ body.archive .entry-content.news-feed{
 #nav-below{
   @include flex(0,1,auto);
   @include display-flex;
+  @include flex-wrap(wrap);
   @include justify-content(center); 
   @include align-items(center);
   width: 100%;
