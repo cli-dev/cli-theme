@@ -4433,12 +4433,12 @@ body.archive .entry-content.news-feed {
   margin: 0 5px;
 }
 /* line 257, ../sass/pages/_blog.scss */
-.pagination .current, .pagination .inactive:hover {
+.pagination .current, .pagination a:hover {
   background-color: #231F20;
   color: #E1E1E1;
 }
 /* line 261, ../sass/pages/_blog.scss */
-.pagination .inactive {
+.pagination a {
   background-color: #E1E1E1;
   color: #231F20;
 }
