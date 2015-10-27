@@ -19,7 +19,7 @@ $careers_page = get_id_by_slug( 'careers' );
         $apply_form= get_field('apply_form');
       ?>
       <div class="position-description">
-        <?php echo $description; ?>
+        <p><?php echo $description; ?></p>
       </div>
       <div class="position-row">
         <div class="position-col">
