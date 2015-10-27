@@ -203,6 +203,10 @@ body.archive .entry-content.news-feed{
     .nav-txt, .fa{
       @include flex(0,1,auto); 
     }
+    .fa{
+      font-size: 25px;
+      padding: 0 3px;
+    }
   }
 }
 
