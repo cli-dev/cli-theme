@@ -24,7 +24,7 @@ $display_button = get_sub_field('display_button', $item_id);
 $button_text = get_sub_field('button_text', $item_id);
 $button_class = (get_sub_field('button_class', $item_id)) ? ' ' . get_sub_field('button_class', $item_id) : '';
 
-$button = ($display_button == 1) ? '<div class="btn' . $button_class . '"">' . $button_text . '</div>' : '';
+$button = ($display_button == 1) ? '<div class="btn' . $button_class . '">' . $button_text . '</div>' : '';
 
 $first_block = ($display_intro_block == 1) ? '<div class="position-block"' . $number_of_columns . '><div class="position-block-inner"' . $first_block_background_color . '><h2'. $first_block_text_color. '>' . $first_block_intro_text . '</h2></div></div>' : '';
 
