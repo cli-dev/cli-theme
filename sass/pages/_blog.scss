@@ -184,22 +184,29 @@ body.archive .entry-content.news-feed{
 #nav-below{
   @include flex(0,1,auto);
   @include display-flex;
-  @include flex-wrap(nowrap);
   @include justify-content(center); 
   @include align-items(center);
   width: 100%;
-  margin-top: 20px;
-  @include breakpoint($md){
+  margin-top: 10px;
+  @include breakpoint($mds){
+    @include flex-wrap(nowrap);
+  }
+  @include breakpoint($mds){
     width: auto;  
     margin-top: 0;
   }
   a{  
-    margin: 0 5px;
+    margin-top: 10px;
+    width: 100%;
     @include flex(0,1,auto); 
     @include display-flex;
     @include flex-wrap(nowrap);
     @include justify-content(center); 
     @include align-items(center);
+    @include breakpoint($mds){
+      width: auto;
+      margin: 0 5px;
+    }
     .nav-txt, .fa{
       @include flex(0,1,auto); 
     }
