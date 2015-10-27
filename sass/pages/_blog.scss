@@ -254,11 +254,11 @@ body.archive .entry-content.news-feed{
     padding: 0 10px;
     margin: 0 5px;  
   }
-  .current, .inactive:hover{
+  .current, a:hover{
     background-color: $black;
     color: $off-white;  
   }
-  .inactive{
+  a{
     background-color: $off-white;
     color: $black;  
   }
