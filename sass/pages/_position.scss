@@ -73,7 +73,6 @@ body.single-position{
 }
 
 .position-btn{
-  line-height: 35px;
   text-align: center;
   @include display-flex;
   @include align-items(center);
@@ -81,17 +80,18 @@ body.single-position{
   @include flex-direction(column);
   span{
     @include flex(0,1,auto);
+    line-height: 50px;
   }
 }
 
 .position-form{
   display: none;
-  padding: 20px 0;
-  h3{
-    padding-bottom: 20px;  
-  }
+  padding: 20px;
+  max-width: $grid-width;
+  margin: 0 auto;
   @include breakpoint($md){
-    padding: 40px;  
+    padding: 40px; 
+    width: 80%; 
   }
 }
 
@@ -121,13 +121,6 @@ body.single-position{
   @include flex(1,1,auto);
 }
 
-.position-form{
-  max-width: $grid-width;
-  margin: 0 auto;
-  @include breakpoint($md){
-    width: 80%;  
-  }
-}
 
 .positions{
   @include breakpoint($md){

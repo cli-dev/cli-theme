@@ -3726,7 +3726,6 @@ body.single-position .page-header-inner {
 
 /* line 75, ../sass/pages/_position.scss */
 .position-btn {
-  line-height: 35px;
   text-align: center;
   display: -webkit-box;
   display: -moz-box;
@@ -3751,28 +3750,28 @@ body.single-position .page-header-inner {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-/* line 82, ../sass/pages/_position.scss */
+/* line 81, ../sass/pages/_position.scss */
 .position-btn span {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  line-height: 50px;
 }
 
 /* line 87, ../sass/pages/_position.scss */
 .position-form {
   display: none;
-  padding: 20px 0;
-}
-/* line 90, ../sass/pages/_position.scss */
-.position-form h3 {
-  padding-bottom: 20px;
+  padding: 20px;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 @media (min-width: 700px) {
   /* line 87, ../sass/pages/_position.scss */
   .position-form {
     padding: 40px;
+    width: 80%;
   }
 }
 
@@ -3855,20 +3854,8 @@ body.single-position .page-header-inner {
   flex: 1 1 auto;
 }
 
-/* line 124, ../sass/pages/_position.scss */
-.position-form {
-  max-width: 1050px;
-  margin: 0 auto;
-}
 @media (min-width: 700px) {
-  /* line 124, ../sass/pages/_position.scss */
-  .position-form {
-    width: 80%;
-  }
-}
-
-@media (min-width: 700px) {
-  /* line 132, ../sass/pages/_position.scss */
+  /* line 125, ../sass/pages/_position.scss */
   .positions {
     display: -webkit-box;
     display: -moz-box;
@@ -3885,7 +3872,7 @@ body.single-position .page-header-inner {
     margin: -5px;
   }
 }
-/* line 139, ../sass/pages/_position.scss */
+/* line 132, ../sass/pages/_position.scss */
 .positions .position-block {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
@@ -3896,13 +3883,13 @@ body.single-position .page-header-inner {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 146, ../sass/pages/_position.scss */
+  /* line 139, ../sass/pages/_position.scss */
   .position-block {
     width: 100% !important;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 900px) {
-  /* line 152, ../sass/pages/_position.scss */
+  /* line 145, ../sass/pages/_position.scss */
   .position-block {
     width: 50% !important;
   }
