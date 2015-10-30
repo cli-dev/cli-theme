@@ -187,7 +187,7 @@ p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $para
   echo '.btn.'. $color_class_name .'.outline:hover{ color: #FFF; background: ' . $color . ';}';
   echo '.btn.'. $color_class_name .'.solid{ color: #FFF; background: ' . $color . ';}';
   echo '.btn.'. $color_class_name .'-hover:hover{ color: #FFF; background: ' . $color . ' !important;}';
-  echo '*[class*="hvr"].'. $color_class_name .':before{ background-color:' . $color . '; border-color:' . $color . ';}';
+  echo '*[class*="hvr"].'. $color_class_name .':before{ background:' . $color . '; border-color:' . $color . ';}';
   
 endwhile; endif; 
 ?>
