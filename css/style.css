@@ -171,11 +171,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 91, ../sass/helpers/_classes.scss */
-*[class*="hvr"]:hover h1, *[class*="hvr"]:hover h2, *[class*="hvr"]:hover h3, *[class*="hvr"]:hover h4, *[class*="hvr"]:hover h5, *[class*="hvr"]:hover h6, *[class*="hvr"]:hover p, *[class*="hvr"]:hover ul li, ul *[class*="hvr"]:hover li, *[class*="hvr"]:hover ol li, ol *[class*="hvr"]:hover li, *[class*="hvr"]:hover .ttf-tweet, *[class*="hvr"]:hover li, *[class*="hvr"]:hover a, *[class*="hvr"]:hover span, *[class*="hvr"]:hover strong, *[class*="hvr"]:hover em, *[class*="hvr"]:hover blockquote, *[class*="hvr"]:hover i {
+*[class*="hvr"]:hover h1, *[class*="hvr"]:hover h2, *[class*="hvr"]:hover h3, *[class*="hvr"]:hover h4, *[class*="hvr"]:hover h5, *[class*="hvr"]:hover h6, *[class*="hvr"]:hover p, *[class*="hvr"]:hover ul li, ul *[class*="hvr"]:hover li, *[class*="hvr"]:hover ol li, ol *[class*="hvr"]:hover li, *[class*="hvr"]:hover .ttf-tweet, *[class*="hvr"]:hover li, *[class*="hvr"]:hover a, *[class*="hvr"]:hover span, *[class*="hvr"]:hover blockquote, *[class*="hvr"]:hover i {
   color: #FFF;
 }
 /* line 95, ../sass/helpers/_classes.scss */
-*[class*="hvr"] h1, *[class*="hvr"] h2, *[class*="hvr"] h3, *[class*="hvr"] h4, *[class*="hvr"] h5, *[class*="hvr"] h6, *[class*="hvr"] p, *[class*="hvr"] ul li, ul *[class*="hvr"] li, *[class*="hvr"] ol li, ol *[class*="hvr"] li, *[class*="hvr"] .ttf-tweet, *[class*="hvr"] li, *[class*="hvr"] a, *[class*="hvr"] span, *[class*="hvr"] strong, *[class*="hvr"] em, *[class*="hvr"] blockquote, *[class*="hvr"] i {
+*[class*="hvr"] h1, *[class*="hvr"] h2, *[class*="hvr"] h3, *[class*="hvr"] h4, *[class*="hvr"] h5, *[class*="hvr"] h6, *[class*="hvr"] p, *[class*="hvr"] ul li, ul *[class*="hvr"] li, *[class*="hvr"] ol li, ol *[class*="hvr"] li, *[class*="hvr"] .ttf-tweet, *[class*="hvr"] li, *[class*="hvr"] a, *[class*="hvr"] span, *[class*="hvr"] blockquote, *[class*="hvr"] i {
   -moz-transition: ease-in-out 0.3s all;
   -o-transition: ease-in-out 0.3s all;
   -webkit-transition: ease-in-out 0.3s all;

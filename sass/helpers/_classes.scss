@@ -88,11 +88,11 @@
 
 *[class*="hvr"]{
   &:hover{
-    h1,h2,h3,h4,h5,h6,p,li,a,span,strong,em,blockquote,i{
+    h1,h2,h3,h4,h5,h6,p,li,a,span,blockquote,i{
       color: #FFF; 
     }   
   }
-  h1,h2,h3,h4,h5,h6,p,li,a,span,strong,em,blockquote,i{
+  h1,h2,h3,h4,h5,h6,p,li,a,span,blockquote,i{
     @include transition(ease-in-out 0.3s all);  
   }
 }
