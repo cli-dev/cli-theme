@@ -71,7 +71,7 @@
     }
   }
   .max-width-col-#{$i}{
-    max-width: ($i/12) * $grid-width - 60px; 
+    max-width: ($i/12) * $grid-width - 40px; 
   }
 }
 
