@@ -2194,9 +2194,9 @@ acf_add_local_field_group(array (
 								'id' => '',
 							),
 							'choices' => array (
-								'center' => 'Align items in the center',
-								'start' => 'Align items to the left',
-								'end' => 'Align items to the right',
+								'center' => 'Align items vertically center',
+								'start' => 'Align items to the top',
+								'end' => 'Align items to the bottom',
 							),
 							'default_value' => array (
 							),
@@ -2230,9 +2230,9 @@ acf_add_local_field_group(array (
 								'id' => '',
 							),
 							'choices' => array (
-								'center' => 'Align items vertically centered',
-								'start' => 'Align items to the top',
-								'end' => 'Align items to the bottom',
+								'center' => 'Align items horizontally centered',
+								'start' => 'Align items to the left',
+								'end' => 'Align items to the right',
 							),
 							'default_value' => array (
 							),
