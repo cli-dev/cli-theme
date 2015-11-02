@@ -65,8 +65,8 @@
       <?php if( have_rows('header_content', $item_id) ): while ( have_rows('header_content', $item_id) ) : the_row(); ?>
          
         <div class="header-block">   
-          <?php if( get_row_layout() == 'header_text' ) { $text_color = get_sub_field('text_color', $item_id)?>
-            <span<?php if($text_color) { echo ' style="color:' . $text_color . ';"';} ?>><?php the_sub_field('header_text', $item_id); ?></span>
+          <?php if( get_row_layout() == 'header_text' ) {?>
+            <?php the_sub_field('header_text', $item_id); ?>
           <?php } ?>
           
           <?php if( get_row_layout() == 'image' ) { $image = get_sub_field('header_image', $item_id);?>
