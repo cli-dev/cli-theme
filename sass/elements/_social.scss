@@ -33,8 +33,11 @@ $social-colors: (facebook, $facebook),
     a{
       display: block;
       font-size: 30px;
+      width: 30px;
+      height: 30px;
     }
     i{
+      line-height: 30px;
       @include transition(ease-in-out 0.2s all);  
     }
   }
