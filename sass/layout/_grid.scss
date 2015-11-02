@@ -102,6 +102,9 @@
     /*min-height: 2px;*/
     @include flex(0, 1, auto);  
   }
+  &.flex-direction-row{
+    @include flex-wrap(wrap);
+  }
 }
 
 .col-12{

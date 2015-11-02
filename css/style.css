@@ -688,7 +688,7 @@ em {
   margin: 0 auto;
   padding: 20px 0;
 }
-@media (min-width: 700px) {
+@media (min-width: 480px) {
   /* line 38, ../sass/elements/_forms.scss */
   #searchform {
     display: -webkit-box;
@@ -706,9 +706,16 @@ em {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  /* line 48, ../sass/elements/_forms.scss */
+  #searchsubmit {
+    width: auto;
+  }
 }
 
-/* line 52, ../sass/elements/_forms.scss */
+/* line 56, ../sass/elements/_forms.scss */
 #s {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -722,21 +729,24 @@ em {
   font-family: "Open Sans", sans-serif;
   border: none;
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
-@media (min-width: 700px) {
-  /* line 52, ../sass/elements/_forms.scss */
+@media (min-width: 480px) {
+  /* line 56, ../sass/elements/_forms.scss */
   #s {
     margin-right: 15px;
     margin-bottom: 0;
+    width: auto;
   }
 }
 
-/* line 67, ../sass/elements/_forms.scss */
+/* line 74, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid {
   max-width: 1050px;
   margin: 0 auto;
 }
-/* line 70, ../sass/elements/_forms.scss */
+/* line 77, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .row {
   display: -webkit-box;
   display: -moz-box;
@@ -759,13 +769,13 @@ em {
   padding: 10px 0;
 }
 @media (min-width: 700px) {
-  /* line 70, ../sass/elements/_forms.scss */
+  /* line 77, ../sass/elements/_forms.scss */
   .content-bottom-widget .caldera-grid .row {
     -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 }
-/* line 80, ../sass/elements/_forms.scss */
+/* line 87, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .row div[class^="col-"] {
   width: 100%;
   -webkit-box-flex: 0;
@@ -776,12 +786,12 @@ em {
   padding: 10px 0;
 }
 @media (min-width: 700px) {
-  /* line 80, ../sass/elements/_forms.scss */
+  /* line 87, ../sass/elements/_forms.scss */
   .content-bottom-widget .caldera-grid .row div[class^="col-"] {
     width: auto;
     padding: 0 10px;
   }
-  /* line 87, ../sass/elements/_forms.scss */
+  /* line 94, ../sass/elements/_forms.scss */
   .content-bottom-widget .caldera-grid .row div[class^="col-"]:nth-child(2) {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -790,22 +800,22 @@ em {
     flex: 1 1 auto;
   }
 }
-/* line 92, ../sass/elements/_forms.scss */
+/* line 99, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .row .col-md-6 {
   width: 100% !important;
   max-width: 500px;
 }
-/* line 97, ../sass/elements/_forms.scss */
+/* line 104, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .btn {
   margin-top: 10px;
 }
 @media (min-width: 700px) {
-  /* line 97, ../sass/elements/_forms.scss */
+  /* line 104, ../sass/elements/_forms.scss */
   .content-bottom-widget .caldera-grid .btn {
     margin-top: 0;
   }
 }
-/* line 103, ../sass/elements/_forms.scss */
+/* line 110, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid label.newsletter-label {
   text-transform: uppercase;
   text-align: center;
@@ -814,17 +824,17 @@ em {
   margin: 0;
 }
 @media (min-width: 900px) {
-  /* line 103, ../sass/elements/_forms.scss */
+  /* line 110, ../sass/elements/_forms.scss */
   .content-bottom-widget .caldera-grid label.newsletter-label {
     font-size: 20px;
   }
 }
-/* line 113, ../sass/elements/_forms.scss */
+/* line 120, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .form-group {
   margin: 0;
   text-align: center;
 }
-/* line 116, ../sass/elements/_forms.scss */
+/* line 123, ../sass/elements/_forms.scss */
 .content-bottom-widget .caldera-grid .form-group input[type="email"] {
   border: none;
   padding: 0 15px;
@@ -2726,152 +2736,157 @@ a.flex-col.social-grid {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
+/* line 105, ../sass/layout/_grid.scss */
+.col-inner.flex-direction-row {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 
-/* line 107, ../sass/layout/_grid.scss */
+/* line 110, ../sass/layout/_grid.scss */
 .col-12 {
   width: 100%;
 }
 
-/* line 111, ../sass/layout/_grid.scss */
+/* line 114, ../sass/layout/_grid.scss */
 .col-11 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 111, ../sass/layout/_grid.scss */
+  /* line 114, ../sass/layout/_grid.scss */
   .col-11 {
     width: 91.66667%;
   }
 }
 
-/* line 118, ../sass/layout/_grid.scss */
+/* line 121, ../sass/layout/_grid.scss */
 .col-10 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 118, ../sass/layout/_grid.scss */
+  /* line 121, ../sass/layout/_grid.scss */
   .col-10 {
     width: 83.33333%;
   }
 }
 
-/* line 124, ../sass/layout/_grid.scss */
+/* line 127, ../sass/layout/_grid.scss */
 .col-9 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 124, ../sass/layout/_grid.scss */
+  /* line 127, ../sass/layout/_grid.scss */
   .col-9 {
     width: 75%;
   }
 }
 
-/* line 130, ../sass/layout/_grid.scss */
+/* line 133, ../sass/layout/_grid.scss */
 .col-8 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 130, ../sass/layout/_grid.scss */
+  /* line 133, ../sass/layout/_grid.scss */
   .col-8 {
     width: 66.66667%;
   }
 }
 
-/* line 136, ../sass/layout/_grid.scss */
+/* line 139, ../sass/layout/_grid.scss */
 .col-7 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 136, ../sass/layout/_grid.scss */
+  /* line 139, ../sass/layout/_grid.scss */
   .col-7 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 136, ../sass/layout/_grid.scss */
+  /* line 139, ../sass/layout/_grid.scss */
   .col-7 {
     width: 58.33333%;
   }
 }
 
-/* line 145, ../sass/layout/_grid.scss */
+/* line 148, ../sass/layout/_grid.scss */
 .col-6 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 145, ../sass/layout/_grid.scss */
+  /* line 148, ../sass/layout/_grid.scss */
   .col-6 {
     width: 50%;
   }
 }
 
-/* line 151, ../sass/layout/_grid.scss */
+/* line 154, ../sass/layout/_grid.scss */
 .col-5 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 151, ../sass/layout/_grid.scss */
+  /* line 154, ../sass/layout/_grid.scss */
   .col-5 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 151, ../sass/layout/_grid.scss */
+  /* line 154, ../sass/layout/_grid.scss */
   .col-5 {
     width: 41.66667%;
   }
 }
 
-/* line 160, ../sass/layout/_grid.scss */
+/* line 163, ../sass/layout/_grid.scss */
 .col-4 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 160, ../sass/layout/_grid.scss */
+  /* line 163, ../sass/layout/_grid.scss */
   .col-4 {
     width: 50%;
   }
 }
 @media (min-width: 1100px) {
-  /* line 160, ../sass/layout/_grid.scss */
+  /* line 163, ../sass/layout/_grid.scss */
   .col-4 {
     width: 33.33333%;
   }
 }
 
-/* line 169, ../sass/layout/_grid.scss */
+/* line 172, ../sass/layout/_grid.scss */
 .col-3 {
   width: 100%;
 }
 @media (min-width: 700px) {
-  /* line 169, ../sass/layout/_grid.scss */
+  /* line 172, ../sass/layout/_grid.scss */
   .col-3 {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 169, ../sass/layout/_grid.scss */
+  /* line 172, ../sass/layout/_grid.scss */
   .col-3 {
     width: 25%;
   }
 }
 
-/* line 178, ../sass/layout/_grid.scss */
+/* line 181, ../sass/layout/_grid.scss */
 .col-2 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 178, ../sass/layout/_grid.scss */
+  /* line 181, ../sass/layout/_grid.scss */
   .col-2 {
     width: 16.66667%;
   }
 }
 
-/* line 184, ../sass/layout/_grid.scss */
+/* line 187, ../sass/layout/_grid.scss */
 .col-1 {
   width: 100%;
 }
 @media (min-width: 900px) {
-  /* line 184, ../sass/layout/_grid.scss */
+  /* line 187, ../sass/layout/_grid.scss */
   .col-1 {
     width: 8.33333%;
   }

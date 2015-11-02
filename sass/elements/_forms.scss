@@ -40,13 +40,17 @@
   max-width: 650px;
   margin: 0 auto;
   padding: 20px 0;
-  @include breakpoint($md){
+  @include breakpoint($mds){
     @include display-flex;
   }
 }
 
 #searchsubmit{
   @include flex(0,1,auto);
+  width: 100%;
+  @include breakpoint($mds){
+    width: auto;
+  }
 }
 
 #s{
@@ -58,9 +62,12 @@
   font-family: $primary-font;
   border: none;
   margin-bottom: 20px;
-  @include breakpoint($md){
+  width: 100%;
+  text-align: center;
+  @include breakpoint($mds){
     margin-right: 15px;
     margin-bottom: 0;
+    width: auto;
   }
 }
 
