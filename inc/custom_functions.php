@@ -240,6 +240,16 @@ function displaySocialProfiles($icon_type, $extra_class) {
   $flickrCode = '';
   $newswireCode = '';
   $instagramCode = '';
+
+  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_facebook-circle-outline.svg');
+  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_twitter-circle-outline.svg');
+  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_google-circle-outline.svg');
+  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_linkedin-circle-outline.svg');
+  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_tumblr-circle-outline.svg');
+  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_pinterest-circle-outline.svg');
+  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_flickr-circle-outline.svg');
+  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_newswire-circle-outline.svg');
+  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_instagram-circle-outline.svg');
   
   if($facebook){
     if($type_of_icon === 'icon1'){
@@ -255,7 +265,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
     }
     else{
-      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="facebook" fill="none" stroke="#3C599B" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM32.5 15.5h-2.8c-2.2 0-3.2 0.7-3.2 2.2v3.8h5.8l-0.7 5h-5.1v14h-5v-14h-5v-5h5v-4.3c0-4.5 2.9-6.9 6.9-6.9 1.9 0 3.1 0.1 4.1 0.2V15.5z"/></svg></a></div>';  
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank">' . $facebookSVG . '</a></div>';  
     }
     
   }
@@ -274,7 +284,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
     }
     else{
-    $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="twitter" fill="none" stroke="#32CCFE" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM36.7 19c0 0.3 0 0.5 0 0.8 0 8-6.1 17.1-17.1 17.1-3.4 0-6.6-1-9.2-2.7 0.5 0.1 1 0.1 1.5 0.1 2.8 0 5.4-1 7.5-2.6-2.6-0.1-4.9-1.8-5.6-4.2 0.4 0.1 0.7 0.1 1.1 0.1 0.5 0 0.6-0.1 1.1-0.2-2.8-0.6-5.3-3-5.3-5.9 0 0 0-0.1 0-0.1 1 0.4 2.2 0.7 3.2 0.8-1.6-1.1-2.4-2.9-2.4-5 0-1.1 0.4-2.1 0.9-3 3 3.7 7.5 6 12.5 6.3-0.1-0.4-0.1-0.9-0.1-1.4 0-3.3 2.7-6 6-6 1.7 0 3.3 0.7 4.4 1.9 1.4-0.3 2.7-0.8 3.8-1.5-0.4 1.4-1.4 2.6-2.6 3.3 1.2-0.1 2.4-0.5 3.5-0.9C38.9 17.1 37.8 18.2 36.7 19z"/></svg></a></div>';  
+    $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank">' . $twitterSVG . '</a></div>';  
     }
 
   }
@@ -293,7 +303,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
     }
     else{
-    $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="google" fill="none" stroke="#DD4B39" stroke-miterlimit="10" d="M25.5 0.5c-13.3 0-24 10.7-24 24 0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49.5 11.2 38.8 0.5 25.5 0.5zM28 32.4c-3.1 4.4-9.3 5.6-14.2 3.8 -4.9-1.9-8.3-7-7.9-12.2 0.1-6.4 6-12 12.4-11.8 3.1-0.1 6 1.2 8.3 3.1 -1 1.1-2 2.2-3.2 3.3 -2.8-2-6.9-2.5-9.7-0.3 -4 2.8-4.2 9.4-0.3 12.4 3.8 3.4 10.9 1.7 12-3.5 -2.4 0-4.7 0-7.1-0.1 0-1.4 0-2.8 0-4.2 4 0 7.9 0 11.9 0C30.5 26.1 30 29.6 28 32.4zM40.2 27.3v3.2h-3.4v-3.2h-3.2v-2.8h3.2v-3h3.4v3h3.1v2.8H40.2z"/></svg></a></div>';  
+    $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank">' . $googleSVG . '</a></div>';  
     }
 
   }
@@ -312,7 +322,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
     }
     else{
-    $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve""><path id="linkedin" fill="none" stroke="#0977B4" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5 13.5 0 24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM16.5 39.5h-7v-19h7V39.5zM13.6 17.5L13.6 17.5c-2.2 0-3.6-1.4-3.6-3.2 0-1.9 1.4-3.3 3.6-3.3 2.2 0 3.6 1.4 3.6 3.3C17.2 16.1 15.8 17.5 13.6 17.5zM39.5 39.5h-6V29.3c0-2.6-0.9-4.4-3.2-4.4 -1.8 0-3 1.2-3.4 2.3 -0.2 0.4-0.3 1-0.3 1.6v10.6h-6.1c0.1-17 0-19 0-19h6.1v2.6c1-1.3 2.3-3.2 5.7-3.2 4.2 0 7.3 2.8 7.3 8.7V39.5z"/></svg></a></div>';  
+    $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
     }
 
   }
@@ -331,7 +341,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
     }
     else{
-    $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="tumblr" fill="none" stroke="#2D4865" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM28 40c-6.5 0.1-9.5-4.7-9.5-8v-9.5h-3v-4.2c5-1.6 6.1-5.5 6.3-7.8 0-0.1 0.6 0 0.7 0 0 0 0 0 4 0v8h6v4h-6v9c0 1.3 0.7 3 3.1 3 0.8 0 2-0.3 2.5-0.5l1.3 4.3C32.8 39 30.2 40 28 40z"/></svg></a></div>'; 
+    $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
     }
 
   }
@@ -350,7 +360,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
     }
     else{
-    $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="pinterest" fill="none" stroke="#CB2027" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM27.4 33.1c-2 0-3.8-1.1-4.5-2.3 -1.1 4.2-1.3 5-1.3 5 -0.4 1.4-1.5 3.3-1.9 3.9 -0.3 0.6-2.2 0.1-2.1-0.8 0-0.9 0-2.8 0.3-4.2 0 0 0.4-1.5 2.4-10 -0.6-1.2-0.6-2.9-0.6-2.9 0-2.7 1.6-4.7 3.5-4.7 1.7 0 2.5 1.3 2.5 2.8 0 1.7-1.1 4.2-1.6 6.5 -0.5 2 1 3.5 2.9 3.5 3.5 0 5.8-4.5 5.8-9.7 0-4-2.7-7-7.6-7 -5.6 0-9 4.2-9 8.8 0 1.6 0.5 2.7 1.2 3.6 0.3 0.4 0.4 0.5 0.3 1 -0.1 0.3-0.3 1.1-0.4 1.5 -0.1 0.5-0.5 0.6-0.9 0.5 -2.6-1-3.7-3.9-3.7-7C12.7 16.3 17 10 25.7 10c7 0 11.6 5.1 11.6 10.5C37.3 27.7 33.3 33.1 27.4 33.1z"/></svg></a></div>'; 
+    $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
     }
 
   }
@@ -369,7 +379,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr-square-round"></i></a></div>';  
     }
     else{
-    $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="flickr" fill="none" stroke="#000000" stroke-miterlimit="10" d="M25 2C12.3 2 2 12.3 2 25s10.3 23 23 23 23-10.3 23-23S37.7 2 25 2zM16 31.8c-3.8 0-6.8-3-6.8-6.8s3-6.8 6.8-6.8 6.8 3 6.8 6.8S19.8 31.8 16 31.8zM34 31.8c-3.8 0-6.8-3-6.8-6.8s3-6.8 6.8-6.8 6.8 3 6.8 6.8S37.8 31.8 34 31.8z"/></svg></a></div>';  
+    $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank">' . $flickrSVG . '</a></div>';  
     }
 
   }
@@ -388,7 +398,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire-square-round"></i></a></div>';  
     }
     else{
-    $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="newswire" fill="none" stroke="#1357A8" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM37.5 37.5c0 1.4-1 2.5-2.4 2.5 -0.7 0-1.2-0.3-1.6-0.7 0 0 0 0 0 0 0 0 0-0.1-0.1-0.1 -0.1-0.1-0.6-0.2-0.6-0.3L16.5 19.5v17.9c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5V12.5c0-1.4 1.5-2.5 2.9-2.5 0.5 0 1.1 0.1 1.5 0.4 0.3 0.2 0.6 0.4 0.8 0.7l15.8 19.3V12.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V37.5z"/></svg></a></div>';  
+    $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank">' . $newswireSVG . '</a></div>';  
     }
 
   }
@@ -407,7 +417,8 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-square-round"></i></a></div>';  
     }
     else{
-    $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="instagram" fill="none" stroke="#7C5641" stroke-miterlimit="10" d="M25 30.8c3.3 0 6-2.6 6-5.8 0-3.2-2.7-5.8-6-5.8 -3.3 0-6 2.6-6 5.8C19 28.2 21.7 30.8 25 30.8zM34.4 25.7c0 5-4.2 8.8-9.3 8.8 -5.1 0-9.3-3.7-9.3-8.7 0-0.9 0.1-2.3 0.4-2.3h-3.6v11.9c0 0.7 1.4 2.1 2 2.1h20.9c0.7 0 1.1-1.5 1.1-2.1V23.5H34C34.2 23.5 34.4 24.8 34.4 25.7zM25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM39.5 36.2c0 2.1-1.2 4.3-3.3 4.3H13.8c-2.1 0-4.3-2.2-4.3-4.3V13.8c0-2.1 2.2-3.3 4.3-3.3h22.3c2.1 0 3.3 1.2 3.3 3.3V36.2zM35.3 13.5h-3.4c-0.7 0-1.4 0.4-1.4 1.2v3.2c0 0.7 0.6 1.6 1.4 1.6h3.4c0.7 0 1.2-0.8 1.2-1.6v-3.2C36.5 13.9 36 13.5 35.3 13.5z"/></svg></a></div>';  
+    $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</svg>
+';  
     }
 
   }
@@ -435,7 +446,7 @@ function displaySocialShare() {
       $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
     }
     else{
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="facebook" fill="none" stroke="#3C599B" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM32.5 15.5h-2.8c-2.2 0-3.2 0.7-3.2 2.2v3.8h5.8l-0.7 5h-5.1v14h-5v-14h-5v-5h5v-4.3c0-4.5 2.9-6.9 6.9-6.9 1.9 0 3.1 0.1 4.1 0.2V15.5z"/></svg></a></div>';  
+      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank">' . $facebookSVG . '</a></div>';  
     }
 
     if($type_of_icon === 'icon1'){
@@ -451,7 +462,7 @@ function displaySocialShare() {
       $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
     }
     else{
-    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="twitter" fill="none" stroke="#32CCFE" stroke-miterlimit="10" d="M25 1C11.7 1 1 11.7 1 25c0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49 11.7 38.3 1 25 1zM36.7 19c0 0.3 0 0.5 0 0.8 0 8-6.1 17.1-17.1 17.1-3.4 0-6.6-1-9.2-2.7 0.5 0.1 1 0.1 1.5 0.1 2.8 0 5.4-1 7.5-2.6-2.6-0.1-4.9-1.8-5.6-4.2 0.4 0.1 0.7 0.1 1.1 0.1 0.5 0 0.6-0.1 1.1-0.2-2.8-0.6-5.3-3-5.3-5.9 0 0 0-0.1 0-0.1 1 0.4 2.2 0.7 3.2 0.8-1.6-1.1-2.4-2.9-2.4-5 0-1.1 0.4-2.1 0.9-3 3 3.7 7.5 6 12.5 6.3-0.1-0.4-0.1-0.9-0.1-1.4 0-3.3 2.7-6 6-6 1.7 0 3.3 0.7 4.4 1.9 1.4-0.3 2.7-0.8 3.8-1.5-0.4 1.4-1.4 2.6-2.6 3.3 1.2-0.1 2.4-0.5 3.5-0.9C38.9 17.1 37.8 18.2 36.7 19z"/></svg></a></div>';  
+    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank">' . $twitterSVG . '</a></div>';  
     }
 
     if($type_of_icon === 'icon1'){
@@ -467,7 +478,7 @@ function displaySocialShare() {
       $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
     }
     else{
-    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="google" fill="none" stroke="#DD4B39" stroke-miterlimit="10" d="M25.5 0.5c-13.3 0-24 10.7-24 24 0 13.3 10.7 24 24 24 13.3 0 24-10.7 24-24C49.5 11.2 38.8 0.5 25.5 0.5zM28 32.4c-3.1 4.4-9.3 5.6-14.2 3.8 -4.9-1.9-8.3-7-7.9-12.2 0.1-6.4 6-12 12.4-11.8 3.1-0.1 6 1.2 8.3 3.1 -1 1.1-2 2.2-3.2 3.3 -2.8-2-6.9-2.5-9.7-0.3 -4 2.8-4.2 9.4-0.3 12.4 3.8 3.4 10.9 1.7 12-3.5 -2.4 0-4.7 0-7.1-0.1 0-1.4 0-2.8 0-4.2 4 0 7.9 0 11.9 0C30.5 26.1 30 29.6 28 32.4zM40.2 27.3v3.2h-3.4v-3.2h-3.2v-2.8h3.2v-3h3.4v3h3.1v2.8H40.2z"/></svg></a></div>';  
+    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank">' . $googleSVG . '</a></div>';  
     }
 
     if($type_of_icon === 'icon1'){
@@ -483,7 +494,7 @@ function displaySocialShare() {
       $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
     }
     else{
-    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="linkedin" fill="none" stroke="#0977B4" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5 13.5 0 24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM16.5 39.5h-7v-19h7V39.5zM13.6 17.5L13.6 17.5c-2.2 0-3.6-1.4-3.6-3.2 0-1.9 1.4-3.3 3.6-3.3 2.2 0 3.6 1.4 3.6 3.3C17.2 16.1 15.8 17.5 13.6 17.5zM39.5 39.5h-6V29.3c0-2.6-0.9-4.4-3.2-4.4 -1.8 0-3 1.2-3.4 2.3 -0.2 0.4-0.3 1-0.3 1.6v10.6h-6.1c0.1-17 0-19 0-19h6.1v2.6c1-1.3 2.3-3.2 5.7-3.2 4.2 0 7.3 2.8 7.3 8.7V39.5z"/></svg></a></div>';  
+    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
     }
 
     if($type_of_icon === 'icon1'){
@@ -499,7 +510,7 @@ function displaySocialShare() {
       $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
     }
     else{
-    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="tumblr" fill="none" stroke="#2D4865" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM28 40c-6.5 0.1-9.5-4.7-9.5-8v-9.5h-3v-4.2c5-1.6 6.1-5.5 6.3-7.8 0-0.1 0.6 0 0.7 0 0 0 0 0 4 0v8h6v4h-6v9c0 1.3 0.7 3 3.1 3 0.8 0 2-0.3 2.5-0.5l1.3 4.3C32.8 39 30.2 40 28 40z"/></svg></a></div>'; 
+    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
     }
 
     if($type_of_icon === 'icon1'){
@@ -515,7 +526,7 @@ function displaySocialShare() {
       $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
     }
     else{
-    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path id="pinterest" fill="none" stroke="#CB2027" stroke-miterlimit="10" d="M25 0.5C11.5 0.5 0.5 11.5 0.5 25c0 13.5 11 24.5 24.5 24.5s24.5-11 24.5-24.5C49.5 11.5 38.5 0.5 25 0.5zM27.4 33.1c-2 0-3.8-1.1-4.5-2.3 -1.1 4.2-1.3 5-1.3 5 -0.4 1.4-1.5 3.3-1.9 3.9 -0.3 0.6-2.2 0.1-2.1-0.8 0-0.9 0-2.8 0.3-4.2 0 0 0.4-1.5 2.4-10 -0.6-1.2-0.6-2.9-0.6-2.9 0-2.7 1.6-4.7 3.5-4.7 1.7 0 2.5 1.3 2.5 2.8 0 1.7-1.1 4.2-1.6 6.5 -0.5 2 1 3.5 2.9 3.5 3.5 0 5.8-4.5 5.8-9.7 0-4-2.7-7-7.6-7 -5.6 0-9 4.2-9 8.8 0 1.6 0.5 2.7 1.2 3.6 0.3 0.4 0.4 0.5 0.3 1 -0.1 0.3-0.3 1.1-0.4 1.5 -0.1 0.5-0.5 0.6-0.9 0.5 -2.6-1-3.7-3.9-3.7-7C12.7 16.3 17 10 25.7 10c7 0 11.6 5.1 11.6 10.5C37.3 27.7 33.3 33.1 27.4 33.1z"/></svg></a></div>'; 
+    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
     }
 
 
