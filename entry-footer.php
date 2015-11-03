@@ -1,6 +1,6 @@
 <footer class="entry-footer">
 <div class="entry-footer-inner">
-  <div class="social-share">
+  <div class="social-share-wrap">
     <h4>Share:</h4>
     <?php echo displaySocialShare(); ?>
   </div>

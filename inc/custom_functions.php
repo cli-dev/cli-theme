@@ -6,7 +6,7 @@ define('CLI_ROOT', get_template_directory_uri());
 
 function main_stylesheet() {
 
-  wp_register_style( 'main', CLI_ROOT . '/css/style.css', false, false, 'all' );
+  wp_register_style( 'main', CLI_ROOT . '/css/min/style.css', false, false, 'all' );
   wp_enqueue_style( 'main' );
 
 }
@@ -425,13 +425,23 @@ function displaySocialProfiles($icon_type, $extra_class) {
   
   
 
-return '<div id="social-profiles" class="social ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . '</div>';
+return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . '</div>';
   
 }
 
 function displaySocialShare() {
   
   $type_of_icon = get_field('type_of_icon', 'options');
+
+  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_facebook-circle-outline.svg');
+  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_twitter-circle-outline.svg');
+  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_google-circle-outline.svg');
+  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_linkedin-circle-outline.svg');
+  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_tumblr-circle-outline.svg');
+  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_pinterest-circle-outline.svg');
+  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_flickr-circle-outline.svg');
+  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_newswire-circle-outline.svg');
+  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_instagram-circle-outline.svg');
 
     if($type_of_icon === 'icon1'){
       $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook"></i></a></div>';  
@@ -530,7 +540,7 @@ function displaySocialShare() {
     }
 
 
-return '<div id="social-share" class="social ' . $type_of_icon . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
+return '<div class="social social-share ' . $type_of_icon . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
   
 }
 

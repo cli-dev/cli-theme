@@ -34,7 +34,7 @@
     margin: 0 auto;  
   }
   &.fill-space{
-    @include flex(1,1,auto);
+    @include flex(1 1 auto);
   }
 }
 
@@ -45,7 +45,7 @@
   @include justify-content(center); 
   @include align-items(center);
   .panel-inner{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     text-align: center; 
     text-transform: uppercase; 
     border-style: solid;

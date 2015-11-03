@@ -87,11 +87,11 @@ em{
 
 @font-face {
 	font-family: 'CLi-Social';
-	src:url('../fonts/CLi-Social.eot?25co08');
-	src:url('../fonts/CLi-Social.eot?#iefix25co08') format('embedded-opentype'),
-		url('../fonts/CLi-Social.ttf?25co08') format('truetype'),
-		url('../fonts/CLi-Social.woff?25co08') format('woff'),
-		url('../fonts/CLi-Social.svg?25co08#icomoon') format('svg');
+	src: font-url('CLi-Social.eot?25co08');
+	src: font-url('CLi-Social.eot?#iefix25co08') format('embedded-opentype'),
+		   font-url('CLi-Social.ttf?25co08') format('truetype'),
+		   font-url('CLi-Social.woff?25co08') format('woff'),
+		   font-url('CLi-Social.svg?25co08#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

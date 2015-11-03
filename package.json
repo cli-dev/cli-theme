@@ -6,15 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" :
-  { "type" : "git",
-    "url" : "https://github.com/snrankin/cli-brand-enhanced-theme.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snrankin/cli-brand-enhanced-theme.git"
   },
   "author": "Sam Rankin",
   "license": "ISC",
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-compass": "latest",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",

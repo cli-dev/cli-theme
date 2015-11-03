@@ -51,13 +51,13 @@
   padding: 10px;
   @include breakpoint($md){
     padding: 20px;
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     @include display-flex;
     @include flex-direction(column);
     @include justify-content(center);
     @include align-items(center);
     > *{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
     }
   }
   .widget_sp_image a{

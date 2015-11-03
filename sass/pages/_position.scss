@@ -23,7 +23,7 @@ body.single-position{
     @include align-items(stretch);
     @include flex-wrap(nowrap);  
     .position-col{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
       &:first-child{
         width: 2/3*100%;
       }
@@ -35,7 +35,7 @@ body.single-position{
       }
     }
     .position-btn{
-      @include flex(1,1,auto);
+      @include flex(1 1 auto);
       height: 50%;  
       cursor: pointer;
     }
@@ -58,7 +58,7 @@ body.single-position{
   @include display-flex;
   @include flex-wrap(nowrap);
   div{
-    @include flex(1,1,auto);
+    @include flex(1 1 auto);
     &:first-child{
       max-width: 105px;
       @include breakpoint($md){
@@ -79,7 +79,7 @@ body.single-position{
   @include justify-content(center);
   @include flex-direction(column);
   span{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     line-height: 50px;
   }
 }
@@ -96,29 +96,29 @@ body.single-position{
 }
 
 .position-block{
-  @include flex(1,1,auto);
+  @include flex(1 1 auto);
   @include display-flex;
   @include align-items(stretch);
   @include flex-wrap(wrap);
 }
 .position-block-inner{
   width: 100%;
-  @include flex(1,1,auto);
+  @include flex(1 1 auto);
   @include display-flex;
   @include align-items(stretch);
   @include flex-wrap(wrap);
   @include flex-direction(column);
   padding: 20px;
   a{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     @include align-self(center);
   }
   h3{
-    @include flex(0,1,auto); 
+    @include flex(0 1 auto); 
   }
 }
 .job-description{
-  @include flex(1,1,auto);
+  @include flex(1 1 auto);
 }
 
 
@@ -130,7 +130,7 @@ body.single-position{
     margin: -5px;  
   }
   .position-block{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     padding: 5px;
   }
 }

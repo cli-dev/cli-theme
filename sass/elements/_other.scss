@@ -88,14 +88,14 @@
        
     }
     h3{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
     }
     div{
-      @include flex(0,1,auto); 
+      @include flex(0 1 auto); 
       max-width: 70%; 
     }
     p{
-      @include flex(1,1,auto);  
+      @include flex(1 1 auto);  
     }
     
   }
@@ -111,10 +111,10 @@
     @include justify-content(flex-end);
     h3{
       padding-bottom: 20px;  
-      @include flex(0,1,auto); 
+      @include flex(0 1 auto); 
     }
     a{
-      @include flex(0,1,auto); 
+      @include flex(0 1 auto); 
       padding: 0;  
     }
   }
@@ -126,7 +126,7 @@
   @include flex-wrap(nowrap);
   @include align-items(center);
   .single-image, .single-image-title{
-    @include flex(0,1,auto);  
+    @include flex(0 1 auto);  
   }
   .single-image-title{
     padding: 5px;
@@ -214,7 +214,7 @@
     padding-top: 20px;  
   }
   .location-item{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     @include breakpoint($md){
       width: 50%;  
     }
@@ -244,7 +244,7 @@
   @include align-items(center);
   padding-bottom: 10px;
   div{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
   }
 }
 
@@ -266,7 +266,7 @@ h4.location-item-title{
   font-size: 13px;
   line-height: 1.4;
   @include breakpoint($mds){
-    @include flex(0,1,auto);  
+    @include flex(0 1 auto);  
   }
   &.label{
     min-width: 70px; 
@@ -328,7 +328,7 @@ h4.location-item-title{
     @include display-flex;
     @include align-items(flex-end); 
     span{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
     }
   }
 }
@@ -338,7 +338,7 @@ h4.location-item-title{
   @include flex-wrap(wrap);
   @include align-items(stretch);
   > * {
-    @include flex(1,1,auto); 
+    @include flex(1 1 auto); 
     border: solid 2px #FFF; 
   }
 }
@@ -356,24 +356,24 @@ a.flex-col.social-grid{
   &.col-inner{
     padding: 10px;  
     > *{
-      @include flex(1,1,auto); 
+      @include flex(1 1 auto); 
       position: relative;
     }
   }
   &.col-inner.social-grid-mini{
     padding: 0;
     > * {
-      @include flex(1,1,auto); 
+      @include flex(1 1 auto); 
       border: solid 10px #FFF; 
       max-height: 50%;
     }
   }
  .blog-feed-wrapper{
-    @include flex(1,1,auto);  
+    @include flex(1 1 auto);  
     @include display-flex;
     @include align-items(stretch);
     article{
-     @include flex(1,1,auto); 
+     @include flex(1 1 auto); 
     }
   }
   .twitter-feed-wrapper{
@@ -384,7 +384,7 @@ a.flex-col.social-grid{
       color: #FFF;  
     }
     .twitter-feed{
-      @include flex(1,1,auto); 
+      @include flex(1 1 auto); 
       position: relative;
     }
   }

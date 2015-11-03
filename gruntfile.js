@@ -22,11 +22,29 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
+          relativeAssets: true,
           cssDir: 'css',
           sassDir: 'sass',
           imagesDir: 'imgs',
           javascriptsDir: 'js',
           outputStyle: 'expanded',
+          fontsPath: 'fonts',
+          imagesPath: 'imgs',
+          require: ['breakpoint']
+        }
+      },
+      prod: {
+        options: {
+          relativeAssets: true,
+          sourcemap: true,
+          environment: 'production',
+          cssDir: 'css/min',
+          sassDir: 'sass',
+          imagesDir: 'imgs',
+          javascriptsDir: 'js',
+          outputStyle: 'compressed',
+          fontsPath: 'fonts',
+          imagesPath: 'imgs',
           require: ['breakpoint']
         }
       }
@@ -39,9 +57,6 @@ module.exports = function(grunt) {
       css: {
         files: ['sass/**/*.scss'],
         tasks: ['compass', 'sync'],
-        options: {
-          livereload: true
-        }
       }
     },
     ftp_push: {
@@ -67,7 +82,7 @@ module.exports = function(grunt) {
     sync: {
       main: {
         files: [
-          {expand: true, src: ['css/*.css'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+          {expand: true, src: ['css/*.css', 'css/min/*.map', 'css/min/*.css'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       },
     },
@@ -81,6 +96,7 @@ module.exports = function(grunt) {
   // make sure you have run npm install so our app can find these
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-push');
   grunt.loadNpmTasks('grunt-sync');

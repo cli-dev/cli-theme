@@ -35,7 +35,7 @@ body.archive .entry-content.news-feed{
     border: #FFF solid 5px;
   }
   .post-block, .post-block-small{
-    @include flex(1,1,auto); 
+    @include flex(1 1 auto); 
     @include breakpoint($md){
       width: 50%;  
       min-height: 300px;
@@ -58,7 +58,7 @@ body.archive .entry-content.news-feed{
 .post-block, .post-block-small{
   @include display-flex;
   a{
-    @include flex(1,1,auto);
+    @include flex(1 1 auto);
     @include display-flex;
     @include align-items(stretch);
     position: relative;
@@ -78,7 +78,7 @@ body.archive .entry-content.news-feed{
     background-repeat: no-repeat; 
   }
   .post-block-inner{
-    @include flex(1,1,auto);
+    @include flex(1 1 auto);
     @include display-flex;
     @include align-items(stretch);
     @include flex-direction(column);
@@ -90,19 +90,19 @@ body.archive .entry-content.news-feed{
 }
 
 .post-block-title{
-  @include flex(0,1,auto); 
+  @include flex(0 1 auto); 
   text-transform: none; 
   color: #FFF;
 }
 
 .post-block-date{
-  @include flex(0,1,auto);  
+  @include flex(0 1 auto);  
 }
 
 .post-block-excerpt{
   padding: 20px 0;
   opacity: 0;  
-  @include flex(1,1,auto); 
+  @include flex(1 1 auto); 
   @include transition(all 0.3s ease-in-out);
   @include transition-delay(0.1s);
   p{
@@ -111,7 +111,7 @@ body.archive .entry-content.news-feed{
 }
 
 .post-block-read-more{
-  @include flex(0,1,auto); 
+  @include flex(0 1 auto); 
 }
 
 .small-news-feed{
@@ -176,30 +176,47 @@ body.archive .entry-content.news-feed{
     border-top: solid 1px $black;
     @include display-flex;
     @include flex-wrap(wrap);
-    @include justify-content(space-between); 
+    @include justify-content(center); 
     @include align-items(center);
+  }
+  .social-share-wrap{
+    @include flex(1 1 auto);
+  }
+  .navigation{
+    @include flex(0 1 auto);
+    width: 100%;
+    @include breakpoint($md){
+      width: auto;
+    }
   }
 }
 
 #nav-below{
-  @include flex(0,1,auto);
+  @include flex(0 1 auto);
   @include display-flex;
   @include flex-wrap(wrap);
   @include justify-content(center); 
   @include align-items(center);
   width: 100%;
-  margin-top: 10px;
+  margin: 10px -5px 0 -5px;
   @include breakpoint($mds){
     @include flex-wrap(nowrap);
-  }
-  @include breakpoint($mds){
     width: auto;  
-    margin-top: 0;
+    margin: 0 -5px 0 0px;
+  }
+  @include breakpoint($md){
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+  @include breakpoint($mdl){
+    @include justify-content(flex-start);
+    width: auto;  
+    margin: 0 -5px 0 0px;
   }
   a{  
     margin-top: 10px;
     width: 100%;
-    @include flex(0,1,auto); 
+    @include flex(0 1 auto); 
     @include display-flex;
     @include flex-wrap(nowrap);
     @include justify-content(center); 
@@ -209,7 +226,7 @@ body.archive .entry-content.news-feed{
       margin: 0 5px;
     }
     .nav-txt, .fa{
-      @include flex(0,1,auto); 
+      @include flex(0 1 auto); 
     }
     .fa{
       font-size: 25px;
@@ -228,7 +245,7 @@ body.archive .entry-content.news-feed{
     padding: 20px;
   }
   div{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     &:first-child{
       margin-bottom: 20px;  
     }
@@ -238,21 +255,21 @@ body.archive .entry-content.news-feed{
     @include justify-content(space-between);
     @include align-items(center);
     .news-icon{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
       width: 50px;
       height: auto;
     }
     .post-block-date{
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
     }
   }
 }
 
 .blog-feed-wrapper.news-inner-block{
- @include flex(1,1,auto);
+ @include flex(1 1 auto);
  @include display-flex;
  .post-block:only-child{
-   @include flex(1,1,auto);  
+   @include flex(1 1 auto);  
  }
 }
 
@@ -262,7 +279,7 @@ body.archive .entry-content.news-feed{
   @include justify-content(center);
   @include align-items(center);
   > *{
-    @include flex(0,1,auto);
+    @include flex(0 1 auto);
     line-height: 30px;
     padding: 0 10px;
     margin: 0 5px;  

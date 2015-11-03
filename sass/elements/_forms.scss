@@ -46,7 +46,7 @@
 }
 
 #searchsubmit{
-  @include flex(0,1,auto);
+  @include flex(0 1 auto);
   width: 100%;
   @include breakpoint($mds){
     width: auto;
@@ -54,7 +54,7 @@
 }
 
 #s{
-  @include flex(1,1,auto);
+  @include flex(1 1 auto);
   color: $black;  
   padding: 10px;
   line-height: 20px;
@@ -86,13 +86,13 @@
     }
     div[class^="col-"]{
       width: 100%;
-      @include flex(0,1,auto);
+      @include flex(0 1 auto);
       padding: 10px 0;
       @include breakpoint($md){
         width:auto;
         padding: 0 10px;
         &:nth-child(2){
-          @include flex(1,1,auto);
+          @include flex(1 1 auto);
         }
       }
     }
