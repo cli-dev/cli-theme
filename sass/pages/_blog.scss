@@ -284,14 +284,6 @@ body.archive .entry-content.news-feed{
     padding: 0 10px;
     margin: 0 5px;  
   }
-  .current, a:hover{
-    background-color: $black;
-    color: $off-white;  
-  }
-  a{
-    background-color: $off-white;
-    color: $black;  
-  }
   @include breakpoint($mdl){
     padding-top: 40px;
   }

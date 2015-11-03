@@ -51,11 +51,11 @@ function cli_add_dynamic_css(){
 add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css' );
 
 function bac_variable_length_excerpt($text, $length, $finish_sentence){
-  //Word length of the excerpt. This is exact or NOT depending on your '$finish_sentence' variable.
-  $length = 15; /* Change the Length of the excerpt as you wish. The Length is in words. */
+
+
+  $length = get_field('excerpt_length', 'option');
   
-  //1 if you want to finish the sentence of the excerpt (No weird cuts).
-  $finish_sentence = 0; // Put 0 if you do NOT want to finish the sentence.
+  $finish_sentence = get_field('finish_sentence', 'option');
    
   $tokens = array();
   $out = '';

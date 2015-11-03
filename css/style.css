@@ -3815,16 +3815,6 @@ body.archive .entry-content.news-feed {
   padding: 0 10px;
   margin: 0 5px;
 }
-/* line 287, ../sass/pages/_blog.scss */
-.pagination .current, .pagination a:hover {
-  background-color: #231F20;
-  color: #E1E1E1;
-}
-/* line 291, ../sass/pages/_blog.scss */
-.pagination a {
-  background-color: #E1E1E1;
-  color: #231F20;
-}
 @media (min-width: 900px) {
   /* line 276, ../sass/pages/_blog.scss */
   .pagination {

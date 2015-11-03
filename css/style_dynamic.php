@@ -65,6 +65,11 @@ $footer_bottom_text_color = get_field('footer_bottom_text_color', 'option');
 $footer_bottom_link_color = get_field('footer_bottom_link_color', 'option');
 $footer_bottom_link_hover_color = get_field('footer_bottom_link_hover_color', 'option');
 
+$pagination_item_background_color = get_field('pagination_item_background_color', 'option');
+$pagination_item_text_color = get_field('pagination_item_text_color', 'option');
+$pagination_current_background_color = get_field('pagination_current_background_color', 'option');
+$pagination_current_text_color = get_field('pagination_current_text_color', 'option');
+
 $global_css = get_field('global_css', 'option');
 $tablet_portrait_css = get_field('tablet_portrait_css', 'option');
 $tablet_landscape_css = get_field('tablet_landscape_css', 'option');
@@ -174,6 +179,16 @@ $desktop_css = get_field('desktop_css', 'option');
 h1,h2,h3,h4,h5,h6{<?php if($headings_font_family) { echo 'font-family: "' . $headings_font_family_value . '";'; } if($headings_line_height) { echo 'line-height: ' . $headings_line_height . ';'; } if($headings_font_color) { echo 'color: ' . $headings_font_color . ';'; } if($headings_font_weight) { echo 'font-weight: ' . $headings_font_weight . ';'; } if($headings_text_transform) { echo 'text-transform: ' . $headings_text_transform . ';'; }?>}
 
 p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $paragraph_font_family_value . '";'; } if($paragraph_line_height) { echo 'line-height: ' . $paragraph_line_height . ';'; } if($paragraph_font_color) { echo 'color: ' . $paragraph_font_color . ';'; } if($paragraph_font_weight) { echo 'font-weight: ' . $paragraph_font_weight . ';'; } if($paragraph_text_transform) { echo 'text-transform: ' . $paragraph_text_transform . ';'; }?>}
+
+.pagination .current,.pagination a:hover{
+  background-color: <?php echo $pagination_current_background_color; ?>;
+  color: <?php echo $pagination_current_text_color; ?>;
+}
+
+.pagination a{
+  background-color: <?php echo $pagination_item_background_color; ?>;
+  color: <?php echo $pagination_item_text_color; ?>;
+}
 
 <?php if( have_rows('theme_colors') ): while( have_rows('theme_colors') ): the_row(); 
 
