@@ -1,9 +1,8 @@
-/node_modules
-sftp-config.json
-/.sass-cache
-.DS_Store
+clitheme.sublime-workspace
 clitheme.sublime-project
 *.sublime-workspace
-clitheme.sublime-workspace
-*.sublime-workspace
-clitheme.sublime-workspace
+sftp-config.json
+/.sass-cache
+/node_modules
+grunt-watch.bat
+.DS_Store
