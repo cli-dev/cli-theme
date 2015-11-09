@@ -2,7 +2,7 @@
   padding: 10px
 }
 
-.acf-field.hidden-by-conditional-logic{
+body.toplevel_page_theme-general-settings .acf-field.hidden-by-conditional-logic{
   display: block !important;
   opacity: 0;
 }
