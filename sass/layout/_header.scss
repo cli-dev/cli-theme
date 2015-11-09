@@ -79,10 +79,6 @@
   @include breakpoint($mdl){
     @include flex(0 1 auto);
     padding: 10px;
-    &.center-logo{
-      display: block;
-      margin: 0 auto;
-    }
   }
   a{
     @include flex(1 1 auto);
@@ -92,6 +88,10 @@
   }
   &.center-logo{
     display: none;
+    @include breakpoint($mdl){
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -159,6 +159,7 @@ img.site-main-logo{
   @include display-flex;
   @include align-items(center);
   @include flex-direction(column); 
+  overflow: hidden;
 }
 
 .page-header-inner{
