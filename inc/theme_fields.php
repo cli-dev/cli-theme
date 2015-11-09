@@ -237,6 +237,7 @@ acf_add_local_field_group(array (
 					'disabled' => 0,
 				),
 			),
+			'collapsed' => '',
 		),
 		array (
 			'key' => 'field_5602e62ed6d6a',
@@ -274,6 +275,7 @@ acf_add_local_field_group(array (
 					'default_font' => 'Open Sans',
 				),
 			),
+			'collapsed' => '',
 		),
 		array (
 			'key' => 'field_562e5bcbf0cd5',
@@ -389,6 +391,7 @@ acf_add_local_field_group(array (
 					'disabled' => 0,
 				),
 			),
+			'collapsed' => '',
 		),
 		array (
 			'key' => 'field_56265e29e9709',
@@ -438,7 +441,7 @@ acf_add_local_field_group(array (
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
-				'width' => '',
+				'width' => 20,
 				'class' => '',
 				'id' => '',
 			),
@@ -466,13 +469,14 @@ acf_add_local_field_group(array (
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
-				'width' => '',
+				'width' => 20,
 				'class' => '',
 				'id' => '',
 			),
 			'choices' => array (
 				'left' => 'left',
 				'center' => 'center',
+				'right' => 'right',
 			),
 			'default_value' => array (
 			),
@@ -507,6 +511,72 @@ acf_add_local_field_group(array (
 			),
 			'message' => '',
 			'default_value' => 0,
+		),
+		array (
+			'key' => 'field_5640cb7f7749f',
+			'label' => 'Center Logo Menu Type',
+			'name' => 'center_logo_menu_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_5605b94321d7d',
+						'operator' => '==',
+						'value' => 'center',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 20,
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'top' => 'Centered above menu',
+				'divided' => 'In between two menus',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
+		),
+		array (
+			'key' => 'field_5640d20d9edeb',
+			'label' => 'Logo Height',
+			'name' => 'logo_height',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_5640cb7f7749f',
+						'operator' => '==',
+						'value' => 'top',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 20,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => 'px',
+			'min' => '',
+			'max' => '',
+			'step' => 1,
+			'readonly' => 0,
+			'disabled' => 0,
 		),
 		array (
 			'key' => 'field_55d4c8cd4b507',
@@ -545,21 +615,6 @@ acf_add_local_field_group(array (
 			'step' => '0.05',
 			'readonly' => 0,
 			'disabled' => 0,
-		),
-		array (
-			'key' => 'field_560eca6029271',
-			'label' => 'Menu Background Color',
-			'name' => 'menu_background_color',
-			'type' => 'color_picker',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
 		),
 		array (
 			'key' => 'field_55f30b4e7e257',
@@ -622,6 +677,21 @@ acf_add_local_field_group(array (
 			),
 			'message' => 'Will open with a button',
 			'default_value' => 0,
+		),
+		array (
+			'key' => 'field_560eca6029271',
+			'label' => 'Menu Background Color',
+			'name' => 'menu_background_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => 20,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 		array (
 			'key' => 'field_55d4c9004b509',
@@ -715,7 +785,7 @@ acf_add_local_field_group(array (
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
-				'width' => '',
+				'width' => 20,
 				'class' => '',
 				'id' => '',
 			),

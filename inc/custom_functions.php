@@ -709,17 +709,18 @@ add_filter('acf/load_field/name=paragraph_font_family', 'my_acf_load_field');
 function custom_navigation_menus() {
 
   $logo_position = get_field('logo_position', 'option');
+  $center_logo_menu_type = get_field('center_logo_menu_type', 'option');
 
   $locations = '';
 
-  if($logo_position === 'center'){
+  if($logo_position === 'center' && $center_logo_menu_type === 'divided'){
     $locations = array(
       'divided-right-menu' => __( 'Divided menu right side', 'cli_theme' ),
       'divided-left-menu' => __( 'Divided menu left side', 'cli_theme' ),
     );
   } else {
     $locations = array(
-      'right-menu' => __( 'Main Menu', 'cli_theme' ),
+      'main-menu' => __( 'Main Menu', 'cli_theme' ),
     );
   }
   register_nav_menus( $locations );
@@ -766,3 +767,8 @@ function my_search_form( $form ) {
 }
 
 add_filter( 'get_search_form', 'my_search_form' );
+
+add_action( 'admin_enqueue_scripts', 'load_admin_style', 99 );
+function load_admin_style() {
+  wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin/admin-style.css', false, '1.0.0' );
+}

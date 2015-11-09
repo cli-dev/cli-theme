@@ -7,6 +7,7 @@
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
   $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
   $header_type = get_field('header_type', 'option');
+  $center_logo_menu_type = get_field('center_logo_menu_type', 'option');
 
 ?>
 
@@ -17,9 +18,12 @@
         <?php  
           get_template_part('templates/menu' , 'mobile');
        
-          if($logo_position === 'center'){ 
+          if($logo_position === 'center' && $center_logo_menu_type === 'divided'){ 
             get_template_part('templates/menu' , 'divided'); 
           } 
+          else if($logo_position === 'center' && $center_logo_menu_type === 'top'){
+            get_template_part('templates/menu' , 'center'); 
+          }
           else { 
             get_template_part('templates/menu' , 'right'); 
           }  

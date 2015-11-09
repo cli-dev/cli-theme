@@ -26,6 +26,15 @@
     @include justify-content(space-between);
     @include flex-wrap(nowrap);
   }
+  &.menu-center{
+    @include breakpoint($mdl){
+      padding: 0 40px;
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
 }
 
 #mobile-nav{
@@ -70,6 +79,10 @@
   @include breakpoint($mdl){
     @include flex(0 1 auto);
     padding: 10px;
+    &.center-logo{
+      display: block;
+      margin: 0 auto;
+    }
   }
   a{
     @include flex(1 1 auto);
@@ -224,4 +237,8 @@ img.site-main-logo{
       @include flex(0 1 auto);
     }
   }
+}
+
+#menu-center{
+
 }
