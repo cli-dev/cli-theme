@@ -117,6 +117,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'flickr_feed' ) { 
           get_template_part('templates/rowlayout', 'flickr');
         }
+        else if ( get_row_layout() == 'hover_box' ) { 
+          get_template_part('templates/rowlayout', 'hoverbox');
+        }
       ?>
    <?php endwhile; endif; ?>
   <?php echo $end_inner_column ; ?>

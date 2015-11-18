@@ -75,6 +75,25 @@ $tablet_portrait_css = get_field('tablet_portrait_css', 'option');
 $tablet_landscape_css = get_field('tablet_landscape_css', 'option');
 $desktop_css = get_field('desktop_css', 'option');
 
+$scroll_button_width = get_field('scroll_button_width', 'option');
+$scroll_button_border_width = get_field('scroll_button_border_width', 'option');
+$scroll_button_icon_font_size = get_field('scroll_button_icon_font_size', 'option');
+$scroll_button_bottom = get_field('scroll_button_bottom', 'option');
+$scroll_button_right = get_field('scroll_button_right', 'option');
+$scroll_button_border_color = get_field('scroll_button_border_color', 'option');
+$scroll_button_background_color = get_field('scroll_button_background_color', 'option');
+$scroll_button_icon_color = get_field('scroll_button_icon_color', 'option');
+$scroll_button_hover_border_color = get_field('scroll_button_hover_border_color', 'option');
+$scroll_button_hover_background_color = get_field('scroll_button_hover_background_color', 'option');
+$scroll_button_hover_icon_color = get_field('scroll_button_hover_icon_color', 'option');
+
+$sadie_effect_gradient_top_color = get_field('sadie_effect_gradient_top_color', 'option');
+$sadie_effect_gradient_top_color_opacity = get_field('sadie_effect_gradient_top_color_opacity', 'option');
+$sadie_effect_gradient_top = 'rgba(' . hex2rgb($sadie_effect_gradient_top_color) . ', ' . $sadie_effect_gradient_top_color_opacity . ')';
+$sadie_effect_gradient_bottom_color = get_field('sadie_effect_gradient_bottom_color', 'option');
+$sadie_effect_gradient_bottom_color_opacity = get_field('sadie_effect_gradient_bottom_color_opacity', 'option');
+$sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_color) . ', ' . $sadie_effect_gradient_bottom_color_opacity . ')';
+
 ?>
 
 <?php if ($text_highlight_color) : ?>
@@ -128,7 +147,8 @@ $desktop_css = get_field('desktop_css', 'option');
   color: <?php echo $footer_top_link_color; ?>;
 }
 
-#top-footer .social-icon svg path{
+#top-footer .social-icon svg path,
+#top-footer .social-icon svg polygon{
   stroke: <?php echo $footer_top_link_color; ?>;
 }
 
@@ -188,6 +208,34 @@ p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $para
 .pagination a{
   background-color: <?php echo $pagination_item_background_color; ?>;
   color: <?php echo $pagination_item_text_color; ?>;
+}
+
+.effect-sadie .box-content:before{
+  background: -webkit-linear-gradient(top, <?php echo $sadie_effect_gradient_top; ?> 0%, <?php echo $sadie_effect_gradient_bottom; ?> 75%);
+  background: linear-gradient(to bottom, <?php echo $sadie_effect_gradient_top; ?> 0%, <?php echo $sadie_effect_gradient_bottom; ?> 75%);
+}
+
+#scrollTop{
+  background: <?php if($scroll_button_background_color){echo $scroll_button_background_color;} else {echo "transparent";} ?>; 
+  bottom: <?php echo $scroll_button_width; ?>px;
+  right: <?php echo $scroll_button_width; ?>px;
+  border: solid <?php echo $scroll_button_border_width; ?>px <?php echo $scroll_button_border_color; ?>;
+  width: <?php echo $scroll_button_width; ?>px;
+  height: <?php echo $scroll_button_width; ?>px;
+}
+
+#scrollTop i{
+  color: <?php echo $scroll_button_icon_color; ?>;
+  font-size: <?php echo $scroll_button_icon_font_size; ?>px;
+}
+
+#scrollTop:hover{
+  background: <?php if($scroll_button_hover_background_color){echo $scroll_button_hover_background_color;} else {echo "transparent";} ?>; 
+  border: solid <?php echo $scroll_button_border_width; ?>px <?php echo $scroll_button_hover_border_color; ?>;
+}
+
+#scrollTop:hover i{
+  color: <?php echo $scroll_button_hover_icon_color; ?>;
 }
 
 <?php if( have_rows('theme_colors') ): while( have_rows('theme_colors') ): the_row(); 

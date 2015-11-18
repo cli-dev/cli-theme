@@ -7,6 +7,8 @@ $pinterest: #bd081c;
 $flickr: #ff0084;
 $inewswire: #1357A8;
 $instagram: #7C5641;
+$vimeo: #1ab7ea;
+$youtube: #cd201f;
 
 $social-colors: (facebook, $facebook),
                 (twitter, $twitter),
@@ -16,7 +18,9 @@ $social-colors: (facebook, $facebook),
                 (pinterest, $pinterest),
                 (flickr, $flickr),
                 (newswire, $inewswire),
-                (instagram, $instagram);
+                (instagram, $instagram),
+                (vimeo, $vimeo),
+                (youtube, $youtube);
 
 .social{
   @include display-flex(inline-flex);
@@ -53,7 +57,7 @@ $social-colors: (facebook, $facebook),
       }
     }
     @each $socialnetwork, $color in $social-colors {
-      a:hover ##{$socialnetwork}{
+      a:hover .#{$socialnetwork}-path{
         fill: $color;  
         stroke: $color;
       }
@@ -61,7 +65,7 @@ $social-colors: (facebook, $facebook),
     svg{
       width: 35px;
       height: 35px;
-      path{
+      path, polygon{
         @include transition(all ease-in-out 0.3s);    
         stroke-width: 1.7;
       }

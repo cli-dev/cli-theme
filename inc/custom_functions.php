@@ -230,6 +230,8 @@ function displaySocialProfiles($icon_type, $extra_class) {
   $flickr = get_field('flickr', 'options');
   $newswire = get_field('newswire', 'options');
   $instagram = get_field('instagram', 'options');
+  $youtube = get_field('youtube', 'options');
+  $vimeo = get_field('vimeo', 'options');
 
   $facebookCode = '';
   $twitterCode = '';
@@ -240,16 +242,20 @@ function displaySocialProfiles($icon_type, $extra_class) {
   $flickrCode = '';
   $newswireCode = '';
   $instagramCode = '';
+  $youtubeCode = '';
+  $vimeoCode = '';
 
-  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_facebook-circle-outline.svg');
-  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_twitter-circle-outline.svg');
-  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_google-circle-outline.svg');
-  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_linkedin-circle-outline.svg');
-  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_tumblr-circle-outline.svg');
-  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_pinterest-circle-outline.svg');
-  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_flickr-circle-outline.svg');
-  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_newswire-circle-outline.svg');
-  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_instagram-circle-outline.svg');
+  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
+  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/twitter-circle-outline.svg');
+  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/google-circle-outline.svg');
+  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/linkedin-circle-outline.svg');
+  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/tumblr-circle-outline.svg');
+  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/pinterest-circle-outline.svg');
+  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/flickr-circle-outline.svg');
+  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/newswire-circle-outline.svg');
+  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/instagram-circle-outline.svg');
+  $youtubeSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/youtube-circle-outline.svg');
+  $vimeoSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/vimeo-circle-outline.svg');
   
   if($facebook){
     if($type_of_icon === 'icon1'){
@@ -417,15 +423,52 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-square-round"></i></a></div>';  
     }
     else{
-    $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</svg>
-';  
+    $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</a></div>';  
+    }
+
+  }
+
+  if($youtube){
+    if($type_of_icon === 'icon1'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-square-round"></i></a></div>';  
+    }
+    else{
+    $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank">' . $youtubeSVG . '</a></div>';  
+    }
+
+  }
+
+  if($vimeo){
+    if($type_of_icon === 'icon1'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-square-round"></i></a></div>';  
+    }
+    else{
+    $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank">' . $vimeoSVG . '</a></div>';  
     }
 
   }
   
   
 
-return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . '</div>';
+return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . $youtubeCode . $vimeoCode .'</div>';
   
 }
 
@@ -658,6 +701,54 @@ function team_member() {
 
 }
 add_action( 'init', 'team_member', 0 );
+
+// Register Custom Post Type
+function portfolio() {
+
+  $labels = array(
+    'name'                  => _x( 'Portfolio Items', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Portfolio Item', 'Post Type Singular Name', 'text_domain' ),
+    'menu_name'             => __( 'Portfolio', 'text_domain' ),
+    'name_admin_bar'        => __( 'Portfolio', 'text_domain' ),
+    'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+    'all_items'             => __( 'All Portfolio Items', 'text_domain' ),
+    'add_new_item'          => __( 'Add New Portfolio Item', 'text_domain' ),
+    'add_new'               => __( 'Add New', 'text_domain' ),
+    'new_item'              => __( 'New Item', 'text_domain' ),
+    'edit_item'             => __( 'Edit Item', 'text_domain' ),
+    'update_item'           => __( 'Update Item', 'text_domain' ),
+    'view_item'             => __( 'View Item', 'text_domain' ),
+    'search_items'          => __( 'Search Item', 'text_domain' ),
+    'not_found'             => __( 'Not found', 'text_domain' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+    'items_list'            => __( 'Items list', 'text_domain' ),
+    'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+    'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+  );
+  $args = array(
+    'label'                 => __( 'Portfolio Item', 'text_domain' ),
+    'description'           => __( 'Post Type Description', 'text_domain' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'thumbnail', ),
+    'taxonomies'            => array( 'category', 'post_tag' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'menu_icon'             => 'dashicons-portfolio',
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,    
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'page',
+  );
+  register_post_type( 'portfolio', $args );
+
+}
+add_action( 'init', 'portfolio', 0 );
 
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);

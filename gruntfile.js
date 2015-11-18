@@ -20,19 +20,6 @@ module.exports = function(grunt) {
       }
     },
     compass: {
-      dev: {
-        options: {
-          relativeAssets: true,
-          cssDir: 'css',
-          sassDir: 'sass',
-          imagesDir: 'imgs',
-          javascriptsDir: 'js',
-          outputStyle: 'expanded',
-          fontsPath: 'fonts',
-          imagesPath: 'imgs',
-          require: ['breakpoint']
-        }
-      },
       prod: {
         options: {
           relativeAssets: true,

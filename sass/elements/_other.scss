@@ -283,13 +283,8 @@ h4.location-item-title{
 
 #scrollTop{
   position: fixed;
-  bottom: 10px;
-  right: 10px;
   z-index: 9999;
-  border: solid 3px $black;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
   cursor: pointer;
   opacity: 0;
   @include transition(all 0.3s ease-in-out);
@@ -298,14 +293,8 @@ h4.location-item-title{
     opacity: 1; 
   }
   i{
-    font-size: 55px;
-    line-height: 50px;
-    color: $black; 
     @include transition(all 0.3s ease-in-out);
-  }
-  &:hover{
-    border: solid 3px $off-white;;
-    background: $off-white;;
+    margin-top: -3px;
   }
 }
 
@@ -337,7 +326,7 @@ h4.location-item-title{
   @include display-flex;
   @include flex-wrap(wrap);
   @include align-items(stretch);
-  > * {
+  &.col-inner > * {
     @include flex(1 1 auto); 
     border: solid 2px #FFF; 
   }
