@@ -756,7 +756,7 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-function my_acf_load_field( $field ) {
+function theme_font_choices( $field ) {
   
   $theme_fonts = get_field('theme_fonts', 'option');
   $typekit_fonts = get_field('typekit_fonts', 'option');
@@ -792,10 +792,34 @@ function my_acf_load_field( $field ) {
   return $field;
     
 }
-add_filter('acf/load_field/name=default_font_family', 'my_acf_load_field');
-add_filter('acf/load_field/name=menu_font_family', 'my_acf_load_field');
-add_filter('acf/load_field/name=headings_font_family', 'my_acf_load_field');
-add_filter('acf/load_field/name=paragraph_font_family', 'my_acf_load_field');
+add_filter('acf/load_field/name=default_font_family', 'theme_font_choices');
+add_filter('acf/load_field/name=menu_font_family', 'theme_font_choices');
+add_filter('acf/load_field/name=headings_font_family', 'theme_font_choices');
+add_filter('acf/load_field/name=paragraph_font_family', 'theme_font_choices');
+
+function theme_button_choices( $field ) {
+  $theme_colors = get_field('theme_colors', 'option');
+
+  $colors = array();
+
+  if($theme_colors){
+
+    foreach($theme_colors as $theme_color){
+
+      $themeColor = $theme_color['color_class_name'];
+
+      array_push($colors, $themeColor);
+    
+    }
+  }
+
+  $field['choices'] = $colors;
+  
+  return $field;
+}
+add_filter('acf/load_field/name=solid_initial_state', 'theme_button_choices');
+add_filter('acf/load_field/name=solid_hover_state', 'theme_button_choices');
+add_filter('acf/load_field/name=outline_type', 'theme_button_choices');
 
 function custom_navigation_menus() {
 
