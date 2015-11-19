@@ -33,7 +33,7 @@
       
       $variants = implode(",", $font_variants);
       
-      echo "'" . $font["font"] . ': ' . $variants . "', ";
+      echo "'" . $font["font"] . ':' . $variants . "', ";
     }
     echo ']}});</script>';
   }
