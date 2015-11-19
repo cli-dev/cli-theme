@@ -31,9 +31,6 @@ body.archive .entry-content.news-feed{
     @include flex-wrap(wrap);
     @include align-items(stretch);  
   }
-  .post-block-small .post-block-inner{
-    border: #FFF solid 5px;
-  }
   .post-block, .post-block-small{
     @include flex(1 1 auto); 
     @include breakpoint($md){
@@ -85,14 +82,11 @@ body.archive .entry-content.news-feed{
     padding: 20px;
     position: relative;
     z-index: 5;
-    background-color: rgba(0,0,0,0.5);
   }
 }
 
 .post-block-title{
-  @include flex(0 1 auto); 
-  text-transform: none; 
-  color: #FFF;
+  @include flex(0 1 auto);
 }
 
 .post-block-date{
@@ -105,9 +99,6 @@ body.archive .entry-content.news-feed{
   @include flex(1 1 auto); 
   @include transition(all 0.3s ease-in-out);
   @include transition-delay(0.1s);
-  p{
-    font-size: 14px;
-  }
 }
 
 .post-block-read-more{

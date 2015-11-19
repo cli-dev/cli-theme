@@ -217,8 +217,8 @@ p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $para
 
 #scrollTop{
   background: <?php if($scroll_button_background_color){echo $scroll_button_background_color;} else {echo "transparent";} ?>; 
-  bottom: <?php echo $scroll_button_width; ?>px;
-  right: <?php echo $scroll_button_width; ?>px;
+  bottom: <?php echo $scroll_button_bottom; ?>px;
+  right: <?php echo $scroll_button_right; ?>px;
   border: solid <?php echo $scroll_button_border_width; ?>px <?php echo $scroll_button_border_color; ?>;
   width: <?php echo $scroll_button_width; ?>px;
   height: <?php echo $scroll_button_width; ?>px;

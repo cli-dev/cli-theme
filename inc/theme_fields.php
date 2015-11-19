@@ -196,9 +196,10 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
+			'collapsed' => '',
 			'min' => '',
 			'max' => '',
-			'layout' => 'table',
+			'layout' => 'block',
 			'button_label' => 'Add Theme Color',
 			'sub_fields' => array (
 				array (
@@ -210,7 +211,7 @@ acf_add_local_field_group(array (
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array (
-						'width' => 20,
+						'width' => '12.5',
 						'class' => '',
 						'id' => '',
 					),
@@ -225,7 +226,7 @@ acf_add_local_field_group(array (
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array (
-						'width' => 80,
+						'width' => '12.5',
 						'class' => '',
 						'id' => '',
 					),
@@ -238,7 +239,6 @@ acf_add_local_field_group(array (
 					'disabled' => 0,
 				),
 			),
-			'collapsed' => '',
 		),
 		array (
 			'key' => 'field_5602e62ed6d6a',
@@ -762,9 +762,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Oswald' => 'Oswald',
-				'Lato' => 'Lato',
-				'Crimson Text' => 'Crimson Text',
+				'Roboto' => 'Roboto',
 				'ltc-bodoni-175' => 'LTC Bodani',
 				'futura-pt' => 'Futura',
 			),
@@ -959,9 +957,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Oswald' => 'Oswald',
-				'Lato' => 'Lato',
-				'Crimson Text' => 'Crimson Text',
+				'Roboto' => 'Roboto',
 				'ltc-bodoni-175' => 'LTC Bodani',
 				'futura-pt' => 'Futura',
 			),
@@ -989,9 +985,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Oswald' => 'Oswald',
-				'Lato' => 'Lato',
-				'Crimson Text' => 'Crimson Text',
+				'Roboto' => 'Roboto',
 				'ltc-bodoni-175' => 'LTC Bodani',
 				'futura-pt' => 'Futura',
 			),
@@ -1119,9 +1113,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
-				'Oswald' => 'Oswald',
-				'Lato' => 'Lato',
-				'Crimson Text' => 'Crimson Text',
+				'Roboto' => 'Roboto',
 				'ltc-bodoni-175' => 'LTC Bodani',
 				'futura-pt' => 'Futura',
 			),

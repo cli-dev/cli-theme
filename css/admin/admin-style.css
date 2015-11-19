@@ -1,8 +1,3 @@
 .acf-field{
   padding: 10px
 }
-
-body.toplevel_page_theme-general-settings .acf-field.hidden-by-conditional-logic{
-  display: block !important;
-  opacity: 0;
-}

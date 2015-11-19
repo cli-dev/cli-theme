@@ -79,7 +79,7 @@
   @include display-flex;
   @include flex-wrap(wrap);
   @include justify-content(center);
-  @inclue align-items(center); 
+  @include align-items(center); 
   @include breakpoint($lrg){
     margin: 0 -5px;
   } 
@@ -90,11 +90,7 @@
       padding: 0 5px;
     }
     a{
-      display: block;
-      line-height: 30px;
-      text-align: center;
-      text-transform: lowercase;
-      font-weight: 700;  
+      display: block;  
     }
   }
 }
