@@ -476,15 +476,12 @@ function displaySocialShare() {
   
   $type_of_icon = get_field('type_of_icon', 'options');
 
-  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_facebook-circle-outline.svg');
-  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_twitter-circle-outline.svg');
-  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_google-circle-outline.svg');
-  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_linkedin-circle-outline.svg');
-  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_tumblr-circle-outline.svg');
-  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_pinterest-circle-outline.svg');
-  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_flickr-circle-outline.svg');
-  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_newswire-circle-outline.svg');
-  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/Icons_instagram-circle-outline.svg');
+  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
+  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/twitter-circle-outline.svg');
+  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/google-circle-outline.svg');
+  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/linkedin-circle-outline.svg');
+  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/tumblr-circle-outline.svg');
+  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/pinterest-circle-outline.svg');
 
     if($type_of_icon === 'icon1'){
       $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook"></i></a></div>';  
