@@ -176,6 +176,7 @@ img.site-main-logo{
 
 .header-block{
   @include flex(0 1 auto); 
+  max-width: 100%;
 }
 
 #side-menu{
