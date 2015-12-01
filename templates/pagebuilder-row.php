@@ -34,9 +34,9 @@ $row_background_image = (get_sub_field('row_background_image', $item_id)) ? get_
 $background_image_overlay = (get_sub_field('background_image_overlay', $item_id)) ? get_sub_field('background_image_overlay', $item_id) : '';
 $background_image_overlay_opacity = (get_sub_field('background_image_overlay_opacity', $item_id)) ? get_sub_field('background_image_overlay_opacity', $item_id) : '';
 $overlay_rgb = (get_sub_field('background_image_overlay', $item_id)) ? hex2rgb($background_image_overlay) : '';
-$parallax_image = (get_sub_field('parallax_image', $item_id)) ? 'data-image-src="' . get_sub_field('parallax_image', $item_id) . '"' : '';
-$horizontal_position = (get_sub_field('horizontal_position', $item_id)) ? 'data-position-x="' . get_sub_field('horizontal_position', $item_id) . '"' : '';
-$vertical_positon = (get_sub_field('vertical_positon', $item_id)) ? 'data-position-y="' . get_sub_field('vertical_positon', $item_id) . '"' : '';
+$parallax_image = get_sub_field('parallax_image', $item_id);
+$horizontal_position = get_sub_field('horizontal_position', $item_id);
+$vertical_positon = get_sub_field('vertical_positon', $item_id);
 $speed = (get_sub_field('column_direction', $item_id)) ? 'data-speed="' . get_sub_field('speed', $item_id) . '"' : '';
 
 $row_wrapper_styles = '';
@@ -53,7 +53,7 @@ else if ($background_type === 'image'){
   } 
 }
 else if ($background_type === 'parallax'){
-  $row_wrapper_styles = ' data-parallax="scroll"' . $parallax_image . ' ' . $horizontal_position . ' ' . $vertical_positon . ' ' . $speed;
+  $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') ' . $horizontal_position . ' ' . $vertical_positon .  ' no-repeat; background-size: cover; background-attachment: fixed;"';
 }
 else{
   $row_wrapper_styles = '';  

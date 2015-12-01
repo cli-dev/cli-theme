@@ -98,7 +98,7 @@
   @include breakpoint($lrg){
     padding: 40px;
   }
-  > *{
+  .col-item{
     min-height: 1px;
     @include flex(0 1 auto);  
     max-width: 100%;

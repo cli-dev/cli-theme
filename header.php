@@ -28,12 +28,11 @@
     foreach($theme_fonts as $theme_font)
     {
       $font = $theme_font['theme_font'];
+      $variants = $theme_font['variants'];
+
+      $googleVariants = implode(",",$variants);
       
-      $font_variants = $font["variants"];
-      
-      $variants = implode(",", $font_variants);
-      
-      echo "'" . $font["font"] . ':' . $variants . "', ";
+      echo "'" . $font . ':' . $googleVariants . "', ";
     }
     echo ']}});</script>';
   }

@@ -67,7 +67,7 @@ $end_inner_column = '</div>';
 
 <?php echo $start_outer_column ; ?> 
   <?php echo $start_inner_column ; ?> 
-    <?php if( have_rows('column_content', $item_id) ) : while ( have_rows('column_content', $item_id) ) : the_row(); ?>
+    <?php if( have_rows('column_content', $item_id) ) : while ( have_rows('column_content', $item_id) ) : the_row(); ?>     
       <?php 
         if ( get_row_layout() == 'text' ) { 
           get_template_part('templates/rowlayout', 'text');
@@ -119,6 +119,9 @@ $end_inner_column = '</div>';
         }
         else if ( get_row_layout() == 'hover_box' ) { 
           get_template_part('templates/rowlayout', 'hoverbox');
+        }
+        else if ( get_row_layout() == 'image_gallery' ) { 
+          get_template_part('templates/rowlayout', 'gallery');
         }
       ?>
    <?php endwhile; endif; ?>

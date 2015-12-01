@@ -56,12 +56,6 @@
   padding: 0;  
   &.row-wrapper .flex-row{
     padding: 0;  
-    .col-inner{
-      padding: 20px;  
-      @include breakpoint($md){
-        padding: 40px;  
-      }
-    }
   }
   &.col-inner{
     padding: 0;  
@@ -79,10 +73,10 @@
 .img-col .col-inner{
   min-height: 150px;
   @include breakpoint($md){
-    min-height: 300px;  
+    min-height: 250px;  
   }
   @include breakpoint($lrg){
-    min-height: 500px;  
+    min-height: 350px;  
   }
 }
 
@@ -115,4 +109,8 @@
 .alignleft{
   float: left;
   margin: 0 10px 10px 0;  
+}
+
+.wow{
+  visibility: hidden;
 }

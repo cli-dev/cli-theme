@@ -389,3 +389,32 @@ a.flex-col.social-grid{
     }
   }
 }
+
+.img-gallery{
+  @include display-flex;
+  @include flex-wrap(wrap);
+  .gallery-img-wrap{
+    @include flex(0 1 auto);
+    width: 100%;
+    @include breakpoint($mds){
+      max-width: 50%;
+    }
+    @include breakpoint($mdl){
+      max-width: 25%;
+    }
+  }
+}
+
+.gallery-img{
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}

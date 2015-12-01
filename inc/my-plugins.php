@@ -28,9 +28,6 @@ function add_my_plugins() {
   
   wp_register_script( 'googleFonts', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js', false,'1.5.18', false);
   wp_enqueue_script( 'googleFonts' );
-  
-  wp_register_script( 'googleMaps', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', false,'', false);
-  wp_enqueue_script( 'googleMaps' );
 
   wp_register_script( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js',  array('jquery'), '2.1.5', false );
   wp_enqueue_script( 'fancybox' );
@@ -49,9 +46,6 @@ function add_my_plugins() {
   
   wp_register_script( 'instagramFeed', get_template_directory_uri() . '/js/vendor/instafeed.min.js', false, '1.3.2',  false );
   wp_enqueue_script( 'instagramFeed' );
-
-  wp_register_script( 'maps', get_template_directory_uri() . '/js/maps.js', array('jquery'),'', true);
-  wp_enqueue_script( 'maps' );
   
   wp_register_script( 'owlCarousel', get_template_directory_uri() . '/js/vendor/owl-carousel/owl.carousel.min.js', array('jquery'),'2.0', true);
   wp_enqueue_script( 'owlCarousel' );

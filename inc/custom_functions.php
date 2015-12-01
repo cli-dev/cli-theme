@@ -4,6 +4,8 @@ define( 'ACFGFS_API_KEY', 'AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U' );
 
 define('CLI_ROOT', get_template_directory_uri());
 
+// Add Main Stylesheet
+
 function main_stylesheet() {
 
   wp_register_style( 'main', CLI_ROOT . '/css/min/style.css', false, false, 'all' );
@@ -753,6 +755,30 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
+
+function push_google_font_families($field){
+
+  $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U');
+
+  $google_fonts = json_decode($returned_content, true);
+
+  $fonts = array();
+
+  foreach($google_fonts['items'] as $val){
+
+    $fontName = $val['family'];
+
+    $fonts[$fontName] = $fontName;
+  }
+
+  $field['choices'] = $fonts;
+
+  return $field;
+}
+
+add_filter('acf/load_field/name=theme_font', 'push_google_font_families');
+
+
 function theme_font_choices( $field ) {
   
   $theme_fonts = get_field('theme_fonts', 'option');
@@ -766,10 +792,8 @@ function theme_font_choices( $field ) {
     foreach($theme_fonts as $theme_font)
     {
       $font = $theme_font['theme_font'];
-      $fontName = $font['font'];
-      $cssName = $font['font'];
-      
-      $googleFonts[$cssName] = $fontName;
+
+      $googleFonts[$font] = $font;
     }
   }
 
@@ -880,7 +904,9 @@ function my_search_form( $form ) {
 
 add_filter( 'get_search_form', 'my_search_form' );
 
-add_action( 'admin_enqueue_scripts', 'load_admin_style', 99 );
+
 function load_admin_style() {
   wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin/admin-style.css', false, '1.0.0' );
 }
+
+add_action( 'admin_enqueue_scripts', 'load_admin_style', 99 );
