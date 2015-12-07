@@ -1,16 +1,5 @@
 <?php
 
-// First, create a function that includes the path to your favicon
-function add_favicon() {
-    $favicon_url = get_stylesheet_directory_uri() . '/imgs/admin-favicon.png';
-  echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
-}
-  
-// Now, just make sure that function runs when you're on the login page and admin pages  
-add_action('login_head', 'add_favicon');
-add_action('admin_head', 'add_favicon');
-
-
 define('CLI_ROOT', get_template_directory_uri());
 
 // Add Main Stylesheet
@@ -22,6 +11,16 @@ function main_stylesheet() {
 
 }
 add_action( 'wp_enqueue_scripts', 'main_stylesheet' );
+
+// First, create a function that includes the path to your favicon
+function add_favicon() {
+    $favicon_url = CLI_ROOT . '/imgs/admin-favicon.png';
+  echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+}
+  
+// Now, just make sure that function runs when you're on the login page and admin pages  
+add_action('login_head', 'add_favicon');
+add_action('admin_head', 'add_favicon');
 
 if(!function_exists('cli_is_css_folder_writable')) {
 	/**
