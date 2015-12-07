@@ -624,6 +624,8 @@ function is_blog () {
 
 add_image_size( 'sidebar-thumb', 50, 50, true );
 
+add_image_size( 'theme_image_preview', 100, 100);
+
 function position() {
 
 	$labels = array(

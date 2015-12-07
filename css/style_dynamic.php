@@ -24,6 +24,12 @@ $desktop_header_height = get_field('desktop_header_height', 'option');
 $mobile_header_height = get_field('mobile_header_height', 'options');
 $header_bg_rgb = hex2rgb($header_color);
 $menu_link_color = get_field('menu_link_color', 'option');
+$menu_line_height = get_field('menu_line_height', 'option');
+$mobile_menu_item_divider_color = get_field('mobile_menu_item_divider_color', 'option');
+$menu_icon_top_bar_background_color = get_field('menu_icon_top_bar_background_color', 'option');
+$menu_icon_middle_bar_background_color = get_field('menu_icon_middle_bar_background_color', 'option');
+$menu_icon_bottom_bar_background_color = get_field('menu_icon_bottom_bar_background_color', 'option');
+$menu_icon_text_color_color = get_field('menu_icon_text_color_color', 'option');
 $menu_font_size = get_field('menu_font_size', 'option');
 $menu_background_color = get_field('menu_background_color', 'option'); 
 
@@ -128,6 +134,58 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 #header .menu .current-menu-item a, #header .menu a:hover{
   <?php if ($menu_link_active_color) { echo 'color: ' . $menu_link_active_color . '; '; }?>
 }
+
+<?php if($menu_icon_top_bar_background_color) :?>
+
+.menu-button span::before{
+  background-color: <?php echo $menu_icon_top_bar_background_color; ?>;
+}
+
+<?php endif ?>
+
+<?php if($menu_icon_middle_bar_background_color) :?>
+
+.menu-button span{
+  background-color: <?php echo $menu_icon_middle_bar_background_color; ?>;
+}
+
+<?php endif ?>
+
+<?php if($menu_icon_bottom_bar_background_color) :?>
+
+.menu-button span::after{
+  background-color: <?php echo $menu_icon_bottom_bar_background_color; ?>;
+}
+
+<?php endif ?>
+
+<?php if($menu_icon_top_bar_background_color): ?>
+
+.menu-button-txt{
+  color: <?php echo $menu_icon_text_color_color; ?>;
+}
+
+<?php endif ?>
+
+<?php if($menu_line_height) : ?>
+
+#header .menu a .link-text{
+  line-height: <?php echo $menu_line_height; ?>px;
+}
+
+<?php endif ?>
+
+<?php if($mobile_menu_item_divider_color): ?>
+
+#mobile-nav .menu li{
+  border-bottom: solid 1px <?php echo $menu_icon_text_color_color; ?>;
+}
+
+#mobile-nav .menu li:last-child{
+  border-bottom: none;
+}
+
+<?php endif ?>
 
 <?php if ($footer_top_background_color) : ?>
 

@@ -16,8 +16,25 @@
   $header_type = get_field('header_type', $item_id);
 
   $header_item_direction = get_field('header_item_direction', $item_id);
-  $header_item_distribution = get_field('header_item_distribution', $item_id);
-  $header_item_alignment = get_field('header_item_alignment', $item_id);
+  $header_item_horizontal_distribution = (get_field('header_item_horizontal_distribution', $item_id)) ? ' flex-position-' . get_field('header_item_horizontal_distribution', $item_id) : '';
+  $header_item_horizontal_alignment = (get_field('header_item_horizontal_alignment', $item_id)) ? ' flex-align-' . get_field('header_item_horizontal_alignment', $item_id) : '';
+  $header_item_vertical_distribution = (get_field('header_item_vertical_distribution', $item_id)) ? ' flex-position-' . get_field('header_item_vertical_distribution', $item_id) : '';
+  $header_item_vertical_alignment = (get_field('header_item_vertical_alignment', $item_id)) ? ' flex-align-' . get_field('header_item_vertical_alignment', $item_id) : '';
+
+  if($header_item_direction === 'row'){
+    $col_position = $header_item_horizontal_distribution;
+    $col_alignment = $header_item_horizontal_alignment;
+    $row_direction = ' flex-direction-row';
+  }
+  else{
+    $col_position = $header_item_vertical_distribution;
+    $col_alignment = $header_item_vertical_alignment;
+    $row_direction = ' flex-direction-column';
+  }
+  
+  $header_items = $row_direction . $col_position . $col_alignment;
+
+
   $add_background_video = get_field('add_background_video', $item_id);
   $video_mp4 = get_field('video_mp4', $item_id);
   $video_ogg = get_field('video_ogg', $item_id);
@@ -61,7 +78,7 @@
         <div class="bg-video-overlay"></div>
       </div>
     <?php } ?>
-    <div class="page-header-inner in-grid flex-row<?php if($header_item_direction){ echo ' flex-direction-' . $header_item_direction;} ?><?php if($header_item_distribution){ echo ' flex-position-' . $header_item_distribution;} ?><?php if($header_item_alignment){ echo ' flex-align-' . $header_item_alignment;} ?>">
+    <div class="page-header-inner in-grid flex-row <?php echo $header_items ?>">
       <?php if( have_rows('header_content', $item_id) ): while ( have_rows('header_content', $item_id) ) : the_row(); ?>
          
         <div class="header-block">   
