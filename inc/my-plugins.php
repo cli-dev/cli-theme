@@ -31,6 +31,9 @@ function add_my_plugins() {
 
   wp_register_script( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js',  array('jquery'), '2.1.5', false );
   wp_enqueue_script( 'fancybox' );
+
+  wp_register_script( 'nicescroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js',  array('jquery'), '3.6.0', false );
+  wp_enqueue_script( 'nicescroll' );
   
   wp_register_script( 'transit', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js', array('jquery'),'0.9.12', true);
   wp_enqueue_script( 'transit' );

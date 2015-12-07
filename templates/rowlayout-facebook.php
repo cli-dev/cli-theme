@@ -6,7 +6,7 @@ $item_id = (is_blog()) ? $page_for_posts : $postid;
 $facebook_posts = get_sub_field('facebook_posts', $item_id);
 $custom_class = get_sub_field('custom_class', $item_id);
 
-$$item_add_animation = get_sub_field('add_item_animation', $item_id);
+$item_add_animation = get_sub_field('add_item_animation', $item_id);
 $animation_class = ($item_add_animation == 1) ? ' wow' : '';
 $item_animation_effect = (get_sub_field('item_animation_effect', $item_id)) ? ' ' . get_sub_field('item_animation_effect', $item_id)  : '';
 $item_animation_duration = (get_sub_field('item_animation_duration')) ? ' data-wow-duration="' . get_sub_field('item_animation_duration', $item_id) . 's"'  : '';

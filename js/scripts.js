@@ -7,6 +7,10 @@ jQuery(document).ready(function($) {
 
   $('#container').css('min-height', cH);
 
+  $("html").niceScroll({
+    mousescrollstep: 60,
+  });
+
   $(window).resize(function(event) {
     var wH2 = $(window).height(); 
     var fH2 = $('#footer').height();
