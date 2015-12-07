@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', 'main_stylesheet' );
 function add_favicon() {
   $favicon = get_field('favicon', 'option');
   if ($favicon) {
-    echo '<link rel="shortcut icon" href="' . $favicon_url . '" type="image/x-icon" />';
+    echo '<link rel="shortcut icon" href="' . $favicon . '" type="image/x-icon" />';
   }
 }
   
