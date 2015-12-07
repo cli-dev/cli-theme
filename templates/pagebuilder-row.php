@@ -35,8 +35,8 @@ $background_image_overlay = (get_sub_field('background_image_overlay', $item_id)
 $background_image_overlay_opacity = (get_sub_field('background_image_overlay_opacity', $item_id)) ? get_sub_field('background_image_overlay_opacity', $item_id) : '';
 $overlay_rgb = (get_sub_field('background_image_overlay', $item_id)) ? hex2rgb($background_image_overlay) : '';
 $parallax_image = get_sub_field('parallax_image', $item_id);
-$horizontal_position = get_sub_field('horizontal_position', $item_id);
-$vertical_positon = get_sub_field('vertical_positon', $item_id);
+$parallax_horizontal_position = get_sub_field('parallax_horizontal_position', $item_id);
+$parallax_vertical_positon = get_sub_field('parallax_vertical_positon', $item_id);
 $speed = (get_sub_field('column_direction', $item_id)) ? 'data-speed="' . get_sub_field('speed', $item_id) . '"' : '';
 
 $row_wrapper_styles = '';
