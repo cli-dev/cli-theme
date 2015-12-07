@@ -101,7 +101,6 @@
   .col-item{
     min-height: 1px;
     @include flex(0 1 auto);  
-    max-width: 100%;
   }
   &.flex-direction-row{
     @include flex-wrap(wrap);
