@@ -53,7 +53,21 @@ else if ($background_type === 'image'){
   } 
 }
 else if ($background_type === 'parallax'){
-  $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') ' . $horizontal_position . ' ' . $vertical_positon .  ' no-repeat; background-size: cover; background-attachment: fixed;"';
+  if ( !$detect->isMobile() ) {
+    if($parallax_image && $background_image_overlay){
+      $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') ' . $parallax_horizontal_position . ' ' . $parallax_vertical_positon .  ' no-repeat; background-size: cover; background-attachment: fixed; box-shadow: inset 0 0 0 1000px rgba(' . $overlay_rgb . ', ' . $background_image_overlay_opacity . ');"';
+    } 
+    else if($parallax_image && !$background_image_overlay){ 
+      $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') ' . $parallax_horizontal_position . ' ' . $parallax_vertical_positon .  ' no-repeat; background-size: cover; background-attachment: fixed;"';
+    } 
+  } else{
+    if($parallax_image && $background_image_overlay){
+      $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') center no-repeat; background-size: cover; box-shadow: inset 0 0 0 1000px rgba(' . $overlay_rgb . ', ' . $background_image_overlay_opacity . ');"'; 
+    } 
+    else if($parallax_image && !$background_image_overlay){ 
+      $row_wrapper_styles = ' style="background: url(' . $parallax_image . ') center no-repeat; background-size: cover;"';
+    } 
+  }
 }
 else{
   $row_wrapper_styles = '';  

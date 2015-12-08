@@ -314,7 +314,7 @@ acf_add_local_field_group(array (
 											'prepend' => '',
 											'append' => 'seconds',
 											'min' => '',
-											'max' => 0,
+											'max' => '',
 											'step' => '0.01',
 											'readonly' => 0,
 											'disabled' => 0,
@@ -6486,6 +6486,13 @@ acf_add_local_field_group(array (
 								'value' => 'image',
 							),
 						),
+						array (
+							array (
+								'field' => 'field_55f8a525ec31d',
+								'operator' => '==',
+								'value' => 'parallax',
+							),
+						),
 					),
 					'wrapper' => array (
 						'width' => '33.33',
@@ -6507,6 +6514,13 @@ acf_add_local_field_group(array (
 								'field' => 'field_55f8a525ec31d',
 								'operator' => '==',
 								'value' => 'image',
+							),
+						),
+						array (
+							array (
+								'field' => 'field_55f8a525ec31d',
+								'operator' => '==',
+								'value' => 'parallax',
 							),
 						),
 					),
@@ -6560,7 +6574,7 @@ acf_add_local_field_group(array (
 				array (
 					'key' => 'field_55f73df4adc06',
 					'label' => 'Horizontal Position',
-					'name' => 'horizontal_position',
+					'name' => 'parallax_horizontal_position',
 					'type' => 'select',
 					'instructions' => '',
 					'required' => 0,
@@ -6604,7 +6618,7 @@ acf_add_local_field_group(array (
 				array (
 					'key' => 'field_55f73e32adc07',
 					'label' => 'Vertical Positon',
-					'name' => 'vertical_positon',
+					'name' => 'parallax_vertical_positon',
 					'type' => 'select',
 					'instructions' => '',
 					'required' => 0,
