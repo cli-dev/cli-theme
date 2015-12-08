@@ -84,7 +84,7 @@ if ( function_exists('register_sidebar') ) {
   register_sidebar(array(
     'name' => 'Header Widget Area',
     'id' => 'header-widgets',
-    'description' => 'Used with side menu',
+    'description' => '',
     'before_widget' => '<div id="%1$s" class="header-widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="header-widget-title">',

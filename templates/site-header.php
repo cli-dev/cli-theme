@@ -15,6 +15,11 @@
   <div id="content-wrapper">
     <header id="header" class="<?php echo $header_in_grid; ?>">
       <div class="header-inner">
+        <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
+          <div id="header-widgets">  
+            <?php dynamic_sidebar( 'header-widgets' ); ?>
+          </div>
+        <?php endif; ?>
         <?php  
           get_template_part('templates/menu' , 'mobile');
        

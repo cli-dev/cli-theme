@@ -233,17 +233,16 @@ img.site-main-logo{
 }
 
 #header-widgets{
-  display: none;
+  max-width: $grid-width;
+  margin: 0 auto;
+  @include display-flex;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include align-items(center);
   @include breakpoint($md){
-    @include display-flex;
-    @include flex-wrap(nowrap);
-    @include align-items(center);
-    > div{
-      @include flex(0 1 auto);
-    }
+    @include justify-content(space-between);
   }
-}
-
-#menu-center{
-
+  > div{
+    @include flex(0 1 auto);
+  }
 }
