@@ -5,7 +5,7 @@ function add_my_plugins() {
   wp_register_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css', false, '3.4.0' );
 	wp_enqueue_style( 'animate' );
   
-  wp_register_style( 'fontAwesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0' );
+  wp_register_style( 'fontAwesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', false, '4.5.0' );
 	wp_enqueue_style( 'fontAwesome' );
   
   wp_register_style( 'genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css', false, '' );

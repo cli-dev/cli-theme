@@ -1,3 +1,14 @@
 .acf-field{
   padding: 10px
 }
+
+.acf-field select option[value="fa-angle-double-down"]:before{
+  content:'\f103';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  padding-right: 5px;
+}
+
+div[data-name="accordion_tab_title"] .acf-editor-wrap iframe{
+  min-height: 80px;
+}

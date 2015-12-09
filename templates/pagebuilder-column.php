@@ -123,6 +123,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'image_gallery' ) { 
           get_template_part('templates/rowlayout', 'gallery');
         }
+        else if ( get_row_layout() == 'vertical_accordion' ) { 
+          get_template_part('templates/rowlayout', 'accordion');
+        }
       ?>
    <?php endwhile; endif; ?>
   <?php echo $end_inner_column ; ?>
