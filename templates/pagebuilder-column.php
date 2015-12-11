@@ -26,6 +26,15 @@ $column_bg_rgb = hex2rgb($column_background_color);
 $link_column = get_sub_field('link_column', $item_id);
 $column_link = get_sub_field('column_link', $item_id);
 
+$link_type = get_sub_field('link_type', $item_id);
+
+$internal_link = get_permalink( get_sub_field('internal_link', $item_id));
+$external_link = get_sub_field('external_link', $item_id);
+
+$link = ($link_type === 'Internal') ? $internal_link : $external_link;
+
+$target = ($link_type === 'Internal') ? '_self' : '_blank';
+
 $add_classes_to_outer_column = ' class="flex-col' . $column_width . $custom_column_alignment . $col_custom_class . (($column_add_animation == 1) ? ' wow' : '' ) . $column_animation_effect . '"';
 $add_animation = $column_animation_delay . $column_animation_offset;
 
@@ -58,7 +67,7 @@ else{
 
 $add_classes_to_inner_column = 'class="col-inner ' . $item_direction . $content_position . $content_alignment . $inner_column_class . '"';
 
-$start_outer_column = ($link_column == 1) ? '<a href="' . $column_link . '"' . $add_classes_to_outer_column . (($column_add_animation == 1) ? $add_animation : '' ) . $column_styles . '>' : '<div ' . $add_classes_to_outer_column . (($column_add_animation == 1) ? $add_animation : '' ) . $column_styles . '>';
+$start_outer_column = ($link_column == 1) ? '<a href="' . $link . '" target="' . $target . '" ' . $add_classes_to_outer_column . (($column_add_animation == 1) ? $add_animation : '' ) . $column_styles . '>' : '<div ' . $add_classes_to_outer_column . (($column_add_animation == 1) ? $add_animation : '' ) . $column_styles . '>';
 $end_outer_column = ($link_column == 1) ? '</a>' : '</div>';
 
 $start_inner_column = '<div ' . $add_classes_to_inner_column . ' >';
@@ -81,7 +90,7 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'single_image' ) { 
           get_template_part('templates/rowlayout', 'singleimg'); 
         } 
-        else if ( get_row_layout() == 'facebook_feed' ) { 
+        else if ( get_row_layout() == 'facebook' ) { 
           get_template_part('templates/rowlayout', 'facebook'); 
         } 
         else if ( get_row_layout() == 'twitter_feed' ) { 
