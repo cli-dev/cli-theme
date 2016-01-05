@@ -114,6 +114,20 @@ function show_Contact() {
 }
 add_shortcode( 'contact_info', 'displayContactInfo' );
 
+function show_Phone() {
+  
+  return displayPhone();
+  
+}
+add_shortcode( 'phone', 'show_Phone' );
+
+function show_Email() {
+  
+  return displayEmail();
+  
+}
+add_shortcode( 'email', 'show_Email' );
+
 function copyright() {
   
   $siteTitle = get_bloginfo( 'name' ); 

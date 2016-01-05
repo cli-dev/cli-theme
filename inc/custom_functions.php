@@ -180,7 +180,7 @@ function displayfullAddress() {
     $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
-return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div>' . $phoneCode . $emailCode . '</div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div>' . $phoneCode . $emailCode . '</div>';
   
 }
 
@@ -207,7 +207,7 @@ function displayAddress() {
     $zipCode = '<span itemprop="postalCode">' . $zip . '</span>';  
   }
 
-return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div></div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div></div>';
   
 }
 
@@ -224,7 +224,31 @@ function displayContactInfo() {
     $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
-return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $phoneCode . $emailCode . '</div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $phoneCode . $emailCode . '</div>';
+  
+}
+
+function displayPhone() {
+  
+  $phone = get_field('phone', 'option');
+  
+  if($phone){
+    $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
+  }
+
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $phoneCode . '</div>';
+  
+}
+
+function displayEmail() {
+  
+  $email = get_field('email', 'option');
+  
+  if($email){
+    $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
+  }
+
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $emailCode . '</div>';
   
 }
 
@@ -476,10 +500,8 @@ function displaySocialProfiles($icon_type, $extra_class) {
     }
 
   }
-  
-  
 
-return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . $youtubeCode . $vimeoCode .'</div>';
+  return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . $youtubeCode . $vimeoCode .'</div>';
   
 }
 
