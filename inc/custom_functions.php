@@ -714,7 +714,7 @@ function team_member() {
 		'label'               => __( 'Team Member', 'cli_theme' ),
 		'description'         => __( 'Post Type Description', 'cli_theme' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail', ),
+		'supports'            => array( 'title', 'thumbnail', 'page-attributes', ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
