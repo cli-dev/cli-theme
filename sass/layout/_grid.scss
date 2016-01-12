@@ -100,6 +100,7 @@
   }
   .col-item{
     min-height: 1px;
+    max-width: 100%;
     @include flex(0 1 auto);  
   }
   &.flex-direction-row{
