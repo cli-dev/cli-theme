@@ -64,18 +64,6 @@
   @include align-self(stretch);
 }
 
-@for $i from 1 through 12{
-  .flex-order-#{$i}{
-    @include breakpoint($md){
-      @include order($i);
-    }
-  }
-  .max-width-col-#{$i}{
-    max-width: ($i/12) * $grid-width - 40px; 
-  }
-}
-
-
 .flex-col{
   @include flex(0 1 auto); 
   position: relative;
@@ -98,14 +86,15 @@
   @include breakpoint($lrg){
     padding: 40px;
   }
-  .col-item{
-    min-height: 1px;
-    max-width: 100%;
-    @include flex(0 1 auto);  
-  }
   &.flex-direction-row{
     @include flex-wrap(wrap);
   }
+}
+
+.col-item{
+  min-height: 1px;
+  max-width: 100%;
+  @include flex(0 1 auto);  
 }
 
 .col-12{
@@ -189,5 +178,16 @@
   width: 100%;
   @include breakpoint($mdl){
     width: 1/12 * 100%; 
+  }
+}
+
+@for $i from 1 through 12{
+  .flex-order-#{$i}{
+    @include breakpoint($md){
+      @include order($i);
+    }
+  }
+  .max-width-col-#{$i}, .col-inner.max-width-col-#{$i}{
+    max-width: ($i/12) * $grid-width - 40px; 
   }
 }
