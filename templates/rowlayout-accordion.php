@@ -6,6 +6,8 @@ $postid = get_the_ID();
 $item_id = (is_blog()) ? $page_for_posts : $postid;
 
 $accordion_class = get_sub_field('accordion_class', $item_id);
+$open_icon = get_sub_field('open_tab_icon', $item_id);
+$close_icon = get_sub_field('open_tab_icon', $item_id);
 
 ?>
 
@@ -21,8 +23,6 @@ $accordion_class = get_sub_field('accordion_class', $item_id);
     $title_bg = (get_sub_field('accordion_tab_title_background_color')) ? ' style="background-color: ' . get_sub_field('accordion_tab_title_background_color') . ';"' : '';
     $content_bg = (get_sub_field('accordion_tab_content_background_color')) ? ' style="background-color: ' . get_sub_field('accordion_tab_content_background_color') . '; display:none;"' : ' style="display:none;"';
     $custom_class = get_sub_field('custom_class');
-    $open_icon = get_sub_field('open_tab_icon');
-    $close_icon = get_sub_field('open_tab_icon');
 
     ?>
 
@@ -46,11 +46,13 @@ $accordion_class = get_sub_field('accordion_class', $item_id);
 
       $(element).click(function() {
         if($(this).children('.accordion-content').css('display') === 'none'){
-          $('.accordion-content').slideUp();
+          $('.accordion-content').slideUp().removeClass('active-tab');
+          $(this).addClass('active-tab');
           $(this).children('.accordion-content').slideDown();
           $(this).find('.fa').removeClass('<?php echo $open_icon; ?>').addClass('<?php echo $close_icon; ?>');
         } else{
           $(this).children('.accordion-content').slideUp();
+          $(this).removeClass('active-tab');
           $(this).find('.fa').removeClass('<?php echo $close_icon; ?>').addClass('<?php echo $open_icon; ?>');
         }
       });
