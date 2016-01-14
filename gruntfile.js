@@ -36,6 +36,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      css: {
+        src: ['css/vendor/animate.min.css','css/vendor/hover-min.css','css/vendor/jquery.fancybox.min.css','css/vendor/owl.carousel.css','css/min/style.css'],
+        dest: 'css/style.css',
+      },
+      jsheader: {
+        src: ['js/vendor/modernizr.min.js','js/vendor/webfont.js','js/vendor/jquery.fancybox.min.js','js/vendor/jquery.nicescroll.min.js'],
+        dest: 'js/header-scripts.js',
+      },
+      jsfooter: {
+        src: ['js/vendor/jquery.transit.min.js','js/vendor/jquery.scrollTo.min.js','js/vendor/wow.min.js','js/vendor/owl-carousel/owl.carousel.min.js','js/scripts.js'],
+        dest: 'js/footer-scripts.js',
+      },
+    },
     watch: {
       scripts: {
         files: ['js/**/*.js'],
@@ -43,7 +57,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['sass/**/*.scss'],
-        tasks: ['compass', 'sync'],
+        tasks: ['compass', 'concat', 'sync'],
       }
     },
     ftp_push: {
@@ -84,6 +98,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-push');
   grunt.loadNpmTasks('grunt-sync');

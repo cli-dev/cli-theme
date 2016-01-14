@@ -6,7 +6,7 @@ define('CLI_ROOT', get_template_directory_uri());
 
 function main_stylesheet() {
 
-  wp_register_style( 'main', CLI_ROOT . '/css/min/style.css', false, false, 'all' );
+  wp_register_style( 'main', CLI_ROOT . '/css/style.css', false, false, 'all' );
   wp_enqueue_style( 'main' );
 
 }
