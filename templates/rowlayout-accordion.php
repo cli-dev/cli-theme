@@ -7,7 +7,7 @@ $item_id = (is_blog()) ? $page_for_posts : $postid;
 
 $accordion_class = get_sub_field('accordion_class', $item_id);
 $open_icon = get_sub_field('open_tab_icon', $item_id);
-$close_icon = get_sub_field('open_tab_icon', $item_id);
+$close_icon = get_sub_field('close_tab_icon', $item_id);
 
 ?>
 
@@ -46,8 +46,9 @@ $close_icon = get_sub_field('open_tab_icon', $item_id);
 
       $(element).click(function() {
         if($(this).children('.accordion-content').css('display') === 'none'){
-          $('.accordion-content').slideUp().removeClass('active-tab');
-          $(this).addClass('active-tab');
+          $('.accordion-content').slideUp();
+          $('.<?php echo $accordion_class; ?> .fa').removeClass('<?php echo $close_icon; ?>').addClass('<?php echo $open_icon; ?>');
+          $(this).addClass('active-tab').siblings().removeClass('active-tab');
           $(this).children('.accordion-content').slideDown();
           $(this).find('.fa').removeClass('<?php echo $open_icon; ?>').addClass('<?php echo $close_icon; ?>');
         } else{
