@@ -37,9 +37,12 @@ module.exports = function(grunt) {
       }
     },
     concat: {
+      options: {
+        sourceMap: true,
+      },
       css: {
         src: ['css/vendor/animate.min.css','css/vendor/hover-min.css','css/vendor/jquery.fancybox.min.css','css/vendor/owl.carousel.css','css/min/style.css'],
-        dest: 'css/style.css',
+        dest: 'css/production/style.css',
       },
       jsheader: {
         src: ['js/vendor/modernizr.min.js','js/vendor/webfont.js','js/vendor/jquery.fancybox.min.js','js/vendor/jquery.nicescroll.min.js'],
