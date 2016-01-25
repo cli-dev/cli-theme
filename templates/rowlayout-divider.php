@@ -29,6 +29,7 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
-<div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
+<div class="col-item<?php echo $custom_class . $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
 
-<div class="divider<?php echo $custom_class; ?>" <?php echo $divider_styles; ?>></div></div>
+  <div class="divider" <?php echo $divider_styles; ?>></div>
+</div>
