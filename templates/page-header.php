@@ -81,16 +81,20 @@
     <div class="page-header-inner in-grid flex-row <?php echo $header_items ?>">
       <?php if( have_rows('header_content', $item_id) ): while ( have_rows('header_content', $item_id) ) : the_row(); ?>
          
-        <div class="header-block">   
+          
           <?php if( get_row_layout() == 'header_text' ) {?>
-            <?php the_sub_field('header_text', $item_id); ?>
+            <?php $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : ''; ?>  
+            <div class="header-block<?php echo $custom_class; ?>"> 
+              <?php the_sub_field('header_text', $item_id); ?>
+            </div>
           <?php } ?>
           
           <?php if( get_row_layout() == 'image' ) { $image = get_sub_field('header_image', $item_id);?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="single-image" />
+            <?php $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : ''; ?>  
+            <div class="header-block<?php echo $custom_class; ?>"> 
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="single-image" />
+            </div>
           <?php } ?>
-        
-        </div>
       
      <?php endwhile; endif; ?>  
     </div>
