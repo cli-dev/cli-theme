@@ -254,7 +254,7 @@ function displayEmail() {
 
 function displaySocialProfiles($icon_type, $extra_class) {
 
-  $icon_type = 'icon1';
+  $icon_type = '';
   $extra_class = '';
   
   $custom_class = $extra_class;
