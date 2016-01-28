@@ -971,9 +971,3 @@ function vc_remove_wp_ver_css_js( $src ) {
 }
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
-
-if (WP_DEBUG) {
-  define('WP_DEBUG_LOG', true);
-  define('WP_DEBUG_DISPLAY', false);
-  @ini_set('display_errors',0);
-}
