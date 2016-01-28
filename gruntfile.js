@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         dest: 'js/header-scripts.js',
       },
       jsfooter: {
-        src: ['js/vendor/jquery.transit.min.js','js/vendor/jquery.scrollTo.min.js','js/vendor/wow.min.js','js/vendor/owl-carousel/owl.carousel.min.js','js/scripts.js'],
+        src: ['js/vendor/jquery.transit.min.js','js/vendor/jquery.hoverIntent.min.js','js/vendor/jquery.scrollTo.min.js','js/vendor/wow.min.js','js/vendor/owl-carousel/owl.carousel.min.js','js/scripts.js'],
         dest: 'js/footer-scripts.js',
       },
     },

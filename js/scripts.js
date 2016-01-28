@@ -212,9 +212,11 @@ jQuery(document).ready(function($) {
   $('.header-inner .menu-container > .menu > li.menu-item-has-children').hoverIntent(
     function(){
       $(this).children('.sub-menu').slideDown();
+      $(this).children('.sub-menu-icon').removeClass('genericon-expand').addClass('genericon-collapse');
     },
     function(){
       $(this).children('.sub-menu').slideUp();
+      $(this).children('.sub-menu-icon').removeClass('genericon-collapse').addClass('genericon-expand');
     }
   )
   

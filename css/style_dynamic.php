@@ -123,7 +123,7 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 @media screen and (min-width: 1000px){
   <?php if($header_color) { echo '.menu-container{ background-color: transparent; } #header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} .sub-menu { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
-  <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} '; }?>
+  <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} .menu-container .sub-menu-icon{ line-height: ' . $desktop_header_height . 'px;}'; }?>
 }
 
 .menu-mobile-container .menu a,
@@ -137,7 +137,7 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 }
 
 .menu-mobile-container .menu .current-menu-item a, .menu-mobile-container .menu a:hover, .menu-mobile-container .menu .current_page_parent a,
-.menu-container .menu .current-menu-item a, .menu-container .menu a:hover, .menu-container .menu .current_page_parent a{
+.menu-container .menu .current-menu-item a, .menu-container .menu a:hover, .menu-container .menu .current_page_parent a, li.menu-item-has-children:hover .sub-menu-icon{
   <?php if ($menu_link_active_color) { echo 'color: ' . $menu_link_active_color . '; '; }?>
 }
 

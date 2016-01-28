@@ -151,6 +151,7 @@ $button-color: #FFF;
   }
 }
 
+.header-inner .menu-mobile-container > .menu > li.menu-item-has-children,
 .header-inner .menu-container > .menu > li.menu-item-has-children{
   position: relative;
   @include breakpoint($mdl){
@@ -160,12 +161,17 @@ $button-color: #FFF;
       left: 0;
       z-index: 100;
       width: auto;
+      margin: 0 !important;
       a{
         white-space: nowrap;
       }
     }
+    >a{
+      padding-right: 10px;
+    }
   }
   .sub-menu-icon{
+    @include transition(ease-in-out all 0.3s);
     position: absolute;
     top: 0;
     right: 0;
