@@ -136,8 +136,8 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
   <?php if ($menu_link_color) { echo 'color: ' . $menu_link_color . '; '; }?>
 }
 
-.menu-mobile-container .menu .current-menu-item a, .menu-mobile-container .menu a:hover, .menu-mobile-container .menu .current_page_parent a,
-.menu-container .menu .current-menu-item a, .menu-container .menu a:hover, .menu-container .menu .current_page_parent > a, li.menu-item-has-children:hover .sub-menu-icon{
+.menu-mobile-container .menu .current-menu-item > a, .menu-mobile-container .menu a:hover, .menu-mobile-container .menu .current_page_parent > a,
+.menu-container .menu .current-menu-item > a, .menu-container .menu a:hover, .menu-container .menu .current_page_parent > a, li.menu-item-has-children:hover .sub-menu-icon{
   <?php if ($menu_link_active_color) { echo 'color: ' . $menu_link_active_color . '; '; }?>
 }
 
