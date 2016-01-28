@@ -13,5 +13,5 @@
     </button>
     <span class="menu-button-txt">Menu</span>
   </div>
-  <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'container_class' => 'menu-mobile-container', 'link_before' => '<span class="link-text">', 'link_after' => '</span>', 'depth' => -1) ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'container_class' => 'menu-mobile-container', 'link_before' => '<span class="link-text">', 'link_after' => '</span>') ); ?>
 </nav>

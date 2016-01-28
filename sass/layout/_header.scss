@@ -110,13 +110,13 @@ img.site-main-logo{
     @include display-flex;
     @include align-items(stretch);
     @include flex-direction(column); 
-    overflow: hidden;
     width: auto; 
     position: relative;
     top: auto;
     left: auto;
     &.hidden-menu{
       margin-right: 100px;
+      overflow-x: hidden;
       ul.menu{
         @include transform(translateX(100%));
       }

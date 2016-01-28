@@ -253,9 +253,6 @@ function displayEmail() {
 }
 
 function displaySocialProfiles($icon_type, $extra_class) {
-
-  $icon_type = '';
-  $extra_class = '';
   
   $custom_class = $extra_class;
   $type_of_icon = $icon_type;

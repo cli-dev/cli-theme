@@ -133,19 +133,47 @@ $button-color: #FFF;
     }
   }
   a{
-    display: block;
-    padding: 0 5px;
-    @include flex(1 1 auto); 
-    @include display-flex;
-    @include justify-content(center);
-    @include align-items(stretch);
-    @include flex-direction(column);
-    .link-text{
-      @include flex(0 1 auto);
+    display: inline-block;
+    @include breakpoint($mdl){
+      @include flex(1 1 auto); 
+      @include display-flex;
+      @include justify-content(center);
+      @include align-items(stretch);
+      @include flex-direction(column);
+      .link-text{
+        @include flex(0 1 auto);
+      }
     }
   }
   ul{
     margin: 0;
     list-style: none;
+  }
+}
+
+.header-inner .menu-container > .menu > li.menu-item-has-children{
+  position: relative;
+  @include breakpoint($mdl){
+    >.sub-menu{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 100;
+      width: auto;
+      a{
+        white-space: nowrap;
+      }
+    }
+  }
+  .sub-menu-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+  >.sub-menu{
+    display: none;
+    padding-bottom: 0;
+    margin-left: 20px;
   }
 }

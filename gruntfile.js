@@ -56,11 +56,11 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['jshint']
+        tasks: ['jshint', 'concat:jsheader', 'concat:jsfooter', 'sync:js']
       },
       css: {
         files: ['sass/**/*.scss'],
-        tasks: ['compass', 'concat', 'sync'],
+        tasks: ['compass', 'concat:css', 'sync:css'],
       }
     },
     ftp_push: {
@@ -84,11 +84,16 @@ module.exports = function(grunt) {
       }
     },
     sync: {
-      main: {
+      css: {
         files: [
-          {expand: true, src: ['css/*.css', 'css/min/*.map', 'css/min/*.css'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+          {expand: true, src: ['css/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       },
+      js: {
+        files: [
+          {expand: true, src: ['js/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+        ],
+      }
     },
   });
   
