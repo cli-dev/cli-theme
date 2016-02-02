@@ -791,7 +791,7 @@ add_filter('the_content', 'filter_ptags_on_images');
 
 function push_google_font_families($field){
 
-  $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCb6qQxNAuJiQm-iEBkCs3KF1Iopl1gw0U');
+  $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc');
 
   $google_fonts = json_decode($returned_content, true);
 
