@@ -6,7 +6,7 @@
               
   $image = get_sub_field('single_image', $item_id);
   $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : '';
-  $title_position = (get_sub_field('title_position', $item_id)) ? get_sub_field('title_position', $item_id) : '';
+  $title_position = (get_sub_field('title_position', $item_id)) ? get_sub_field('title_position', $item_id) : ' no-title';
   $display_title = (get_sub_field('display_title', $item_id) == 1) ? '<div class="single-image-title">' . $image['title'] . '</div>' : '';
   $width = (get_sub_field('single_image_size', $item_id)) ? ' width="' . get_sub_field('single_image_size', $item_id) . '"' : '';
   

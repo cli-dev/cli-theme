@@ -122,6 +122,9 @@
   .single-image-title{
     padding: 5px;
   }
+  &.no-title{
+    display: block;
+  }
   &.title-top{
     @include flex-direction(column);
     @include justify-content(center);

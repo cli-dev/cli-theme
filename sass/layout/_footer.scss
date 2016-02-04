@@ -72,25 +72,30 @@
   }
 }
 
-.footer-widget .menu{
-  padding:0;
-  margin: 0 -10px;
-  list-style: none;
-  @include display-flex;
-  @include flex-wrap(wrap);
-  @include justify-content(center);
-  @include align-items(center); 
-  @include breakpoint($lrg){
-    margin: 0 -5px;
-  } 
-  li{
-    width: auto;
-    padding: 0 10px;
+.footer-widget {
+  .social{
+    @include display-flex;
+  }
+  .menu{
+    padding:0;
+    margin: 0 -10px;
+    list-style: none;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include align-items(center); 
     @include breakpoint($lrg){
-      padding: 0 5px;
-    }
-    a{
-      display: block;  
+      margin: 0 -5px;
+    } 
+    li{
+      width: auto;
+      padding: 0 10px;
+      @include breakpoint($lrg){
+        padding: 0 5px;
+      }
+      a{
+        display: block;  
+      }
     }
   }
 }
