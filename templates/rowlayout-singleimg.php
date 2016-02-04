@@ -6,11 +6,10 @@
               
   $image = get_sub_field('single_image', $item_id);
   $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : '';
-  $title_position = (get_sub_field('title_position', $item_id)) ? get_sub_field('title_position', $item_id) : ' no-title';
+  $title_position = (get_sub_field('title_position', $item_id)) ? get_sub_field('title_position', $item_id) : '';
+  $layout_classes = (get_sub_field('display_title', $item_id) == 1) ? 'class="single-image-wrapper ' . $title_position . '"' : 'class="single-image-wrapper no-title"';
   $display_title = (get_sub_field('display_title', $item_id) == 1) ? '<div class="single-image-title">' . $image['title'] . '</div>' : '';
   $width = (get_sub_field('single_image_size', $item_id)) ? ' width="' . get_sub_field('single_image_size', $item_id) . '"' : '';
-  
-  $layout_classes = 'class="single-image-wrapper ' . $title_position . '"';
  
 $item_add_animation = get_sub_field('add_item_animation', $item_id);
 $animation_class = ($item_add_animation == 1) ? ' wow' : '';
