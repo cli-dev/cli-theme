@@ -44,10 +44,12 @@
     echo '<script src="https://use.typekit.net/' . $typekit . '.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>';
   }
 
+  $slug = (!is_blog()) ? the_slug() . '-page' : '';
+
 ?>
 
 </head>
-<body <?php body_class(); ?> >
+<body <?php body_class($slug); ?> >
 <div id="top"></div>
 <div id="wrapper" class="hfeed">
 <?php get_template_part('templates/site-header') ?>
