@@ -29,8 +29,8 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
-<div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
-<a class="special-btn <?php echo $custom_class; ?>" href="<?php echo $link; ?>">
+<div class="col-item<?php echo $custom_class . $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
+<a class="special-btn" href="<?php echo $link; ?>">
   <div class="first-panel panel">
     <div class="panel-inner" <?php echo $first_panel_styles; ?>>
       <?php echo $first_panel_text; ?>
