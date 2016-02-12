@@ -51,7 +51,7 @@
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
           <div id="header-widgets">  
-            <?php dynamic_sidebar( 'header-widgets' ); ?>
+            <div class="header-widgets-inner"><?php dynamic_sidebar( 'header-widgets' ); ?></div>
           </div>
         <?php endif; ?>
         <div class="menu-button-area<?php echo $hide_button; if ($header_type === 'Right Menu') { echo ' right-menu-btn';} else {echo ' left-menu-btn';}?>">
