@@ -17,7 +17,7 @@
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
           <div id="header-widgets">  
-            <?php dynamic_sidebar( 'header-widgets' ); ?>
+            <div class="header-widgets-inner"><?php dynamic_sidebar( 'header-widgets' ); ?></div>
           </div>
         <?php endif; ?>
         <?php  
