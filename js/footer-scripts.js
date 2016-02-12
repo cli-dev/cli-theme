@@ -22,6 +22,7 @@ jQuery(document).ready(function($) {
 
   $("html").niceScroll({
     mousescrollstep: 60,
+    horizrailenabled: false
   });
 
   $(window).resize(function(event) {
