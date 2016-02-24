@@ -18,10 +18,10 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
-<div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
+<div class="col-item<?php echo $animation_class . $item_animation_effect . $custom_class; ?>"<?php echo $animation;?>>
         
 <?php $args = array ('posts_per_page' => $blog_posts, 'offset' => $post_offset, 'cat' => $blog_category); $query = new WP_Query( $args ); if ( $query->have_posts() ) : ?>
-  <div class="blog-feed-wrapper <?php echo $custom_class; ?>">
+  <div class="blog-feed-wrapper">
   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
     <?php get_template_part('templates/post-layouts/post-layout-' . $post_layout); ?>
   <?php endwhile; ?>

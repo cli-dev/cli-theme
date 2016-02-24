@@ -15,8 +15,8 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
-<div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
-<div class="twitter-feed-wrapper <?php echo $custom_class; ?>">
+<div class="col-item<?php echo $animation_class . $item_animation_effect . $custom_class; ?>"<?php echo $animation;?>>
+<div class="twitter-feed-wrapper">
 <div class="twitter-feed<?php if ($is_slider == 1) { echo ' twitter-slider'; }?>">
   <?php $twitter_posts = get_sub_field('twitter_posts', $item_id); echo do_shortcode('[timeline-twitter-feed]'); ?>
 </div>
