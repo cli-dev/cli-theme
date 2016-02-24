@@ -5734,8 +5734,8 @@ acf_add_local_field_group(array (
 								),
 								array (
 									'key' => '56ce0eb78caf8',
-									'name' => 'twitter_feed',
-									'label' => 'Twitter Feed',
+									'name' => 'flickr_feed',
+									'label' => 'Flickr Feed',
 									'display' => 'block',
 									'sub_fields' => array (
 										array (
