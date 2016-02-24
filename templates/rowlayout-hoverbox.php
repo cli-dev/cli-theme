@@ -6,6 +6,7 @@ $postid = get_the_ID();
 $item_id = (is_blog()) ? $page_for_posts : $postid;
 
 $hover_effect = get_sub_field('hover_effect', $item_id);
+$custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : '';
 
 $background_color = (get_sub_field('background_color', $item_id)) ? ' background-color: ' . get_sub_field('background_color', $item_id) . '; ' : '';
 
@@ -39,7 +40,7 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
-<div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
+<div class="col-item<?php echo $animation_class . $item_animation_effect . $custom_class; ?>"<?php echo $animation;?>>
 
 <?php echo $box_open_tag; ?>
   <?php if ($box_image) { echo '<div class="box-img" style="background: url(' . $box_image . ') center no-repeat; background-size: cover;"></div>';} ?>
