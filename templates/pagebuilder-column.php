@@ -80,7 +80,10 @@ $end_inner_column = '</div>';
       <?php 
         if ( get_row_layout() == 'text' ) { 
           get_template_part('templates/rowlayout', 'text');
-        } 
+        }
+        else if ( get_row_layout() == 'raw_html' ) { 
+          get_template_part('templates/rowlayout-html');
+        }         
         else if ( get_row_layout() == 'special_button' ) { 
           get_template_part('templates/rowlayout', 'specialbutton'); 
         } 
@@ -119,9 +122,6 @@ $end_inner_column = '</div>';
         } 
         else if ( get_row_layout() == 'quote_block' ) { 
           get_template_part('templates/rowlayout', 'quoteblock');
-        }
-        else if ( get_row_layout() == 'raw_html' ) { 
-          get_template_part('templates/rowlayout', 'html');
         }
         else if ( get_row_layout() == 'flickr_feed' ) { 
           get_template_part('templates/rowlayout', 'flickr');
