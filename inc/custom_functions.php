@@ -734,35 +734,40 @@ function team_member() {
 }
 add_action( 'init', 'team_member', 0 );
 
-// Register Custom Post Type
-function portfolio() {
+function projects() {
 
   $labels = array(
-    'name'                  => _x( 'Portfolio Items', 'Post Type General Name', 'text_domain' ),
-    'singular_name'         => _x( 'Portfolio Item', 'Post Type Singular Name', 'text_domain' ),
-    'menu_name'             => __( 'Portfolio', 'text_domain' ),
-    'name_admin_bar'        => __( 'Portfolio', 'text_domain' ),
-    'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-    'all_items'             => __( 'All Portfolio Items', 'text_domain' ),
-    'add_new_item'          => __( 'Add New Portfolio Item', 'text_domain' ),
-    'add_new'               => __( 'Add New', 'text_domain' ),
-    'new_item'              => __( 'New Item', 'text_domain' ),
-    'edit_item'             => __( 'Edit Item', 'text_domain' ),
-    'update_item'           => __( 'Update Item', 'text_domain' ),
-    'view_item'             => __( 'View Item', 'text_domain' ),
-    'search_items'          => __( 'Search Item', 'text_domain' ),
-    'not_found'             => __( 'Not found', 'text_domain' ),
-    'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-    'items_list'            => __( 'Items list', 'text_domain' ),
-    'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-    'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+    'name'                  => _x( 'Projects', 'Post Type General Name', 'cli_theme' ),
+    'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'cli_theme' ),
+    'menu_name'             => __( 'Projects', 'cli_theme' ),
+    'name_admin_bar'        => __( 'Projects', 'cli_theme' ),
+    'archives'              => __( 'Project Archives', 'cli_theme' ),
+    'parent_item_colon'     => __( 'Parent Project:', 'cli_theme' ),
+    'all_items'             => __( 'All Projects', 'cli_theme' ),
+    'add_new_item'          => __( 'Add New Project', 'cli_theme' ),
+    'add_new'               => __( 'Add New', 'cli_theme' ),
+    'new_item'              => __( 'New Project', 'cli_theme' ),
+    'edit_item'             => __( 'Edit Project', 'cli_theme' ),
+    'update_item'           => __( 'Update Project', 'cli_theme' ),
+    'view_item'             => __( 'View Project', 'cli_theme' ),
+    'search_items'          => __( 'Search Project', 'cli_theme' ),
+    'not_found'             => __( 'Not found', 'cli_theme' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'cli_theme' ),
+    'featured_image'        => __( 'Featured Image', 'cli_theme' ),
+    'set_featured_image'    => __( 'Set featured image', 'cli_theme' ),
+    'remove_featured_image' => __( 'Remove featured image', 'cli_theme' ),
+    'use_featured_image'    => __( 'Use as featured image', 'cli_theme' ),
+    'insert_into_item'      => __( 'Insert into project', 'cli_theme' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this project', 'cli_theme' ),
+    'items_list'            => __( 'Projects list', 'cli_theme' ),
+    'items_list_navigation' => __( 'Projects list navigation', 'cli_theme' ),
+    'filter_items_list'     => __( 'Filter projects list', 'cli_theme' ),
   );
   $args = array(
-    'label'                 => __( 'Portfolio Item', 'text_domain' ),
-    'description'           => __( 'Post Type Description', 'text_domain' ),
+    'label'                 => __( 'Project', 'cli_theme' ),
+    'description'           => __( 'Post Type Description', 'cli_theme' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'thumbnail', ),
-    'taxonomies'            => array( 'category', 'post_tag' ),
     'hierarchical'          => false,
     'public'                => true,
     'show_ui'               => true,
@@ -777,10 +782,48 @@ function portfolio() {
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
   );
-  register_post_type( 'portfolio', $args );
+  register_post_type( 'project', $args );
 
 }
-add_action( 'init', 'portfolio', 0 );
+add_action( 'init', 'projects', 0 );
+
+function project_categories() {
+
+  $labels = array(
+    'name'                       => _x( 'Project Categories', 'Taxonomy General Name', 'cli_theme' ),
+    'singular_name'              => _x( 'Project Category', 'Taxonomy Singular Name', 'cli_theme' ),
+    'menu_name'                  => __( 'Project Categories', 'cli_theme' ),
+    'all_items'                  => __( 'All Project Categories', 'cli_theme' ),
+    'parent_item'                => __( 'Parent Category', 'cli_theme' ),
+    'parent_item_colon'          => __( 'Parent Category:', 'cli_theme' ),
+    'new_item_name'              => __( 'New Project Category Name', 'cli_theme' ),
+    'add_new_item'               => __( 'Add New Project Category', 'cli_theme' ),
+    'edit_item'                  => __( 'Edit Project Category', 'cli_theme' ),
+    'update_item'                => __( 'Update Project Category', 'cli_theme' ),
+    'view_item'                  => __( 'View Project Category', 'cli_theme' ),
+    'separate_items_with_commas' => __( 'Separate project categories with commas', 'cli_theme' ),
+    'add_or_remove_items'        => __( 'Add or remove project categories', 'cli_theme' ),
+    'choose_from_most_used'      => __( 'Choose from the most used', 'cli_theme' ),
+    'popular_items'              => __( 'Popular Categories', 'cli_theme' ),
+    'search_items'               => __( 'Search Project Categories', 'cli_theme' ),
+    'not_found'                  => __( 'Not Found', 'cli_theme' ),
+    'no_terms'                   => __( 'No project categories', 'cli_theme' ),
+    'items_list'                 => __( 'Project Categories list', 'cli_theme' ),
+    'items_list_navigation'      => __( 'Project Categories list navigation', 'cli_theme' ),
+  );
+  $args = array(
+    'labels'                     => $labels,
+    'hierarchical'               => true,
+    'public'                     => true,
+    'show_ui'                    => true,
+    'show_admin_column'          => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => true,
+  );
+  register_taxonomy( 'project_cat', array( 'project' ), $args );
+
+}
+add_action( 'init', 'project_categories', 0 );
 
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
