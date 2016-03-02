@@ -7,9 +7,9 @@
   @include transform(translateX(-50%));
   body.admin-bar &{
     top: 46px;
-  }
-  @include breakpoint($mdl){
-    top: 32px;
+    @include breakpoint($mdl){
+      top: 32px;
+    }
   }
   &.header-in-grid{
     max-width: $grid-width;
