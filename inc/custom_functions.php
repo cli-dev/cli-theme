@@ -19,7 +19,7 @@ function add_favicon() {
     echo '<link rel="shortcut icon" href="' . $favicon . '" type="image/x-icon" />';
   }
 }
-  
+
 add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
 
@@ -40,16 +40,16 @@ if(!function_exists('cli_is_css_folder_writable')) {
 
 function cli_generate_dynamic_css_and_js() {
 
-		if(cli_is_css_folder_writable()) {
-			$css_dir = CLI_ROOT .'/css/';
+  if(cli_is_css_folder_writable()) {
+   $css_dir = CLI_ROOT .'/css/';
 
-			ob_start();
-			include_once('css/style_dynamic.php');
-			$css = ob_get_clean();
-			file_put_contents($css_dir.'style_dynamic.css', $css, LOCK_EX);
+   ob_start();
+   include_once('css/style_dynamic.php');
+   $css = ob_get_clean();
+   file_put_contents($css_dir.'style_dynamic.css', $css, LOCK_EX);
 
-		}
-	}
+ }
+}
 
 function cli_add_dynamic_css(){
   if (file_exists(dirname(__FILE__) ."/css/style_dynamic.css") && cli_is_css_folder_writable() && !is_multisite() && !is_admin()) {
@@ -67,11 +67,11 @@ function bac_variable_length_excerpt($text, $length, $finish_sentence){
   $length = get_field('excerpt_length', 'option');
   
   $finish_sentence = get_field('finish_sentence', 'option');
-   
+
   $tokens = array();
   $out = '';
   $word = 0;
-   
+
   //Divide the string into tokens; HTML tags, or words, followed by any whitespace.
   $regex = '/(<[^>]+>|[^<>\s]+)\s*/u';
   preg_match_all($regex, $text, $tokens);
@@ -79,31 +79,31 @@ function bac_variable_length_excerpt($text, $length, $finish_sentence){
     //Parse each token
     if ($word >= $length && !$finish_sentence){ 
     //Limit reached
-    break;
+      break;
     }
     if ($t[0] != '<'){ 
     //Token is not a tag. 
     //Regular expression that checks for the end of the sentence: '.', '?' or '!'
-    $regex1 = '/[\?\.\!]\s*$/uS';
-    if ($word >= $length && $finish_sentence && preg_match($regex1, $t) == 1){ 
+      $regex1 = '/[\?\.\!]\s*$/uS';
+      if ($word >= $length && $finish_sentence && preg_match($regex1, $t) == 1){ 
       //Limit reached, continue until ? . or ! occur to reach the end of the sentence.
-      $out .= trim($t);
-      break;
-    }   
-    $word++;
+        $out .= trim($t);
+        break;
+      }   
+      $word++;
     }
     //Append what's left of the token.
     $out .= $t;     
   }
   //Add the excerpt ending as a link.
   $excerpt_end = ' [&hellip;]';
-   
+
   //Add the excerpt ending as a non-linked ellipsis with brackets.
   //$excerpt_end = ' [&hellip;]';
-   
+
   //Append the excerpt ending to the token. 
   $out .= $excerpt_end;
-   
+
   return trim(force_balance_tags($out)); 
 }
 
@@ -116,19 +116,19 @@ function bac_excerpt_filter($text){
   $text = get_the_content('');
   $text = strip_shortcodes( $text );
   $text = apply_filters('the_content', $text);
-   
+
   $text = str_replace(']]>', ']]&gt;', $text);
-   
+
   /**By default the code allows all HTML tags in the excerpt**/
   //Control what HTML tags to allow: If you want to allow ALL HTML tags in the excerpt, then do NOT touch.
-   
+
   //If you want to Allow SOME tags: THEN Uncomment the next line + Line 80.
   $allowed_tags = '<p>'; /* Here I am allowing p, a, strong tags. Separate tags by comma. */
-   
+
   //If you want to Disallow ALL HTML tags: THEN Uncomment the next line + Line 80, 
   //$allowed_tags = ''; /* To disallow all HTML tags, keep it empty. The Excerpt will be unformated but newlines are preserved. */
   $text = strip_tags($text, $allowed_tags); /* Line 80 */
-   
+
   //Create the excerpt.
   $text = bac_variable_length_excerpt($text, $length, $finish_sentence);  
   return $text;
@@ -148,7 +148,7 @@ function get_id_by_slug($page_slug) {
 }
 
 function displayfullAddress() {
-  
+
   $address_1 = get_field('address_line_1', 'option');
   $city = get_field('city', 'option');
   $state = get_field('state', 'option');
@@ -185,7 +185,7 @@ function displayfullAddress() {
 }
 
 function displayAddress() {
-  
+
   $address_1 = get_field('address_line_1', 'option');
   $city = get_field('city', 'option');
   $state = get_field('state', 'option');
@@ -212,7 +212,7 @@ function displayAddress() {
 }
 
 function displayContactInfo() {
-  
+
   $phone = get_field('phone', 'option');
   $email = get_field('email', 'option');
   
@@ -229,7 +229,7 @@ function displayContactInfo() {
 }
 
 function displayPhone() {
-  
+
   $phone = get_field('phone', 'option');
   
   if($phone){
@@ -241,7 +241,7 @@ function displayPhone() {
 }
 
 function displayEmail() {
-  
+
   $email = get_field('email', 'option');
   
   if($email){
@@ -253,7 +253,7 @@ function displayEmail() {
 }
 
 function displaySocialProfiles($icon_type, $extra_class) {
-  
+
   $custom_class = $extra_class;
   $type_of_icon = $icon_type;
   $facebook= get_field('facebook', 'options');
@@ -325,7 +325,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
     }
     else{
-    $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank">' . $twitterSVG . '</a></div>';  
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank">' . $twitterSVG . '</a></div>';  
     }
 
   }
@@ -344,7 +344,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
     }
     else{
-    $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank">' . $googleSVG . '</a></div>';  
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank">' . $googleSVG . '</a></div>';  
     }
 
   }
@@ -363,7 +363,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
     }
     else{
-    $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
     }
 
   }
@@ -382,7 +382,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
     }
     else{
-    $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
     }
 
   }
@@ -401,7 +401,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
     }
     else{
-    $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
     }
 
   }
@@ -420,7 +420,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr-square-round"></i></a></div>';  
     }
     else{
-    $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank">' . $flickrSVG . '</a></div>';  
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank">' . $flickrSVG . '</a></div>';  
     }
 
   }
@@ -439,7 +439,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire-square-round"></i></a></div>';  
     }
     else{
-    $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank">' . $newswireSVG . '</a></div>';  
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank">' . $newswireSVG . '</a></div>';  
     }
 
   }
@@ -458,7 +458,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-square-round"></i></a></div>';  
     }
     else{
-    $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</a></div>';  
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</a></div>';  
     }
 
   }
@@ -477,7 +477,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-square-round"></i></a></div>';  
     }
     else{
-    $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank">' . $youtubeSVG . '</a></div>';  
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank">' . $youtubeSVG . '</a></div>';  
     }
 
   }
@@ -496,7 +496,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
       $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-square-round"></i></a></div>';  
     }
     else{
-    $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank">' . $vimeoSVG . '</a></div>';  
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank">' . $vimeoSVG . '</a></div>';  
     }
 
   }
@@ -506,7 +506,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
 }
 
 function displaySocialShare() {
-  
+
   $type_of_icon = get_field('type_of_icon', 'options');
 
   $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
@@ -516,104 +516,104 @@ function displaySocialShare() {
   $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/tumblr-circle-outline.svg');
   $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/pinterest-circle-outline.svg');
 
-    if($type_of_icon === 'icon1'){
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-square"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon3'){
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon4'){
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
-    }
-    else{
-      $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank">' . $facebookSVG . '</a></div>';  
-    }
+  if($type_of_icon === 'icon1'){
+    $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-square"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon3'){
+    $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon4'){
+    $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
+  }
+  else{
+    $facebookCode = '<div class="social-icon"><a href="http://www.facebook.com/share.php?u=' . get_permalink()  . '" target="_blank">' . $facebookSVG . '</a></div>';  
+  }
 
-    if($type_of_icon === 'icon1'){
-      $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-square"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon3'){
-      $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon4'){
-      $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
-    }
-    else{
+  if($type_of_icon === 'icon1'){
+    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-square"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon3'){
+    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon4'){
+    $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
+  }
+  else{
     $twitterCode = '<div class="social-icon"><a href="http://twitter.com/home?status=' . get_permalink()  . '" target="_blank">' . $twitterSVG . '</a></div>';  
-    }
+  }
 
-    if($type_of_icon === 'icon1'){
-      $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-square"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon3'){
-      $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon4'){
-      $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
-    }
-    else{
+  if($type_of_icon === 'icon1'){
+    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-square"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon3'){
+    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon4'){
+    $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
+  }
+  else{
     $googleCode = '<div class="social-icon"><a href="https://plus.google.com/share?url=' . get_permalink()  . '" target="_blank">' . $googleSVG . '</a></div>';  
-    }
+  }
 
-    if($type_of_icon === 'icon1'){
-      $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-square"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon3'){
-      $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon4'){
-      $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
-    }
-    else{
+  if($type_of_icon === 'icon1'){
+    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-square"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon3'){
+    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon4'){
+    $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
+  }
+  else{
     $linkedinCode = '<div class="social-icon"><a href="http://linkedin.com/shareArticle?mini=true&url=' . get_permalink()  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
-    }
+  }
 
-    if($type_of_icon === 'icon1'){
-      $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-square"></i></a></div>';  
-    }
-    else if ($type_of_icon == 'icon3'){
-      $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon == 'icon4'){
-      $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
-    }
-    else{
+  if($type_of_icon === 'icon1'){
+    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-square"></i></a></div>';  
+  }
+  else if ($type_of_icon == 'icon3'){
+    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon == 'icon4'){
+    $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
+  }
+  else{
     $tumblrCode = '<div class="social-icon"><a href="http://www.tumblr.com/share/link?url=' . get_permalink()  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
-    }
+  }
 
-    if($type_of_icon === 'icon1'){
-      $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon2'){
-      $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-square"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon3'){
-      $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-circle"></i></a></div>';  
-    }
-    else if ($type_of_icon === 'icon4'){
-      $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
-    }
-    else{
+  if($type_of_icon === 'icon1'){
+    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon2'){
+    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-square"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon3'){
+    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-circle"></i></a></div>';  
+  }
+  else if ($type_of_icon === 'icon4'){
+    $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
+  }
+  else{
     $pinterestCode = '<div class="social-icon"><a href="http://pinterest.com/pin/create/button/?url=' . get_permalink()  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
-    }
+  }
 
 
-return '<div class="social social-share ' . $type_of_icon . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
+  return '<div class="social social-share ' . $type_of_icon . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . '</div>';
   
 }
 
@@ -621,13 +621,13 @@ function hex2rgb($hex) {
   $hex = str_replace("#", "", $hex);
   
   if(strlen($hex) == 3) {
-  $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-  $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-  $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+    $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+    $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+    $b = hexdec(substr($hex,2,1).substr($hex,2,1));
   } else {
-  $r = hexdec(substr($hex,0,2));
-  $g = hexdec(substr($hex,2,2));
-  $b = hexdec(substr($hex,4,2));
+    $r = hexdec(substr($hex,0,2));
+    $g = hexdec(substr($hex,2,2));
+    $b = hexdec(substr($hex,4,2));
   }
   $rgb = array($r, $g, $b);
   
@@ -666,7 +666,7 @@ function position() {
 		'search_items'        => __( 'Search Position', 'cli_theme' ),
 		'not_found'           => __( 'Not found', 'cli_theme' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'cli_theme' ),
-	);
+   );
 	$args = array(
 		'label'               => __( 'Position', 'cli_theme' ),
 		'description'         => __( 'Open job positions', 'cli_theme' ),
@@ -685,7 +685,7 @@ function position() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-	);
+   );
 	register_post_type( 'position', $args );
 
 }
@@ -709,7 +709,7 @@ function team_member() {
 		'search_items'        => __( 'Search Team Member', 'cli_theme' ),
 		'not_found'           => __( 'Not found', 'cli_theme' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'cli_theme' ),
-	);
+   );
 	$args = array(
 		'label'               => __( 'Team Member', 'cli_theme' ),
 		'description'         => __( 'Post Type Description', 'cli_theme' ),
@@ -728,7 +728,7 @@ function team_member() {
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-	);
+   );
 	register_post_type( 'team_member', $args );
 
 }
@@ -762,7 +762,7 @@ function projects() {
     'items_list'            => __( 'Projects list', 'cli_theme' ),
     'items_list_navigation' => __( 'Projects list navigation', 'cli_theme' ),
     'filter_items_list'     => __( 'Filter projects list', 'cli_theme' ),
-  );
+    );
   $args = array(
     'label'                 => __( 'Project', 'cli_theme' ),
     'description'           => __( 'Post Type Description', 'cli_theme' ),
@@ -781,7 +781,7 @@ function projects() {
     'exclude_from_search'   => false,
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
-  );
+    );
   register_post_type( 'project', $args );
 
 }
@@ -810,7 +810,7 @@ function project_categories() {
     'no_terms'                   => __( 'No project categories', 'cli_theme' ),
     'items_list'                 => __( 'Project Categories list', 'cli_theme' ),
     'items_list_navigation'      => __( 'Project Categories list navigation', 'cli_theme' ),
-  );
+    );
   $args = array(
     'labels'                     => $labels,
     'hierarchical'               => true,
@@ -819,14 +819,14 @@ function project_categories() {
     'show_admin_column'          => true,
     'show_in_nav_menus'          => true,
     'show_tagcloud'              => true,
-  );
+    );
   register_taxonomy( 'project_cat', array( 'project' ), $args );
 
 }
 add_action( 'init', 'project_categories', 0 );
 
 function filter_ptags_on_images($content){
-   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+ return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 add_filter('the_content', 'filter_ptags_on_images');
@@ -835,6 +835,8 @@ add_filter('the_content', 'filter_ptags_on_images');
 function push_google_font_families($field){
 
   $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc');
+
+
 
   $google_fonts = json_decode($returned_content, true);
 
@@ -856,7 +858,7 @@ add_filter('acf/load_field/name=theme_font', 'push_google_font_families');
 
 
 function theme_font_choices( $field ) {
-  
+
   $theme_fonts = get_field('theme_fonts', 'option');
   $typekit_fonts = get_field('typekit_fonts', 'option');
 
@@ -887,7 +889,7 @@ function theme_font_choices( $field ) {
   $field['choices'] = array_merge($googleFonts, $typekitFonts);
   
   return $field;
-    
+
 }
 add_filter('acf/load_field/name=default_font_family', 'theme_font_choices');
 add_filter('acf/load_field/name=menu_font_family', 'theme_font_choices');
@@ -906,7 +908,7 @@ function theme_button_choices( $field ) {
       $themeColor = $theme_color['color_class_name'];
 
       array_push($colors, $themeColor);
-    
+
     }
   }
 
@@ -929,11 +931,11 @@ function custom_navigation_menus() {
     $locations = array(
       'divided-right-menu' => __( 'Divided menu right side', 'cli_theme' ),
       'divided-left-menu' => __( 'Divided menu left side', 'cli_theme' ),
-    );
+      );
   } else {
     $locations = array(
       'main-menu' => __( 'Main Menu', 'cli_theme' ),
-    );
+      );
   }
   register_nav_menus( $locations );
 
@@ -973,40 +975,40 @@ function my_search_form( $form ) {
   $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
   <input type="text" value="' . get_search_query() . '" name="s" id="s" />
   <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn black outline" />
-  </form>';
+</form>';
 
-  return $form;
+return $form;
 }
 
 add_filter( 'get_search_form', 'my_search_form' );
 
 
-function load_admin_style() {
-  wp_enqueue_style( 'fontAwesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' , false, '4.5.0' );
-  wp_enqueue_style( 'admin', get_template_directory_uri() . '/css/admin/admin-style.css', false, '1.0.0' );  
-}
+// function load_admin_style() {
+//   wp_enqueue_style( 'fontAwesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' , false, '4.5.0' );
+//   wp_enqueue_style( 'admin', get_template_directory_uri() . '/css/admin/admin-style.css', false, '1.0.0' );  
+// }
 
-add_action( 'admin_enqueue_scripts', 'load_admin_style', 99 );
+// add_action( 'admin_enqueue_scripts', 'load_admin_style', 99 );
 
-function my_acf_admin_enqueue_scripts() {
-  
-  // register style
-    wp_register_style( 'my-acf-input-css', get_stylesheet_directory_uri() . '/css/admin/my-acf-input.css', false, '1.0.0' );
-    wp_enqueue_style( 'my-acf-input-css' );
-    
-    
-    // register script
-    wp_register_script( 'my-acf-input-js', get_stylesheet_directory_uri() . '/js/my-acf-input.js', false, '1.0.0');
-    wp_enqueue_script( 'my-acf-input-js' );
-    
-}
+// function my_acf_admin_enqueue_scripts() {
 
-add_action( 'acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts' );
+//   // register style
+//   wp_register_style( 'my-acf-input-css', get_stylesheet_directory_uri() . '/css/admin/my-acf-input.css', false, '1.0.0' );
+//   wp_enqueue_style( 'my-acf-input-css' );
+
+
+//     // register script
+//   wp_register_script( 'my-acf-input-js', get_stylesheet_directory_uri() . '/js/my-acf-input.js', false, '1.0.0');
+//   wp_enqueue_script( 'my-acf-input-js' );
+
+// }
+
+// add_action( 'acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts' );
 
 // remove wp version param from any enqueued scripts
 function vc_remove_wp_ver_css_js( $src ) {
   if ( strpos( $src, 'ver=' ) )
-      $src = remove_query_arg( 'ver', $src );
+    $src = remove_query_arg( 'ver', $src );
   return $src;
 }
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
@@ -1017,3 +1019,20 @@ function the_slug() {
   $slug = $post->post_name;
   return $slug;
 }
+
+// function update_vol( $post_id ) {
+//     $post = get_post($post_id);
+//     setup_postdata($post);
+//     $fields = get_fields();
+//     $field_values = array();
+//     if( $fields )
+//       foreach( $fields as $field_name => $value ){
+//                   if (!is_object($value)) // checking for value is not an post object
+//          $field_values[$field_name]=$value; // storing data to array
+//        }
+//       $field_values_fordb = serialize($field_values); //serializing our array
+//     $add_check = add_post_meta($post_id,'serialized_',$field_values_fordb,true); //trying to store our values to db using ADD method
+//     if (!$add_check) update_post_meta($post_id,'serialized_',$field_values_fordb); //if ADD method failed trying UPDATE method
+//   wp_reset_postdata();
+// }
+// add_action( 'save_post', 'update_vol' );
