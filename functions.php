@@ -12,6 +12,20 @@ function cli_theme_setup(){
 		);
 }
 
+function cli_generate_dynamic_css_and_js() {
+  $css_dir = dirname(__FILE__) . '/css/';
+  ob_start(); 
+  require(dirname(__FILE__) . '/inc/style_dynamic.php'); 
+  $css = ob_get_clean(); 
+  file_put_contents($css_dir . 'dynamic-styles.css', $css, LOCK_EX); 
+}
+add_action( 'acf/save_post', 'cli_generate_dynamic_css_and_js' );
+
+function cli_add_dynamic_css(){
+  wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/dynamic-styles.css", array(), filemtime(dirname(__FILE__) ."/css/dynamic-styles.css"));
+}
+add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css' );
+
 add_action( 'wp_enqueue_scripts', 'cli_theme_load_scripts' );
 function cli_theme_load_scripts() {
 	wp_enqueue_script( 'jquery' );

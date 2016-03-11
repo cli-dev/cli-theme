@@ -23,49 +23,11 @@ function add_favicon() {
 add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
 
-if(!function_exists('cli_is_css_folder_writable')) {
-	/**
-	 * Function that checks if css folder is writable
-	 * @return bool
-	 *
-	 * @version 0.1
-	 * @uses is_writable()
-	 */
-	function cli_is_css_folder_writable() {
-		$css_dir = CLI_ROOT .'/css';
-
-		return is_writable($css_dir);
-	}
-}
-
-function cli_generate_dynamic_css_and_js() {
-
-  if(cli_is_css_folder_writable()) {
-   $css_dir = CLI_ROOT .'/css/';
-
-   ob_start();
-   include_once('css/style_dynamic.php');
-   $css = ob_get_clean();
-   file_put_contents($css_dir.'style_dynamic.css', $css, LOCK_EX);
-
- }
-}
-
-function cli_add_dynamic_css(){
-  if (file_exists(dirname(__FILE__) ."/css/style_dynamic.css") && cli_is_css_folder_writable() && !is_multisite() && !is_admin()) {
-    wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.css", array(), filemtime(dirname(__FILE__) ."/css/style_dynamic.css"));
-  } 
-  else if(!is_admin()) {
-    wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/style_dynamic.php");
-  }
-}
-add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css' );
-
 function bac_variable_length_excerpt($text, $length, $finish_sentence){
 
 
   $length = get_field('excerpt_length', 'option');
-  
+
   $finish_sentence = get_field('finish_sentence', 'option');
 
   $tokens = array();
@@ -139,12 +101,12 @@ add_filter('get_the_excerpt','bac_excerpt_filter',5);
 add_filter('widget_text', 'do_shortcode');
 
 function get_id_by_slug($page_slug) {
-	$page = get_page_by_path($page_slug);
-	if ($page) {
-		return $page->ID;
-	} else {
-		return null;
-	}
+ $page = get_page_by_path($page_slug);
+ if ($page) {
+  return $page->ID;
+} else {
+  return null;
+}
 }
 
 function displayfullAddress() {
@@ -1020,10 +982,8 @@ function the_slug() {
   return $slug;
 }
 
-// function update_vol( $post_id ) {
-//     $post = get_post($post_id);
-//     setup_postdata($post);
-//     $fields = get_fields();
+// function combine_theme_options() {
+//     $fields = get_fields('option');
 //     $field_values = array();
 //     if( $fields )
 //       foreach( $fields as $field_name => $value ){
@@ -1031,8 +991,7 @@ function the_slug() {
 //          $field_values[$field_name]=$value; // storing data to array
 //        }
 //       $field_values_fordb = serialize($field_values); //serializing our array
-//     $add_check = add_post_meta($post_id,'serialized_',$field_values_fordb,true); //trying to store our values to db using ADD method
-//     if (!$add_check) update_post_meta($post_id,'serialized_',$field_values_fordb); //if ADD method failed trying UPDATE method
-//   wp_reset_postdata();
+//     $add_check = add_option('serializedoptions_',$field_values_fordb, true); //trying to store our values to db using ADD method
+//     if (!$add_check) update_option('serializedoptions_',$field_values_fordb); //if ADD method failed trying UPDATE method
 // }
-// add_action( 'save_post', 'update_vol' );
+// add_action( 'acf/save_post', 'combine_theme_options' );
