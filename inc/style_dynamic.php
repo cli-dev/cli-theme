@@ -1,43 +1,32 @@
 <?php
 
-$root = dirname(dirname(dirname(dirname(dirname(__FILE__)))));
-
-if ( file_exists( $root.'/wp-load.php' ) ) {
-    require_once( $root.'/wp-load.php' );
-//    require_once( $root.'/wp-config.php' );
-} else {
-	$root = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__))))));
-	if ( file_exists( $root.'/wp-load.php' ) ) {
-    require_once( $root.'/wp-load.php' );
-//    require_once( $root.'/wp-config.php' );
-	}
-}
-header("Content-type: text/css; charset=utf-8"); 
 if( function_exists('get_field') ) :
 
-$content_background_color = get_field('content_background_color', 'option');
-$main_font_color = get_field('main_font_color', 'option');
-$text_highlight_color = get_field('text_highlight_color', 'option');
-$header_color = get_field('header_color', 'option');
-$header_background_opacity = get_field('header_background_opacity', 'option');
-$desktop_header_height = get_field('desktop_header_height', 'option');
-$mobile_header_height = get_field('mobile_header_height', 'options');
+$myoptions = get_option( 'themesettings_');
+
+$content_background_color = $myoptions['content_background_color'];
+$main_font_color = $myoptions['main_font_color'];
+$text_highlight_color = $myoptions['text_highlight_color'];
+$header_color = $myoptions['header_color'];
+$header_background_opacity = $myoptions['header_background_opacity'];
+$desktop_header_height = $myoptions['desktop_header_height'];
+$mobile_header_height = $myoptions['mobile_header_height'];
 $header_bg_rgb = hex2rgb($header_color);
-$menu_link_color = get_field('menu_link_color', 'option');
-$menu_line_height = get_field('menu_line_height', 'option');
-$mobile_menu_item_divider_color = get_field('mobile_menu_item_divider_color', 'option');
-$menu_icon_top_bar_background_color = get_field('menu_icon_top_bar_background_color', 'option');
-$menu_icon_middle_bar_background_color = get_field('menu_icon_middle_bar_background_color', 'option');
-$menu_icon_bottom_bar_background_color = get_field('menu_icon_bottom_bar_background_color', 'option');
-$menu_icon_text_color_color = get_field('menu_icon_text_color_color', 'option');
-$menu_font_size = get_field('menu_font_size', 'option');
-$menu_background_color = get_field('menu_background_color', 'option'); 
+$menu_link_color = $myoptions['menu_link_color'];
+$menu_line_height = $myoptions['menu_line_height'];
+$mobile_menu_item_divider_color = $myoptions['mobile_menu_item_divider_color'];
+$menu_icon_top_bar_background_color = $myoptions['menu_icon_top_bar_background_color'];
+$menu_icon_middle_bar_background_color = $myoptions['menu_icon_middle_bar_background_color'];
+$menu_icon_bottom_bar_background_color = $myoptions['menu_icon_bottom_bar_background_color'];
+$menu_icon_text_color_color = $myoptions['menu_icon_text_color_color'];
+$menu_font_size = $myoptions['menu_font_size'];
+$menu_background_color = $myoptions['menu_background_color']; 
 
 $menu_font_family = get_field_object('menu_font_family', 'option'); 
 $menu_font_family_value = get_field('menu_font_family', 'option');
 $menu_font_family_label = $menu_font_family['choices'][ $menu_font_family_value ];
 
-$menu_link_active_color = get_field('menu_link_active_color', 'option');
+$menu_link_active_color = $myoptions['menu_link_active_color'];
 
 $default_font_family = get_field_object('default_font_family', 'option'); 
 $default_font_family_value = get_field('default_font_family', 'option');
@@ -46,58 +35,58 @@ $default_font_family_label = $default_font_family['choices'][ $default_font_fami
 $headings_font_family = get_field_object('headings_font_family', 'option'); 
 $headings_font_family_value = get_field('headings_font_family', 'option');
 $headings_font_family_label = $headings_font_family['choices'][ $headings_font_family_value ];
-$headings_font_color = get_field('headings_font_color', 'option');
-$headings_text_transform = get_field('headings_text_transform', 'option');
-$headings_line_height = get_field('headings_line_height', 'option');
-$headings_font_weight = get_field('headings_font_weight', 'option');
+$headings_font_color = $myoptions['headings_font_color'];
+$headings_text_transform = $myoptions['headings_text_transform'];
+$headings_line_height = $myoptions['headings_line_height'];
+$headings_font_weight = $myoptions['headings_font_weight'];
 
 $paragraph_font_family = get_field_object('paragraph_font_family', 'option'); 
 $paragraph_font_family_value = get_field('paragraph_font_family', 'option');
 $paragraph_font_family_label = $paragraph_font_family['choices'][ $paragraph_font_family_value ];
-$paragraph_font_color = get_field('paragraph_font_color', 'option');
-$paragraph_text_transform = get_field('paragraph_text_transform', 'option');
-$paragraph_line_height = get_field('paragraph_line_height', 'option');
-$paragraph_font_weight = get_field('paragraph_font_weight', 'option');
+$paragraph_font_color = $myoptions['paragraph_font_color'];
+$paragraph_text_transform = $myoptions['paragraph_text_transform'];
+$paragraph_line_height = $myoptions['paragraph_line_height'];
+$paragraph_font_weight = $myoptions['paragraph_font_weight'];
 
-$link_text_color = get_field('link_text_color', 'option');
-$link_text_hover_color = get_field('link_text_hover_color', 'option');
+$link_text_color = $myoptions['link_text_color'];
+$link_text_hover_color = $myoptions['link_text_hover_color'];
 
-$footer_top_background_color = get_field('footer_top_background_color', 'option');
-$footer_top_text_color = get_field('footer_top_text_color', 'option');
-$footer_top_link_color = get_field('footer_top_link_color', 'option');
-$footer_top_link_hover_color = get_field('footer_top_link_hover_color', 'option');
-$footer_bottom_background_color = get_field('footer_bottom_background_color', 'option');
-$footer_bottom_text_color = get_field('footer_bottom_text_color', 'option');
-$footer_bottom_link_color = get_field('footer_bottom_link_color', 'option');
-$footer_bottom_link_hover_color = get_field('footer_bottom_link_hover_color', 'option');
+$footer_top_background_color = $myoptions['footer_top_background_color'];
+$footer_top_text_color = $myoptions['footer_top_text_color'];
+$footer_top_link_color = $myoptions['footer_top_link_color'];
+$footer_top_link_hover_color = $myoptions['footer_top_link_hover_color'];
+$footer_bottom_background_color = $myoptions['footer_bottom_background_color'];
+$footer_bottom_text_color = $myoptions['footer_bottom_text_color'];
+$footer_bottom_link_color = $myoptions['footer_bottom_link_color'];
+$footer_bottom_link_hover_color = $myoptions['footer_bottom_link_hover_color'];
 
-$pagination_item_background_color = get_field('pagination_item_background_color', 'option');
-$pagination_item_text_color = get_field('pagination_item_text_color', 'option');
-$pagination_current_background_color = get_field('pagination_current_background_color', 'option');
-$pagination_current_text_color = get_field('pagination_current_text_color', 'option');
+$pagination_item_background_color = $myoptions['pagination_item_background_color'];
+$pagination_item_text_color = $myoptions['pagination_item_text_color'];
+$pagination_current_background_color = $myoptions['pagination_current_background_color'];
+$pagination_current_text_color = $myoptions['pagination_current_text_color'];
 
-$global_css = get_field('global_css', 'option');
-$tablet_portrait_css = get_field('tablet_portrait_css', 'option');
-$tablet_landscape_css = get_field('tablet_landscape_css', 'option');
-$desktop_css = get_field('desktop_css', 'option');
+$global_css = $myoptions['global_css'];
+$tablet_portrait_css = $myoptions['tablet_portrait_css'];
+$tablet_landscape_css = $myoptions['tablet_landscape_css'];
+$desktop_css = $myoptions['desktop_css'];
 
-$scroll_button_width = get_field('scroll_button_width', 'option');
-$scroll_button_border_width = get_field('scroll_button_border_width', 'option');
-$scroll_button_icon_font_size = get_field('scroll_button_icon_font_size', 'option');
-$scroll_button_bottom = get_field('scroll_button_bottom', 'option');
-$scroll_button_right = get_field('scroll_button_right', 'option');
-$scroll_button_border_color = get_field('scroll_button_border_color', 'option');
-$scroll_button_background_color = get_field('scroll_button_background_color', 'option');
-$scroll_button_icon_color = get_field('scroll_button_icon_color', 'option');
-$scroll_button_hover_border_color = get_field('scroll_button_hover_border_color', 'option');
-$scroll_button_hover_background_color = get_field('scroll_button_hover_background_color', 'option');
-$scroll_button_hover_icon_color = get_field('scroll_button_hover_icon_color', 'option');
+$scroll_button_width = $myoptions['scroll_button_width'];
+$scroll_button_border_width = $myoptions['scroll_button_border_width'];
+$scroll_button_icon_font_size = $myoptions['scroll_button_icon_font_size'];
+$scroll_button_bottom = $myoptions['scroll_button_bottom'];
+$scroll_button_right = $myoptions['scroll_button_right'];
+$scroll_button_border_color = $myoptions['scroll_button_border_color'];
+$scroll_button_background_color = $myoptions['scroll_button_background_color'];
+$scroll_button_icon_color = $myoptions['scroll_button_icon_color'];
+$scroll_button_hover_border_color = $myoptions['scroll_button_hover_border_color'];
+$scroll_button_hover_background_color = $myoptions['scroll_button_hover_background_color'];
+$scroll_button_hover_icon_color = $myoptions['scroll_button_hover_icon_color'];
 
-$sadie_effect_gradient_top_color = get_field('sadie_effect_gradient_top_color', 'option');
-$sadie_effect_gradient_top_color_opacity = get_field('sadie_effect_gradient_top_color_opacity', 'option');
+$sadie_effect_gradient_top_color = $myoptions['sadie_effect_gradient_top_color'];
+$sadie_effect_gradient_top_color_opacity = $myoptions['sadie_effect_gradient_top_color_opacity'];
 $sadie_effect_gradient_top = 'rgba(' . hex2rgb($sadie_effect_gradient_top_color) . ', ' . $sadie_effect_gradient_top_color_opacity . ')';
-$sadie_effect_gradient_bottom_color = get_field('sadie_effect_gradient_bottom_color', 'option');
-$sadie_effect_gradient_bottom_color_opacity = get_field('sadie_effect_gradient_bottom_color_opacity', 'option');
+$sadie_effect_gradient_bottom_color = $myoptions['sadie_effect_gradient_bottom_color'];
+$sadie_effect_gradient_bottom_color_opacity = $myoptions['sadie_effect_gradient_bottom_color_opacity'];
 $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_color) . ', ' . $sadie_effect_gradient_bottom_color_opacity . ')';
 
 ?>

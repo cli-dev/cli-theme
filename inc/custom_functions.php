@@ -4,17 +4,9 @@ define('CLI_ROOT', get_template_directory_uri());
 
 // Add Main Stylesheet
 
-function main_stylesheet() {
-
-  wp_register_style( 'main', CLI_ROOT . '/css/production/style.css', false, false, 'all' );
-  wp_enqueue_style( 'main' );
-
-}
-add_action( 'wp_enqueue_scripts', 'main_stylesheet' );
-
-
 function add_favicon() {
-  $favicon = get_field('favicon', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $favicon = $myoptions['favicon'];
   if ($favicon) {
     echo '<link rel="shortcut icon" href="' . $favicon . '" type="image/x-icon" />';
   }
@@ -24,11 +16,11 @@ add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
 
 function bac_variable_length_excerpt($text, $length, $finish_sentence){
+  $myoptions = get_option( 'themesettings_');
 
+  $length = $myoptions['excerpt_length'];
 
-  $length = get_field('excerpt_length', 'option');
-
-  $finish_sentence = get_field('finish_sentence', 'option');
+  $finish_sentence = $myoptions['finish_sentence'];
 
   $tokens = array();
   $out = '';
@@ -110,13 +102,13 @@ function get_id_by_slug($page_slug) {
 }
 
 function displayfullAddress() {
-
-  $address_1 = get_field('address_line_1', 'option');
-  $city = get_field('city', 'option');
-  $state = get_field('state', 'option');
-  $zip = get_field('zip', 'option');
-  $phone = get_field('phone', 'option');
-  $email = get_field('email', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $address_1 = $myoptions['address_line_1'];
+  $city = $myoptions['city'];
+  $state = $myoptions['state'];
+  $zip = $myoptions['zip'];
+  $phone = $myoptions['phone'];
+  $email = $myoptions['email'];
   
   if($address_1){
     $addressCode = '<div itemprop="streetAddress">' . $address_1 . '</div>';  
@@ -147,11 +139,11 @@ function displayfullAddress() {
 }
 
 function displayAddress() {
-
-  $address_1 = get_field('address_line_1', 'option');
-  $city = get_field('city', 'option');
-  $state = get_field('state', 'option');
-  $zip = get_field('zip', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $address_1 = $myoptions['address_line_1'];
+  $city = $myoptions['city'];
+  $state = $myoptions['state'];
+  $zip = $myoptions['zip'];
   
   if($address_1){
     $addressCode = '<div itemprop="streetAddress">' . $address_1 . '</div>';  
@@ -174,9 +166,9 @@ function displayAddress() {
 }
 
 function displayContactInfo() {
-
-  $phone = get_field('phone', 'option');
-  $email = get_field('email', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $phone = $myoptions['phone'];
+  $email = $myoptions['email'];
   
   if($phone){
     $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
@@ -191,8 +183,8 @@ function displayContactInfo() {
 }
 
 function displayPhone() {
-
-  $phone = get_field('phone', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $phone = $myoptions['phone'];
   
   if($phone){
     $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
@@ -203,8 +195,8 @@ function displayPhone() {
 }
 
 function displayEmail() {
-
-  $email = get_field('email', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $email = $myoptions['email'];
   
   if($email){
     $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
@@ -215,20 +207,20 @@ function displayEmail() {
 }
 
 function displaySocialProfiles($icon_type, $extra_class) {
-
+  $myoptions = get_option( 'themesettings_');
   $custom_class = $extra_class;
   $type_of_icon = $icon_type;
-  $facebook= get_field('facebook', 'options');
-  $twitter = get_field('twitter', 'options');
-  $google = get_field('google', 'options');
-  $linkedin = get_field('linkedin', 'options');
-  $tumblr = get_field('tumblr', 'options');
-  $pinterest = get_field('pinterest', 'options');
-  $flickr = get_field('flickr', 'options');
-  $newswire = get_field('newswire', 'options');
-  $instagram = get_field('instagram', 'options');
-  $youtube = get_field('youtube', 'options');
-  $vimeo = get_field('vimeo', 'options');
+  $facebook= $myoptions['facebook'];
+  $twitter = $myoptions['twitter'];
+  $google = $myoptions['google'];
+  $linkedin = $myoptions['linkedin'];
+  $tumblr = $myoptions['tumblr'];
+  $pinterest = $myoptions['pinterest'];
+  $flickr = $myoptions['flickr'];
+  $newswire = $myoptions['newswire'];
+  $instagram = $myoptions['instagram'];
+  $youtube = $myoptions['youtube'];
+  $vimeo = $myoptions['vimeo'];
 
   $facebookCode = '';
   $twitterCode = '';
@@ -469,7 +461,7 @@ function displaySocialProfiles($icon_type, $extra_class) {
 
 function displaySocialShare() {
 
-  $type_of_icon = get_field('type_of_icon', 'options');
+  $type_of_icon = $myoptions['type_of_icon'];
 
   $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
   $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/twitter-circle-outline.svg');
@@ -798,8 +790,6 @@ function push_google_font_families($field){
 
   $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc');
 
-
-
   $google_fonts = json_decode($returned_content, true);
 
   $fonts = array();
@@ -820,8 +810,8 @@ add_filter('acf/load_field/name=theme_font', 'push_google_font_families');
 
 
 function theme_font_choices( $field ) {
-
-  $theme_fonts = get_field('theme_fonts', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $theme_fonts = $myoptions['theme_fonts'];
   $typekit_fonts = get_field('typekit_fonts', 'option');
 
   $typekitFonts = array();
@@ -859,7 +849,9 @@ add_filter('acf/load_field/name=headings_font_family', 'theme_font_choices');
 add_filter('acf/load_field/name=paragraph_font_family', 'theme_font_choices');
 
 function theme_button_choices( $field ) {
-  $theme_colors = get_field('theme_colors', 'option');
+  $myoptions = get_option( 'themesettings_');
+
+  $theme_colors = $myoptions['theme_colors'];
 
   $colors = array();
 
@@ -883,9 +875,9 @@ add_filter('acf/load_field/name=solid_hover_state', 'theme_button_choices');
 add_filter('acf/load_field/name=outline_type', 'theme_button_choices');
 
 function custom_navigation_menus() {
-
-  $logo_position = get_field('logo_position', 'option');
-  $center_logo_menu_type = get_field('center_logo_menu_type', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $logo_position = $myoptions['logo_position'];
+  $center_logo_menu_type = $myoptions['center_logo_menu_type'];
 
   $locations = '';
 
@@ -981,17 +973,3 @@ function the_slug() {
   $slug = $post->post_name;
   return $slug;
 }
-
-// function combine_theme_options() {
-//     $fields = get_fields('option');
-//     $field_values = array();
-//     if( $fields )
-//       foreach( $fields as $field_name => $value ){
-//                   if (!is_object($value)) // checking for value is not an post object
-//          $field_values[$field_name]=$value; // storing data to array
-//        }
-//       $field_values_fordb = serialize($field_values); //serializing our array
-//     $add_check = add_option('serializedoptions_',$field_values_fordb, true); //trying to store our values to db using ADD method
-//     if (!$add_check) update_option('serializedoptions_',$field_values_fordb); //if ADD method failed trying UPDATE method
-// }
-// add_action( 'acf/save_post', 'combine_theme_options' );

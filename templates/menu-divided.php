@@ -1,6 +1,7 @@
 <?php
-  $logo = get_field('logo', 'option');
-  $desktop_logo_maximum_width = get_field('desktop_logo_maximum_width', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $logo = $myoptions['logo'];
+  $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
 ?>
 	<nav id="menu-right" class="desktop-menu">
 	  <?php wp_nav_menu( array( 'theme_location' => 'divided-left-menu', 'container_class' => 'left-side-menu', 'link_before' => '<span class="link-text">', 'link_after' => '</span>') ); ?>

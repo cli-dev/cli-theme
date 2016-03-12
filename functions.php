@@ -12,6 +12,27 @@ function cli_theme_setup(){
 		);
 }
 
+function main_stylesheet() {
+
+  wp_register_style( 'main', CLI_ROOT . '/css/production/style.css', false, false, 'all' );
+  wp_enqueue_style( 'main' );
+
+}
+add_action( 'wp_enqueue_scripts', 'main_stylesheet' );
+
+function combine_theme_options() {
+    $fields = get_fields('option');
+    $field_values = array();
+    if( $fields )
+      foreach( $fields as $field_name => $value ){
+                  if (!is_object($value)) // checking for value is not an post object
+         $field_values[$field_name]=$value; // storing data to array
+       }
+      $field_values_fordb = serialize($field_values); //serializing our array
+    update_option('themesettings_',$field_values); //trying to store our values to db using ADD method
+}
+add_action( 'acf/save_post', 'combine_theme_options' );
+
 function cli_generate_dynamic_css_and_js() {
   $css_dir = dirname(__FILE__) . '/css/';
   ob_start(); 
@@ -24,7 +45,7 @@ add_action( 'acf/save_post', 'cli_generate_dynamic_css_and_js' );
 function cli_add_dynamic_css(){
   wp_enqueue_style("style_dynamic", CLI_ROOT . "/css/dynamic-styles.css", array(), filemtime(dirname(__FILE__) ."/css/dynamic-styles.css"));
 }
-add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css' );
+add_action( 'wp_enqueue_scripts', 'cli_add_dynamic_css', 50 );
 
 add_action( 'wp_enqueue_scripts', 'cli_theme_load_scripts' );
 function cli_theme_load_scripts() {

@@ -1,8 +1,9 @@
 <?php
-  $logo = get_field('logo', 'option');
-  $desktop_logo_maximum_width = get_field('desktop_logo_maximum_width', 'option');
-  $is_header_in_grid = get_field('is_header_in_grid', 'option');
-  $hide_menu_on_desktop = get_field('hide_menu_on_desktop', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $logo = $myoptions['logo'];
+  $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
+  $is_header_in_grid = $myoptions['is_header_in_grid'];
+  $hide_menu_on_desktop = $myoptions['hide_menu_on_desktop'];
   $hide_menu = ($hide_menu_on_desktop == 1) ? 'menu-container hidden-menu' : 'menu-container';
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
   $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';

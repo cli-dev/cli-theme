@@ -1,10 +1,10 @@
 <?php
-  $logo = get_field('logo', 'option');
-  $desktop_logo_maximum_width = get_field('desktop_logo_maximum_width', 'option');
-  $hide_menu_on_desktop = get_field('hide_menu_on_desktop', 'option');
+  $logo = $myoptions['logo'];
+  $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
+  $hide_menu_on_desktop = $myoptions['hide_menu_on_desktop'];
   $hide_menu = ($hide_menu_on_desktop == 1) ? 'menu-container hidden-menu' : 'menu-container';
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
-  $logo_height = get_field('logo_height', 'options') ? ' height: ' . get_field('logo_height', 'options') . 'px;' : '';
+  $logo_height = $myoptions['logo_height'] ? ' height: ' . $myoptions['logo_height'] . 'px;' : '';
 ?>
   <div class="site-logo center-logo" itemtype="http://schema.org/LocalBusiness"<?php if ($desktop_logo_maximum_width) { echo ' style="max-width: ' . $desktop_logo_maximum_width . 'px;"'; } ?>> 
     <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?>" rel="home" <?php if ($logo) { echo 'style="background: url(' . $logo . ') center no-repeat; background-size: contain;' . $logo_height . '"';}; ?>>

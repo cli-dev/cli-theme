@@ -1,7 +1,8 @@
 <?php
-  $logo = get_field('logo', 'options');
-  $mobile_logo = get_field('mobile_logo', 'options');
-  $mobile_logo_maximum_width = get_field('mobile_logo_maximum_width', 'options');
+  $myoptions = get_option( 'themesettings_');
+  $logo = $myoptions['logo'];
+  $mobile_logo = $myoptions['mobile_logo'];
+  $mobile_logo_maximum_width = $myoptions['mobile_logo_maximum_width'];
 ?>
 <nav id="mobile-nav">
   <div class="site-logo" itemtype="http://schema.org/LocalBusiness" <?php if ($mobile_logo_maximum_width) { echo 'style="max-width: ' . $mobile_logo_maximum_width . 'px;"'; } ?>> 
