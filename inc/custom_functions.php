@@ -877,7 +877,13 @@ add_filter('acf/load_field/name=outline_type', 'theme_button_choices');
 function custom_navigation_menus() {
   $myoptions = get_option( 'themesettings_');
   $logo_position = $myoptions['logo_position'];
-  $center_logo_menu_type = $myoptions['center_logo_menu_type'];
+
+  $center_logo_menu_type = '';
+
+  if ($logo_position === 'center') {
+    $center_logo_menu_type = $myoptions['center_logo_menu_type'];
+  }
+  
 
   $locations = '';
 
