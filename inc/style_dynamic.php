@@ -290,10 +290,10 @@ p, ul li, ol li{<?php if($paragraph_font_family) { echo 'font-family: "' . $para
   color: <?php echo $scroll_button_hover_icon_color; ?>;
 }
 
-<?php if( have_rows('theme_colors') ): while( have_rows('theme_colors') ): the_row(); 
+<?php if( have_rows('theme_colors', 'option') ): while( have_rows('theme_colors', 'option') ): the_row(); 
 
-  $color = get_sub_field('color');
-  $color_class_name = get_sub_field('color_class_name');
+  $color = get_sub_field('color', 'option');
+  $color_class_name = get_sub_field('color_class_name', 'option');
 
   echo '.'. $color_class_name .'-border{ border-color:' . $color . ';  }';
   echo '.'. $color_class_name .'-bg{ background-color:' . $color . ';  }';
