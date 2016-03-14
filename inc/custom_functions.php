@@ -111,30 +111,30 @@ function displayfullAddress() {
   $email = $myoptions['email'];
   
   if($address_1){
-    $addressCode = '<div itemprop="streetAddress">' . $address_1 . '</div>';  
+    $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
   }
   
   if($city){
-    $cityCode = '<span itemprop="addressLocality">' . $city . ', </span>';  
+    $cityCode = '<span class="schema-info city" itemprop="addressLocality">' . $city . ', </span>';  
   }
   
   if($state){
-    $stateCode = '<span itemprop="addressRegion">' . $state . '</span>';  
+    $stateCode = '<span class="schema-info state" itemprop="addressRegion">' . $state . '</span>';  
   }
   
   if($zip){
-    $zipCode = '<span itemprop="postalCode">' . $zip . '</span>';  
+    $zipCode = '<span class="schema-info zip" itemprop="postalCode">' . $zip . '</span>';  
   }
   
   if($phone){
-    $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
+    $phoneCode = '<div class="schema-info phone"><a href="tel:' . $phone . '"  itemprop="telephone">' . $phone . '</a></div>';  
   }
   
   if($email){
-    $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
+    $emailCode = '<div class="schema-info email"><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
-  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div>' . $phoneCode . $emailCode . '</div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div>' . $phoneCode . $emailCode . '</div>';
   
 }
 
@@ -146,22 +146,22 @@ function displayAddress() {
   $zip = $myoptions['zip'];
   
   if($address_1){
-    $addressCode = '<div itemprop="streetAddress">' . $address_1 . '</div>';  
+    $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
   }
   
   if($city){
-    $cityCode = '<span itemprop="addressLocality">' . $city . ', </span>';  
+    $cityCode = '<span class="schema-info city" itemprop="addressLocality">' . $city . ', </span>';  
   }
   
   if($state){
-    $stateCode = '<span itemprop="addressRegion">' . $state . '</span>';  
+    $stateCode = '<span class="schema-info state" itemprop="addressRegion">' . $state . '</span>';  
   }
   
   if($zip){
-    $zipCode = '<span itemprop="postalCode">' . $zip . '</span>';  
+    $zipCode = '<span class="schema-info zip" itemprop="postalCode">' . $zip . '</span>';  
   }
 
-  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div></div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div>' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div></div>';
   
 }
 
@@ -171,11 +171,11 @@ function displayContactInfo() {
   $email = $myoptions['email'];
   
   if($phone){
-    $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
+    $phoneCode = '<div class="schema-info phone"><a href="tel:' . $phone . '"  itemprop="telephone">' . $phone . '</a></div>';  
   }
   
   if($email){
-    $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
+    $emailCode = '<div class="schema-info email"><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
   return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $phoneCode . $emailCode . '</div>';
@@ -187,7 +187,7 @@ function displayPhone() {
   $phone = $myoptions['phone'];
   
   if($phone){
-    $phoneCode = '<div itemprop="telephone">' . $phone . '</div>';  
+    $phoneCode = '<div class="schema-info phone"><a href="tel:' . $phone . '"  itemprop="telephone">' . $phone . '</a></div>';  
   }
 
   return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $phoneCode . '</div>';
@@ -199,7 +199,7 @@ function displayEmail() {
   $email = $myoptions['email'];
   
   if($email){
-    $emailCode = '<div><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
+    $emailCode = '<div class="schema-info email"><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
   return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">' . $emailCode . '</div>';
