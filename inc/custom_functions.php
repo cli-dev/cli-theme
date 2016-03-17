@@ -209,7 +209,7 @@ function displayEmail() {
 function displaySocialProfiles($icon_type, $extra_class) {
   $myoptions = get_option( 'themesettings_');
   $custom_class = $extra_class;
-  $type_of_icon = $icon_type;
+  $type_of_icon = $myoptions['type_of_icon'];;
   $facebook= $myoptions['facebook'];
   $twitter = $myoptions['twitter'];
   $google = $myoptions['google'];

@@ -140,8 +140,8 @@ function copyright() {
 add_shortcode( 'copyright', 'copyright' );
 
 function show_SocialProfiles() {
-  
-  $icon_type = get_field('type_of_icon', 'options');
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
   return displaySocialProfiles($icon_type, 'shortcode');
   
 }
