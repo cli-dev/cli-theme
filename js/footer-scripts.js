@@ -109,8 +109,6 @@ jQuery(document).ready(function($) {
     if($(this).hasClass('fill-space')){
       var maxHeight = $(this).height();
     
-      console.log(maxHeight);
-    
       $(this).children('.panel').height(maxHeight-4);
       
       $(this).css('max-height', maxHeight);
@@ -122,8 +120,6 @@ jQuery(document).ready(function($) {
       }).get();
     
       var maxHeight2 = Math.max.apply(null, elementHeights);
-      
-      console.log(maxHeight2);
     
       $(this).children('.panel').height(maxHeight2);
       
@@ -166,22 +162,7 @@ jQuery(document).ready(function($) {
   
   wow.init();
   
-  var sliderWidth = $('.twitter-slider').width();
-
-  var itemWidth = sliderWidth - 60;
-
-  console.log(itemWidth);
   
-  $('.twitter-slider .timeline-twitter-feed').owlCarousel({
-    items: 1,
-    nav: true,
-    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-    autoHeight:true,
-    onInitialized: function(){
-      $('.owl-item').width(sliderWidth);
-      $('.owl-stage-outer').width(sliderWidth);
-    }
-  });
   
   $(window).scroll(function() {
     if ($(window).scrollTop() >= 400) {

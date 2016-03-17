@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         sourceMap: true,
       },
       css: {
-        src: ['css/vendor/animate.min.css','css/vendor/hover-min.css','css/vendor/jquery.fancybox.min.css','css/vendor/owl.carousel.css','css/min/style.css'],
+        src: ['css/vendor/animate.min.css','css/vendor/hover-min.css','css/vendor/jquery.fancybox.min.css','css/vendor/owl.carousel.min.css','css/min/style.css'],
         dest: 'css/production/style.css',
       },
       jsheader: {
