@@ -20,7 +20,20 @@ $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_anima
     <div class="twitter-feed<?php if ($is_slider == 1) { echo ' twitter-slider'; }?>">
       <?php $twitter_posts = get_sub_field('twitter_posts', $item_id); echo do_shortcode('[timeline-twitter-feed]'); ?>
     </div>
-
-    <i class="social-grid-icon fa fa-twitter"></i>
   </div>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      var sliderWidth = $('.twitter-slider').width();
+      $('.twitter-slider .timeline-twitter-feed').owlCarousel({
+        items: 1,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        autoHeight:true,
+        onInitialized: function(){
+          $('.twitter-slider .owl-item').width(sliderWidth);
+          $('.twitter-slider .owl-stage-outer').width(sliderWidth);
+        }
+      });
+    });
+  </script>
 </div>
