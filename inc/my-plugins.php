@@ -7,7 +7,6 @@ function add_my_plugins() {
   
   wp_register_script( 'footerJS', get_template_directory_uri() . '/js/footer-scripts.js', array('jquery'),'', true);
   wp_enqueue_script( 'footerJS' );
-  
 
 }
  
