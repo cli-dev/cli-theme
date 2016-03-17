@@ -460,8 +460,22 @@ function displaySocialProfiles($icon_type, $extra_class) {
 }
 
 function displaySocialShare() {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $facebook= $myoptions['facebook'];
+  $twitter = $myoptions['twitter'];
+  $google = $myoptions['google'];
+  $linkedin = $myoptions['linkedin'];
+  $tumblr = $myoptions['tumblr'];
+  $pinterest = $myoptions['pinterest'];
 
-  $type_of_icon = $myoptions['type_of_icon'];
+  $facebookCode = '';
+  $twitterCode = '';
+  $googleCode = '';
+  $linkedinCode = '';
+  $tumblrCode = '';
+  $pinterestCode = '';
 
   $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
   $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/twitter-circle-outline.svg');

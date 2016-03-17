@@ -7,7 +7,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
 <?php //Theme Variables 
-  $favicon = get_field('favicon', 'option');
+  $myoptions = get_option( 'themesettings_');
+  $favicon = $myoptions['favicon'];
 ?>
 
 <?php if ($favicon) : ?>
@@ -37,7 +38,7 @@
     echo ']}});</script>';
   }
 
-  $typekit = get_field('typekit_id', 'option');
+  $typekit = $myoptions['typekit_id'];
 
   if($typekit)
   {  
