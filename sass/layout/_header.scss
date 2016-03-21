@@ -1,4 +1,4 @@
-#header{
+.site-header{
   width: 100%;
   position: absolute;
   z-index: 1000;
@@ -99,7 +99,7 @@ img.site-main-logo{
   display: none;  
 }
 
-#header .menu-container{
+.site-header .menu-container{
   width: 100%;
   display: none;
   position: absolute;
@@ -233,7 +233,7 @@ img.site-main-logo{
   }
 }
 
-#header-widgets{
+.site-header-widgets{
   max-width: $grid-width;
   margin: 0 auto;
   @include display-flex;

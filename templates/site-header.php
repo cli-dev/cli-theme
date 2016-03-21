@@ -49,7 +49,7 @@
     <?php get_template_part('templates/menu' , 'side'); ?>
   </nav>
   <div id="content-wrapper" class="<?php if($hide_menu_on_desktop == 0) { if ($header_type === 'Right Side Menu') { echo 'has-right-menu';} else {echo 'has-left-menu';} } ?>">
-    <header id="header" class="has-side-menu <?php echo $header_in_grid; ?>">
+    <header class="site-header has-side-menu <?php echo $header_in_grid; ?>">
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
           <div id="header-widgets">  
