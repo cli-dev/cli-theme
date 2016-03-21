@@ -109,7 +109,8 @@ $button-color: #FFF;
   }
 }
 
-.header-inner ul.menu{
+.header-inner ul.menu,
+.sticky-header.headhesive ul.menu{
   padding: 20px;
   margin: 0;
   list-style: none;
@@ -152,7 +153,8 @@ $button-color: #FFF;
 }
 
 .header-inner .menu-mobile-container > .menu > li.menu-item-has-children,
-.header-inner .menu-container > .menu > li.menu-item-has-children{
+.header-inner .menu-container > .menu > li.menu-item-has-children,
+.sticky-header.headhesive .menu-container > .menu > li.menu-item-has-children{
   position: relative;
   @include breakpoint($mdl){
     >.sub-menu{

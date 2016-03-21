@@ -1,7 +1,10 @@
 <?php
   
   $myoptions = get_option( 'themesettings_');
-  $logo = $myoptions['logo'];
+  
+  $logoimg = $myoptions['logo'];
+  $logosvg = $myoptions['svg_desktop_logo'];
+  $logo = ($logosvg) ? $logosvg : $logoimg;
   $logo_position = $myoptions['logo_position'];
   $is_header_in_grid = $myoptions['is_header_in_grid'];
   $hide_menu_on_desktop = $myoptions['hide_menu_on_desktop'];
@@ -15,10 +18,10 @@
 
 <?php if ($header_type === 'Top Menu') { ?>
   <div id="content-wrapper">
-    <header id="header" class="<?php echo $header_in_grid; ?>">
+    <header class="site-header<?php echo $header_in_grid; ?>">
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
-          <div id="header-widgets">  
+          <div class="header-widgets">  
             <div class="header-widgets-inner"><?php dynamic_sidebar( 'header-widgets' ); ?></div>
           </div>
         <?php endif; ?>
@@ -44,7 +47,7 @@
   ?>
   <nav id="side-menu" class="<?php echo $hide_menu; if ($header_type === 'Right Side Menu') { echo ' right-menu';} else {echo ' left-menu';} ?>">
     <div class="site-logo" itemtype="http://schema.org/LocalBusiness"<?php if ($desktop_logo_maximum_width) { echo ' style="max-width: ' . $desktop_logo_maximum_width . 'px;"'; } ?>> 
-      <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?>" rel="home" <?php if ($logo) { echo 'style="background: url(' . $logo . ') center no-repeat; background-size: contain;';}; ?>><img src="<?php if ($logo) { echo $logo; }; ?>" alt="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?> Logo" itemprop="logo" class="site-main-logo"/></a>
+      <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?>" rel="home" <?php if ($logo) { echo 'style="background: url(' . $logo . ') center no-repeat; background-size: contain;';}; ?>><img src="<?php if ($logoimg) { echo $logoimg; }; ?>" alt="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?> Logo" itemprop="logo" class="site-main-logo"/></a>
     </div>
     <?php get_template_part('templates/menu' , 'side'); ?>
   </nav>
@@ -52,7 +55,7 @@
     <header class="site-header has-side-menu <?php echo $header_in_grid; ?>">
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
-          <div id="header-widgets">  
+          <div class="header-widgets">  
             <div class="header-widgets-inner"><?php dynamic_sidebar( 'header-widgets' ); ?></div>
           </div>
         <?php endif; ?>

@@ -13,7 +13,8 @@
   }
 }
 
-.header-inner > nav{
+.header-inner > nav,
+.sticky-nav-inner{
   padding: 10px;
   margin: 0 auto;
   width: 100%;
@@ -37,13 +38,13 @@
   }
 }
 
-#mobile-nav{
+nav.mobile-nav{
   width: 100%;
   @include display-flex;
   @include justify-content(center);
   position: relative; 
   @include breakpoint($mdl){
-    display: none;
+    display: none !important;
   }
 }
 
@@ -99,7 +100,8 @@ img.site-main-logo{
   display: none;  
 }
 
-.site-header .menu-container{
+.site-header .menu-container,
+.sticky-header.headhesive .menu-container{
   width: 100%;
   display: none;
   position: absolute;
@@ -125,6 +127,10 @@ img.site-main-logo{
       }
     }
   }
+}
+
+.site-header .sticky-header{
+  display: none;
 }
 
 .menu-button-area{
@@ -245,5 +251,22 @@ img.site-main-logo{
   }
   > div{
     @include flex(0 1 auto);
+  }
+}
+
+/*----------------------------------------------------------------------------*\
+  Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+
+.sticky-header.headhesive {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include transform(translateY(-100%));
+  @include transition(ease-in-out all 0.3s);
+  &.headhesive--stick{
+    @include transform(translateY(0));
   }
 }

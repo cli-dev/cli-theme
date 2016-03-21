@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         dest: 'css/production/style.css',
       },
       jsheader: {
-        src: ['js/vendor/modernizr.min.js','js/vendor/webfont.js','js/vendor/jquery.fancybox.min.js','js/vendor/jquery.nicescroll.min.js'],
+        src: ['js/vendor/modernizr.min.js','js/vendor/webfont.js','js/vendor/jquery.fancybox.min.js','js/vendor/jquery.nicescroll.min.js','js/vendor/headhesive.min.js'],
         dest: 'js/header-scripts.js',
       },
       jsfooter: {

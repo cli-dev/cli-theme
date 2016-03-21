@@ -11,6 +11,7 @@ $header_color = $myoptions['header_color'];
 $header_background_opacity = $myoptions['header_background_opacity'];
 $desktop_header_height = $myoptions['desktop_header_height'];
 $mobile_header_height = $myoptions['mobile_header_height'];
+$sticky_header_height = $myoptions['sticky_header_height'];
 $header_bg_rgb = hex2rgb($header_color);
 $menu_link_color = $myoptions['menu_link_color'];
 $menu_line_height = $myoptions['menu_line_height'];
@@ -106,13 +107,14 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 <?php if($link_text_hover_color) { echo 'a:hover{color: ' . $link_text_hover_color . ';} '; }?>
 
-<?php if($header_color) { echo '#header, .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
+<?php if($header_color) { echo '.sticky-header.headhesive, .site-header, .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
 
 <?php if($mobile_header_height) { echo '.header-inner > nav{ height: ' . $mobile_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $mobile_header_height . 'px;} '; }?>
 
 @media screen and (min-width: 1000px){
-  <?php if($header_color) { echo '.menu-container{ background-color: transparent; } #header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} .sub-menu { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
+  <?php if($header_color) { echo '.menu-container{ background-color: transparent; } .site-header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} .sub-menu { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
   <?php if($desktop_header_height) { echo '.header-inner > nav{ height: ' . $desktop_header_height . 'px;} .page-header, .post-image-window{ padding-top:' . $desktop_header_height . 'px;} .menu-container .sub-menu-icon{ line-height: ' . $desktop_header_height . 'px;}'; }?>
+  <?php if($sticky_header_height) { echo '.sticky-header.headhesive .menu-container .sub-menu-icon{ line-height: ' . $sticky_header_height . 'px;}'; }?>
 }
 
 .menu-mobile-container .menu a,
@@ -162,7 +164,7 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 <?php endif ?>
 
-#header .menu a .link-text, .sub-menu-icon{
+.site-header .menu a .link-text, .sub-menu-icon{
   <?php 
     if($menu_line_height) { echo 'line-height: ' . $menu_line_height . 'px;'; }
     if($menu_font_size) { echo 'font-size: ' . $menu_font_size . 'px;';}
