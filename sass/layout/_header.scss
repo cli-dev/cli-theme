@@ -266,7 +266,11 @@ img.site-main-logo{
   width: 100%;
   @include transform(translateY(-100%));
   @include transition(ease-in-out all 0.3s);
+  display: none;
+  @include breakpoint($mdl){
+    display: block;
+  }
   &.headhesive--stick{
-    @include transform(translateY(0));
+    @include transform(translateY(0)); 
   }
 }
