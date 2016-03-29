@@ -109,11 +109,18 @@ function displayfullAddress() {
   $us_state = $myoptions['us_state'];
   $ca_state = $myoptions['ca_state'];
   $au_state = $myoptions['au_state'];
-  $state = if($country === "AU") { $au_state } elseif($country === "CA"){ $ca_state } else { $us_state };
   $zip = $myoptions['zip'];
   $phone = $myoptions['phone'];
   $email = $myoptions['email'];
-  
+
+  if($country === "AU") { 
+    $state = $au_state; 
+  } else if($country === "CA"){ 
+    $state = $ca_state;
+  } else { 
+    $state = $us_state;
+  }
+
   if($address_1){
     $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
   }
@@ -150,8 +157,15 @@ function displayAddress() {
   $us_state = $myoptions['us_state'];
   $ca_state = $myoptions['ca_state'];
   $au_state = $myoptions['au_state'];
-  $state = if($country === "AU") { $au_state } elseif($country === "CA"){ $ca_state } else { $us_state };
   $zip = $myoptions['zip'];
+
+  if($country === "AU") { 
+    $state = $au_state; 
+  } else if($country === "CA"){ 
+    $state = $ca_state;
+  } else { 
+    $state = $us_state;
+  }
   
   if($address_1){
     $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
