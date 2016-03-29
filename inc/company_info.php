@@ -1,11 +1,37 @@
-<?php
-
-if( function_exists('acf_add_local_field_group') ):
+<?php if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_55d5fec1360ee',
 	'title' => 'Company Info',
 	'fields' => array (
+		array (
+			'key' => 'field_56fb0575bd9a7',
+			'label' => 'Country',
+			'name' => 'country',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array (
+				'US' => 'United States of America',
+				'CA' => 'Canada',
+				'AU' => 'Australia',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
+		),
 		array (
 			'key' => 'field_55d5fec08f163',
 			'label' => 'Address Line 1',
@@ -50,19 +76,26 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_55d5ff188f166',
-			'label' => 'State / Province',
-			'name' => 'state',
+			'label' => 'State',
+			'name' => 'us_state',
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_56fb0575bd9a7',
+						'operator' => '==',
+						'value' => 'US',
+					),
+				),
+			),
 			'wrapper' => array (
 				'width' => 25,
 				'class' => 'field_type-select field_key-field_55d5ff188f166',
 				'id' => '',
 			),
 			'choices' => array (
-				'US STATES' => 'US STATES',
 				'AL' => 'Alabama',
 				'AK' => 'Alaska',
 				'AS' => 'American Samoa',
@@ -111,24 +144,95 @@ acf_add_local_field_group(array (
 				'UT' => 'Utah',
 				'VT' => 'Vermont',
 				'VA' => 'Virginia',
-				'WA' => 'Washington',
+				'WA' => 'Western Australia',
 				'WV' => 'West Virginia',
 				'WI' => 'Wisconsin',
 				'WY' => 'Wyoming',
-				'' => '',
-				'CANADIAN PROVINCES' => 'CANADIAN PROVINCES',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
+		),
+		array (
+			'key' => 'field_56fb05d6bd9a8',
+			'label' => 'Province',
+			'name' => 'ca_state',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_56fb0575bd9a7',
+						'operator' => '==',
+						'value' => 'CA',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 25,
+				'class' => 'field_type-select field_key-field_55d5ff188f166',
+				'id' => '',
+			),
+			'choices' => array (
 				'AB' => 'Alberta',
 				'BC' => 'British Columbia',
 				'MB' => 'Manitoba',
 				'NB' => 'New Brunswick',
 				'NF' => 'Newfoundland',
-				'NT' => 'Northwest Territories',
+				'NT' => 'Northern Territory',
 				'NS' => 'Nova Scotia',
 				'ON' => 'Ontario',
 				'PE' => 'Prince Edward Island',
 				'QC' => 'Quebec',
 				'SK' => 'Saskatchewan',
 				'YT' => 'Yukon',
+			),
+			'default_value' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
+			'disabled' => 0,
+			'readonly' => 0,
+		),
+		array (
+			'key' => 'field_56fb05d8bd9a9',
+			'label' => 'State',
+			'name' => 'au_state',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_56fb0575bd9a7',
+						'operator' => '==',
+						'value' => 'AU',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => 25,
+				'class' => 'field_type-select field_key-field_55d5ff188f166',
+				'id' => '',
+			),
+			'choices' => array (
+				'NSW' => 'New South Wales',
+				'QLD' => 'Queensland',
+				'SA' => 'South Australia',
+				'TAS' => 'Tasmania',
+				'VIC' => 'Victoria',
+				'ACT' => 'Australian Capital Territory',
+				'JBT' => 'Jervis Bay Territory',
 			),
 			'default_value' => array (
 			),

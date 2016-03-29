@@ -105,7 +105,11 @@ function displayfullAddress() {
   $myoptions = get_option( 'themesettings_');
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
-  $state = $myoptions['state'];
+  $country = $myoptions['country'];
+  $us_state = $myoptions['us_state'];
+  $ca_state = $myoptions['ca_state'];
+  $au_state = $myoptions['au_state'];
+  $state = if($country === "AU") { $au_state } elseif($country === "CA"){ $ca_state } else { $us_state };
   $zip = $myoptions['zip'];
   $phone = $myoptions['phone'];
   $email = $myoptions['email'];
@@ -142,7 +146,11 @@ function displayAddress() {
   $myoptions = get_option( 'themesettings_');
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
-  $state = $myoptions['state'];
+  $country = $myoptions['country'];
+  $us_state = $myoptions['us_state'];
+  $ca_state = $myoptions['ca_state'];
+  $au_state = $myoptions['au_state'];
+  $state = if($country === "AU") { $au_state } elseif($country === "CA"){ $ca_state } else { $us_state };
   $zip = $myoptions['zip'];
   
   if($address_1){
