@@ -42,8 +42,9 @@ if ($sticky_header == "1") {?>
 
 <script type="text/javascript">
   jQuery(document).ready(function($) {
-    
-  var navWidths = $('.divided-menu').map(function() {
+
+    $(window).load(function(){
+var navWidths = $('.divided-menu').map(function() {
     return $(this).outerWidth();
   }).get();
 
@@ -52,4 +53,7 @@ if ($sticky_header == "1") {?>
   $('.divided-menu').css('min-width', navWidth);
 
   });
+    });
+    
+  
 </script>
