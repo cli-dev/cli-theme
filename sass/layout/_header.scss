@@ -31,10 +31,18 @@
     @include breakpoint($mdl){
       padding: 0 40px;
       @include display-flex;
-      @include flex-direction(column);
       @include justify-content(center);
-      @include align-items(center);
+      @include align-items(stretch);
     }
+  }
+}
+
+.divided-menu{
+  @include flex(0 1 auto);
+  @include display-flex;
+  @include align-items(stretch);
+  > ul{
+    @include flex(0 1 auto);
   }
 }
 
