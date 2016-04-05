@@ -160,3 +160,10 @@ function show_positions() {
   
 }
 add_shortcode( 'positions', 'show_positions' );
+
+function home_logo_link() {
+
+  get_template_part('templates/home-logo');
+  
+}
+add_shortcode( 'logo_link', 'home_logo_link' );
