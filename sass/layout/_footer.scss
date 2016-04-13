@@ -34,17 +34,6 @@
 
 #bottom-footer .footer-inner{
   padding: 20px;
-  @include breakpoint($mdl){
-    @include justify-content(flex-end);
-  }
-  .textwidget{
-    text-align: center;
-    font-weight: 300;
-    font-size: 12px; 
-    @include breakpoint($mdl){
-      text-align: right;
-    }
-  }
 }
 
 .footer-column{
