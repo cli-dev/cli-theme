@@ -188,8 +188,10 @@ img.site-main-logo{
     padding: 80px 40px;
   }
   @include breakpoint($mdl){
-   width: 80%;
-   padding: 80px;
+    width: 80%;
+  }
+  @include breakpoint($lrg){
+    padding: 80px;
   }
 }
 
