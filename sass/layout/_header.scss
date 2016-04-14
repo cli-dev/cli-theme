@@ -181,10 +181,11 @@ img.site-main-logo{
 .page-header-inner{
   padding: 40px 20px;
   min-height: 100px;
-  @include flex(1 1 $grid-width);
+  width: 100%;
+  @include flex(1 1 auto);
   margin: 0;
   @include breakpoint($md){
-   width: 100%;
+   width: 80%;
    padding: 80px 40px;
   }
 }
