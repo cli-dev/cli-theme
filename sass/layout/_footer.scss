@@ -12,7 +12,6 @@
   padding: 10px;
   @include breakpoint($md){
     padding: 20px;
-    width: 80%;
     margin: 0 auto;
     max-width: $grid-width;
     @include display-flex;
@@ -22,6 +21,7 @@
   }
   @include breakpoint($mdl){
     @include flex-wrap(nowrap);
+    width: 80%;
   }
 }
 

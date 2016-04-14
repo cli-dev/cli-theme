@@ -182,11 +182,14 @@ img.site-main-logo{
   padding: 40px 20px;
   min-height: 100px;
   width: 100%;
-  @include flex(1 1 auto);
+  @include flex(0 1 auto);
   margin: 0;
   @include breakpoint($md){
+    padding: 80px 40px;
+  }
+  @include breakpoint($mdl){
    width: 80%;
-   padding: 80px 40px;
+   padding: 80px;
   }
 }
 

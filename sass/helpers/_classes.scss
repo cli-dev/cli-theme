@@ -63,7 +63,7 @@
 }
 
 .in-grid{
-  @include breakpoint($md){
+  @include breakpoint($mdl){
     margin: 0 auto;
     max-width: $grid-width;
     width: 80%;
