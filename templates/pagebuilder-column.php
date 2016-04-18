@@ -117,6 +117,9 @@ $end_inner_column = '</div>';
         else if ( get_row_layout() == 'social_profiles' ) { 
           get_template_part('templates/rowlayout', 'socialprofiles');
         }
+        else if ( get_row_layout() == 'team_grid' ) { 
+          get_template_part('templates/rowlayout', 'team');
+        }
         else if ( get_row_layout() == 'google_map' ) { 
           get_template_part('templates/rowlayout', 'map');
         } 

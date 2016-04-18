@@ -1004,3 +1004,5 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
   return $existing_mimes;
 
 }
+
+add_image_size( 'team-headshot', 300, 300, array( 'center', 'top' ) );

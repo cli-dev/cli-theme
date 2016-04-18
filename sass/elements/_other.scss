@@ -415,3 +415,94 @@ a.flex-col.social-grid{
     padding-bottom: 100%;
   }
 }
+
+.team-bios{
+  display: none;
+}
+
+.team{
+  @include display-flex;
+  @include flex-wrap(wrap);
+}
+
+.team-member-wrapper{
+  @include flex(0 1 auto);
+  width: 50%;
+}
+
+.team-member{
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.team-hover-panel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  @include transform(translateY(100%));
+  @include transition(ease-in-out all 0.3s);
+  .team-member:hover &{
+    @include transform(translateY(0));
+  }
+  .hover-panel-inner{
+    @include flex(0 1 auto);
+  }
+  h3{
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+  .team-position{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.fancybox-opened .fancybox-skin{
+  box-shadow: none;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.fancybox-overlay{
+  background: rgba(0,0,0,0.7);
+}
+
+.fancybox-close{
+  top: 10px;
+  right: 10px;
+  background-image: none;
+  border: solid 1px $black;
+  @include transition(ease-in-out all 0.3s);
+  &:after{
+    content: '\f406';
+    font-family: 'Genericons';
+    font-size: 20px;
+    color: $black;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+    @include transition(ease-in-out all 0.3s);
+  }
+  &:hover{
+    border: solid 1px $gray;
+    &:after{
+      color: $gray;
+    }
+  }
+}
