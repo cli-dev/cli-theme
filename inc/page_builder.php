@@ -1099,7 +1099,7 @@ acf_add_local_field_group(array (
 											'name' => 'internal_link',
 											'type' => 'post_object',
 											'instructions' => '',
-											'required' => 0,
+											'required' => 1,
 											'conditional_logic' => array (
 												array (
 													array (
@@ -1115,7 +1115,10 @@ acf_add_local_field_group(array (
 												'id' => '',
 											),
 											'post_type' => array (
-												0 => 'portfolio',
+												0 => 'post',
+												1 => 'page',
+												2 => 'position',
+												3 => 'project',
 											),
 											'taxonomy' => array (
 											),
