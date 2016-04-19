@@ -837,16 +837,16 @@ function push_google_font_families($field){
 
   $fonts = array();
 
-  foreach($google_fonts['items'] as $val){
+  if($google_fonts){
+    foreach($google_fonts['items'] as $val){
+      $fontName = $val['family'];
+      $fonts[$fontName] = $fontName;
+    }
 
-    $fontName = $val['family'];
+    $field['choices'] = $fonts;
 
-    $fonts[$fontName] = $fontName;
-  }
-
-  $field['choices'] = $fonts;
-
-  return $field;
+    return $field;
+  } 
 }
 
 add_filter('acf/load_field/name=theme_font', 'push_google_font_families');
