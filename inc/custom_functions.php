@@ -822,25 +822,18 @@ add_filter('the_content', 'filter_ptags_on_images');
 
 function push_google_font_families($field){
 
-  set_error_handler(
-    create_function(
-      '$severity, $message, $file, $line',
-      'throw new ErrorException($message, $severity, $severity, $file, $line);'
-      )
-    );
+  $url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc";
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+  curl_setopt($ch, CURLOPT_HEADER, false);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_REFERER, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+  $result = curl_exec($ch);
+  curl_close($ch);
 
-  try {
-    file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc');
-  }
-  catch (Exception $e) {
-    echo $e->getMessage();
-  }
-
-  restore_error_handler();
-
-  $returned_content = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc');
-
-  $google_fonts = json_decode($returned_content, true);
+  $google_fonts = json_decode($result, true);
 
   $fonts = array();
 
