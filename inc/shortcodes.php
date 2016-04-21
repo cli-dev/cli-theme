@@ -167,3 +167,16 @@ function home_logo_link() {
   
 }
 add_shortcode( 'logo_link', 'home_logo_link' );
+
+function footer_logo_link() {
+
+  $myoptions = get_option( 'themesettings_');
+  $logo = $myoptions['footer_logo'];
+
+  $footerLogo = '<div class="footer-logo"><a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home">
+    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Logo" /></a></div>';
+
+  return $footerLogo;
+  
+}
+add_shortcode( 'footer_logo', 'footer_logo_link' );
