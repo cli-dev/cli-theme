@@ -1117,8 +1117,9 @@ acf_add_local_field_group(array (
 											'post_type' => array (
 												0 => 'post',
 												1 => 'page',
-												2 => 'position',
-												3 => 'project',
+												2 => 'attachment',
+												3 => 'position',
+												4 => 'project',
 											),
 											'taxonomy' => array (
 											),
@@ -3145,7 +3146,7 @@ acf_add_local_field_group(array (
 											'field_type' => 'radio',
 											'allow_null' => 1,
 											'add_term' => 0,
-											'save_terms' => 0,
+											'save_terms' => 1,
 											'load_terms' => 1,
 											'return_format' => 'id',
 											'multiple' => 0,
