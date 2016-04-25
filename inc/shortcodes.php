@@ -28,7 +28,7 @@ function btn_shortcode( $atts ) {
     'animation_offset' => '',
   ), $atts );
   
-  return '<a href="' . esc_attr($a['link']) . '" data-wow-duration="' . esc_attr($a['animation_duration']) . '" data-wow-delay="' . esc_attr($a['animation_delay']) . '" data-wow-offset="' . esc_attr($a['animation_offset']) . '" target="_' . esc_attr($a['target']) . '" class="btn ' . esc_attr($a['btn_color']) . '-btn ' . esc_attr($a['customclass']) . ' ' . esc_attr($a['animation_effect']) . '">' . esc_attr($a['title']) . '</a>';
+  return '<a href="' . esc_attr($a['link']) . '" data-wow-duration="' . esc_attr($a['animation_duration']) . '" data-wow-delay="' . esc_attr($a['animation_delay']) . '" data-wow-offset="' . esc_attr($a['animation_offset']) . '" target="_' . esc_attr($a['target']) . '" class="btn ' . esc_attr($a['btn_color']) . '-btn ' . esc_attr($a['customclass']) . ' ' . esc_attr($a['animation_effect']) . '"><span>' . esc_attr($a['title']) . '</span></a>';
   
 }
 add_shortcode( 'btn', 'btn_shortcode' );
