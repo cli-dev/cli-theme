@@ -38,12 +38,11 @@
     echo ']}});</script>';
   }
 
-  $typekit = $myoptions['typekit_id'];
-
   $add_typekit_fonts = $myoptions['add_typekit_fonts'];
 
-  if(($add_typekit_fonts == '1') && $typekit)
+  if(($add_typekit_fonts == '1'))
   {  
+    $typekit = $myoptions['typekit_id'];
     echo '<script src="https://use.typekit.net/' . $typekit . '.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>';
   }
 

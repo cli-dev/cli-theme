@@ -1,0 +1,48 @@
+@import "compass";
+@import "breakpoint";
+
+$mds: 480px;
+$md: 700px;
+$mdl: 900px;
+$lrg: 1100px;
+$xlrg: 1300px;
+$xxlrg: 1800px;
+
+.toplevel_page_theme-general-settings {
+  *{
+    @include box-sizing(border-box);  
+  }
+  .acf-fields{
+    @include breakpoint($lrg){
+      @include display-flex;
+      @include align-items(stretch);
+      .acf-tab-wrap{
+        @include flex(0 1 auto);
+      }
+      .acf-tab-wrapper{
+        @include flex(1 1 auto);
+        @include display-flex;
+        @include flex-wrap(wrap);
+        .acf-field{
+          @include flex(0 1 auto);
+          min-height: 0 !important;
+        }
+      }
+    }
+  }
+  .acf-field{
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .acf-input-wrap input,
+  .wp-color-result,
+  .acf-input-prepend, 
+  .acf-input-append{
+    height: 30px;
+  }
+  .wp-color-result:after{
+    height: 28px;
+    line-height: 28px;
+  }
+}

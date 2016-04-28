@@ -34,6 +34,21 @@ module.exports = function(grunt) {
           imagesPath: 'imgs',
           require: ['breakpoint']
         }
+      },
+      admin: {
+        options: {
+          relativeAssets: true,
+          sourcemap: true,
+          environment: 'production',
+          cssDir: 'admin/css',
+          sassDir: 'admin/sass',
+          imagesDir: 'imgs',
+          javascriptsDir: 'admin/js',
+          outputStyle: 'compressed',
+          fontsPath: 'fonts',
+          imagesPath: 'imgs',
+          require: ['breakpoint']
+        }
       }
     },
     concat: {
@@ -60,7 +75,11 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['sass/**/*.scss'],
-        tasks: ['compass', 'concat:css', 'sync:css'],
+        tasks: ['compass:prod', 'compass:admin', 'concat:css', 'sync:css'],
+      },
+      admin: {
+        files: ['admin/**/*.scss'],
+        tasks: ['compass:admin', 'sync:admin'],
       }
     },
     ftp_push: {
@@ -92,6 +111,11 @@ module.exports = function(grunt) {
       js: {
         files: [
           {expand: true, src: ['js/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+        ],
+      },
+      admin: {
+        files: [
+          {expand: true, src: ['admin/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       }
     },

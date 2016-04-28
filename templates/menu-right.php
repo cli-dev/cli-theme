@@ -5,15 +5,16 @@ $sticky = ($sticky_header == "1") ? 'sticky-header' : '';
 $logoimg = $myoptions['logo'];
 $logosvg = $myoptions['svg_desktop_logo'];
 $logo = ($logosvg) ? $logosvg : $logoimg;
-$sticky_logo = ($myoptions['sticky_header_logo']) ? $myoptions['sticky_header_logo'] : $logo;
+$sticky_logo = '';
 $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
 $is_header_in_grid = $myoptions['is_header_in_grid'];
 $hide_menu_on_desktop = $myoptions['hide_menu_on_desktop'];
 $hide_menu = ($hide_menu_on_desktop == 1) ? 'menu-container hidden-menu' : 'menu-container';
 $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
 $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
-
-$sticky_header_height = $myoptions['sticky_header_height'];
+if ($sticky_header == "1") {$sticky_logo = ($myoptions['sticky_header_logo']) ? $myoptions['sticky_header_logo'] : $logo;}
+$sticky_header_height = '';
+if ($sticky_header == "1") {$sticky_header_height = $myoptions['sticky_header_height'];}
 $sticky_height = ($sticky_header_height) ? ' style="height: ' . $sticky_header_height . 'px;"' : '';
 
 if ($sticky_header == "1") {?>

@@ -1,15 +1,17 @@
 .site-header{
-  width: 100%;
-  position: absolute;
-  z-index: 1000;
-  top: 0;
-  left: 50%;
-  @include transform(translateX(-50%));
   &.header-in-grid{
     max-width: $grid-width;
     @include breakpoint($md){
       width: 80%;
     }
+  }
+  &.header-overlap{
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
   }
 }
 
@@ -169,13 +171,16 @@ img.site-main-logo{
 }
 
 .page-header{
+  width: 100%;
   position: relative;
+  overflow: hidden; 
+}
+
+.page-header-inner-wrapper{
   width: 100%;
   @include display-flex;
-  @include flex-direction(row);
   @include justify-content(center);
   @include align-items(stretch);
-  overflow: hidden;
 }
 
 .page-header-inner{

@@ -16,9 +16,7 @@ jQuery(document).ready(function($) {
   var wH = $(window).height(); 
   var fH = $('#footer').height();
   var cH = wH - fH;
-  var hH = $('.site-header').outerHeight();
 
-  $('.page-header').css('padding-top', hH);
   $('#container').css('min-height', cH);
   $("html").niceScroll({
     mousescrollstep: 60,
@@ -29,9 +27,7 @@ jQuery(document).ready(function($) {
     var fH2 = $('#footer').height();
     var cH2 = wH2 - fH2;
     $('#container').css('min-height', cH2);
-    var hH2 = $('.site-header').outerHeight();
 
-  $('.page-header').css('padding-top', hH2);
   });
   $('.menu-mobile-container').hide();
   $('.menu-button-area').click(function(){

@@ -1015,3 +1015,12 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
 }
 
 add_image_size( 'team-headshot', 300, 300, array( 'center', 'top' ) );
+
+function load_admin_style() {
+  wp_register_style( 'acfStyles', CLI_ROOT . '/admin/css/admin-style.css', false, false );
+  wp_enqueue_style( 'acfStyles' );
+
+  wp_register_script( 'acfScripts', CLI_ROOT . '/admin/js/admin-scripts.js', array( 'jquery' ), false, false);
+  wp_enqueue_script( 'acfScripts' );
+}
+add_action( 'admin_enqueue_scripts', 'load_admin_style', 999 );

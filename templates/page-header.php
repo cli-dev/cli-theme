@@ -1,4 +1,4 @@
-<header class="page-header wow fadeIn" data-wow-delay="0.5s" <?php 
+<?php 
 
   $page_for_posts = get_option( 'page_for_posts' );  
   $postid = get_the_ID();
@@ -48,21 +48,46 @@
   $background_image_color_overlay_opacity = get_field('background_image_color_overlay_opacity', $item_id);
   $header_rgb = hex2rgb($background_image_color_overlay);
 
-
-
-  if($header_type === 'bg-img'){
-    echo 'style="background: url(' . $background_image . ') center no-repeat; background-size: cover;'; 
-    if($background_image_color_overlay){ 
-      echo ' box-shadow: inset 0 0 0 1000px rgba(' . $header_rgb . ', ' . $background_image_color_overlay_opacity . ');"';} 
-    else{
-      echo '"';
-    } 
-  }
-
-  if($header_type === 'color'){echo 'style="background-color: ' . $header_color . ';"';}
+  $add_animation = get_field('add_animation', $item_id);
+  $animation_class = ($add_animation == 1) ? ' wow' : '';
+  $animation_effect = (get_field('animation_effect', $item_id)) ? ' ' . get_sub_field('animation_effect', $item_id)  : '';
+  $animation_duration = (get_field('animation_duration')) ? ' data-wow-duration="' . get_sub_field('animation_duration', $item_id) . 's"'  : '';
+  $animation_delay = (get_field('animation_delay', $item_id)) ? ' data-wow-delay="' . get_sub_field('animation_delay', $item_id) . 's"'  : '';
+  $animation = ($add_animation == 1) ? $animation_duration . $animation_delay : '';
+  $bg_img = ' background: url(' . $background_image . ') center no-repeat; background-size: cover;';
+  $overlay = ($background_image_color_overlay) ? ' box-shadow: inset 0 0 0 1000px rgba(' . $header_rgb . ', ' . $background_image_color_overlay_opacity . ');"' : '';
   
   $detect = new Mobile_Detect;
-?>>
+
+  $myoptions = get_option( 'themesettings_');
+
+  $site_header_type = $myoptions['header_type'];
+
+  if ($site_header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+
+  $pageHeaderWrapperStyles = '';
+  $pageHeaderStyles = '';
+
+  if($top_header_type === 'header-overlap' && $header_type === 'bg-img') {
+    $pageHeaderWrapperStyles = ' style="' . $bg_img . $overlay . '"'; 
+  }
+  elseif ($top_header_type === 'header-overlap' && $header_type === 'color') {
+    $pageHeaderWrapperStyles = ' style="background-color: ' . $header_color . '"'; 
+  } else {
+    $pageHeaderWrapperStyles = '';
+  }
+  
+  if( $top_header_type === 'header-no-overlap' && $header_type === 'bg-img') {
+    $pageHeaderStyles = ' style="' . $bg_img . $overlay . '"'; 
+  } 
+  elseif ($top_header_type === 'header-no-overlap' && $header_type === 'color') {
+    $pageHeaderStyles = ' style="background-color: ' . $header_color . '"'; 
+  } 
+  else{
+    $pageHeaderStyles = '';
+  }
+?>
+<header class="page-header<?php echo ' ' . $header_type . $animation_class . $animation_effect; ?>"<?php echo ' ' . $pageHeaderWrapperStyles;?><?php echo $animation;?>>
   <?php if($header_type === 'slider'){ echo do_shortcode($slider_shortcode); } else {
     if(!$detect->isMobile() && $header_type === 'bg-vid') { ?>
       <div class="header-bg-video bg-video">
@@ -78,10 +103,9 @@
         <div class="bg-video-overlay"></div>
       </div>
     <?php } ?>
-    <div class="page-header-inner in-grid flex-row <?php echo $header_items ?>">
+    <div class="page-header-inner-wrapper"<?php echo ' ' . $pageHeaderStyles;?>>
+      <div class="page-header-inner in-grid flex-row <?php echo $header_items ?>">
       <?php if( have_rows('header_content', $item_id) ): while ( have_rows('header_content', $item_id) ) : the_row(); ?>
-         
-          
           <?php if( get_row_layout() == 'header_text' ) {?>
             <?php $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : ''; ?>  
             <div class="header-block<?php echo $custom_class; ?>"> 
@@ -95,8 +119,9 @@
               <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="single-image" />
             </div>
           <?php } ?>
-      
      <?php endwhile; endif; ?>  
     </div>
+    </div>
+    
   <?php } ?>
 </header>

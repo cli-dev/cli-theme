@@ -12,13 +12,18 @@
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
   $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
   $header_type = $myoptions['header_type'];
-  $center_logo_menu_type = $myoptions['center_logo_menu_type'];
+  $top_header_type = '';
+  if ($header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  $center_logo_menu_type = '';
+  if($logo_position === 'center'){$center_logo_menu_type = $myoptions['center_logo_menu_type'];}
+
+  $header_classes = 'class="site-header ' . $header_in_grid . $top_header_type . '"';
 
 ?>
 
 <?php if ($header_type === 'Top Menu') { ?>
   <div id="content-wrapper">
-    <header class="site-header<?php echo $header_in_grid; ?>">
+    <header <?php echo $header_classes; ?>>
       <div class="header-inner">
         <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
           <div class="header-widgets">  
@@ -40,6 +45,25 @@
          ?>
       </div>
     </header>
+
+    <?php if($top_header_type === "header-overlap") { ?>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          var siteHeaderHeight = $('.site-header').outerHeight();
+
+          $('#content > article > header').css('padding-top', siteHeaderHeight);
+
+          $(window).resize(function(event) {
+
+            var siteHeaderHeight2 = $('.site-header').outerHeight();
+
+            $('#content > article > header').css('padding-top', siteHeaderHeight2);
+
+          });
+        });
+      </script>
+
+    <?php } ?>
 
 <?php } else { ?>
   <?php
