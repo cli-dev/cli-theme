@@ -1,11 +1,11 @@
 <div id="scrollTop"><i class="fa fa-angle-up"></i></div>
-<?php if ( is_active_sidebar( 'content-bottom' ) ) : ?> 
+</div>
+<footer id="footer">
+  <?php if ( is_active_sidebar( 'content-bottom' ) ) : ?> 
   <div id="content-bottom">   
     <?php dynamic_sidebar( 'content-bottom' ); ?>
   </div>
-<?php endif; ?>
-</div>
-<footer id="footer">
+  <?php endif; ?>
   <div id="top-footer" role="contentinfo">
     <div class="footer-inner">
     <?php if ( is_active_sidebar( 'footer-1' ) ) : ?> 
