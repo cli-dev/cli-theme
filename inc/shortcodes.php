@@ -128,6 +128,41 @@ function show_Email() {
 }
 add_shortcode( 'email', 'show_Email' );
 
+function show_verified_badge() {
+  
+  return display_verified_fbr_badge();
+  
+}
+add_shortcode( 'fbr_verified', 'show_verified_badge' );
+
+function show_verified_star_badge() {
+  
+  return display_verified_rating_fbr_badge();
+  
+}
+add_shortcode( 'fbr_verified_star', 'show_verified_star_badge' );
+
+function show_top_place() {
+  
+  return display_top_place_badge();
+  
+}
+add_shortcode( 'fbr_top_place', 'show_top_place' );
+
+function customer_service_badge() {
+  
+  return display_customer_service_badge();
+  
+}
+add_shortcode( 'fbr_customer_service', 'customer_service_badge' );
+
+function fbr_badges() {
+  
+  return '<div class="fbr-badges">' . display_top_place_badge() . display_verified_fbr_badge() . '</div>';
+  
+}
+add_shortcode( 'fbr_badges', 'fbr_badges' );
+
 function copyright() {
   
   $siteTitle = get_bloginfo( 'name' ); 

@@ -506,3 +506,37 @@ a.flex-col.social-grid{
     }
   }
 }
+
+.fbr-badges{
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(flex-start);
+  .fbr-badge{
+    @include flex(0 1 auto);
+  }
+}
+
+#startbadges{
+  display: block;
+}
+
+.fbr-badge{
+  display: block;
+  max-width: 130px;
+  padding: 5px;
+  width: 100%;
+  a{
+    display: block;
+    line-height: 0;
+    font-size: 0;
+  }
+  &.fbr-top-place a,
+  &.fbr-customer-service a{
+    width: 85%;
+    margin: 0 auto;
+  }
+  img{
+    width: 100% !important;
+    height: auto;
+  }
+}

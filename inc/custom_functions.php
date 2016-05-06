@@ -106,19 +106,14 @@ function displayfullAddress() {
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
   $country = $myoptions['country'];
-  $us_state = $myoptions['us_state'];
-  $ca_state = $myoptions['ca_state'];
-  $au_state = $myoptions['au_state'];
   $zip = $myoptions['zip'];
-  $phone = $myoptions['phone'];
-  $email = $myoptions['email'];
 
   if($country === "AU") { 
-    $state = $au_state; 
+    $state = $myoptions['au_state'];
   } else if($country === "CA"){ 
-    $state = $ca_state;
+    $state = $myoptions['ca_state'];
   } else { 
-    $state = $us_state;
+    $state = $myoptions['us_state'];
   }
 
   if($address_1){
@@ -154,17 +149,14 @@ function displayAddress() {
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
   $country = $myoptions['country'];
-  $us_state = $myoptions['us_state'];
-  $ca_state = $myoptions['ca_state'];
-  $au_state = $myoptions['au_state'];
   $zip = $myoptions['zip'];
 
   if($country === "AU") { 
-    $state = $au_state; 
+    $state = $myoptions['au_state'];
   } else if($country === "CA"){ 
-    $state = $ca_state;
+    $state = $myoptions['ca_state'];
   } else { 
-    $state = $us_state;
+    $state = $myoptions['us_state'];
   }
   
   if($address_1){
@@ -479,6 +471,56 @@ function displaySocialProfiles($icon_type, $extra_class) {
 
   return '<div class="social social-profiles ' . $type_of_icon . ' ' . $custom_class . '">' . $facebookCode . $twitterCode . $googleCode . $linkedinCode . $tumblrCode  . $pinterestCode  . $flickrCode  . $newswireCode . $instagramCode . $youtubeCode . $vimeoCode .'</div>';
   
+}
+
+function display_verified_fbr_badge(){
+  $myoptions = get_option( 'themesettings_');
+  $fbr_profile_slug = $myoptions['fbr_profile'];
+
+  $fbr_badge_color = $myoptions['badge_color'];
+
+  $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
+
+  $fbr_verified = '<div class="fbr-badge fbr-verified"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_Verified_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Profile" /></a></div>';
+
+  return $fbr_verified;
+}
+
+function display_verified_rating_fbr_badge(){
+  $myoptions = get_option( 'themesettings_');
+  $fbr_profile_slug = $myoptions['fbr_profile'];
+
+  $fbr_badge_color = $myoptions['badge_color'];
+
+  $fbr_verified_rating = '<div class="fbr-badge fbr-verified-rating"><span id="starbadges"></span><script type="text/javascript" id="my_script_1" src="http://www.fairbusinessreport.org/js/getstarbadges.js?color=' . $fbr_badge_color . '&companyname=' . $fbr_profile_slug . '&height=auto&width=130px"></script></div>';
+
+  return $fbr_verified_rating;
+}
+
+function display_top_place_badge(){
+  $myoptions = get_option( 'themesettings_');
+  $fbr_profile_slug = $myoptions['fbr_profile'];
+
+  $fbr_badge_color = $myoptions['badge_color'];
+
+  $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
+
+  $fbr_top_place = '<div class="fbr-badge fbr-top-place"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopPlacesToWork_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Place to Work Award" /></a></div>';
+
+  return $fbr_top_place;
+}
+
+function display_customer_service_badge(){
+  $myoptions = get_option( 'themesettings_');
+  $fbr_profile_slug = $myoptions['fbr_profile'];
+
+  $fbr_badge_color = $myoptions['badge_color'];
+
+  $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
+
+  $fbr_customer_service = '<div class="fbr-badge fbr-customer-service"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopCustomerService_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Customer Service Award" /></a></div>';
+
+  return $fbr_customer_service;
 }
 
 function displaySocialShare() {

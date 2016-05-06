@@ -1796,6 +1796,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
+				'Roboto' => 'Roboto',
 			),
 			'default_value' => array (
 			),
@@ -1992,6 +1993,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
+				'Roboto' => 'Roboto',
 			),
 			'default_value' => array (
 			),
@@ -2017,6 +2019,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
+				'Roboto' => 'Roboto',
 			),
 			'default_value' => array (
 			),
@@ -2142,6 +2145,7 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'choices' => array (
+				'Roboto' => 'Roboto',
 			),
 			'default_value' => array (
 			),
@@ -2605,8 +2609,8 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'field_564a246a7b6c8',
 			'label' => 'Scroll Button Hover Icon Color',
-			'name' => '',
-			'type' => 'text',
+			'name' => 'scroll_button_hover_icon_color',
+			'type' => 'color_picker',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -2616,12 +2620,6 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'readonly' => 0,
-			'disabled' => 0,
 		),
 		array (
 			'key' => 'field_564a25ae7b6cd',
