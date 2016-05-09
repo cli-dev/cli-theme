@@ -107,6 +107,8 @@ function displayfullAddress() {
   $city = $myoptions['city'];
   $country = $myoptions['country'];
   $zip = $myoptions['zip'];
+  $phone = $myoptions['phone'];
+  $email = $myoptions['email'];
 
   if($country === "AU") { 
     $state = $myoptions['au_state'];
