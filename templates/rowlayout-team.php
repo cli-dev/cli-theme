@@ -47,6 +47,8 @@ $query1 = new WP_Query( $args1 );
 
 <?php if ( $query1->have_posts() ) : ?>
 
+<div class="col-item<?php echo $animation_class . $item_animation_effect . $custom_class; ?>"<?php echo $animation;?>>
+
   <div class="team"<?php echo $gallery_negative_margin; ?>>
 
     <?php while ( $query1->have_posts() ) : $query1->the_post(); ?>
@@ -66,6 +68,7 @@ $query1 = new WP_Query( $args1 );
       ?>
 
       <div class="team-member-wrapper"<?php echo $gallery_spacing; ?>>
+        <div class="team-wrapper-inner">
         <?php echo $team_open_tag; ?>
           <?php if ($team_info_in_hover_panel == 1) { ?>
             <div class="team-hover-panel"<?php echo $hover_bg; ?>>
@@ -82,7 +85,7 @@ $query1 = new WP_Query( $args1 );
           <?php } elseif ($team_info_in_hover_panel !== 1 && $bio !== ''){ ?>
             <div class="team-hover-panel"<?php echo $hover_bg; ?>>
               <div class="hover-panel-inner">
-                <div class="bio-btn<?php echo $bio_button_classes; ?>">View Bio</div>
+                <div class="btn bio-btn<?php echo $bio_button_classes; ?>">View Bio</div>
               </div>
             </div>
           <?php } ?> 
@@ -95,11 +98,13 @@ $query1 = new WP_Query( $args1 );
             <?php } ?>
           </div>
         <?php } ?> 
+        </div>
       </div>
 
     <?php endwhile; ?>
 
   </div>
+</div>
 
   <script type="text/javascript">
     jQuery(document).ready(function($) {
