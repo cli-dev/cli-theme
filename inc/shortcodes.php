@@ -182,6 +182,95 @@ function show_SocialProfiles() {
 }
 add_shortcode( 'social_profiles', 'show_SocialProfiles' );
 
+function show_FacebookProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayFacebookProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'facebook', 'show_FacebookProfile' );
+
+function show_TwitterProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayTwitterProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'twitter', 'show_TwitterProfile' );
+
+function show_GoogleProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayGoogleProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'google', 'show_GoogleProfile' );
+
+function show_LinkedInProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayLinkedInProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'linkedin', 'show_LinkedInProfile' );
+
+function show_TumblrProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayTumblrProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'tumblr', 'show_TumblrProfile' );
+
+function show_PinterestProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayPinterestProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'pinterest', 'show_PinterestProfile' );
+
+function show_FlickrProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayFlickrProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'flickr', 'show_FlickrProfile' );
+
+function show_NewswireProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayNewswireProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'newswire', 'show_NewswireProfile' );
+
+function show_InstagramProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayInstagramProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'instagram', 'show_InstagramProfile' );
+
+function show_YoutubeProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayYoutubeProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'youtube', 'show_YoutubeProfile' );
+
+function show_VimeoProfile() {
+  $myoptions = get_option( 'themesettings_');
+  $icon_type = $myoptions['type_of_icon'];
+  return displayVimeoProfile($icon_type, 'shortcode');
+  
+}
+add_shortcode( 'vimeo', 'show_VimeoProfile' );
+
+
 function show_team() {
   
   get_template_part('templates/team-loop');

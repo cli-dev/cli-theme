@@ -475,6 +475,353 @@ function displaySocialProfiles($icon_type, $extra_class) {
   
 }
 
+function displayFacebookProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $facebook= $myoptions['facebook'];
+
+  $facebookCode = '';
+
+  $facebookSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/facebook-circle-outline.svg');
+  
+  if($facebook){
+    if($type_of_icon === 'icon1'){
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank"><i class="cli-facebook-square-round"></i></a></div>';  
+    }
+    else{
+      $facebookCode = '<div class="social-icon"><a href="' . $facebook  . '" target="_blank">' . $facebookSVG . '</a></div>';  
+    }
+    
+  }
+
+  return $facebookCode;
+  
+}
+
+function displayTwitterProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $twitter = $myoptions['twitter'];
+  $twitterCode = '';
+  $twitterSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/twitter-circle-outline.svg');
+  
+  if($twitter){
+    if($type_of_icon === 'icon1'){
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank"><i class="cli-twitter-square-round"></i></a></div>';  
+    }
+    else{
+      $twitterCode = '<div class="social-icon"><a href="' . $twitter  . '" target="_blank">' . $twitterSVG . '</a></div>';  
+    }
+
+  }
+
+  return $twitterCode;
+  
+}
+
+function displayGoogleProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $google = $myoptions['google'];
+  $googleCode = '';
+  $googleSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/google-circle-outline.svg');
+  
+  if($google){
+    if($type_of_icon === 'icon1'){
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank"><i class="cli-google-square-round"></i></a></div>';  
+    }
+    else{
+      $googleCode = '<div class="social-icon"><a href="' . $google  . '" target="_blank">' . $googleSVG . '</a></div>';  
+    }
+
+  }
+
+  return $googleCode;
+  
+}
+
+function displayLinkedInProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $linkedin = $myoptions['linkedin'];
+  $linkedinCode = '';
+  $linkedinSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/linkedin-circle-outline.svg');
+  
+  if($linkedin){
+    if($type_of_icon === 'icon1'){
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank"><i class="cli-linkedin-square-round"></i></a></div>';  
+    }
+    else{
+      $linkedinCode = '<div class="social-icon"><a href="' . $linkedin  . '" target="_blank">' . $linkedinSVG . '</a></div>';  
+    }
+
+  }
+
+  return $linkedinCode;
+  
+}
+
+function displayTumblrProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $tumblr = $myoptions['tumblr'];
+  $tumblrCode = '';
+  $tumblrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/tumblr-circle-outline.svg');
+  
+  if($tumblr){
+    if($type_of_icon === 'icon1'){
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr-square"></i></a></div>';  
+    }
+    else if ($type_of_icon == 'icon3'){
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank"><i class="cli-tumblr-square-round"></i></a></div>';  
+    }
+    else{
+      $tumblrCode = '<div class="social-icon"><a href="' . $tumblr  . '" target="_blank">' . $tumblrSVG . '</a></div>'; 
+    }
+
+  }
+
+  return $tumblrCode;
+  
+}
+
+function displayPinterestProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $pinterest = $myoptions['pinterest'];
+  $pinterestCode = '';
+  $pinterestSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/pinterest-circle-outline.svg');
+  
+  if($pinterest){
+    if($type_of_icon === 'icon1'){
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank"><i class="cli-pinterest-square-round"></i></a></div>';  
+    }
+    else{
+      $pinterestCode = '<div class="social-icon"><a href="' . $pinterest  . '" target="_blank">' . $pinterestSVG . '</a></div>'; 
+    }
+
+  }
+
+  return $pinterestCode;
+  
+}
+
+function displayFlickrProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $flickr = $myoptions['flickr'];
+  $flickrCode = '';
+  $flickrSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/flickr-circle-outline.svg');
+
+  
+  if($flickr){
+    if($type_of_icon === 'icon1'){
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank"><i class="cli-flickr-square-round"></i></a></div>';  
+    }
+    else{
+      $flickrCode = '<div class="social-icon"><a href="' . $flickr  . '" target="_blank">' . $flickrSVG . '</a></div>';  
+    }
+
+  }
+
+  return $flickrCode;
+  
+}
+
+function displayNewswireProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $newswire = $myoptions['newswire'];
+  $newswireCode = '';
+  $newswireSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/newswire-circle-outline.svg');
+
+  if($newswire){
+    if($type_of_icon === 'icon1'){
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank"><i class="cli-newswire-square-round"></i></a></div>';  
+    }
+    else{
+      $newswireCode = '<div class="social-icon"><a href="' . $newswire  . '" target="_blank">' . $newswireSVG . '</a></div>';  
+    }
+
+  }
+
+  return $newswireCode;
+  
+}
+
+function displayInstagramProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $instagram = $myoptions['instagram'];
+  $instagramCode = '';
+  $instagramSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/instagram-circle-outline.svg');
+  
+  if($instagram){
+    if($type_of_icon === 'icon1'){
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank"><i class="cli-instagram-square-round"></i></a></div>';  
+    }
+    else{
+      $instagramCode = '<div class="social-icon"><a href="' . $instagram  . '" target="_blank">' . $instagramSVG . '</a></div>';  
+    }
+
+  }
+
+  return $instagramCode;
+  
+}
+
+function displayYoutubeProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+  $youtube = $myoptions['youtube'];
+  $youtubeCode = '';
+  $youtubeSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/youtube-circle-outline.svg');
+
+  if($youtube){
+    if($type_of_icon === 'icon1'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank"><i class="cli-youtube-square-round"></i></a></div>';  
+    }
+    else{
+      $youtubeCode = '<div class="social-icon"><a href="' . $youtube  . '" target="_blank">' . $youtubeSVG . '</a></div>';  
+    }
+
+  }
+
+  return $youtubeCode;
+  
+}
+
+function displayVimeoProfile($icon_type, $extra_class) {
+  $myoptions = get_option( 'themesettings_');
+  $custom_class = $extra_class;
+  $type_of_icon = $icon_type;
+
+  $vimeo = $myoptions['vimeo'];
+
+  $vimeoCode = '';
+
+  $vimeoSVG = file_get_contents(get_template_directory_uri() . '/imgs/social/vimeo-circle-outline.svg');
+
+  if($vimeo){
+    if($type_of_icon === 'icon1'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon2'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-square"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon3'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-circle"></i></a></div>';  
+    }
+    else if ($type_of_icon === 'icon4'){
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank"><i class="cli-vimeo-square-round"></i></a></div>';  
+    }
+    else{
+      $vimeoCode = '<div class="social-icon"><a href="' . $vimeo  . '" target="_blank">' . $vimeoSVG . '</a></div>';  
+    }
+
+  }
+
+  return $vimeoCode;
+  
+}
+
 function display_verified_fbr_badge(){
   $myoptions = get_option( 'themesettings_');
   $fbr_profile_slug = $myoptions['fbr_profile'];
