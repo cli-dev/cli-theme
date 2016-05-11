@@ -8,10 +8,10 @@
   @include flex-wrap(wrap);
   padding: 10px;
   @include breakpoint($md){
-    padding: 20px;  
+    padding: 20px 0;  
   }
   @include breakpoint($lrg){
-    padding: 40px;  
+    padding: 40px 0;  
   }
 }
 
@@ -103,25 +103,34 @@
 
 .col-11{
   width: 100%;
-  @include breakpoint($mdl){
+  @include breakpoint($lrg){
     width: 11/12 * 100%;
  
   }  
 }
 .col-10{
   width: 100%;
-  @include breakpoint($mdl){
+  @include breakpoint($md){
+    width: 6/12 * 100%; 
+  }
+  @include breakpoint($lrg){
     width: 10/12 * 100%; 
   }  
 }
 .col-9{
   width: 100%;
   @include breakpoint($md){
+    width: 6/12 * 100%; 
+  }
+  @include breakpoint($mdl){
     width: 9/12 * 100%; 
   }  
 }
 .col-8{
   width: 100%;
+  @include breakpoint($md){
+    width: 6/12 * 100%; 
+  } 
   @include breakpoint($mdl){
     width: 8/12 * 100%; 
   }  
@@ -131,7 +140,7 @@
   @include breakpoint($md){
     width: 6/12 * 100%; 
   }
-  @include breakpoint($mdl){
+  @include breakpoint($lrg){
     width: 7/12 * 100%; 
   }  
 }
@@ -146,7 +155,7 @@
   @include breakpoint($md){
     width: 6/12 * 100%; 
   }
-  @include breakpoint($mdl){
+  @include breakpoint($lrg){
     width: 5/12 * 100%; 
   }  
 }
@@ -155,7 +164,7 @@
   @include breakpoint($md){
     width: 6/12 * 100%; 
   }
-  @include breakpoint($lrg){
+  @include breakpoint($mdl){
     width: 4/12 * 100%; 
   }  
 }
@@ -170,13 +179,19 @@
 }
 .col-2{
   width: 100%;
-  @include breakpoint($mdl){
+  @include breakpoint($md){
+    width: 6/12 * 100%; 
+  }
+  @include breakpoint($lrg){
     width: 2/12 * 100%; 
   }  
 }
 .col-1{
   width: 100%;
-  @include breakpoint($mdl){
+  @include breakpoint($md){
+    width: 6/12 * 100%; 
+  }
+  @include breakpoint($lrg){
     width: 1/12 * 100%; 
   }
 }

@@ -39,6 +39,16 @@
   }
 }
 
+.header-widgets-inner{
+  padding: 10px 20px;
+  @include breakpoint($mdl){
+    padding: 10px 40px;
+    width: 80%;
+    max-width: $grid-width;
+    margin: 0 auto;
+  }
+}
+
 .divided-menu{
   @include flex(0 1 auto);
   @include display-flex;
@@ -89,7 +99,7 @@ nav.mobile-nav{
   @include justify-content(center);
   @include breakpoint($mdl){
     @include flex(0 1 auto);
-    padding: 10px;
+    padding: 10px 0;
   }
   a{
     @include flex(1 1 auto);

@@ -134,6 +134,9 @@ $button-color: #FFF;
       @include display-flex;
       @include align-items(stretch);
       @include flex-direction(column);
+      &:last-child{
+        padding-right: 0;
+      }
     }
   }
   a{
