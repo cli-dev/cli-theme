@@ -174,9 +174,12 @@ function copyright() {
 }
 add_shortcode( 'copyright', 'copyright' );
 
-function show_SocialProfiles() {
-  $myoptions = get_option( 'themesettings_');
-  $icon_type = $myoptions['type_of_icon'];
+function show_SocialProfiles($atts) {
+  $a = shortcode_atts(
+    array(
+      'icon_type' => '',
+    ), $atts );
+  $icon_type = 'icon' . $a['icon_type'];
   return displaySocialProfiles($icon_type, 'shortcode');
   
 }
