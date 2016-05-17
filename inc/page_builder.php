@@ -1224,8 +1224,8 @@ acf_add_local_field_group(array (
 											'choices' => array (
 												0 => 'red',
 												1 => 'blue',
-												2 => 'green',
-												3 => 'yellow',
+												2 => 'yellow',
+												3 => 'green',
 												4 => 'gray',
 												5 => 'off-white',
 												6 => 'white',
@@ -1264,8 +1264,8 @@ acf_add_local_field_group(array (
 											'choices' => array (
 												0 => 'red',
 												1 => 'blue',
-												2 => 'green',
-												3 => 'yellow',
+												2 => 'yellow',
+												3 => 'green',
 												4 => 'gray',
 												5 => 'off-white',
 												6 => 'white',
@@ -1304,8 +1304,8 @@ acf_add_local_field_group(array (
 											'choices' => array (
 												0 => 'red',
 												1 => 'blue',
-												2 => 'green',
-												3 => 'yellow',
+												2 => 'yellow',
+												3 => 'green',
 												4 => 'gray',
 												5 => 'off-white',
 												6 => 'white',
@@ -3118,6 +3118,14 @@ acf_add_local_field_group(array (
 											),
 											'choices' => array (
 												1 => 1,
+												2 => 2,
+												3 => 3,
+												4 => 4,
+												5 => 5,
+												6 => 6,
+												7 => 7,
+												8 => 8,
+												9 => 9,
 											),
 											'default_value' => array (
 											),
@@ -8019,4 +8027,4 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-endif;
+endif; ?>
