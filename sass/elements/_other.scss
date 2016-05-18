@@ -473,40 +473,6 @@ a.flex-col.social-grid{
   }
 }
 
-.fancybox-opened .fancybox-skin{
-  box-shadow: none;
-  background-color: #fff;
-  border-radius: 0;
-}
-
-.fancybox-overlay{
-  background: rgba(0,0,0,0.7);
-}
-
-.fancybox-close{
-  top: 10px;
-  right: 10px;
-  background-image: none;
-  border: solid 1px $black;
-  @include transition(ease-in-out all 0.3s);
-  &:after{
-    content: '\f406';
-    font-family: 'Genericons';
-    font-size: 20px;
-    color: $black;
-    line-height: 36px;
-    text-align: center;
-    display: block;
-    @include transition(ease-in-out all 0.3s);
-  }
-  &:hover{
-    border: solid 1px $gray;
-    &:after{
-      color: $gray;
-    }
-  }
-}
-
 .fbr-badges{
   @include display-flex;
   @include justify-content(center);
@@ -538,5 +504,47 @@ a.flex-col.social-grid{
   img{
     width: 100% !important;
     height: auto;
+  }
+}
+
+.owl-carousel{
+  position: relative;
+  padding: 0 20px 20px;
+  @include breakpoint($mdl){
+    padding: 0 40px 40px;
+  }
+}
+
+.owl-stage-outer{
+  z-index: 5;
+}
+
+.owl-nav{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  > div{
+    @include flex(0 1 auto);
+    width: 20px;
+    height: 20px;
+    @include breakpoint($mdl){
+      width: 40px;
+      height: 40px;
+    }
+    i{
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      display: block;
+      @include breakpoint($mdl){
+        font-size: 40px;
+      }
+    }
   }
 }
