@@ -116,17 +116,17 @@ $query1 = new WP_Query( $args1 );
       var maxWidth = 1/columns * 100;
 
       if($(window).width() >= 1000){
-        $('.team-member-wrapper').css('max-width', maxWidth + '%');
+        $('.team-member-wrapper').css('width', maxWidth + '%');
       }
 
       $(window).resize(function(event) {
         if($(window).width() >= 1000){
-          $('.team-member-wrapper').css('max-width', maxWidth + '%');
+          $('.team-member-wrapper').css('width', maxWidth + '%');
         } else if($(window).width() >= 600){
-          $('.team-member-wrapper').css('max-width','50%');
+          $('.team-member-wrapper').css('width','50%');
         }
         else{
-          $('.team-member-wrapper').css('max-width',  'none');
+          $('.team-member-wrapper').css('width',  'auto');
         }
       });
     });

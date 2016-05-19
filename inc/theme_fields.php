@@ -2419,6 +2419,27 @@ acf_add_local_field_group(array (
 			'endpoint' => 0,
 		),
 		array (
+			'key' => 'field_573e0c3993926',
+			'label' => 'Copyright Text',
+			'name' => 'copyright_text',
+			'type' => 'text',
+			'instructions' => 'Use instead of default copyright txt ( [company name] © [current year] ). Will still add copyright symbol and current year at the end',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => 100,
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
 			'key' => 'field_564a24777b6c9',
 			'label' => 'Scroll Button Width',
 			'name' => 'scroll_button_width',
@@ -2717,4 +2738,4 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-endif;
+endif; ?>

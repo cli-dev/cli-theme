@@ -164,12 +164,17 @@ function fbr_badges() {
 add_shortcode( 'fbr_badges', 'fbr_badges' );
 
 function copyright() {
-  
+  $myoptions = get_option( 'themesettings_');
+  $copyright = $myoptions['copyright_text'];
   $siteTitle = get_bloginfo( 'name' ); 
   
   $currentYear = date("Y");
-  
-  return $siteTitle . ' &copy; ' . $currentYear;
+
+  if($copyright){
+    return $copyright . ' &copy; ' . $currentYear;
+  } else{
+    return $siteTitle . ' &copy; ' . $currentYear;
+  }
   
 }
 add_shortcode( 'copyright', 'copyright' );

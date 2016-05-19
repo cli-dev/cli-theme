@@ -2403,6 +2403,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_573e0c3993926",
+            "label": "Copyright Text",
+            "name": "copyright_text",
+            "type": "text",
+            "instructions": "Use instead of default copyright txt ( [company name] \u00a9 [current year] ). Will still add copyright symbol and current year at the end",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 100,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_564a24777b6c9",
             "label": "Scroll Button Width",
             "name": "scroll_button_width",
@@ -2699,5 +2720,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1463606083
+    "modified": 1463684337
 }
