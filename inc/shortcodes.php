@@ -163,22 +163,6 @@ function fbr_badges() {
 }
 add_shortcode( 'fbr_badges', 'fbr_badges' );
 
-function copyright() {
-  $myoptions = get_option( 'themesettings_');
-  $copyright = $myoptions['copyright_text'];
-  $siteTitle = get_bloginfo( 'name' ); 
-  
-  $currentYear = date("Y");
-
-  if($copyright){
-    return $copyright . ' &copy; ' . $currentYear;
-  } else{
-    return $siteTitle . ' &copy; ' . $currentYear;
-  }
-  
-}
-add_shortcode( 'copyright', 'copyright' );
-
 function show_SocialProfiles($atts) {
   $a = shortcode_atts(
     array(
@@ -312,3 +296,19 @@ function footer_logo_link() {
   
 }
 add_shortcode( 'footer_logo', 'footer_logo_link' );
+
+function copyright() {
+  $myoptions = get_option( 'themesettings_');
+  $copyright = $myoptions['copyright_text'];
+  $siteTitle = get_bloginfo( 'name' ); 
+  
+  $currentYear = date("Y");
+
+  if($copyright){
+    return $copyright . ' &copy; ' . $currentYear;
+  } else{
+    return $siteTitle . ' &copy; ' . $currentYear;
+  }
+  
+}
+add_shortcode( 'copyright', 'copyright' );
