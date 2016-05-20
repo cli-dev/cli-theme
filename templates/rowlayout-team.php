@@ -123,10 +123,10 @@ $query1 = new WP_Query( $args1 );
         if($(window).width() >= 1000){
           $('.team-member-wrapper').css('width', maxWidth + '%');
         } else if($(window).width() >= 600){
-          $('.team-member-wrapper').css('width','50%');
+          $('.team-member-wrapper').css('width','33.333%');
         }
         else{
-          $('.team-member-wrapper').css('width',  '100%');
+          $('.team-member-wrapper').css('width',  '50%');
         }
       });
     });
