@@ -8,7 +8,10 @@
   @include flex-wrap(wrap);
   padding: 10px;
   @include breakpoint($md){
-    padding: 20px 0;  
+    padding: 20px;  
+  }
+  @include breakpoint($mdl){
+    padding: 20px 0;
   }
   @include breakpoint($lrg){
     padding: 40px 0;  

@@ -428,6 +428,9 @@ a.flex-col.social-grid{
 .team-member-wrapper{
   @include flex(0 1 auto);
   width: 50%;
+  @include breakpoint($md){
+    width: 33.333%;
+  }
 }
 
 .team-member{
