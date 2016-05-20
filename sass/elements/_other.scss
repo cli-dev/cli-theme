@@ -520,6 +520,14 @@ a.flex-col.social-grid{
   }
 }
 
+.owl-item{
+  opacity: 0;
+  @include transition(ease-in-out all 0.3s);
+  &.active{
+    opacity: 1;
+  }
+}
+
 .owl-stage-outer{
   z-index: 5;
 }
