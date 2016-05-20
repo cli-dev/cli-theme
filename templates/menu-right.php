@@ -21,7 +21,7 @@ if ($sticky_header == "1") {?>
 <div class="<?php echo $sticky; ?>">
   <nav class="sticky-nav-inner"<?php echo $sticky_height; ?>>
     <div class="site-logo" itemtype="http://schema.org/LocalBusiness"<?php if ($desktop_logo_maximum_width) { echo ' style="max-width: ' . $desktop_logo_maximum_width . 'px;"'; } ?>> 
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?>" rel="home" <?php if ($sticky_logo) { echo 'style="background: url(' . $sticky_logo . ') center no-repeat; background-size: contain;"';}; ?>>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?>" rel="home" <?php if ($sticky_logo) { echo 'style="background: url(' . $sticky_logo . ') left center no-repeat; background-size: contain;"';}; ?>>
         <img src="<?php echo $sticky_logo; ?>" alt="<?php esc_attr_e( get_bloginfo( 'name' ), 'cli-theme' ); ?> Logo" class="site-main-logo"/>
       </a>
     </div>

@@ -126,7 +126,7 @@ $query1 = new WP_Query( $args1 );
           $('.team-member-wrapper').css('width','50%');
         }
         else{
-          $('.team-member-wrapper').css('width',  'auto');
+          $('.team-member-wrapper').css('width',  '100%');
         }
       });
     });
