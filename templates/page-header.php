@@ -50,9 +50,9 @@
 
   $add_animation = get_field('add_animation', $item_id);
   $animation_class = ($add_animation == 1) ? ' wow' : '';
-  $animation_effect = (get_field('animation_effect', $item_id)) ? ' ' . get_sub_field('animation_effect', $item_id)  : '';
-  $animation_duration = (get_field('animation_duration')) ? ' data-wow-duration="' . get_sub_field('animation_duration', $item_id) . 's"'  : '';
-  $animation_delay = (get_field('animation_delay', $item_id)) ? ' data-wow-delay="' . get_sub_field('animation_delay', $item_id) . 's"'  : '';
+  $animation_effect = (get_field('animation_effect', $item_id)) ? ' ' . get_field('animation_effect', $item_id)  : '';
+  $animation_duration = (get_field('animation_duration')) ? ' data-wow-duration="' . get_field('animation_duration', $item_id) . 's"'  : '';
+  $animation_delay = (get_field('animation_delay', $item_id)) ? ' data-wow-delay="' . get_field('animation_delay', $item_id) . 's"'  : '';
   $animation = ($add_animation == 1) ? $animation_duration . $animation_delay : '';
   $bg_img = ' background: url(' . $background_image . ') center no-repeat; background-size: cover;';
   $overlay = ($background_image_color_overlay) ? ' box-shadow: inset 0 0 0 1000px rgba(' . $header_rgb . ', ' . $background_image_color_overlay_opacity . ');"' : '';
