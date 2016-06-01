@@ -61,7 +61,7 @@ $query1 = new WP_Query( $args1 );
       $position = get_field('position');
       $bio = get_field('bio');
 
-      $team_open_tag = ($bio) ? '<a class="team-member" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;" href="#' . the_slug() . '">' : '<div class="team-member" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;">';
+      $team_open_tag = ($bio) ? '<a class="team-member fancybox" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;" href="#' . the_slug() . '">' : '<div class="team-member" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;">';
 
       $team_close_tag = ($bio) ? '</a>' : '</div>';
 
@@ -108,7 +108,7 @@ $query1 = new WP_Query( $args1 );
 
   <script type="text/javascript">
     jQuery(document).ready(function($) {
-      $(".team-member").fancybox({
+      $(".team-member.fancybox").fancybox({
         maxWidth: 700,
         margin: [50, 40, 20, 40]
       });
