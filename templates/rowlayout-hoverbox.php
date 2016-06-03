@@ -23,7 +23,7 @@ $target = ($link_type === 'Internal') ? '_self' : '_blank';
 
 $minimum_height = (get_sub_field('minimum_height', $item_id)) ? ' min-height: ' . get_sub_field('minimum_height', $item_id) . 'px; ' : '';
 
-$box_open_tag = (get_sub_field('link_box', $item_id) == 1) ? '<a href="' . $link . '" target="' . $target . '" class="hover-box effect-' . $hover_effect . '" style="' . $minimum_height . ' ' . $background_color . '">' : '<div class="hover-box effect-' . $hover_effect . '" style="' . $minimum_height . ' ' . $background_color . '">';
+$box_open_tag = (get_sub_field('link_box', $item_id) == 1) ? '<a id="hvr-box-' . get_row_index() . '" href="' . $link . '" target="' . $target . '" class="hover-box effect-' . $hover_effect . '" style="' . $minimum_height . ' ' . $background_color . '">' : '<div id="hvr-box-' . get_row_index() . '" class="hover-box effect-' . $hover_effect . '" style="' . $minimum_height . ' ' . $background_color . '">';
 
 $box_close_tag = (get_sub_field('link_box', $item_id) == 1) ? '</a>' : '</div>';
 
@@ -41,12 +41,11 @@ $item_animation_offset =  (get_sub_field('item_animation_offset', $item_id)) ? '
 $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_animation_delay . $item_animation_offset : '';
 ?>
 <div class="col-item<?php echo $animation_class . $item_animation_effect . $custom_class; ?>"<?php echo $animation;?>>
-
-<?php echo $box_open_tag; ?>
-  <?php if ($box_image) { echo '<div class="box-img" style="background: url(' . $box_image . ') center no-repeat; background-size: cover;"></div>';} ?>
-  <div class="box-content">
-    <div class="box-title"><?php echo $box_title; ?></div>
-    <div class="box-txt"><?php echo $box_content; ?></div>
-  </div>
-<?php echo $box_close_tag; ?>
+  <?php echo $box_open_tag; ?>
+    <?php if ($box_image) { echo '<div class="box-img" style="background: url(' . $box_image . ') center no-repeat; background-size: cover;"></div>';} ?>
+    <div class="box-content">
+      <div class="box-title"><?php echo $box_title; ?></div>
+      <div class="box-txt"><?php echo $box_content; ?></div>
+    </div>
+  <?php echo $box_close_tag; ?>
 </div>
