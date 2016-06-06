@@ -42,8 +42,11 @@
 
 .header-widgets-inner{
   padding: 10px 20px;
-  @include breakpoint($mdl){
+  @include breakpoint($md){
     padding: 10px 40px;
+  }
+  @include breakpoint($mdl){
+    padding: 10px 0;
     width: 80%;
     max-width: $grid-width;
     margin: 0 auto;
@@ -200,8 +203,8 @@ img.site-main-logo{
   padding: 40px 20px;
   min-height: 100px;
   width: 100%;
-  @include flex(0 1 auto);
   margin: 0;
+  @include flex(0 1 auto);
   @include breakpoint($md){
     padding: 80px 40px;
   }
