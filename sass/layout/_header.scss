@@ -24,7 +24,7 @@
   position: relative;  
   @include breakpoint($mdl){
     width: 80%;
-    padding: 0 40px;
+    padding: 0;
     @include display-flex;
     @include align-items(stretch);
     @include justify-content(space-between);
@@ -32,7 +32,7 @@
   }
   &.menu-center{
     @include breakpoint($mdl){
-      padding: 0 40px;
+      padding: 0;
       @include display-flex;
       @include justify-content(center);
       @include align-items(stretch);
