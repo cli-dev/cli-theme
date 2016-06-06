@@ -2,14 +2,14 @@
 <section id="content" role="main">
   <header class="page-header wow fadeIn" data-wow-delay="0.5s" <?php $header_image = get_field( '404_header_image', 'option' );  echo 'style="background: url(' . $header_image . ') center no-repeat; background-size: cover;"';
   ?>>
+    <div class="page-header-inner-wrapper">
       <div class="page-header-inner in-grid flex-row flex-direction-column flex-position-center flex-align-center">
-           
-          <div class="header-block">   
-            <h1 style="text-align:center">404</h1>
-            <p style="text-align:center">Page not found</p>
-          </div>
-        
+        <div class="header-block">   
+          <h1>404</h1>
+          <p>Page not found</p>
+        </div>
       </div>
+    </div>
   </header>
   <article id="post-0" class="post not-found">
     <section class="entry-content">

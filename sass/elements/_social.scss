@@ -27,6 +27,7 @@ $social-colors: (facebook, $facebook),
   @include justify-content(center);
   @include align-items(center);
   @include flex-wrap(wrap);
+  margin: -5px;
   div{
     @include flex(0 1 auto);
     padding: 5px;
@@ -38,12 +39,13 @@ $social-colors: (facebook, $facebook),
     a{
       display: block;
       font-size: 30px;
-      width: 30px;
-      height: 30px;
     }
     i{
       line-height: 30px;
       @include transition(ease-in-out 0.2s all);  
+      &.cli-google{
+        font-size: 1.3em;
+      }
     }
   }
   &.icon5{

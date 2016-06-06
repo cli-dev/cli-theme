@@ -103,3 +103,35 @@
 .wow{
   visibility: hidden;
 }
+
+.left-col{
+  &.tablet .col-inner{
+    @include breakpoint($md){
+      padding-left: 0;
+    }
+    @include breakpoint($mdl){
+      padding-left: 40px;
+    }
+  }
+  &.desktop .col-inner{
+    @include breakpoint($mdl){
+      padding-left: 0;
+    }
+  }
+}
+
+.right-col{
+  &.tablet .col-inner{
+    @include breakpoint($md){
+      padding-right: 0;
+    }
+    @include breakpoint($mdl){
+      padding-right: 40px;
+    }
+  }
+  &.desktop .col-inner{
+    @include breakpoint($mdl){
+      padding-right: 0;
+    }
+  }
+}

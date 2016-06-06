@@ -185,10 +185,12 @@ img.site-main-logo{
   width: 100%;
   position: relative;
   overflow: hidden; 
+  @include display-flex;
 }
 
 .page-header-inner-wrapper{
   width: 100%;
+  @include flex(1 1 auto);
   @include display-flex;
   @include justify-content(center);
   @include align-items(stretch);
@@ -205,9 +207,7 @@ img.site-main-logo{
   }
   @include breakpoint($mdl){
     width: 80%;
-  }
-  @include breakpoint($lrg){
-    padding: 80px;
+    padding: 80px 0;
   }
 }
 
