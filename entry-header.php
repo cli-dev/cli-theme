@@ -42,7 +42,7 @@ else{
 
 ?>
 
-<header class="post-image-window post-header<?php echo $overlapping_header; ?>" style=" background-image: url(<?php if ( has_post_thumbnail() ) { echo $thumb_url; } else { echo $placeholder_img; }  ?>); background-position: 50% 70%; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"><?php 
+<header class="post-image-window post-header<?php echo $overlapping_header; ?>" <?php echo $headerStyles;?>><?php 
   $title = get_the_title();
   $attr = array('class' => "post-img-inner", 'alt' => $title,);
   the_post_thumbnail( 'thumbnail', $attr );
