@@ -1,6 +1,21 @@
 <?php get_header(); ?>
+<?php
+  $myoptions = get_option( 'themesettings_');
+  $logo_position = $myoptions['logo_position'];
+  $site_header_type = $myoptions['header_type'];
+  $top_header_type = '';
+  if ($site_header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  $center_logo_menu_type = '';
+  if($logo_position === 'center'){$center_logo_menu_type = $myoptions['center_logo_menu_type'];}
+
+  $overlapping_header = '';
+
+  if($top_header_type === "header-overlap") {
+    $overlapping_header = ' overlapping-header';
+  }
+?>
 <section id="content" role="main">
-  <header class="page-header wow fadeIn" data-wow-delay="0.5s" <?php $header_image = get_field( '404_header_image', 'option' );  echo 'style="background: url(' . $header_image . ') center no-repeat; background-size: cover;"';
+  <header class="page-header wow fadeIn<?php echo $overlapping_header; ?>" data-wow-delay="0.5s" <?php $header_image = get_field( '404_header_image', 'option' );  echo 'style="background: url(' . $header_image . ') center no-repeat; background-size: cover;"';
   ?>>
     <div class="page-header-inner-wrapper">
       <div class="page-header-inner in-grid flex-row flex-direction-column flex-position-center flex-align-center">

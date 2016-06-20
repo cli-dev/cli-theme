@@ -51,13 +51,13 @@
         jQuery(document).ready(function($) {
           var siteHeaderHeight = $('.site-header').outerHeight();
 
-          $('#content > article > header').css('padding-top', siteHeaderHeight);
+          $('.overlapping-header').css('padding-top', siteHeaderHeight);
 
           $(window).resize(function(event) {
 
             var siteHeaderHeight2 = $('.site-header').outerHeight();
 
-            $('#content > article > header').css('padding-top', siteHeaderHeight2);
+            $('.overlapping-header').css('padding-top', siteHeaderHeight2);
 
           });
         });

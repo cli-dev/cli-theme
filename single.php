@@ -1,19 +1,8 @@
-<?php get_header(); 
-$page_for_posts = get_option( 'page_for_posts' );
-
-$thumb_id = get_post_thumbnail_id();
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-$thumb_url = $thumb_url_array[0];
-$placeholder_img = get_field('background_image', $page_for_posts);
-?>
+<?php get_header(); ?>
 <section id="content" role="main">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('single-post-wrapper'); ?>>
-      <header class="post-image-window" style=" background-image: url(<?php if ( has_post_thumbnail() ) { echo $thumb_url; } else { echo $placeholder_img; }  ?>); background-position: 50% 70%; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"><?php 
-        $title = get_the_title();
-        $attr = array('class' => "post-img-inner", 'alt' => $title,);
-        the_post_thumbnail( 'medium', $attr );
-        ?></header>
+      <?php get_template_part( 'entry', 'header' ); ?>
       <section class="entry-content">
         <?php get_template_part( 'entry', 'content' ); ?>
       </section>

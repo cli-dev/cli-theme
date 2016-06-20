@@ -1,5 +1,7 @@
 <?php 
 
+  $myoptions = get_option( 'themesettings_');
+
   $page_for_posts = get_option( 'page_for_posts' );  
   $postid = get_the_ID();
   
@@ -12,6 +14,18 @@
     $item_id = $postid;
 
   } 
+  $logo_position = $myoptions['logo_position'];
+  $site_header_type = $myoptions['header_type'];
+  $top_header_type = '';
+  if ($site_header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  $center_logo_menu_type = '';
+  if($logo_position === 'center'){$center_logo_menu_type = $myoptions['center_logo_menu_type'];}
+
+  $overlapping_header = '';
+
+  if($top_header_type === "header-overlap") {
+    $overlapping_header = ' overlapping-header';
+  }
 
   $header_type = get_field('header_type', $item_id);
 
@@ -59,35 +73,34 @@
   
   $detect = new Mobile_Detect;
 
-  $myoptions = get_option( 'themesettings_');
-
-  $site_header_type = $myoptions['header_type'];
-
-  if ($site_header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  if ($site_header_type === 'Top Menu') { $top_bar_type = $myoptions['top_header_position']; }
 
   $pageHeaderWrapperStyles = '';
   $pageHeaderStyles = '';
 
-  if($top_header_type === 'header-overlap' && $header_type === 'bg-img') {
+  if($top_bar_type === 'header-overlap' && $header_type === 'bg-img') {
     $pageHeaderWrapperStyles = ' style="' . $bg_img . $overlay . '"'; 
   }
-  elseif ($top_header_type === 'header-overlap' && $header_type === 'color') {
+  elseif ($top_bar_type === 'header-overlap' && $header_type === 'color') {
     $pageHeaderWrapperStyles = ' style="background-color: ' . $header_color . '"'; 
-  } else {
-    $pageHeaderWrapperStyles = '';
+  } 
+  else {
+    $pageHeaderWrapperStyles = ' false';
   }
   
-  if( $top_header_type === 'header-no-overlap' && $header_type === 'bg-img') {
+  if($top_bar_type === 'header-no-overlap' && $header_type === 'bg-img') {
     $pageHeaderStyles = ' style="' . $bg_img . $overlay . '"'; 
   } 
-  elseif ($top_header_type === 'header-no-overlap' && $header_type === 'color') {
+  elseif ($top_bar_type === 'header-no-overlap' && $header_type === 'color') {
     $pageHeaderStyles = ' style="background-color: ' . $header_color . '"'; 
   } 
   else{
-    $pageHeaderStyles = '';
+    $pageHeaderStyles = ' false';
   }
+
+  $header_classes = 'class="page-header test ' . $top_bar_type . ' ' . $header_type . $overlapping_header . $animation_class . $animation_effect . '"';
 ?>
-<header class="page-header<?php echo ' ' . $header_type . $animation_class . $animation_effect; ?>"<?php echo ' ' . $pageHeaderWrapperStyles;?><?php echo $animation;?>>
+<header <?php echo $header_classes . ' ' . $pageHeaderWrapperStyles;?><?php echo $animation;?>>
   <?php if($header_type === 'slider'){ echo do_shortcode($slider_shortcode); } else {
     if(!$detect->isMobile() && $header_type === 'bg-vid') { ?>
       <div class="header-bg-video bg-video">
