@@ -110,6 +110,13 @@ function displayfullAddress() {
   $phone = $myoptions['phone'];
   $email = $myoptions['email'];
 
+  $addressCode = '';
+  $cityCode = '';
+  $stateCode = '';
+  $zipCode = '';
+  $phoneCode = '';
+  $emailCode = '';
+
   if($country === "AU") { 
     $state = $myoptions['au_state'];
   } else if($country === "CA"){ 
@@ -153,6 +160,11 @@ function displayAddress() {
   $country = $myoptions['country'];
   $zip = $myoptions['zip'];
 
+  $addressCode = '';
+  $cityCode = '';
+  $stateCode = '';
+  $zipCode = '';
+
   if($country === "AU") { 
     $state = $myoptions['au_state'];
   } else if($country === "CA"){ 
@@ -185,6 +197,9 @@ function displayContactInfo() {
   $myoptions = get_option( 'themesettings_');
   $phone = $myoptions['phone'];
   $email = $myoptions['email'];
+
+  $phoneCode = '';
+  $emailCode = '';
   
   if($phone){
     $phoneCode = '<div class="schema-info phone"><a href="tel:' . $phone . '"  itemprop="telephone">' . $phone . '</a></div>';  
@@ -201,6 +216,8 @@ function displayContactInfo() {
 function displayPhone() {
   $myoptions = get_option( 'themesettings_');
   $phone = $myoptions['phone'];
+
+  $phoneCode = '';
   
   if($phone){
     $phoneCode = '<div class="schema-info phone"><a href="tel:' . $phone . '"  itemprop="telephone">' . $phone . '</a></div>';  
@@ -213,6 +230,8 @@ function displayPhone() {
 function displayEmail() {
   $myoptions = get_option( 'themesettings_');
   $email = $myoptions['email'];
+
+  $emailCode = '';
   
   if($email){
     $emailCode = '<div class="schema-info email"><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
