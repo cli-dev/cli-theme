@@ -16,8 +16,7 @@
   } 
   $logo_position = $myoptions['logo_position'];
   $site_header_type = $myoptions['header_type'];
-  $top_header_type = '';
-  if ($site_header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  $top_header_type = $myoptions['top_header_position'];
   $center_logo_menu_type = '';
   if($logo_position === 'center'){$center_logo_menu_type = $myoptions['center_logo_menu_type'];}
 
@@ -73,32 +72,48 @@
   
   $detect = new Mobile_Detect;
 
-  if ($site_header_type === 'Top Menu') { $top_bar_type = $myoptions['top_header_position']; }
-
   $pageHeaderWrapperStyles = '';
   $pageHeaderStyles = '';
 
-  if($top_bar_type === 'header-overlap' && $header_type === 'bg-img') {
-    $pageHeaderWrapperStyles = ' style="' . $bg_img . $overlay . '"'; 
-  }
-  elseif ($top_bar_type === 'header-overlap' && $header_type === 'color') {
-    $pageHeaderWrapperStyles = ' style="background-color: ' . $header_color . '"'; 
-  } 
-  else {
-    $pageHeaderWrapperStyles = ' false';
-  }
-  
-  if($top_bar_type === 'header-no-overlap' && $header_type === 'bg-img') {
-    $pageHeaderStyles = ' style="' . $bg_img . $overlay . '"'; 
-  } 
-  elseif ($top_bar_type === 'header-no-overlap' && $header_type === 'color') {
-    $pageHeaderStyles = ' style="background-color: ' . $header_color . '"'; 
-  } 
-  else{
-    $pageHeaderStyles = ' false';
+  if ($site_header_type === 'Top Menu') { 
+    $top_bar_type = $myoptions['top_header_position']; 
+    $pageHeaderWrapperStyles = '';
+    $pageHeaderStyles = '';
+
+    if($top_bar_type === 'header-overlap' && $header_type === 'bg-img') {
+      $pageHeaderWrapperStyles = ' style="' . $bg_img . $overlay . '"'; 
+    }
+    elseif ($top_bar_type === 'header-overlap' && $header_type === 'color') {
+      $pageHeaderWrapperStyles = ' style="background-color: ' . $header_color . '"'; 
+    } 
+    else {
+      $pageHeaderWrapperStyles = '';
+    }
+    
+    if($top_bar_type === 'header-no-overlap' && $header_type === 'bg-img') {
+      $pageHeaderStyles = ' style="' . $bg_img . $overlay . '"'; 
+    } 
+    elseif ($top_bar_type === 'header-no-overlap' && $header_type === 'color') {
+      $pageHeaderStyles = ' style="background-color: ' . $header_color . '"'; 
+    } 
+    else{
+      $pageHeaderStyles = '';
+    }
+  } else{
+    if($header_type === 'bg-img') {
+      $pageHeaderWrapperStyles = ' style="' . $bg_img . $overlay . '"'; 
+    }
+    elseif ($header_type === 'color') {
+      $pageHeaderWrapperStyles = ' style="background-color: ' . $header_color . '"'; 
+    } 
+    else {
+      $pageHeaderWrapperStyles = '';
+    }
   }
 
-  $header_classes = 'class="page-header test ' . $top_bar_type . ' ' . $header_type . $overlapping_header . $animation_class . $animation_effect . '"';
+  
+
+  $header_classes = 'class="page-header ' . $top_bar_type . ' ' . $header_type . $overlapping_header . $animation_class . $animation_effect . '"';
 ?>
 <header <?php echo $header_classes . ' ' . $pageHeaderWrapperStyles;?><?php echo $animation;?>>
   <?php if($header_type === 'slider'){ echo do_shortcode($slider_shortcode); } else {

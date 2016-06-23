@@ -12,8 +12,7 @@
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
   $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
   $header_type = $myoptions['header_type'];
-  $top_header_type = '';
-  if ($header_type === 'Top Menu') { $top_header_type = $myoptions['top_header_position']; }
+  $top_header_type = $myoptions['top_header_position'];
   $center_logo_menu_type = '';
   if($logo_position === 'center'){$center_logo_menu_type = $myoptions['center_logo_menu_type'];}
 
@@ -68,6 +67,7 @@
 <?php } else { ?>
   <?php
     $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
+    $header_classes = 'class="site-header has-side-menu ' . $header_in_grid . $top_header_type . '"';
   ?>
   <nav id="side-menu" class="<?php echo $hide_menu; if ($header_type === 'Right Side Menu') { echo ' right-menu';} else {echo ' left-menu';} ?>">
     <div class="site-logo" itemtype="http://schema.org/LocalBusiness"<?php if ($desktop_logo_maximum_width) { echo ' style="max-width: ' . $desktop_logo_maximum_width . 'px;"'; } ?>> 
@@ -76,20 +76,37 @@
     <?php get_template_part('templates/menu' , 'side'); ?>
   </nav>
   <div id="content-wrapper" class="<?php if($hide_menu_on_desktop == 0) { if ($header_type === 'Right Side Menu') { echo 'has-right-menu';} else {echo 'has-left-menu';} } ?>">
-    <header class="site-header has-side-menu <?php echo $header_in_grid; ?>">
+    <header <?php echo $header_classes; ?>>
       <div class="header-inner">
-        <?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>  
-          <div class="header-widgets">  
-            <div class="header-widgets-inner"><?php dynamic_sidebar( 'header-widgets' ); ?></div>
+        <div class="header-widgets">  
+          <div class="header-widgets-inner">
+            <?php if ( is_active_sidebar( 'header-widgets' ) ) {dynamic_sidebar( 'header-widgets' );} ?>  
+            <div class="menu-button-area<?php echo $hide_button; if ($header_type === 'Right Menu') { echo ' right-menu-btn';} else {echo ' left-menu-btn';}?>">
+              <button class="menu-button">
+                <span>toggle menu</span>
+              </button>
+              <span class="menu-button-txt">Menu</span>
+            </div>
           </div>
-        <?php endif; ?>
-        <div class="menu-button-area<?php echo $hide_button; if ($header_type === 'Right Menu') { echo ' right-menu-btn';} else {echo ' left-menu-btn';}?>">
-          <button class="menu-button">
-            <span>toggle menu</span>
-          </button>
-          <span class="menu-button-txt">Menu</span>
         </div>
       </div>
     </header>
-<?php } ?>
+    <?php if($top_header_type === "header-overlap") { ?>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          var siteHeaderHeight = $('.header-inner').outerHeight();
+
+          $('.overlapping-header').css('padding-top', siteHeaderHeight);
+
+          $(window).resize(function(event) {
+
+            var siteHeaderHeight2 = $('.header-inner').outerHeight();
+
+            $('.overlapping-header').css('padding-top', siteHeaderHeight2);
+
+          });
+        });
+      </script>
+    <?php } ?>
+  <?php } ?>
 

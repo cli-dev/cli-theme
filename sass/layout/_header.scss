@@ -42,6 +42,7 @@
 
 .header-widgets-inner{
   padding: 10px 20px;
+  position: relative;
   @include breakpoint($md){
     padding: 10px 40px;
   }

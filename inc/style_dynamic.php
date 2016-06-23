@@ -107,9 +107,11 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 <?php if($link_text_hover_color) { echo 'a:hover{color: ' . $link_text_hover_color . ';} '; }?>
 
-<?php if($header_color) { echo '.sticky-header.headhesive, .site-header, .menu-mobile-container{background-color: ' . $header_color . ';} '; }?>
+<?php if($header_color) { echo '.sticky-header.headhesive, .site-header, .mobile-nav{background-color: ' . $header_color . ';} '; }?>
 
 <?php if($mobile_header_height) { echo '.mobile-nav { height: ' . $mobile_header_height . 'px;}'; }?>
+
+<?php if($menu_background_color) { echo '#side-menu.menu-container, .menu-mobile-container, .sub-nav{ background-color: ' . $menu_background_color . ';}'; }?>
 
 @media screen and (min-width: 1000px){
   <?php if($header_color) { echo '.menu-container{ background-color: transparent; } .site-header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} .sub-menu { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
