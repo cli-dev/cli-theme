@@ -206,6 +206,6 @@
     }
   }
   .max-width-col-#{$i}, .col-inner.max-width-col-#{$i}{
-    max-width: ($i/12) * $grid-width - 40px; 
+    max-width: ($i/12) * $grid-width; 
   }
 }
