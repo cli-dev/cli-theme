@@ -2,6 +2,7 @@
 <section id="content" role="main">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('single-post-wrapper'); ?>>
+      <?php get_template_part( 'entry', 'header' ); ?>
       <section class="entry-content">
         <?php get_template_part( 'entry', 'content' ); ?>
       </section>
