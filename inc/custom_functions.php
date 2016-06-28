@@ -1247,6 +1247,8 @@ function push_google_font_families($field){
 
   $fonts = array();
 
+  $field = '';
+
   if($google_fonts){
     foreach($google_fonts['items'] as $val){
       $fontName = $val['family'];
@@ -1256,6 +1258,9 @@ function push_google_font_families($field){
     $field['choices'] = $fonts;
 
     return $field;
+    
+  } else {
+    return null;
   } 
 }
 
