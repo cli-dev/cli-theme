@@ -87,7 +87,6 @@ function bac_excerpt_filter($text){
   $text = bac_variable_length_excerpt($text, $length, $finish_sentence);  
   return $text;
 }
-//Hooks the 'bac_excerpt_filter' function to a specific (get_the_excerpt) filter action.
 add_filter('get_the_excerpt','bac_excerpt_filter',5);
 
 add_filter('widget_text', 'do_shortcode');
@@ -1247,7 +1246,7 @@ function push_google_font_families($field){
 
   $fonts = array();
 
-  $field = '';
+  //$field = '';
 
   if($google_fonts){
     foreach($google_fonts['items'] as $val){
