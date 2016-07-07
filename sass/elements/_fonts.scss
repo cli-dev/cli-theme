@@ -1,113 +1,27 @@
-body{
-  padding: 0;
-  margin: 0;
-}
-
-a{
-  text-decoration: none;
-  @include transition(all ease-in-out 0.3s);
-}
-
-h1,h2,h3,h4,h5,h6{
-  padding-bottom: 15px;  
-}
-
-h1, h2{
-  font-size: 24px;
-  @include breakpoint($lrg){
-    font-size: 28px;  
-  } 
-}
-
-h3{
-  font-size: 18px;
-  @include breakpoint($md){
-    font-size: 20px;  
-  }
-  @include breakpoint($lrg){
-    font-size: 24px;  
-  }  
-}
-
-h4{
-  font-size: 16px;
-  @include breakpoint($md){
-    font-size: 18px;  
-  }
-  @include breakpoint($lrg){
-    font-size: 20px;  
-  }  
-}
-
-h5{
-  font-size: 12px;
-  @include breakpoint($md){
-    font-size: 16px;  
-  }
-  @include breakpoint($lrg){
-    font-size: 18px;  
-  }  
-}
-
-p{
-  font-size: 16px;  
-  padding-bottom: 20px;
-  &:last-of-type{
-    padding-bottom: 0;  
-  }
-  &:empty{
-    display: none;  
-  }
-}
-
-ul, ol{
-  margin-left: 20px;
-  padding-bottom: 20px;
-  li{
-    @extend p;
-    padding-bottom: 10px;  
-  }
-}
-
-ul{
-  list-style-type: square;  
-}
-
-ol{
-  list-style-type: decimal;  
-}
-
-strong, b{
-  font-weight: 700;  
-}
-
-em{
-  font-style: italic;  
-}
-
 @font-face {
-	font-family: 'CLi-Social';
-	src: font-url('CLi-Social.eot?25co08');
-	src: font-url('CLi-Social.eot?#iefix25co08') format('embedded-opentype'),
-		   font-url('CLi-Social.ttf?25co08') format('truetype'),
-		   font-url('CLi-Social.woff?25co08') format('woff'),
-		   font-url('CLi-Social.svg?25co08#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'CLi-Social';
+  src: font-url('CLi-Social.eot?xdfx0f');
+  src: font-url('CLi-Social.eot?xdfx0f#iefix') format('embedded-opentype'),
+       font-url('CLi-Social.ttf?xdfx0f') format('truetype'),
+       font-url('CLi-Social.woff?xdfx0f') format('woff'),
+       font-url('CLi-Social.svg?xdfx0f#CLi-Social') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="cli-"], [class*=" cli-"] {
-	font-family: 'CLi-Social';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'CLi-Social' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cli-facebook:before {
@@ -242,5 +156,40 @@ em{
 .cli-youtube-square-round:before {
   content: "\e62b";
 }
+.cli-facebook-circle-outline:before {
+  content: "\e62c";
+}
+.cli-flickr-circle-outline:before {
+  content: "\e62d";
+}
+.cli-google-circle-outline:before {
+  content: "\e62e";
+}
+.cli-instagram-circle-outline:before {
+  content: "\e62f";
+}
+.cli-linkedin-circle-outline:before {
+  content: "\e630";
+}
+.cli-newswire-circle-outline:before {
+  content: "\e631";
+}
+.cli-pinterest-circle-outline:before {
+  content: "\e632";
+}
+.cli-tumblr-circle-outline:before {
+  content: "\e633";
+}
+.cli-vimeo-circle-outline:before {
+  content: "\e634";
+}
+.cli-youtube-circle-outline:before {
+  content: "\e635";
+}
+.cli-twitter-circle-outline:before {
+  content: "\e636";
+}
 
-
+a{
+  text-decoration: none;
+}

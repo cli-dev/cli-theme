@@ -18,7 +18,7 @@ $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_anima
 ?>
 <div class="col-item<?php echo $animation_class . $item_animation_effect; ?>"<?php echo $animation;?>>
         
-<div class="instagram-wrapper"><div id="<?php echo $block_id; ?>" class="instagram-block <?php echo $custom_class; ?>"><i class="social-grid-icon fa fa-instagram"></i></div></div> 
+<div class="instagram-wrapper"><div id="<?php echo $block_id; ?>" class="instagram-block <?php echo $custom_class; ?>"></div></div> 
         
 <script type="text/javascript">
   var userFeed = new Instafeed({

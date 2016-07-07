@@ -7,110 +7,6 @@
     }
   } 
 }
-
-.team-bios{
-  display: none; 
-}
-
-
-.team-bio{
-  padding: 20px;
-  img{
-    width: 100%;
-    height: auto;
-    @include breakpoint($md){
-      float: right;
-      margin: 0 0 20px 20px;
-      max-width: 40%; 
-    }
-  }
-}
-
-.team-block{
-  display: block;
-  width: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  &:hover{
-    .team-block-hidden-content{
-      opacity: 1;  
-    }
-  }
-  @include breakpoint($md){
-    width: 25%;
-    &.featured-employee{
-      width: 50%;
-      h3{
-        font-size: 35px;
-      }
-    }
-  }
-  .team-block-inner{
-    width: 100%;
-    &:after{
-      content:'';
-      width: 100%;
-      display: block;
-      padding-bottom: 100%;  
-    }
-  }
-  .featured-employee{
-    .team-block-hidden-content{
-      @include breakpoint($md){
-        padding: 40px 20px;
-      }
-    }
-  }
-  .team-block-hidden-content{
-    opacity: 0;
-    padding: 10px; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    @include transition(all ease-in-out 0.3s);
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(space-around);
-    @include breakpoint($lrg){
-      padding: 20px;
-       
-    }
-    h3{
-      @include flex(0 1 auto);
-    }
-    div{
-      @include flex(0 1 auto); 
-      max-width: 70%; 
-    }
-    p{
-      @include flex(1 1 auto);  
-    }
-    
-  }
-  .static-block-content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    padding: 20px; 
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(flex-end);
-    h3{
-      padding-bottom: 20px;  
-      @include flex(0 1 auto); 
-    }
-    a{
-      @include flex(0 1 auto); 
-      padding: 0;  
-    }
-  }
-}
-
 .single-image-wrapper{
   padding: 10px;
   @include display-flex;
@@ -124,6 +20,7 @@
   }
   &.no-title{
     display: block;
+    padding: 0;
   }
   &.title-top{
     @include flex-direction(column);
@@ -243,7 +140,6 @@
 }
 
 h4.location-item-title{
-  font-size: 18px; 
   padding: 0 0 0 20px; 
 }
 
@@ -257,14 +153,8 @@ h4.location-item-title{
 }
 
 .location-item-table-cell{
-  font-size: 13px;
-  line-height: 1.4;
   @include breakpoint($mds){
     @include flex(0 1 auto);  
-  }
-  &.label{
-    min-width: 70px; 
-    font-weight: bold; 
   }
   .address_line_2{
     padding-bottom: 10px;  
@@ -295,96 +185,13 @@ h4.location-item-title{
   }
 }
 
-
 .instagram-img img{
   width: 100%;
   height: auto;
 }
 
-.social-grid .position-block .position-block-inner{
-  padding: 20px;  
-}
-
-.social-grid-btn{
-  width: 100%;
-  font-size: 30px;
-  @include breakpoint($md){
-    width: 50%;
-    text-align: left;
-    @include display-flex;
-    @include align-items(flex-end); 
-    span{
-      @include flex(0 1 auto);
-    }
-  }
-}
-
-.social-grid-mini{
-  @include display-flex;
-  @include flex-wrap(wrap);
-  @include align-items(stretch);
-  &.col-inner > * {
-    @include flex(1 1 auto); 
-    border: solid 2px #FFF; 
-  }
-}
-
-a.flex-col.social-grid{
-  border: solid 2px #FFF; 
-  line-height: 5; 
-}
-
 .instagram-block{
   position: relative;  
-}
-
-.social-grid{
-  &.col-inner{
-    padding: 10px;  
-    > *{
-      @include flex(1 1 auto); 
-      position: relative;
-    }
-  }
-  &.col-inner.social-grid-mini{
-    padding: 0;
-    > * {
-      @include flex(1 1 auto); 
-      border: solid 10px #FFF; 
-      max-height: 50%;
-    }
-  }
- .blog-feed-wrapper{
-    @include flex(1 1 auto);  
-    @include display-flex;
-    @include align-items(stretch);
-    article{
-     @include flex(1 1 auto); 
-    }
-  }
-  .twitter-feed-wrapper{
-    width: 100%;  
-    @include display-flex;
-    background-color: $black;
-    *{
-      color: #FFF;  
-    }
-    .twitter-feed{
-      @include flex(1 1 auto); 
-      position: relative;
-    }
-  }
-  .social-grid-icon.fa{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 2;  
-    font-size: 40px;
-    display: block;
-    &.fa-instagram{
-      color: #FFF;  
-    }
-  }
 }
 
 .img-gallery{
@@ -416,13 +223,112 @@ a.flex-col.social-grid{
   }
 }
 
-.team-bios{
-  display: none;
-}
 
 .team{
   @include display-flex;
   @include flex-wrap(wrap);
+}
+
+.team-bios{
+  display: none; 
+}
+
+.team-bio{
+  padding: 20px;
+  img{
+    width: 100%;
+    height: auto;
+    @include breakpoint($md){
+      float: right;
+      margin: 0 0 20px 20px;
+      max-width: 40%; 
+    }
+  }
+}
+
+.team-block{
+  display: block;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover{
+    .team-block-hidden-content{
+      opacity: 1;  
+    }
+  }
+  @include breakpoint($md){
+    width: 25%;
+    &.featured-employee{
+      width: 50%;
+      h3{
+        font-size: 35px;
+      }
+    }
+  }
+  .team-block-inner{
+    width: 100%;
+    &:after{
+      content:'';
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;  
+    }
+  }
+  .featured-employee{
+    .team-block-hidden-content{
+      @include breakpoint($md){
+        padding: 40px 20px;
+      }
+    }
+  }
+  .team-block-hidden-content{
+    opacity: 0;
+    padding: 10px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    @include transition(all ease-in-out 0.3s);
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    @include breakpoint($lrg){
+      padding: 20px;
+       
+    }
+    h3{
+      @include flex(0 1 auto);
+    }
+    div{
+      @include flex(0 1 auto); 
+      max-width: 70%; 
+    }
+    p{
+      @include flex(1 1 auto);  
+    }
+    
+  }
+  .static-block-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    padding: 20px; 
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    h3{
+      padding-bottom: 20px;  
+      @include flex(0 1 auto); 
+    }
+    a{
+      @include flex(0 1 auto); 
+      padding: 0;  
+    }
+  }
 }
 
 .team-member-wrapper{
@@ -478,6 +384,17 @@ a.flex-col.social-grid{
   }
 }
 
+.quote{
+  padding: 20px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(stretch);
+  div{
+    @include flex(0 1 auto);
+  }
+}
+
 .fbr-badges{
   @include display-flex;
   @include justify-content(center);
@@ -487,36 +404,11 @@ a.flex-col.social-grid{
   }
 }
 
-#startbadges{
-  display: block;
-}
-
-.fbr-badge{
-  display: block;
-  max-width: 130px;
-  padding: 5px;
-  width: 100%;
-  a{
-    display: block;
-    line-height: 0;
-    font-size: 0;
-  }
-  &.fbr-top-place a,
-  &.fbr-customer-service a{
-    width: 85%;
-    margin: 0 auto;
-  }
-  img{
-    width: 100% !important;
-    height: auto;
-  }
-}
-
 .owl-carousel{
   position: relative;
-  padding: 0 20px 20px;
+  padding: 0 20px;
   @include breakpoint($mdl){
-    padding: 0 40px 40px;
+    padding: 0 40px;
   }
 }
 
@@ -557,7 +449,36 @@ a.flex-col.social-grid{
       display: block;
       @include breakpoint($mdl){
         font-size: 40px;
+        line-height: 40px;
       }
+    }
+  }
+}
+
+.owl-dots{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 5px 20px;
+  top: 100%;
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  .owl-dot{
+    @include flex(0 1 auto);
+    padding: 2px;
+    &:before{
+      content: '\f1db';
+      font-family: 'FontAwesome';
+      display: block;
+      font-size: 15px; 
+    }
+    &.active:before{
+      content: '\f111';  
+    }
+    &:only-child{
+      display: none;  
     }
   }
 }

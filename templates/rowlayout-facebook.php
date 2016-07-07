@@ -17,5 +17,4 @@ $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_anima
 ?>
 <div class="col-item facebook-feed<?php echo $animation_class . $item_animation_effect . ' ' . $custom_class; ?>"<?php echo $animation;?>>
   <?php echo do_shortcode('[custom-facebook-feed num=' . $facebook_posts . ']'); ?>
-  <i class="social-grid-icon fa fa-facebook"></i>
 </div>

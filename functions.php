@@ -105,6 +105,7 @@ require_once('inc/custom_css.php');
 require_once('inc/my-plugins.php');
 require_once('inc/theme-options.php');
 require_once('inc/custom_functions.php');
+require_once('inc/social.php');
 require_once('inc/shortcodes.php');
 require_once('inc/widget-areas.php');
 require_once('inc/company_info.php');
