@@ -279,7 +279,17 @@ add_shortcode( 'positions', 'show_positions' );
 
 function home_logo_link() {
 
-  get_template_part('templates/home-logo');
+  $myoptions = get_option( 'themesettings_');
+  $logoimg = $myoptions['logo'];
+  $logosvg = $myoptions['svg_desktop_logo'];
+  $logo = ($logosvg) ? $logosvg : $logoimg;
+
+  $logo_bg = ($logo) ? ' style="background: url(' . $logo . ') center no-repeat; background-size: contain;"' : '';
+
+  $footerLogo = '<div class="site-logo" itemtype="http://schema.org/LocalBusiness"><a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home">
+    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Logo" itemprop="logo" class="site-main-logo" /></a></div>';
+
+  return $footerLogo;
   
 }
 add_shortcode( 'logo_link', 'home_logo_link' );
