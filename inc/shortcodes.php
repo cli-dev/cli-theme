@@ -280,16 +280,17 @@ add_shortcode( 'positions', 'show_positions' );
 function home_logo_link() {
 
   $myoptions = get_option( 'themesettings_');
+  $desktop_logo_maximum_width = $myoptions['desktop_logo_maximum_width'];
+  $logo_max_width = ($desktop_logo_maximum_width) ? ' style="max-width: ' . $desktop_logo_maximum_width . 'px;"' : '';
   $logoimg = $myoptions['logo'];
   $logosvg = $myoptions['svg_desktop_logo'];
   $logo = ($logosvg) ? $logosvg : $logoimg;
 
   $logo_bg = ($logo) ? ' style="background: url(' . $logo . ') center no-repeat; background-size: contain;"' : '';
 
-  $footerLogo = '<div class="site-logo" itemtype="http://schema.org/LocalBusiness"><a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home">
-    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Logo" itemprop="logo" class="site-main-logo" /></a></div>';
+  $siteLogo = '<div class="site-logo" itemtype="http://schema.org/LocalBusiness"'. $logo_max_width .'><a itemprop="url" href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home"' . $logo_bg . '><img src="' . $logoimg . '" alt="' . get_bloginfo( 'name' ) . ' Logo" itemprop="logo" class="site-main-logo" /></a></div>';
 
-  return $footerLogo;
+  return $siteLogo;
   
 }
 add_shortcode( 'logo_link', 'home_logo_link' );
