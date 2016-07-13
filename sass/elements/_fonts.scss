@@ -190,6 +190,89 @@
   content: "\e636";
 }
 
+body{
+  padding: 0;
+  margin: 0;
+}
+
 a{
   text-decoration: none;
+  @include transition(all ease-in-out 0.3s);
+}
+
+h1,h2,h3,h4,h5,h6{
+  padding-bottom: 15px;  
+}
+
+h1, h2{
+  font-size: 24px;
+  @include breakpoint($lrg){
+    font-size: 28px;  
+  } 
+}
+
+h3{
+  font-size: 18px;
+  @include breakpoint($md){
+    font-size: 20px;  
+  }
+  @include breakpoint($lrg){
+    font-size: 24px;  
+  }  
+}
+
+h4{
+  font-size: 16px;
+  @include breakpoint($md){
+    font-size: 18px;  
+  }
+  @include breakpoint($lrg){
+    font-size: 20px;  
+  }  
+}
+
+h5{
+  font-size: 12px;
+  @include breakpoint($md){
+    font-size: 16px;  
+  }
+  @include breakpoint($lrg){
+    font-size: 18px;  
+  }  
+}
+
+p{
+  font-size: 16px;  
+  padding-bottom: 20px;
+  &:last-of-type{
+    padding-bottom: 0;  
+  }
+  &:empty{
+    display: none;  
+  }
+}
+
+ul, ol{
+  margin-left: 20px;
+  padding-bottom: 20px;
+  li{
+    @extend p;
+    padding-bottom: 10px;  
+  }
+}
+
+ul{
+  list-style-type: square;  
+}
+
+ol{
+  list-style-type: decimal;  
+}
+
+strong, b{
+  font-weight: 700;  
+}
+
+em{
+  font-style: italic;  
 }
