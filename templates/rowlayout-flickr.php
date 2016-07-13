@@ -57,84 +57,74 @@ $animation = ($item_add_animation == 1) ? $item_animation_duration . $item_anima
 
     $(window).load(function() {
 
-    var columns = <?php echo $columns; ?>;
+      var columns = <?php echo $columns; ?>;
 
-    <?php if ($is_slider == 1) { ?>
-      if(columns == 1){
-        $('.flickr-wrapper.owl-carousel').owlCarousel({
-          items: 1,
-          loop: true,
-          margin: 0,
-          nav: true,
-          navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
-        });
-      } else if (columns == 2) {
-        $('.flickr-wrapper.owl-carousel').owlCarousel({
-          items: 1,
-          loop: true,
-          margin: 0,
-          nav: true,
-          navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-          responsive:{
-            500:{
-              items:2,
-              margin: <?php echo $column_spacing; ?>,
+      <?php if ($is_slider == 1) { ?>
+        if(columns == 1){
+          $('.flickr-wrapper.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+          });
+        } else if (columns == 2) {
+          $('.flickr-wrapper.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            responsive:{
+              500:{
+                items:2,
+                margin: <?php echo $column_spacing; ?>,
+              }
             }
-          }
-        });
-      } else if (columns >= 3) {
-        $('.flickr-wrapper.owl-carousel').owlCarousel({
-          items: 1,
-          loop: true,
-          margin: 0,
-          nav: true,
-          navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-          responsive:{
-            500:{
-              items:2,
-              margin: <?php echo $column_spacing; ?>,
-            },
-            800:{
-              items:3,
-              margin: <?php echo $column_spacing; ?>,
-            },
-            1200:{
-              items:columns,
-              margin: <?php echo $column_spacing; ?>,
+          });
+        } else if (columns >= 3) {
+          $('.flickr-wrapper.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            responsive:{
+              500:{
+                items:2,
+                margin: <?php echo $column_spacing; ?>,
+              },
+              800:{
+                items:3,
+                margin: <?php echo $column_spacing; ?>,
+              },
+              1200:{
+                items:columns,
+                margin: <?php echo $column_spacing; ?>,
+              }
             }
-          }
-        });
+          });
 
-      }
+        }
 
-      var owlDots = $('.owl-dots').outerHeight();
+      <?php } else { ?>
+        var maxWidth = 1/columns * 100;
 
-      $('.owl-carousel').css('padding-bottom', owlDots);
-
-      $(window).resize(function(event) {
-        var owlDots2 = $('.owl-dots').outerHeight();
-
-        $('.owl-carousel').css('padding-bottom', owlDots2);
-      });
-
-    <?php } else { ?>
-      var maxWidth = 1/columns * 100;
-
-      if($(window).width() >= 1000){
-        $('.flickr-img-wrapper').css('width', maxWidth + '%');
-      }
-
-      $(window).resize(function(event) {
         if($(window).width() >= 1000){
           $('.flickr-img-wrapper').css('width', maxWidth + '%');
-        } else if($(window).width() >= 600){
-          $('.flickr-img-wrapper').css('width','50%');
         }
-        else{
-          $('.flickr-img-wrapper').css('width', 'auto');
-        }
-      });
-    <?php } ?>
+
+        $(window).resize(function(event) {
+          if($(window).width() >= 1000){
+            $('.flickr-img-wrapper').css('width', maxWidth + '%');
+          } else if($(window).width() >= 600){
+            $('.flickr-img-wrapper').css('width','50%');
+          }
+          else{
+            $('.flickr-img-wrapper').css('width', 'auto');
+          }
+        });
+      <?php } ?>
     });
   });
 </script>

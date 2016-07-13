@@ -194,7 +194,7 @@ h4.location-item-title{
   position: relative;  
 }
 
-.img-gallery{
+.image-gallery{
   @include display-flex;
   @include flex-wrap(wrap);
   .gallery-img-wrap{
@@ -215,11 +215,35 @@ h4.location-item-title{
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  position: relative;
   &:before{
     content: '';
     display: block;
     width: 100%;
     padding-bottom: 100%;
+  }
+  span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    @include transition(ease-in-out all 0.3s);
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+  }
+  .img-zoom{
+    @include flex(0 1 auto);
+    display: block;
+    text-align: center;
+    font-size: 40px;
+  }
+  &:hover{
+    span{
+      opacity: 1;
+    }
   }
 }
 

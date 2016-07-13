@@ -4,6 +4,7 @@ if( function_exists('get_field') ) :
 
 $myoptions = get_option( 'themesettings_');
 
+$header_type = $myoptions['header_type'];
 $content_background_color = $myoptions['content_background_color'];
 $main_font_color = $myoptions['main_font_color'];
 $text_highlight_color = $myoptions['text_highlight_color'];
@@ -113,11 +114,13 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 <?php if($menu_background_color) { echo '#side-menu.menu-container, .menu-mobile-container, .sub-nav{ background-color: ' . $menu_background_color . ';}'; }?>
 
+<?php if ($header_type === 'Top Menu') : ?>
 @media screen and (min-width: 1000px){
   <?php if($header_color) { echo '.menu-container{ background-color: transparent; } .site-header { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} .sub-menu { background-color: rgba(' . $header_bg_rgb . ', ' . $header_background_opacity . ');} '; }?>
   <?php if($desktop_header_height) { echo '.desktop-menu{ height: ' . $desktop_header_height . 'px;} .menu-container .sub-menu-icon{ line-height: ' . $desktop_header_height . 'px;}'; }?>
   <?php if($sticky_header_height) { echo '.sticky-header.headhesive .menu-container .sub-menu-icon{ line-height: ' . $sticky_header_height . 'px;}'; }?>
 }
+<?php endif ?>
 
 .menu-mobile-container .menu a,
 .menu-container .menu a{
@@ -166,7 +169,9 @@ $sadie_effect_gradient_bottom = 'rgba(' . hex2rgb($sadie_effect_gradient_bottom_
 
 <?php endif ?>
 
-.site-header .menu a .link-text, .sub-menu-icon{
+.site-header .menu a .link-text, 
+.sub-menu-icon,
+#side-menu .menu a{
   <?php 
     if($menu_line_height) { echo 'line-height: ' . $menu_line_height . 'px;'; }
     if($menu_font_size) { echo 'font-size: ' . $menu_font_size . 'px;';}
