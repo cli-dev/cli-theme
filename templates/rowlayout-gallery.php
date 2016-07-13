@@ -6,7 +6,7 @@ $images = get_sub_field('images', $item_id);
 $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : '';
 $columns_on_desktop = get_sub_field('columns_on_desktop', $item_id);
 $number_of_columns = ($columns_on_desktop) ? ' data-col-number="' . $columns_on_desktop . '"' : '';
-$column_spacing = intval(get_sub_field( get_sub_field('spacing_between_images', $item_id)));
+$column_spacing = intval(get_sub_field('spacing_between_images', $item_id));
 $gallery_negative_margin = ($column_spacing) ? ' style="margin: -' . ($column_spacing/2) . 'px"' : '';
 $gallery_spacing = ($column_spacing) ? ' style="padding: ' . ($column_spacing/2) . 'px"' : '';
 $item_add_animation = get_sub_field('add_item_animation', $item_id);
