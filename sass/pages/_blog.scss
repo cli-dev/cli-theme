@@ -46,7 +46,9 @@ body.archive .entry-content.news-feed{
   @include breakpoint($mdl){
     padding: 40px 0;
     @include display-flex;
+    @include flex-direction(column);
     @include justify-content(center);
+    @include align-items(center);
   }
   @include breakpoint($lrg){
     padding: 80px 0;
