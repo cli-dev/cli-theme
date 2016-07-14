@@ -717,27 +717,28 @@
                                     "max": ""
                                 },
                                 {
-                                    "key": "565cc5fff5d71",
+                                    "key": "5786c8908bdbb",
                                     "name": "image_gallery",
                                     "label": "Image Gallery",
                                     "display": "block",
                                     "sub_fields": [
                                         {
-                                            "key": "field_565cc61df5d72",
+                                            "key": "field_5786c8c48bdca",
                                             "label": "Images",
                                             "name": "images",
                                             "type": "gallery",
                                             "instructions": "",
                                             "required": 1,
-                                            "conditional_logic": 0,
+                                            "conditional_logic": "",
                                             "wrapper": {
-                                                "width": "",
+                                                "width": 100,
                                                 "class": "",
                                                 "id": ""
                                             },
                                             "min": "",
                                             "max": "",
-                                            "preview_size": "sidebar-thumb",
+                                            "preview_size": "theme_image_preview",
+                                            "insert": "append",
                                             "library": "all",
                                             "min_width": "",
                                             "min_height": "",
@@ -745,57 +746,10 @@
                                             "max_width": "",
                                             "max_height": "",
                                             "max_size": "",
-                                            "mime_types": "",
-                                            "insert": "append"
+                                            "mime_types": ""
                                         },
                                         {
-                                            "key": "field_565cc64af5d73",
-                                            "label": "Columns on Desktop",
-                                            "name": "columns_on_desktop",
-                                            "type": "number",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": 20,
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "min": 1,
-                                            "max": 12,
-                                            "step": 1,
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
-                                            "key": "field_565cc682f5d74",
-                                            "label": "Spacing Between Images",
-                                            "name": "spacing_between_images",
-                                            "type": "number",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": 20,
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "pixels",
-                                            "min": 0,
-                                            "max": "",
-                                            "step": 1,
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
-                                            "key": "field_565cd340955db",
+                                            "key": "field_5786c8908bdbe",
                                             "label": "Custom Class",
                                             "name": "custom_class",
                                             "type": "text",
@@ -803,7 +757,7 @@
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": 60,
+                                                "width": 70,
                                                 "class": "",
                                                 "id": ""
                                             },
@@ -816,15 +770,15 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_565cc6a8f5d75",
-                                            "label": "Add Item Animation?",
-                                            "name": "add_item_animation",
+                                            "key": "field_5786c8908bdbd",
+                                            "label": "Make gallery a slider?",
+                                            "name": "is_slider",
                                             "type": "true_false",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
-                                                "width": "",
+                                                "width": 30,
                                                 "class": "",
                                                 "id": ""
                                             },
@@ -832,7 +786,120 @@
                                             "default_value": 0
                                         },
                                         {
-                                            "key": "field_565cc6c8f5d76",
+                                            "key": "field_5786c8908bdc0",
+                                            "label": "Hover Color",
+                                            "name": "hover_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc1",
+                                            "label": "Hover Color Opacity",
+                                            "name": "hover_color_opacity",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc2",
+                                            "label": "Hover Icon Color",
+                                            "name": "hover_icon_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc3",
+                                            "label": "Number of Columns on Desktop",
+                                            "name": "columns_on_desktop",
+                                            "type": "number",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": 4,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "min": "",
+                                            "max": "",
+                                            "step": 1,
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc4",
+                                            "label": "Grid Spacing",
+                                            "name": "grid_spacing",
+                                            "type": "number",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "min": "",
+                                            "max": "",
+                                            "step": 1,
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc5",
+                                            "label": "Add Item Animation?",
+                                            "name": "add_item_animation",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": 33,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0
+                                        },
+                                        {
+                                            "key": "field_5786c8908bdc6",
                                             "label": "Item Animation Effect",
                                             "name": "item_animation_effect",
                                             "type": "select",
@@ -841,7 +908,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_565cc6a8f5d75",
+                                                        "field": "field_5786c8908bdc5",
                                                         "operator": "==",
                                                         "value": "1"
                                                     }
@@ -938,7 +1005,7 @@
                                             "readonly": 0
                                         },
                                         {
-                                            "key": "field_565cc6e3f5d77",
+                                            "key": "field_5786c8908bdc7",
                                             "label": "Item Animation Duration",
                                             "name": "item_animation_duration",
                                             "type": "number",
@@ -947,7 +1014,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_565cc6a8f5d75",
+                                                        "field": "field_5786c8908bdc5",
                                                         "operator": "==",
                                                         "value": "1"
                                                     }
@@ -969,7 +1036,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_565cc703f5d78",
+                                            "key": "field_5786c8908bdc8",
                                             "label": "Item Animation Delay",
                                             "name": "item_animation_delay",
                                             "type": "number",
@@ -978,7 +1045,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_565cc6a8f5d75",
+                                                        "field": "field_5786c8908bdc5",
                                                         "operator": "==",
                                                         "value": "1"
                                                     }
@@ -1000,7 +1067,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_565cc71df5d79",
+                                            "key": "field_5786c8908bdc9",
                                             "label": "Item Animation Offset",
                                             "name": "item_animation_offset",
                                             "type": "number",
@@ -1009,7 +1076,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_565cc6a8f5d75",
+                                                        "field": "field_5786c8908bdc5",
                                                         "operator": "==",
                                                         "value": "1"
                                                     }
@@ -1026,7 +1093,7 @@
                                             "append": "pixels",
                                             "min": "",
                                             "max": "",
-                                            "step": 1,
+                                            "step": "",
                                             "readonly": 0,
                                             "disabled": 0
                                         }
@@ -8069,5 +8136,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1467918206
+    "modified": 1468451912
 }
