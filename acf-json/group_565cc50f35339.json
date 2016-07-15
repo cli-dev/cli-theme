@@ -2906,7 +2906,7 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "default_value": "",
+                                            "default_value": "default-accordion",
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
@@ -2988,6 +2988,66 @@
                                             "readonly": 0
                                         },
                                         {
+                                            "key": "field_57892207be766",
+                                            "label": "Tab Title Background Color",
+                                            "name": "tab_title_background_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": "",
+                                            "conditional_logic": "",
+                                            "wrapper": {
+                                                "width": 25,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
+                                            "key": "field_57892231be767",
+                                            "label": "Tab Content Background Color",
+                                            "name": "tab_content_background_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": "",
+                                            "conditional_logic": "",
+                                            "wrapper": {
+                                                "width": 25,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
+                                            "key": "field_57892258be768",
+                                            "label": "Active Tab Background Color",
+                                            "name": "active_tab_background_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": "",
+                                            "conditional_logic": "",
+                                            "wrapper": {
+                                                "width": 25,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
+                                            "key": "field_57892274be769",
+                                            "label": "Tab Background Hover Color",
+                                            "name": "tab_background_hover_color",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": "",
+                                            "conditional_logic": "",
+                                            "wrapper": {
+                                                "width": 25,
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": ""
+                                        },
+                                        {
                                             "key": "field_566877610c5b7",
                                             "label": "Accordion",
                                             "name": "accordion",
@@ -3043,45 +3103,15 @@
                                                     "media_upload": 1
                                                 },
                                                 {
-                                                    "key": "field_566877fe0c5ba",
-                                                    "label": "Accordion Tab Title Background Color",
-                                                    "name": "accordion_tab_title_background_color",
-                                                    "type": "color_picker",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": 25,
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "default_value": ""
-                                                },
-                                                {
-                                                    "key": "field_566878270c5bb",
-                                                    "label": "Accordion Tab Content Background Color",
-                                                    "name": "accordion_tab_content_background_color",
-                                                    "type": "color_picker",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": 25,
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "default_value": ""
-                                                },
-                                                {
                                                     "key": "field_56687a436ec88",
                                                     "label": "Custom Class",
                                                     "name": "custom_class",
                                                     "type": "text",
-                                                    "instructions": "no caps or spaces",
+                                                    "instructions": "",
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
-                                                        "width": "",
+                                                        "width": 70,
                                                         "class": "",
                                                         "id": ""
                                                     },
@@ -3092,6 +3122,22 @@
                                                     "maxlength": "",
                                                     "readonly": 0,
                                                     "disabled": 0
+                                                },
+                                                {
+                                                    "key": "field_5789264165ebb",
+                                                    "label": "Have this tab open by default?",
+                                                    "name": "open_by_default",
+                                                    "type": "true_false",
+                                                    "instructions": "",
+                                                    "required": "",
+                                                    "conditional_logic": "",
+                                                    "wrapper": {
+                                                        "width": 30,
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "message": "",
+                                                    "default_value": 0
                                                 }
                                             ]
                                         }
@@ -8136,5 +8182,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1468451912
+    "modified": 1468606081
 }
