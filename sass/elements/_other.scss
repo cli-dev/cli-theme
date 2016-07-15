@@ -506,3 +506,27 @@ h4.location-item-title{
     }
   }
 }
+
+.accordion{
+  &.default-accordion{
+    .accordion-tab-title{
+      padding: 10px 20px;
+      @include display-flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include breakpoint($md){
+        padding: 20px 40px;
+      }
+    }
+    .accordion-content{
+      padding: 20px;
+      @include breakpoint($md){
+        padding: 40px;
+      }
+    }
+  }
+  .accordion-tab-title{
+    cursor: pointer;
+    @include transition(ease-in-out all 0.3s);
+  }
+}

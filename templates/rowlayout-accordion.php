@@ -8,30 +8,58 @@ $item_id = (is_blog()) ? $page_for_posts : $postid;
 $accordion_class = get_sub_field('accordion_class', $item_id);
 $open_icon = get_sub_field('open_tab_icon', $item_id);
 $close_icon = get_sub_field('close_tab_icon', $item_id);
+$tab_title_bg_color = get_sub_field('tab_title_background_color', $item_id);
+$tab_content_bg_color = get_sub_field('tab_content_background_color', $item_id);
+$tab_bg_hover_color = get_sub_field('tab_background_hover_color', $item_id);
+$active_tab_bg_color = get_sub_field('active_tab_background_color', $item_id);
 
 ?>
 
 <?php if( have_rows('accordion', $item_id) ): ?>
+
+  <?php if ($tab_title_bg_color || $tab_content_bg_color || $tab_bg_hover_color || $active_tab_bg_color) { ?>
+    <style type="text/css">
+      <?php if ($tab_title_bg_color ) { ?>
+        .accordion.<?php echo $accordion_class; ?> .accordion-tab-title{
+          background-color: <?php echo $tab_title_bg_color; ?>;
+        }
+      <?php } ?>
+      <?php if ($tab_content_bg_color) { ?>
+        .accordion.<?php echo $accordion_class; ?> .accordion-content{
+          background-color: <?php echo $tab_content_bg_color; ?>;
+        }
+      <?php } ?>
+      <?php if ($tab_bg_hover_color) { ?>
+        .accordion.<?php echo $accordion_class; ?> .accordion-tab-title:hover{
+          background-color: <?php echo $tab_bg_hover_color; ?>;
+        }
+      <?php } ?>
+      <?php if ($active_tab_bg_color) { ?>
+        .accordion.<?php echo $accordion_class; ?> .accordion-tab.active-tab .accordion-tab-title{
+          background-color: <?php echo $active_tab_bg_color; ?>;
+        }
+      <?php } ?>
+    </style>
+
+  <?php } ?>
 
   <div class="accordion<?php echo ' ' . $accordion_class; ?>">
 
   <?php while( have_rows('accordion', $item_id) ): the_row(); 
 
     // vars
-    $title = get_sub_field('accordion_tab_title');
-    $content = get_sub_field('accordion_tab_content');
-    $title_bg = (get_sub_field('accordion_tab_title_background_color')) ? ' style="background-color: ' . get_sub_field('accordion_tab_title_background_color') . ';"' : '';
-    $content_bg = (get_sub_field('accordion_tab_content_background_color')) ? ' style="background-color: ' . get_sub_field('accordion_tab_content_background_color') . '; display:none;"' : ' style="display:none;"';
-    $custom_class = get_sub_field('custom_class');
-
+      $title = get_sub_field('accordion_tab_title');
+      $content = get_sub_field('accordion_tab_content');
+      $custom_class = get_sub_field('custom_class');
+      $open_by_default = (get_sub_field('open_by_default') == 1) ? ' default-open-tab' : '';
     ?>
 
-    <div class="accordion-tab<?php echo ' ' . $custom_class; ?>">
-      <div class="accordion-tab-title"<?php echo $title_bg; ?>>
+    <div class="accordion-tab<?php echo ' ' . $custom_class . $open_by_default; ?>">
+      <div class="accordion-tab-title">
         <div class="accordion-tab-title-content"><?php echo $title; ?></div>
         <div class="accordion-tab-icon"><i class="fa<?php echo ' ' . $open_icon; ?>"></i></div>
       </div>
-      <div class="accordion-content"<?php echo $content_bg; ?>><?php echo $content; ?></div>
+      <div class="accordion-content"><?php echo $content; ?></div>
     </div>
     
 
@@ -42,7 +70,10 @@ $close_icon = get_sub_field('close_tab_icon', $item_id);
   <script>
     jQuery(document).ready(function($){
 
-      element = $('.<?php echo $accordion_class; ?>').children('.accordion-tab');
+      element = $('.accordion.<?php echo $accordion_class; ?>').children('.accordion-tab');
+      $('.accordion-content').hide();
+      $('.accordion-tab.default-open-tab').addClass('active-tab');
+      $('.accordion-tab.default-open-tab .accordion-content').show();
 
       $(element).click(function() {
         if($(this).children('.accordion-content').css('display') === 'none'){
