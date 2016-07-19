@@ -76,6 +76,8 @@ jQuery(document).ready(function($) {
 
   // Menu Functionality
 
+  $('.sticky-header').midnight();
+
   $('.sub-menu').hide();
   $('li.menu-item-has-children').append('<span class="sub-menu-icon genericon genericon-expand"></span>');
   $('.menu-mobile-container li.menu-item-has-children').click(function(){
