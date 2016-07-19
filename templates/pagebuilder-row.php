@@ -13,6 +13,7 @@ $col_horizontal_alignment = (get_sub_field('horizontal_alignment', $item_id)) ? 
 $col_vertical_position = (get_sub_field('vertical_position', $item_id)) ? ' flex-position-' . get_sub_field('vertical_position', $item_id) : '';
 $col_vertical_alignment = (get_sub_field('vertical_alignment', $item_id)) ? ' flex-align-' . get_sub_field('vertical_alignment', $item_id) : '';
 $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field('custom_class', $item_id) : '';
+$header_class = (get_sub_field('header_class', $item_id)) ? ' data-midnight="' . get_sub_field('header_class', $item_id) . '"' : '';
 $wrap = (get_sub_field('wrap', $item_id) == 0) ? ' nowrap' : '';
 $is_in_grid = (get_sub_field('is_in_grid', $item_id) == 1) ? ' in-grid' : '';
 $row_add_animation = get_sub_field('row_add_animation', $item_id);
@@ -87,7 +88,7 @@ else{
 $row_wrapper_classes = 'class="row-wrapper' . $custom_class . $animation_class . $row_animation_effect . '"';
 $row_wrapper_animation = $row_animation_duration . $row_animation_delay . $row_animation_offset;
 
-$row_wrapper = $row_wrapper_classes . $row_wrapper_animation . $row_wrapper_styles;
+$row_wrapper = $row_wrapper_classes . $header_class . $row_wrapper_animation . $row_wrapper_styles;
 
 $add_classes_to_inner_row = 'class="flex-row' . $row_direction . $col_position . $col_alignment .  $wrap . $is_in_grid . '"';
 

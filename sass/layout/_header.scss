@@ -38,6 +38,11 @@
       @include align-items(stretch);
     }
   }
+  img.site-main-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header-widgets-inner{
@@ -155,11 +160,6 @@ img.site-main-logo{
         @include transform(translateX(0));
       }
     }
-  }
-  img.site-main-logo{
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 
