@@ -16,6 +16,7 @@ $custom_class = (get_sub_field('custom_class', $item_id)) ? ' ' . get_sub_field(
 $header_class = (get_sub_field('header_class', $item_id)) ? ' data-midnight="' . get_sub_field('header_class', $item_id) . '"' : '';
 $wrap = (get_sub_field('wrap', $item_id) == 0) ? ' nowrap' : '';
 $is_in_grid = (get_sub_field('is_in_grid', $item_id) == 1) ? ' in-grid' : '';
+$row_id = (get_sub_field('row_id', $item_id)) ? ' id="' . get_sub_field('row_id', $item_id) . '"' : '';
 $row_add_animation = get_sub_field('row_add_animation', $item_id);
 $animation_class = ($row_add_animation == 1 ? ' wow' : '');
 $row_animation_effect = ($row_add_animation == 1 ? ' ' . get_sub_field('row_animation_effect', $item_id)  : '');
@@ -85,15 +86,15 @@ else{
   $row_direction = ' flex-direction-column';
 }
 
-$row_wrapper_classes = 'class="row-wrapper' . $custom_class . $animation_class . $row_animation_effect . '"';
+$row_wrapper_classes = ' class="row-wrapper' . $custom_class . $animation_class . $row_animation_effect . '"';
 $row_wrapper_animation = $row_animation_duration . $row_animation_delay . $row_animation_offset;
 
-$row_wrapper = $row_wrapper_classes . $header_class . $row_wrapper_animation . $row_wrapper_styles;
+$row_wrapper = $row_id . $row_wrapper_classes . $header_class . $row_wrapper_animation . $row_wrapper_styles;
 
 $add_classes_to_inner_row = 'class="flex-row' . $row_direction . $col_position . $col_alignment .  $wrap . $is_in_grid . '"';
 
 ?>
-<div <?php echo $row_wrapper; ?>>
+<div<?php echo $row_wrapper; ?>>
   <?php if(!$detect->isMobile() && $background_type === 'video') { ?>
     <div class="bg-video">
       <video autoplay loop poster="<?php echo $row_video_placeholder_image; ?>" class="bgvid">

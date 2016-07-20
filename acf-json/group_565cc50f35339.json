@@ -7310,12 +7310,54 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 50,
+                        "width": 25,
                         "class": "field_type-true_false field_key-field_55d629d7648f9",
                         "id": ""
                     },
                     "message": "Yes",
                     "default_value": 1
+                },
+                {
+                    "key": "field_578f98a4c74da",
+                    "label": "Row ID",
+                    "name": "row_id",
+                    "type": "text",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_578e9f2e7792b",
+                    "label": "Header Class",
+                    "name": "header_class",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 25,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
                 },
                 {
                     "key": "field_55d4b9d686574",
@@ -7326,7 +7368,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 50,
+                        "width": 25,
                         "class": "field_type-text field_key-field_55d4b9d686574",
                         "id": ""
                     },
@@ -8182,5 +8224,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1468606081
+    "modified": 1469028597
 }
