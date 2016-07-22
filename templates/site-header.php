@@ -10,7 +10,7 @@
   $hide_menu_on_desktop = $myoptions['hide_menu_on_desktop'];
   $hide_menu = ($hide_menu_on_desktop == 1) ? 'menu-container hidden-menu' : 'menu-container';
   $hide_button = ($hide_menu_on_desktop == 0) ? ' hide_button' : '';
-  $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid' : '';
+  $header_in_grid = ($is_header_in_grid == 1) ? ' header-in-grid ' : '';
   $header_type = $myoptions['header_type'];
   $top_header_type = $myoptions['top_header_position'];
   $center_logo_menu_type = '';
