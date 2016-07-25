@@ -8,6 +8,16 @@ $item_id = (is_blog()) ? $page_for_posts : $postid;
 
 $col_custom_class = get_sub_field('column_custom_class', $item_id) ? ' ' .  get_sub_field('column_custom_class', $item_id) : '';
 $inner_column_class = get_sub_field('inner_column_class', $item_id) ? ' ' . get_sub_field('inner_column_class', $item_id) : '';
+$header_class = get_sub_field('header_class', $item_id);
+$header_class_light = ($header_class === 'light') ? ' data-midnight="light"' : '';
+$header_class_dark = ($header_class === 'dark') ? ' data-midnight="dark"' : '';
+$header_class_structure = '';
+if($header_class_dark){
+  $header_class_structure = $header_class_dark;
+}
+else{
+  $header_class_structure = $header_class_light;
+}
 $column_width = get_sub_field('column_width', $item_id) ? ' col-' . get_sub_field('column_width', $item_id) : '';
 $custom_column_alignment = get_sub_field('custom_column_alignment', $item_id) ? ' flex-single-align-' . get_sub_field('custom_column_alignment', $item_id) : '';
 $content_direction = get_sub_field('content_direction', $item_id);
@@ -35,7 +45,7 @@ $link = ($link_type === 'Internal') ? $internal_link : $external_link;
 
 $target = ($link_type === 'Internal') ? '_self' : '_blank';
 
-$add_classes_to_outer_column = ' class="flex-col' . $column_width . $custom_column_alignment . $col_custom_class . (($column_add_animation == 1) ? ' wow' : '' ) . $column_animation_effect . '"';
+$add_classes_to_outer_column = ' class="flex-col' . $column_width . $custom_column_alignment . $col_custom_class . (($column_add_animation == 1) ? ' wow' : '' ) . $column_animation_effect . '"' . $header_class_structure;
 $add_animation = $column_animation_delay . $column_animation_offset;
 
 $column_styles = '';
