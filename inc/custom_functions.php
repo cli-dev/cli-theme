@@ -170,6 +170,8 @@ function displayAddress() {
     $state = $myoptions['au_state'];
   } else if($country === "CA"){ 
     $state = $myoptions['ca_state'];
+  } else if($country === "UK"){ 
+    $state = $myoptions['postcode_area'];
   } else { 
     $state = $myoptions['us_state'];
   }
