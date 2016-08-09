@@ -31,7 +31,7 @@ function combine_theme_options() {
       $field_values_fordb = serialize($field_values); //serializing our array
     update_option('themesettings_',$field_values); //trying to store our values to db using ADD method
 }
-add_action( 'acf/save_post', 'combine_theme_options' );
+add_action( 'acf/save_post', 'combine_theme_options', 20 );
 
 function cli_generate_dynamic_css_and_js() {
   $css_dir = dirname(__FILE__) . '/css/';
