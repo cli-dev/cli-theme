@@ -104,6 +104,7 @@ function displayfullAddress() {
   $myoptions = get_option( 'themesettings_');
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
+  $state= '';
   $country = $myoptions['country'];
   $zip = $myoptions['zip'];
   $phone = $myoptions['phone'];
@@ -158,6 +159,7 @@ function displayAddress() {
   $myoptions = get_option( 'themesettings_');
   $address_1 = $myoptions['address_line_1'];
   $city = $myoptions['city'];
+  $state= '';
   $country = $myoptions['country'];
   $zip = $myoptions['zip'];
 
