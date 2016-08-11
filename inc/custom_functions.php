@@ -463,7 +463,7 @@ add_filter('the_content', 'filter_ptags_on_images');
 
 function push_google_font_families($field){
 
-  $url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBT9olH1cQa2XcrrVBcmjkA8RXg_8Dh-Fc";
+  $url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCCi4NfyfjQhCvAdi1VHYKbQhLgl-0linc";
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
   curl_setopt($ch, CURLOPT_HEADER, false);
