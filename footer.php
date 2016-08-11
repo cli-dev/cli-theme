@@ -1,4 +1,4 @@
-<div id="scrollTop"><i class="fa fa-angle-up"></i></div>
+<!-- <div id="scrollTop"><i class="fa fa-angle-up"></i></div> -->
 </div>
 <footer id="footer">
   <?php if ( is_active_sidebar( 'content-bottom' ) ) : ?> 
