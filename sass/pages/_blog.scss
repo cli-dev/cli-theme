@@ -2,6 +2,8 @@ body.single-post{
   .entry-content{
     @include breakpoint($mdl){
       @include display-flex;
+      @include flex-direction(column);
+      @include align-items(center);
       @include justify-content(center);
     }
   }
