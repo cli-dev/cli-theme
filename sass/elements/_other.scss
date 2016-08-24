@@ -258,10 +258,14 @@ h4.location-item-title{
 }
 
 .team-bio{
-  padding: 20px;
+  padding: 5px;
+  @include breakpoint($md){
+    padding: 25px;
+  }
   img{
     width: 100%;
     height: auto;
+    margin-bottom: 20px;
     @include breakpoint($md){
       float: right;
       margin: 0 0 20px 20px;
