@@ -295,13 +295,26 @@ function home_logo_link() {
 }
 add_shortcode( 'logo_link', 'home_logo_link' );
 
+function mobile_logo_link() {
+
+  $myoptions = get_option( 'themesettings_');
+  $logo = $myoptions['svg_mobile_logo'];
+
+  $mobileLogo = '<div class="mobile-logo"><a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home">
+    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Mobile Logo" /></a></div>';
+
+  return $mobileLogo;
+  
+}
+add_shortcode( 'mobile_logo', 'mobile_logo_link' );
+
 function footer_logo_link() {
 
   $myoptions = get_option( 'themesettings_');
   $logo = $myoptions['footer_logo'];
 
   $footerLogo = '<div class="footer-logo"><a href="' . esc_url( home_url( '/' ) ) . '" title="' . get_bloginfo( 'name' ) . '" rel="home">
-    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Logo" /></a></div>';
+    <img src="' . $logo . '" alt="' . get_bloginfo( 'name' ) . ' Footer Logo" /></a></div>';
 
   return $footerLogo;
   
