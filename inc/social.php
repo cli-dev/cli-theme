@@ -674,7 +674,7 @@ function display_verified_fbr_badge(){
 
   $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
 
-  $fbr_verified = '<div class="fbr-badge fbr-verified"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_Verified_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Profile" /></a></div>';
+  $fbr_verified = '<div class="fbr-badge fbr-verified"><a href="' . $fbr_profile . '" target="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_Verified_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Profile" /></a></div>';
 
   return $fbr_verified;
 }
@@ -698,7 +698,7 @@ function display_top_place_badge(){
 
   $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
 
-  $fbr_top_place = '<div class="fbr-badge fbr-top-place"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopPlacesToWork_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Place to Work Award" /></a></div>';
+  $fbr_top_place = '<div class="fbr-badge fbr-top-place"><a href="' . $fbr_profile . '" target="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopPlacesToWork_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Place to Work Award" /></a></div>';
 
   return $fbr_top_place;
 }
@@ -711,7 +711,7 @@ function display_customer_service_badge(){
 
   $fbr_profile = 'http://www.fairbusinessreport.org/company/' . $fbr_profile_slug . '/profile';
 
-  $fbr_customer_service = '<div class="fbr-badge fbr-customer-service"><a href="' . $fbr_profile . '" targe="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopCustomerService_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Customer Service Award" /></a></div>';
+  $fbr_customer_service = '<div class="fbr-badge fbr-customer-service"><a href="' . $fbr_profile . '" target="_blank" title="' . get_bloginfo( 'name' ) . '"><img src="' . CLI_ROOT . '/imgs/FBR_TopCustomerService_Badge_' . $fbr_badge_color . '.png" alt="' . get_bloginfo( 'name' ) . ' Fair Business Report Top Customer Service Award" /></a></div>';
 
   return $fbr_customer_service;
 }
