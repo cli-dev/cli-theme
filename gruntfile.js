@@ -82,40 +82,20 @@ module.exports = function(grunt) {
         tasks: ['compass:admin', 'sync:admin'],
       }
     },
-    ftp_push: {
-      your_target: {
-        options: {
-          host: "",
-          dest: "",
-          port: 21,
-          username: "",
-          password: "",
-        },
-        files: [
-          {
-            expand: true,
-            cwd: '.',
-            src: [
-              "css/**"
-            ]
-          }
-        ]
-      }
-    },
     sync: {
       css: {
         files: [
-          {expand: true, src: ['css/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+          {expand: true, src: ['css/**'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       },
       js: {
         files: [
-          {expand: true, src: ['js/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+          {expand: true, src: ['js/**'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       },
       admin: {
         files: [
-          {expand: true, src: ['admin/*'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
+          {expand: true, src: ['admin/**'], dest: 'W:/clithemewp/wp-content/themes/cli-theme/'},
         ],
       }
     },
@@ -132,6 +112,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-ftp-push');
   grunt.loadNpmTasks('grunt-sync');
 };
