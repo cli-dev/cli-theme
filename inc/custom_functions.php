@@ -151,7 +151,7 @@ function displayfullAddress() {
     $emailCode = '<div class="schema-info email"><a href="mailto:' . $email  . '" itemprop="email">' . $email . '</a></div>';  
   }
 
-  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div>' . $phoneCode . $emailCode . '</div>';
+  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" target="_blank" class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '</div></a>' . $phoneCode . $emailCode . '</div>';
   
 }
 
@@ -194,7 +194,11 @@ function displayAddress() {
     $zipCode = '<span class="schema-info zip" itemprop="postalCode">' . $zip . '</span>';  
   }
 
-  return '<div class="company-address" itemscope itemtype="http://schema.org/LocalBusiness"><div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '<div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '</div></div></div>';
+  return '<a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">
+  <div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '
+  <div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '
+  </div>
+  </a>';
   
 }
 
