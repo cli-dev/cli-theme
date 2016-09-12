@@ -56,10 +56,12 @@ jQuery(document).ready(function($) {
   }); 
 
   // Page Animation Functionality
-  var wow = new WOW({
-    mobile: false, 
+  $(window).load(function() {
+    var wow = new WOW({
+      mobile: false, 
+    });
+    wow.init();
   });
-  wow.init();
 
   // Scroll Button Functionality
   $(window).scroll(function() {
