@@ -41,7 +41,12 @@ $query1 = new WP_Query( $args1 );
       $thumb_url = $thumb_url_array[0];
       $position = get_field('position');
       $bio = get_field('bio');
-      $team_open_tag = ($bio) ? '<a class="team-member fancybox" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;" href="#' . the_slug() . '">' : '<div class="team-member" style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;">';
+      $team_img = '';
+      if( has_post_thumbnail() ){
+        $team_img = ' style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;"';
+      }
+      $team_img = ($thumb_url) ? ' style="background: url(' . $thumb_url . ') center top no-repeat; background-size: cover;"' : '';
+      $team_open_tag = ($bio) ? '<a class="team-member fancybox"' . $team_img . 'href="#' . the_slug() . '">' : '<div class="team-member"' . $team_img . '>';
       $team_close_tag = ($bio) ? '</a>' : '</div>';
       ?>
       <div class="team-member-wrapper"<?php echo $gallery_spacing; ?>>

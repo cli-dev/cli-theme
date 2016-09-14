@@ -93,13 +93,10 @@
 .col-inner{
   @include flex(1 1 auto); 
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   position: relative;
   -ms-flex-preferred-size: auto;
   @include display-flex;
-  @include breakpoint($md){
-    padding: 20px;
-  }
   @include breakpoint($lrg){
     padding: 40px;
   }
