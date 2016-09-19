@@ -103,6 +103,7 @@ nav.mobile-nav{
 .site-logo{
   width: 100%;
   padding: 5px;
+  overflow: hidden;
   @include flex(1 1 auto);
   @include display-flex;
   @include flex-direction(column);

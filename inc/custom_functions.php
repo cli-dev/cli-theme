@@ -194,8 +194,8 @@ function displayAddress() {
     $zipCode = '<span class="schema-info zip" itemprop="postalCode">' . $zip . '</span>';  
   }
 
-  return '<a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">
-  <div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '
+  return '<a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" class="schema-info address" itemscope itemtype="http://schema.org/LocalBusiness">
+  <div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '</div>
   <div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '
   </div>
   </a>';
