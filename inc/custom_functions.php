@@ -128,7 +128,7 @@ function displayfullAddress() {
   }
 
   if($address_1){
-    $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
+    $addressCode = '<span class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</span';  
   }
   
   if($city){
@@ -179,7 +179,7 @@ function displayAddress() {
   }
   
   if($address_1){
-    $addressCode = '<div class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</div>';  
+    $addressCode = '<span class="schema-info address-line-1" itemprop="streetAddress">' . $address_1 . '</span>';  
   }
   
   if($city){
@@ -194,10 +194,12 @@ function displayAddress() {
     $zipCode = '<span class="schema-info zip" itemprop="postalCode">' . $zip . '</span>';  
   }
 
-  return '<a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" target="_blank" class="schema-info address" itemscope itemtype="http://schema.org/LocalBusiness">
-  <div class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $addressCode . '</div>
-  <div class="schema-info address2">' . $cityCode . $stateCode . ' ' . $zipCode . '
-  </div>
+  return 
+  '<a href="http://maps.google.com/?q=' . $address_1 . ' ' . $city . ' ' . $state . ' ' . $zip . '" target="_blank" class="company-address" itemscope itemtype="http://schema.org/LocalBusiness">
+    <span class="schema-info address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      ' . $addressCode . '
+      <span class="schema-info address-line-2">' . $cityCode . $stateCode . ' ' . $zipCode . '</span>
+    </span>
   </a>';
   
 }
