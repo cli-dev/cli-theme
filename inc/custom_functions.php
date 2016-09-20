@@ -128,7 +128,7 @@ function displayfullAddress() {
   }
 
   if($address_1){
-    $addressCode = '<span class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</span';  
+    $addressCode = '<span class="schema-info address1" itemprop="streetAddress">' . $address_1 . '</span>';  
   }
   
   if($city){
