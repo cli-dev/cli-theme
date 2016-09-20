@@ -114,55 +114,43 @@ $social-colors: (facebook, $facebook),
     .ttf-tweet-text{
       text-align: center;
     }
-    .ttf-timestamp{ 
-      line-height: 20px;
-      &:before{
-        content: '\f017';
-        font-family: 'FontAwesome';
-        font-size: 20px;
-        line-height: 20px;
-        display: inline-block;
-        padding-right: 5px;
+    .ttf-tweet-full-name{
+      padding: 10px;
+      @include display-flex;
+      @include justify-content(center);
+      @include align-items(center);
+      @include breakpoint($md){
+        padding-bottom: 0;
       }
+      &:before{
+        content: "\f007"; 
+        font-family: 'FontAwesome';
+        display: block;
+        padding-right: 5px; 
+      } 
+      
     }
-  }
-}
-
-.twitter-feed-wrapper{
-  .ttf-tweet-user-name{
-    display: none;  
-  }
-  .ttf-tweet-full-name{
-    display: block;
-    font-size: 12px;
-    padding: 10px;
-    &:before{
-      content: "\f007"; 
-      font-family: 'FontAwesome';
-      display: inline-block;
-      padding-right: 5px; 
-    } 
-    @include breakpoint($md){
-      font-size: 16px;
-      padding: 10px 10px 0;
+    .ttf-tweet-text{
+      padding: 10px 0;
     }
-  }
-  .ttf-tweet-text{
-    padding: 10px 0;
-  }
-  .ttf-timestamp{
-    font-size: 12px;
-    padding: 10px;
-    @include breakpoint($md){
-      font-size: 16px;
-      padding: 10px 10px 0;
+    .ttf-timestamp{
+      padding: 10px;
+      @include display-flex;
+      @include justify-content(center);
+      @include align-items(center);
+      @include breakpoint($md){
+        padding-bottom: 0;
+      }
+      &:before{
+        content: "\f017"; 
+        font-family: 'FontAwesome';
+        display: block;
+        padding-right: 5px; 
+      }  
     }
-    &:before{
-      content: "\f017"; 
-      font-family: 'FontAwesome';
-      display: inline-block;
-      padding-right: 5px; 
-    }  
+    .ttf-tweet-user-name{
+      display: none;  
+    }
   }
 }
 
