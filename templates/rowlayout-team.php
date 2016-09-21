@@ -89,7 +89,8 @@ $query1 = new WP_Query( $args1 );
     jQuery(document).ready(function($) {
       $(".team-member.fancybox").fancybox({
         maxWidth: 700,
-        margin: [50, 40, 20, 40]
+        padding: 0,
+        margin: [50, 20, 20, 20]
       });
       var columns = <?php echo $columns_on_desktop; ?>;
       var maxWidth = 1/columns * 100;
