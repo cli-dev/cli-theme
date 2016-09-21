@@ -4,6 +4,8 @@ html{
 
 #wrapper{
   position: relative;  
+  width: 100vw;
+  overflow-x: hidden !important;
 }
 
 #content-wrapper{
