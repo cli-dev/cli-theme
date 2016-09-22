@@ -32,6 +32,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_55d5fec08f163',
@@ -92,7 +93,7 @@ acf_add_local_field_group(array (
 				),
 			),
 			'wrapper' => array (
-				'width' => 25,
+				'width' => '25',
 				'class' => 'field_type-select field_key-field_55d5ff188f166',
 				'id' => '',
 			),
@@ -145,7 +146,7 @@ acf_add_local_field_group(array (
 				'UT' => 'Utah',
 				'VT' => 'Vermont',
 				'VA' => 'Virginia',
-				'WA' => 'Western Australia',
+				'WA' => 'Washington',
 				'WV' => 'West Virginia',
 				'WI' => 'Wisconsin',
 				'WY' => 'Wyoming',
@@ -156,9 +157,8 @@ acf_add_local_field_group(array (
 			'multiple' => 0,
 			'ui' => 0,
 			'ajax' => 0,
+			'return_format' => 'value',
 			'placeholder' => '',
-			'disabled' => 0,
-			'readonly' => 0,
 		),
 		array (
 			'key' => 'field_56fb05d6bd9a8',
@@ -204,6 +204,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_56fb05d8bd9a9',
@@ -244,6 +245,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_57aa0e2fafc17',
@@ -398,6 +400,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_55d5ffcd8f167',
@@ -506,6 +509,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_55d6007a8f16c',
@@ -712,6 +716,7 @@ acf_add_local_field_group(array (
 			'placeholder' => '',
 			'disabled' => 0,
 			'readonly' => 0,
+			'return_format' => 'value',
 		),
 	),
 	'location' => array (
